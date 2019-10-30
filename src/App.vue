@@ -1,28 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="dark-color">
+      <s-link>Ссылка</s-link>
+    </div>
+    <s-badge :type="'sausage'">Primary</s-badge>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import SLink from 'Elements/Link/SLink';
+import SBadge from 'Elements/Badge/SBadge';
 export default {
-  name: "app",
   components: {
-    HelloWorld
+    SLink,
+    SBadge
   }
 };
 </script>
-
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

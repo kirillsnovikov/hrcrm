@@ -1,0 +1,36 @@
+@mixin text-color($name, $color) {
+  .#{$name}-color {
+    color: $color;
+  }
+}
+
+@mixin bg-color($name, $color) {
+  .#{$name}-bg {
+    background: $color;
+  }
+}
+
+@mixin link-color($name, $color) {
+  .#{$name}-link {
+    color: inherit;
+    &:hover {
+      color: $color;
+    }
+    &:active {
+      color: $color - #212121;
+    }
+  }
+}
+
+@mixin badge-color($name, $color) {
+  .#{$name}-badge {
+    @extend .border-radius;
+    @include badge($name, $color);
+    // border-radius: $border-radius;
+  }
+  .#{$name}-badge-sausage {
+    @extend .border-radius-sausage;
+    @include badge($name, $color);
+    // border-radius: 10rem;
+  }
+}

@@ -1,0 +1,19 @@
+%link {
+  width: 100%;
+  height: 100%;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.s-link {
+  text-decoration: none;
+  @extend %link;
+}
+
+.s-link-underline {
+  @extend %link;
+}

@@ -1,0 +1,25 @@
+@include text-color('primary', $primary-color);
+@include text-color('danger', $danger-color);
+@include text-color('success', $success-color);
+@include text-color('info', $info-color);
+@include text-color('alert', $alert-color);
+@include text-color('dark', $dark-color);
+@include text-color('white', $white-color);
+
+@include bg-color('primary', $primary-color);
+@include bg-color('danger', $danger-color);
+@include bg-color('success', $success-color);
+@include bg-color('info', $info-color);
+@include bg-color('alert', $alert-color);
+
+@include link-color('primary', $primary-color);
+@include link-color('danger', $danger-color);
+@include link-color('success', $success-color);
+@include link-color('info', $info-color);
+@include link-color('alert', $alert-color);
+
+@include badge-color('primary', $primary-color);
+@include badge-color('danger', $danger-color);
+@include badge-color('success', $success-color);
+@include badge-color('info', $info-color);
+@include badge-color('alert', $alert-color);
