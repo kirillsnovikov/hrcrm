@@ -14,7 +14,7 @@
   .#{$name}-link {
     color: inherit;
     &:hover {
-      color: $color;
+      @extend .#{$name}-color;
     }
     &:active {
       color: $color - #212121;
@@ -26,11 +26,9 @@
   .#{$name}-badge {
     @extend .border-radius;
     @include badge($name, $color);
-    // border-radius: $border-radius;
   }
   .#{$name}-badge-sausage {
     @extend .border-radius-sausage;
     @include badge($name, $color);
-    // border-radius: 10rem;
   }
 }

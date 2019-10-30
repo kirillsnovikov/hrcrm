@@ -3,7 +3,7 @@
     <div class="dark-color">
       <s-link>Ссылка</s-link>
     </div>
-    <s-badge :type="'sausage'">Primary</s-badge>
+    <s-badge :color="'white'" :type="'sausage'">Primary</s-badge>
   </div>
 </template>
 

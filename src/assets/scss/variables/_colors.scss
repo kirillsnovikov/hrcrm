@@ -19,7 +19,16 @@ $danger-color: $DARK_TERRA_COTTA;
 $success-color: $ASPARAGUS;
 $info-color: $MAGIC_MINT;
 $alert-color: $GARGOYLE_GAS;
-
 $black-color: $JET;
 $dark-color: $FELDGRAU;
 $white-color: $WHITE_SMOKE;
+
+$colors: (
+  primary: $primary-color,
+  danger: $danger-color,
+  success: $success-color,
+  info: $info-color,
+  alert: $alert-color,
+  dark: $dark-color,
+  white: $white-color
+);

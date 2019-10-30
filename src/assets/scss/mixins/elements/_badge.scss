@@ -1,6 +1,8 @@
 @mixin badge($name, $color) {
   @extend .#{$name}-bg;
-  @if $name == 'alert' {
+  @if $name == alert {
+    @extend .dark-color;
+  } @else if $name == white {
     @extend .dark-color;
   } @else {
     @extend .white-color;
