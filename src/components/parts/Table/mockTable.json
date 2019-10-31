@@ -1,0 +1,1294 @@
+{
+    "entry_list": [
+        {
+            "id": "28a01647-2fa4-c0de-709d-5da47cf58f60",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Administrator"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Olga Mironova"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "28a01647-2fa4-c0de-709d-5da47cf58f60"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Аналитик"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-14 13:48:22"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-23 20:09:44"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "1"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "description": {
+                    "name": "description",
+                    "value": "Аналитический склад ума"
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "be15dbe9-21c5-a26b-92a6-5d9dc7d14152"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел анализа"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "1e456ba9-60fd-d6cb-cd60-5d9e31d5f077"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ Digital Credit"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "77f28e78-fccb-ac0c-8759-5d7919a2be4e"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Москва"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "b650935e-ba66-499f-6f83-5d931fb1b950"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "1aee87c3-34ae-4cd0-180d-5d7915809c95"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "Новая"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "50000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "100000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "-99"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": "ETL"
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": "143fcd09-dce2-93d1-6ab8-5db0b16666f4"
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": "Аналитик"
+                }
+            }
+        },
+        {
+            "id": "40247c29-e7d3-3da6-180b-5da47ec96a5b",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Administrator"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Olga Mironova"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "40247c29-e7d3-3da6-180b-5da47ec96a5b"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Аналитик"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-14 13:54:26"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-23 20:08:58"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "1"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "description": {
+                    "name": "description",
+                    "value": "ыар\r\nтшз\r\nшзш"
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "be15dbe9-21c5-a26b-92a6-5d9dc7d14152"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел анализа"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "709983ee-9e92-7c0f-2f79-5d95d46b54ad"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "ebd21cd0-2fb1-a7f3-5082-5d9598452028"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Белгород"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "b650935e-ba66-499f-6f83-5d931fb1b950"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "81762280-2ba3-6a36-af69-5d8cb251f5c3"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "На паузе"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "50000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "100000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "e19c2bec-4d39-7b4e-5435-5d8bd5f78465"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": "SQL"
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": "143fcd09-dce2-93d1-6ab8-5db0b16666f4"
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": "Аналитик"
+                }
+            }
+        },
+        {
+            "id": "655d8591-1227-8add-81d2-5db18a48d171",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Olga Mironova"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Olga Mironova"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "655d8591-1227-8add-81d2-5db18a48d171"
+                },
+                "name": {
+                    "name": "name",
+                    "value": ""
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-24 11:25:44"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-24 11:25:44"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "description": {
+                    "name": "description",
+                    "value": ""
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "f0620125-e4d9-df3b-37c5-5d9dc88e39f1"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел разработки"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "76870b5f-dc38-61ac-d992-5d9e3354a8b5"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "Росбанк"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "77f28e78-fccb-ac0c-8759-5d7919a2be4e"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Москва"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "15e2652d-336b-8e41-56fd-5da44fd67770"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Алексей Рощин"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "c4178301-17a9-1a9c-f7ee-5da4276848c6"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Vladimir Prazdnikov"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "1aee87c3-34ae-4cd0-180d-5d7915809c95"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "Открыта"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "50000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "150000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "-99"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "2"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": "Siebel"
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": "68580bbc-beb8-2904-9ae1-5db15561844a"
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": "Другое"
+                }
+            }
+        },
+        {
+            "id": "9dc0fd3b-dacf-8aa7-e3d0-5d9ba335142d",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Olga Mironova"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Administrator"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "9dc0fd3b-dacf-8aa7-e3d0-5d9ba335142d"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Java Senior Developer"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-07 20:44:15"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-11 09:34:17"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "1"
+                },
+                "description": {
+                    "name": "description",
+                    "value": ""
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6b6b228c-8fca-16a9-348a-5d78d186353d"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "Digital"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "4c2e9992-7ed5-18a7-9716-5d8befe53237"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "• (TEST) Отдельный отдел"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "9d4f90cc-fac9-0f33-add9-5d9350b75663"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "Роснефть"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "77f28e78-fccb-ac0c-8759-5d7919a2be4e"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Москва"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "176cfa2c-84ef-51b4-870c-5d91d47fc198"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Александр Смирнов"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "383b443b-5e2c-7f9d-716c-5d91d4873e60"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Вадим Лапшин"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "8ab4909e-0986-1774-48a2-5d91d112f427"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Илья Пряников"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "1aee87c3-34ae-4cd0-180d-5d7915809c95"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "Открыта"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "60000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "90000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "-99"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": ""
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": ""
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": ""
+                }
+            }
+        },
+        {
+            "id": "b4662034-2693-8afa-702d-5d9dbd9e0836",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Olga Mironova"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Olga Mironova"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "b4662034-2693-8afa-702d-5d9dbd9e0836"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Лид главный бэк-разработчик"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-09 11:01:19"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-09 11:37:56"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "description": {
+                    "name": "description",
+                    "value": "Обязанности\r\n\r\nПроведение финансового анализа хозяйственной деятельности, юридической структуры заёмщика, проведение предварительной оценки стоимости активов.\r\nВ рамках рабочей группы участие в выработке и реализации сценария работы по проектам на сопровождении, взаимодействие со смежными подразделениями (юристы, финансисты, залоговики, безопасность и др.).\r\nУчастие в работе коллегиальных органов: подготовка материалов по проекту, согласование проекта решения с профильными службами Банка.\r\nПривлечение и координация работы консультантов (оценщики, юристы и т.д.).\r\nРегулярное заполнение отчётных форм по проектам на сопровождении, подготовка справок, отчётов, презентаций для руководства.\r\nТребования\r\n\r\nЗнание корпоративного финансирования\r\nОпыт работы с финансовым моделированием\r\nНаличие сертификации CFA, ACCA - желательно\r\nЗнание английского языка для ведения переговоров и переписки\r\nУсловия\r\n\r\nработа в крупнейшем банке России;\r\nтрудоустройство согласно ТК РФ;\r\nрегулярное корпоративное обучение;\r\nДМС, страхование от несчастных случаев и тяжелых заболеваний;\r\nматериальная помощь и социальная поддержка, корпоративная пенсионная программа;\r\nльготные условия кредитования;\r\nяркая и насыщенная корпоративная жизнь."
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "cd6cdf90-c4a0-cee3-2c77-5d78d1d75bdb"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "BPM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "c7a985ff-a605-9dfd-65bb-5d95efb9b80d"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "709983ee-9e92-7c0f-2f79-5d95d46b54ad"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "77f28e78-fccb-ac0c-8759-5d7919a2be4e"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Москва"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "383b443b-5e2c-7f9d-716c-5d91d4873e60"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Вадим Лапшин"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "360a9c50-8b86-8577-b861-5d91d481f440"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Василий Перепёлкин"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": ""
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": ""
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "114590a2-5b15-65e0-e1bb-5d7915664203"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "Отменена"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "100000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "120000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "-99"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": ""
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": "2019-10-09"
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": "2019-10-19"
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": ""
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": ""
+                }
+            }
+        },
+        {
+            "id": "b69d9c88-f2f2-af9e-8faa-5da47d022e33",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Administrator"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Administrator"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "b69d9c88-f2f2-af9e-8faa-5da47d022e33"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Системный аналитик"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-14 13:52:44"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-14 13:53:37"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "1"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "1"
+                },
+                "description": {
+                    "name": "description",
+                    "value": ""
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "c7a985ff-a605-9dfd-65bb-5d95efb9b80d"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "709983ee-9e92-7c0f-2f79-5d95d46b54ad"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "77f28e78-fccb-ac0c-8759-5d7919a2be4e"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Москва"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Andrey Ryabov"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "b650935e-ba66-499f-6f83-5d931fb1b950"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "1aee87c3-34ae-4cd0-180d-5d7915809c95"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "Открыта"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "0.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "0.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "-99"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": "BPMN, Aris, RationalRose "
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": ""
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": ""
+                }
+            }
+        },
+        {
+            "id": "c36a021e-ba98-84c3-e284-5da04d6cdc4f",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Administrator"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Olga Mironova"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "c36a021e-ba98-84c3-e284-5da04d6cdc4f"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Аналитик"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-11 09:37:56"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-23 20:09:17"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "1"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "description": {
+                    "name": "description",
+                    "value": "Biarch\r\nМосква, biarch.ru\r\n\r\nИнформационные технологии, системная интеграция, интернет... Показать еще\r\n\r\nАналитик\r\nСтек:\r\n● Power BI\r\n○ Автоматизация отчётности\r\n● Python\r\n○ Выгрузка данных по API\r\n○ Обработка данных\r\n○ Бот для Telegram (Автоматическая выгрузка ключевых метрик из amoCRM и отправка их в корпоративный чат)\r\n● JS\r\n○ Работа с cookie файлами\r\n○ Передача данных с сайта в БД и CRM системы\r\n○ Замена элементов на сайте и считывание данных с использование библиотеке jQuery\r\n● PHP\r\n○ Доработки/настройки внутренних решений \r\n● Google Analytics\r\n● Яндекс.Метрика\r\n● SQL"
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "c7a985ff-a605-9dfd-65bb-5d95efb9b80d"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "709983ee-9e92-7c0f-2f79-5d95d46b54ad"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "ebd21cd0-2fb1-a7f3-5082-5d9598452028"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Белгород"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "b650935e-ba66-499f-6f83-5d931fb1b950"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "81762280-2ba3-6a36-af69-5d8cb251f5c3"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "На паузе"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "50000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "100000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "-99"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": "SQL"
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": "143fcd09-dce2-93d1-6ab8-5db0b16666f4"
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": "Аналитик"
+                }
+            }
+        },
+        {
+            "id": "cbe2cdae-d7c1-cdbd-ea4f-5da04b2851d2",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "assigned_user_name": {
+                    "name": "assigned_user_name",
+                    "value": ""
+                },
+                "modified_by_name": {
+                    "name": "modified_by_name",
+                    "value": "Administrator"
+                },
+                "created_by_name": {
+                    "name": "created_by_name",
+                    "value": "Olga Mironova"
+                },
+                "id": {
+                    "name": "id",
+                    "value": "cbe2cdae-d7c1-cdbd-ea4f-5da04b2851d2"
+                },
+                "name": {
+                    "name": "name",
+                    "value": "Аналитик"
+                },
+                "date_entered": {
+                    "name": "date_entered",
+                    "value": "2019-10-11 09:30:45"
+                },
+                "date_modified": {
+                    "name": "date_modified",
+                    "value": "2019-10-23 20:08:40"
+                },
+                "modified_user_id": {
+                    "name": "modified_user_id",
+                    "value": "1"
+                },
+                "created_by": {
+                    "name": "created_by",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "description": {
+                    "name": "description",
+                    "value": "Biarch\r\nМосква, biarch.ru\r\n\r\nИнформационные технологии, системная интеграция, интернет... Показать еще\r\n\r\nАналитик\r\nСтек:\r\n● Power BI\r\n○ Автоматизация отчётности\r\n● Python\r\n○ Выгрузка данных по API\r\n○ Обработка данных\r\n○ Бот для Telegram (Автоматическая выгрузка ключевых метрик из amoCRM и отправка их в корпоративный чат)\r\n● JS\r\n○ Работа с cookie файлами\r\n○ Передача данных с сайта в БД и CRM системы\r\n○ Замена элементов на сайте и считывание данных с использование библиотеке jQuery\r\n● PHP\r\n○ Доработки/настройки внутренних решений \r\n● Google Analytics\r\n● Яндекс.Метрика\r\n● SQL"
+                },
+                "deleted": {
+                    "name": "deleted",
+                    "value": "0"
+                },
+                "assigned_user_id": {
+                    "name": "assigned_user_id",
+                    "value": ""
+                },
+                "hrpac_business_units_id_c": {
+                    "name": "hrpac_business_units_id_c",
+                    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+                },
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "hrpac_departments_id_c": {
+                    "name": "hrpac_departments_id_c",
+                    "value": "c7a985ff-a605-9dfd-65bb-5d95efb9b80d"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "project_id_c": {
+                    "name": "project_id_c",
+                    "value": "709983ee-9e92-7c0f-2f79-5d95d46b54ad"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "hrpac_cities_id_c": {
+                    "name": "hrpac_cities_id_c",
+                    "value": "77f28e78-fccb-ac0c-8759-5d7919a2be4e"
+                },
+                "location_id": {
+                    "name": "location_id",
+                    "value": "Москва"
+                },
+                "user_id_c": {
+                    "name": "user_id_c",
+                    "value": "492e3208-4a4b-5234-7f6f-5d76471f5b1c"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "user_id1_c": {
+                    "name": "user_id1_c",
+                    "value": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "user_id2_c": {
+                    "name": "user_id2_c",
+                    "value": "b650935e-ba66-499f-6f83-5d931fb1b950"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                },
+                "hrpac_vacancy_statuses_id_c": {
+                    "name": "hrpac_vacancy_statuses_id_c",
+                    "value": "1aee87c3-34ae-4cd0-180d-5d7915809c95"
+                },
+                "status_id": {
+                    "name": "status_id",
+                    "value": "Открыта"
+                },
+                "salary_min": {
+                    "name": "salary_min",
+                    "value": "50000.000000"
+                },
+                "salary_max": {
+                    "name": "salary_max",
+                    "value": "100000.000000"
+                },
+                "salary_val": {
+                    "name": "salary_val",
+                    "value": ""
+                },
+                "currency_id": {
+                    "name": "currency_id",
+                    "value": "e19c2bec-4d39-7b4e-5435-5d8bd5f78465"
+                },
+                "amount": {
+                    "name": "amount",
+                    "value": "1"
+                },
+                "stack": {
+                    "name": "stack",
+                    "value": "SQL"
+                },
+                "date_accept": {
+                    "name": "date_accept",
+                    "value": ""
+                },
+                "date_going": {
+                    "name": "date_going",
+                    "value": ""
+                },
+                "hrpac_vacancy_names_id_c": {
+                    "name": "hrpac_vacancy_names_id_c",
+                    "value": "143fcd09-dce2-93d1-6ab8-5db0b16666f4"
+                },
+                "name_id": {
+                    "name": "name_id",
+                    "value": "Аналитик"
+                }
+            }
+        }
+    ],
+    "relationship_list": [
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        }
+    ]
+}

@@ -8,5 +8,12 @@ module.exports = {
         Parts: path.resolve(__dirname, 'src/components/parts/')
       }
     }
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@/assets/scss/main.scss";`
+      }
+    }
   }
 };

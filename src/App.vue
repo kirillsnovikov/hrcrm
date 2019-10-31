@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <div class="dark-color">
-      <s-link>Ссылка</s-link>
-    </div>
-    <s-badge :color="'white'" :type="'sausage'">Primary</s-badge>
+    <s-table :data="tableData"></s-table>
   </div>
 </template>
 
 <script>
-import SLink from 'Elements/Link/SLink';
-import SBadge from 'Elements/Badge/SBadge';
+import STable from 'Parts/Table/STable';
+import tableData from 'Parts/Table/mockTable';
 export default {
   components: {
-    SLink,
-    SBadge
+    STable
+  },
+  data() {
+    return {
+      tableData: tableData
+    };
   }
 };
 </script>

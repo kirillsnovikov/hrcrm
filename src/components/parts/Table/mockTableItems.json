@@ -1,0 +1,270 @@
+{
+    "entry_list": [
+        {
+            "id": "28a01647-2fa4-c0de-709d-5da47cf58f60",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ Digital Credit"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел анализа"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                }
+            }
+        },
+        {
+            "id": "40247c29-e7d3-3da6-180b-5da47ec96a5b",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел анализа"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                }
+            }
+        },
+        {
+            "id": "655d8591-1227-8add-81d2-5db18a48d171",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Алексей Рощин"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "Росбанк"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел разработки"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Vladimir Prazdnikov"
+                }
+            }
+        },
+        {
+            "id": "9dc0fd3b-dacf-8aa7-e3d0-5d9ba335142d",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "Digital"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Вадим Лапшин"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "Роснефть"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Александр Смирнов"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "• (TEST) Отдельный отдел"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Илья Пряников"
+                }
+            }
+        },
+        {
+            "id": "b4662034-2693-8afa-702d-5d9dbd9e0836",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "BPM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Василий Перепёлкин"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Вадим Лапшин"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": ""
+                }
+            }
+        },
+        {
+            "id": "b69d9c88-f2f2-af9e-8faa-5da47d022e33",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Andrey Ryabov"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                }
+            }
+        },
+        {
+            "id": "c36a021e-ba98-84c3-e284-5da04d6cdc4f",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                }
+            }
+        },
+        {
+            "id": "cbe2cdae-d7c1-cdbd-ea4f-5da04b2851d2",
+            "module_name": "HRPAC_VACANCY",
+            "name_value_list": {
+                "business_unit_id": {
+                    "name": "business_unit_id",
+                    "value": "CRM"
+                },
+                "supervisor_id": {
+                    "name": "supervisor_id",
+                    "value": "Andrey Ryabov"
+                },
+                "project_link_id": {
+                    "name": "project_link_id",
+                    "value": "ВТБ ЕФР"
+                },
+                "manager_id": {
+                    "name": "manager_id",
+                    "value": "Olga Mironova"
+                },
+                "department_id": {
+                    "name": "department_id",
+                    "value": "Отдел бизнес-анализа"
+                },
+                "recruiter_id": {
+                    "name": "recruiter_id",
+                    "value": "Olga Denisova"
+                }
+            }
+        }
+    ],
+    "relationship_list": [
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        },
+        {
+            "link_list": []
+        }
+    ]
+}

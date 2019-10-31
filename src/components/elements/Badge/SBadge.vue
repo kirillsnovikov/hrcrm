@@ -19,7 +19,7 @@ export default {
   },
   mounted() {
     if (process.env.NODE_ENV === 'development') {
-      console.log(this.color);
+      // console.log(this.color);
     }
   },
   computed: {
