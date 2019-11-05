@@ -8,25 +8,33 @@
 import 'Elements/Badge/badge.scss';
 export default {
   props: {
-    type: {
-      type: String,
-      default: ''
-    },
     color: {
       type: String,
       default: 'primary'
-    }
-  },
-  mounted() {
-    if (process.env.NODE_ENV === 'development') {
-      // console.log(this.color);
+    },
+    round: {
+      type: Boolean,
+      default: false
+    },
+    empty: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     badgeClass() {
+      if (process.env.NODE_ENV === 'development') {
+        // console.log(this);
+      }
       return {
-        [`${this.color}-badge-sausage`]: this.type === 'sausage',
-        [`${this.color}-badge`]: !this.type
+        [`${this.color}-badge`]: !this.empty,
+        [`${this.color}-badge-empty`]: this.empty,
+        'border-radius-round': this.round,
+        'is-disabled': this.disabled
       };
     }
   }

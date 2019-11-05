@@ -3,9 +3,9 @@
     <div class="s-table-item__left">
       <div class="s-table-item__left__title">
         <div class="s-table-item__left__title__name">
-          <s-link :type="'underline'" :activeColor="'dark'">{{
-            data.header.title
-          }}</s-link>
+          <s-link :type="'underline'" :activeColor="'dark'">
+            {{ data.header.title }}
+          </s-link>
         </div>
         <s-link
           class="s-table-item__left__title__city"
@@ -14,9 +14,12 @@
           >{{ data.header.location }}</s-link
         >
       </div>
-      <s-badge class="s-table-item__left__badge" :color="colorStatus">{{
-        data.header.status
-      }}</s-badge>
+      <s-badge
+        class="s-table-item__left__badge"
+        :color="colorStatus === 'white' ? 'dark' : colorStatus"
+        :empty="colorStatus === 'white'"
+        >{{ data.header.status }}</s-badge
+      >
     </div>
     <div class="s-table-item__main">
       <div

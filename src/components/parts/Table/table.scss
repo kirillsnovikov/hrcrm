@@ -23,7 +23,7 @@
     &__title {
       @extend %flex-col;
       &__name {
-        @extend .primary-color;
+        @extend .success-color;
         font-size: 1.25em;
       }
       &__city {

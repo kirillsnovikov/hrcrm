@@ -1,17 +1,5 @@
-%badge-base {
-  @extend %cursor-pointer;
-  @extend .border-radius;
-  @extend %select-none;
-}
-
-// @mixin badge($name, $color) {
-// }
-
-// @mixin badge-empty($name, $color) {
-// }
-
-@mixin badge-color($name, $color) {
-  .#{$name}-badge {
+@mixin button-color($name, $color) {
+  .#{$name}-button {
     // @include badge($name, $color);
     @extend %badge-base;
     @extend .#{$name}-bg;
@@ -29,7 +17,7 @@
       @extend .#{$name}-bg-active;
     }
   }
-  .#{$name}-badge-empty {
+  .#{$name}-button-empty {
     // @include badge-empty($name, $color);
     @extend %badge-base;
     @extend .#{$name}-border;

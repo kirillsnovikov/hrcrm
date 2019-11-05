@@ -1,7 +1,7 @@
 <template>
   <section id="s-table" class="s-table">
     <s-table-item
-      v-for="item in tableData"
+      v-for="item in parseTableData"
       :data="item"
       :key="item.id"
     ></s-table-item>
@@ -18,19 +18,12 @@ export default {
       default: new Object()
     }
   },
-  data() {
-    return {
-      tableData: []
-    };
-  },
   components: {
     STableItem
   },
-  mounted() {
-    this.parseTableData();
-  },
-  methods: {
+  computed: {
     parseTableData() {
+      let tableData = [];
       this.data.entry_list.forEach(item => {
         let result = {};
         result['header'] = {};
@@ -45,8 +38,9 @@ export default {
         result.body['Нанимающий менеджер'] = data.manager_id.value;
         result.body['Отдел'] = data.department_id.value;
         result.body['Рекрутер'] = data.recruiter_id.value;
-        this.tableData.push(result);
+        tableData.push(result);
       });
+      return tableData;
     }
   }
 };

@@ -7,9 +7,17 @@
 }
 
 @each $name, $color in $colors {
+  @include border-color($name, $color);
+}
+
+@each $name, $color in $colors {
   @include link-color($name, $color);
 }
 
 @each $name, $color in $colors {
   @include badge-color($name, $color);
+}
+
+@each $name, $color in $colors {
+  @include button-color($name, $color);
 }
