@@ -10,7 +10,7 @@
 
 <script>
 import STableItem from 'Parts/Table/STableItem.vue';
-import 'Parts/Table/table.scss';
+// import 'Parts/Table/table.scss';
 export default {
   props: {
     data: {

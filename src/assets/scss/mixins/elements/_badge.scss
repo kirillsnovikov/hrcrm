@@ -1,19 +1,24 @@
-%badge-base {
-  @extend %cursor-pointer;
-  @extend .border-radius;
-  @extend %select-none;
+@mixin badge-base {
+  cursor: pointer;
+  border-radius: 0.25rem;
+  user-select: none;
+  @content;
 }
 
-// @mixin badge($name, $color) {
-// }
+%badge-padding {
+  padding: 0.25em 0.4em;
+}
 
-// @mixin badge-empty($name, $color) {
-// }
+%badge-base {
+  @include badge-base {
+    @extend %badge-padding;
+  }
+}
 
 @mixin badge-color($name, $color) {
   .#{$name}-badge {
-    // @include badge($name, $color);
     @extend %badge-base;
+    // @extend %badge-padding;
     @extend .#{$name}-bg;
     @if $name == alert {
       @extend .dark-color;
@@ -30,8 +35,8 @@
     }
   }
   .#{$name}-badge-empty {
-    // @include badge-empty($name, $color);
     @extend %badge-base;
+    // @extend %badge-padding;
     @extend .#{$name}-border;
     @extend .#{$name}-color;
     &:hover {
