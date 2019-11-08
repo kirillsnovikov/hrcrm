@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build src/build.js",
+    "build-lib": "vue-cli-service build --target lib --name CRMSuite src/build.js",
+    "build-comp": "vue-cli-service build --target wc --name s-table src/build.js"
   },
   "dependencies": {
     "axios": "^0.19.0",

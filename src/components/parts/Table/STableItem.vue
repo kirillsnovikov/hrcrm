@@ -3,7 +3,7 @@
     <div class="s-table-item__left">
       <div class="s-table-item__left__title">
         <div class="s-table-item__left__title__name">
-          <s-link :type="'underline'" :activeColor="'dark'">
+          <s-link :type="'underline'" :activeColor="'dark'" target>
             {{ data.header.title }}
           </s-link>
         </div>
@@ -11,6 +11,7 @@
           class="s-table-item__left__title__city"
           :type="'underline'"
           :activeColor="'dark'"
+          target
           >{{ data.header.location }}</s-link
         >
       </div>
@@ -29,7 +30,7 @@
       >
         <span class="s-table-item__main__item__name dark-color">{{ k }}</span>
         <span class="s-table-item__main__item__value">
-          <s-link>{{ item }}</s-link>
+          <s-link target>{{ item }}</s-link>
         </span>
       </div>
     </div>

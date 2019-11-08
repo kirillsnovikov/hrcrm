@@ -10,13 +10,20 @@
 
 <script>
 import STableItem from 'Parts/Table/STableItem.vue';
-// import 'Parts/Table/table.scss';
 export default {
+  name: 's-table',
   props: {
     data: {
-      type: Object,
-      default: new Object()
+      type: Object
     }
+  },
+  data() {
+    return {
+      columnParams: ['label', 'module', 'id'],
+      titleKeys: ['NAME_ID', 'LOCATION_ID', 'STATUS_ID']
+      // dataKeys: this.getDataKeys()
+      // columns: this.data.columns
+    };
   },
   components: {
     STableItem
@@ -24,23 +31,69 @@ export default {
   computed: {
     parseTableData() {
       let tableData = [];
-      this.data.entry_list.forEach(item => {
-        let result = {};
-        result['header'] = {};
-        result['body'] = {};
-        let data = item.name_value_list;
-        result.header['title'] = data.name.value;
-        result.header['location'] = data.location_id.value;
-        result.header['status'] = data.status_id.value;
-        result.body['Бизнес юнит'] = data.business_unit_id.value;
-        result.body['Линейный руководитель'] = data.supervisor_id.value;
-        result.body['Проект'] = data.project_link_id.value;
-        result.body['Нанимающий менеджер'] = data.manager_id.value;
-        result.body['Отдел'] = data.department_id.value;
-        result.body['Рекрутер'] = data.recruiter_id.value;
-        tableData.push(result);
+      if (this.data.data) {
+        this.data.data.forEach(item => {
+          if (process.env.NODE_ENV === 'development') {
+            // console.log(item);
+          }
+          let result = {};
+          result['header'] = this.getTitles(item);
+          result['body'] = this.getBody(item);
+          tableData.push(result);
+        });
+        // console.log(tableData);
+        return tableData;
+      }
+      return {};
+    }
+  },
+  methods: {
+    getDataKeys() {
+      let keys = [];
+      keys = Object.keys(this.data.columns).forEach(key => {
+        this.titleKeys.forEach(titleKey => {
+          console.log(titleKey !== key);
+          return titleKey !== key;
+        });
       });
-      return tableData;
+      console.log(keys);
+      return keys;
+    },
+    getTitles(data) {
+      // console.log(data);
+      // let keys = ['NAME_ID', 'LOCATION_ID', 'STATUS_ID'];
+      let titles = {};
+      this.titleKeys.forEach(key => {
+        titles[data[key]] = this.getColumnParams(this.data.columns[key], data);
+        // delete this.data.columns[key];
+      });
+      return titles;
+    },
+    getBody(data) {
+      let dataKeys = this.getDataKeys();
+      let body = {};
+      dataKeys.forEach(column => {
+        // console.log(this.data.columns, column);
+        body[data[column]] = this.getColumnParams(
+          this.data.columns[column],
+          data
+        );
+      });
+      return body;
+    },
+    getColumnParams(column, data) {
+      // console.log(column);
+      let parameters = {};
+      this.columnParams.forEach(param => {
+        if (param === 'label') {
+          parameters[param] = this.data.mod[column[param]];
+        } else if (param === 'module') {
+          parameters[param] = column[param];
+        } else {
+          parameters[param] = data[column[param]];
+        }
+      });
+      return parameters;
     }
   }
 };

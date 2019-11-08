@@ -19,7 +19,7 @@
 import SButton from 'Elements/Button/SButton';
 // import SBadge from 'Elements/Badge/SBadge';
 import STable from 'Parts/Table/STable';
-import tableData from 'Parts/Table/mockTable';
+import tableData from 'Parts/Table/mockTable3';
 export default {
   components: {
     SButton,
