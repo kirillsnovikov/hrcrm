@@ -1,36 +1,33 @@
 <template>
   <section class="s-table-item">
     <div class="s-table-item__left">
-      <div class="s-table-item__left__title">
-        <div class="s-table-item__left__title__name">
-          <s-link :type="'underline'" :activeColor="'dark'" target>
-            {{ data.header.title }}
-          </s-link>
-        </div>
-        <s-link
-          class="s-table-item__left__title__city"
-          :type="'underline'"
-          :activeColor="'dark'"
-          target
-          >{{ data.header.location }}</s-link
-        >
+      <div class="s-table-item__title s-table-item__left__s-table-item__title">
+        <s-link :type="'underline'" :activeColor="'dark'" target>{{ data.header.title.name }}</s-link>
       </div>
+      <s-link
+        class="s-table-item__location s-table-item__left__s-table-item__location"
+        :type="'underline'"
+        :activeColor="'dark'"
+        target
+      >{{ data.header.location.name }}</s-link>
       <s-badge
-        class="s-table-item__left__badge"
+        v-if="data.header.status.name"
+        class="s-table-item__status s-table-item__left__s-table-item__status"
         :color="colorStatus === 'white' ? 'dark' : colorStatus"
         :empty="colorStatus === 'white'"
-        >{{ data.header.status }}</s-badge
-      >
+      >{{ data.header.status.name }}</s-badge>
     </div>
     <div class="s-table-item__main">
       <div
-        class="s-table-item__main__item"
+        class="s-table-item__value s-table-item__main__s-table-item__value"
         v-for="(item, k) in data.body"
         :key="`${k + item}`"
       >
-        <span class="s-table-item__main__item__name dark-color">{{ k }}</span>
-        <span class="s-table-item__main__item__value">
-          <s-link target>{{ item }}</s-link>
+        <span
+          class="s-table-item__value-label s-table-item__value__s-table-item__value-label dark-color"
+        >{{ item.label }}</span>
+        <span class="s-table-item__value-name">
+          <s-link target>{{ k }}</s-link>
         </span>
       </div>
     </div>
@@ -59,7 +56,7 @@ export default {
   },
   computed: {
     colorStatus() {
-      let status = this.data.header.status;
+      let status = this.data.header.status.name;
       status = Object.keys(statuses).find(i => i === status);
       return statuses[status];
     }

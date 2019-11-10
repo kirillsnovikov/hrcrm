@@ -1,10 +1,6 @@
 <template>
   <section id="s-table" class="s-table">
-    <s-table-item
-      v-for="item in parseTableData"
-      :data="item"
-      :key="item.id"
-    ></s-table-item>
+    <s-table-item v-for="item in parseTableData" :data="item" :key="item.id"></s-table-item>
   </section>
 </template>
 
@@ -20,9 +16,12 @@ export default {
   data() {
     return {
       columnParams: ['label', 'module', 'id'],
-      titleKeys: ['NAME_ID', 'LOCATION_ID', 'STATUS_ID']
-      // dataKeys: this.getDataKeys()
-      // columns: this.data.columns
+      titleKeys: {
+        title: 'NAME_ID',
+        location: 'LOCATION_ID',
+        status: 'STATUS_ID'
+      },
+      dataKeys: []
     };
   },
   components: {
@@ -31,49 +30,54 @@ export default {
   computed: {
     parseTableData() {
       let tableData = [];
+      this.defineKeys();
       if (this.data.data) {
         this.data.data.forEach(item => {
           if (process.env.NODE_ENV === 'development') {
             // console.log(item);
           }
           let result = {};
-          result['header'] = this.getTitles(item);
-          result['body'] = this.getBody(item);
+          Object.defineProperties(result, {
+            header: {
+              value: this.getTitles(item),
+              writable: true
+            },
+            body: {
+              value: this.getBody(item),
+              writable: true
+            }
+          });
           tableData.push(result);
         });
-        // console.log(tableData);
         return tableData;
       }
       return {};
     }
   },
   methods: {
-    getDataKeys() {
-      let keys = [];
-      keys = Object.keys(this.data.columns).forEach(key => {
-        this.titleKeys.forEach(titleKey => {
-          console.log(titleKey !== key);
-          return titleKey !== key;
-        });
-      });
-      console.log(keys);
-      return keys;
+    defineKeys() {
+      this.dataKeys = Object.keys(this.data.columns).filter(
+        key => Object.values(this.titleKeys).indexOf(key) === -1
+      );
     },
     getTitles(data) {
-      // console.log(data);
-      // let keys = ['NAME_ID', 'LOCATION_ID', 'STATUS_ID'];
       let titles = {};
-      this.titleKeys.forEach(key => {
-        titles[data[key]] = this.getColumnParams(this.data.columns[key], data);
-        // delete this.data.columns[key];
-      });
+      for (let [key, value] of Object.entries(this.titleKeys)) {
+        Object.defineProperty(titles, key, {
+          value: {
+            name: this.data.columns[value] ? data[value] : '',
+            props: this.data.columns[value]
+              ? this.getColumnParams(this.data.columns[value], data)
+              : {}
+          },
+          writable: true
+        });
+      }
       return titles;
     },
     getBody(data) {
-      let dataKeys = this.getDataKeys();
       let body = {};
-      dataKeys.forEach(column => {
-        // console.log(this.data.columns, column);
+      this.dataKeys.forEach(column => {
         body[data[column]] = this.getColumnParams(
           this.data.columns[column],
           data
@@ -82,7 +86,6 @@ export default {
       return body;
     },
     getColumnParams(column, data) {
-      // console.log(column);
       let parameters = {};
       this.columnParams.forEach(param => {
         if (param === 'label') {

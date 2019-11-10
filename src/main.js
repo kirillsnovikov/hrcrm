@@ -19,6 +19,17 @@ Object.keys(libs).map(libName => {
   });
 });
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app');
+if (process.env.NODE_ENV === 'development') {
+  new Vue({
+    render: h => h(App)
+  }).$mount('#app');
+} else {
+  // Vue.components('vue-app', App);
+  new Vue({
+    el: '#app',
+    components: {
+      App
+    },
+    template: '<App/>'
+  });
+}

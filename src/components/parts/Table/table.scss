@@ -1,58 +1,87 @@
 .s-table {
   @extend %flex-col;
-  padding: 10px;
+
+  // padding: 10px;
+  * {
+    box-sizing: border-box;
+  }
 }
 
 .s-table-item {
   @extend %flex-center;
   @extend .border-radius;
   margin-bottom: 1.25rem;
-  height: 9.375em;
-  box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+  box-shadow   : -6px 4px 10px 0px rgba($dark-color, 0.42);
+
   &__left {
+    align-self: stretch;
     @extend .white-bg;
     @extend %flex-col;
     @extend .border-left-radius;
-    box-shadow: -47px -5px 58px -54px rgba($dark-color, 0.42) inset;
-    height: 100%;
-    padding: 0.25em 0.25em 0.25em 1em;
-    border-right: 1px dashed $primary-color;
-    flex: 1;
-    align-items: flex-start;
+    box-shadow     : -47px -5px 58px -54px rgba($dark-color, 0.42) inset;
+    padding        : 1em;
+    border-right   : 1px dashed $primary-color;
+    flex           : 1;
+    align-items    : flex-start;
     justify-content: space-around;
-    &__title {
-      @extend %flex-col;
-      &__name {
-        color: $primary-color;
-        font-size: 1.25em;
-      }
-      &__city {
-        font-size: 0.875em;
-      }
+    @extend %flex-col;
+
+    &__s-table-item__title {
+      flex: 0;
     }
-    &__badge {
-      font-size: 0.875em;
+
+    &__s-table-item__location {
+      flex: 1;
     }
+
+    &__s-table-item__status {
+      flex: 0;
+    }
+
   }
+
+  &__title {
+    color    : $primary-color;
+    font-size: 1.25em;
+  }
+
+  &__location {
+    font-size: 0.875em;
+  }
+
+  &__status {
+    font-size: 0.875em;
+  }
+
   &__main {
     @extend .white-bg;
     @extend .border-right-radius;
-    @extend %flex-center;
-    flex-wrap: wrap;
-    padding: 0 1em;
-    flex: 5;
-    height: 100%;
-    &__item {
-      flex: 50%;
-      &__name {
-        margin-right: 0.625em;
-        &::after {
-          content: ':';
-        }
-      }
-      &__value {
-        font-weight: bold;
-      }
+    @extend %flex;
+    align-content: flex-start;
+    flex-wrap    : wrap;
+    padding      : 0.5em 1em;
+    flex         : 5;
+
+    &__s-table-item__value {
+      margin: 0.5em 0;
     }
+  }
+
+  &__value {
+    flex: 50%;
+
+    &__s-table-item__value-label {
+      margin-right: 0.625em;
+    }
+  }
+
+  &__value-label {
+    &::after {
+      content: ':';
+    }
+  }
+
+  &__value-name {
+    font-weight: bold;
   }
 }
