@@ -1,6 +1,10 @@
 <template>
   <section id="s-table" class="s-table">
-    <s-table-item v-for="item in parseTableData" :data="item" :key="item.id"></s-table-item>
+    <s-table-item
+      v-for="item in parseTableData"
+      :data="item"
+      :key="item.id"
+    ></s-table-item>
   </section>
 </template>
 
@@ -21,7 +25,12 @@ export default {
         location: 'LOCATION_ID',
         status: 'STATUS_ID'
       },
-      dataKeys: []
+      dataKeys: [
+        'BUSINESS_UNIT_ID',
+        'DEPARTMENT_ID',
+        'PROJECT_LINK_ID',
+        'SUPERVISOR_ID'
+      ]
     };
   },
   components: {
@@ -30,12 +39,10 @@ export default {
   computed: {
     parseTableData() {
       let tableData = [];
-      this.defineKeys();
+      // this.defineKeys();
+      console.log(this.data.columns);
       if (this.data.data) {
         this.data.data.forEach(item => {
-          if (process.env.NODE_ENV === 'development') {
-            // console.log(item);
-          }
           let result = {};
           Object.defineProperties(result, {
             header: {
@@ -49,6 +56,9 @@ export default {
           });
           tableData.push(result);
         });
+        if (process.env.NODE_ENV === 'development') {
+          console.log(tableData);
+        }
         return tableData;
       }
       return {};

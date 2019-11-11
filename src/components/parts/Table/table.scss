@@ -1,28 +1,36 @@
 .s-table {
-  @extend %flex-col;
+  @extend %flex;
+  flex-wrap: wrap;
 
   // padding: 10px;
   * {
     box-sizing: border-box;
   }
+  &__s-table-item {
+    margin-bottom: 1.25em;
+    margin-right: 2%;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
 }
 
 .s-table-item {
   @extend %flex-center;
+  flex: 49%;
   @extend .border-radius;
-  margin-bottom: 1.25rem;
-  box-shadow   : -6px 4px 10px 0px rgba($dark-color, 0.42);
+  box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
 
   &__left {
     align-self: stretch;
     @extend .white-bg;
     @extend %flex-col;
     @extend .border-left-radius;
-    box-shadow     : -47px -5px 58px -54px rgba($dark-color, 0.42) inset;
-    padding        : 1em;
-    border-right   : 1px dashed $primary-color;
-    flex           : 1;
-    align-items    : flex-start;
+    box-shadow: -47px -5px 58px -54px rgba($dark-color, 0.42) inset;
+    padding: 0.5em 1em;
+    border-right: 1px dashed $primary-color;
+    flex: 0 0 150px;
+    align-items: flex-start;
     justify-content: space-around;
     @extend %flex-col;
 
@@ -37,11 +45,10 @@
     &__s-table-item__status {
       flex: 0;
     }
-
   }
 
   &__title {
-    color    : $primary-color;
+    color: $primary-color;
     font-size: 1.25em;
   }
 
@@ -56,19 +63,19 @@
   &__main {
     @extend .white-bg;
     @extend .border-right-radius;
-    @extend %flex;
-    align-content: flex-start;
-    flex-wrap    : wrap;
-    padding      : 0.5em 1em;
-    flex         : 5;
+    @extend %flex-col;
+    // align-content: flex-start;
+    // flex-wrap: wrap;
+    padding: 0.25em 1em;
+    // flex: 1;
 
     &__s-table-item__value {
-      margin: 0.5em 0;
+      margin: 0.25em 0;
     }
   }
 
   &__value {
-    flex: 50%;
+    // flex: 100%;
 
     &__s-table-item__value-label {
       margin-right: 0.625em;

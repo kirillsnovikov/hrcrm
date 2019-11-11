@@ -1,21 +1,34 @@
 <template>
-  <section class="s-table-item">
+  <section class="s-table-item s-table__s-table-item">
     <div class="s-table-item__left">
       <div class="s-table-item__title s-table-item__left__s-table-item__title">
-        <s-link :type="'underline'" :activeColor="'dark'" target>{{ data.header.title.name }}</s-link>
+        <s-link
+          :type="'underline'"
+          :activeColor="'dark'"
+          target
+          :route="
+            `index.php?module=${data.header.title.props.module}&record=${data.header.title.props.id}`
+          "
+          >{{ data.header.title.name }}</s-link
+        >
       </div>
       <s-link
         class="s-table-item__location s-table-item__left__s-table-item__location"
         :type="'underline'"
         :activeColor="'dark'"
+        :route="
+          `index.php?module=${data.header.location.props.module}&record=${data.header.location.props.id}`
+        "
         target
-      >{{ data.header.location.name }}</s-link>
+        >{{ data.header.location.name }}</s-link
+      >
       <s-badge
         v-if="data.header.status.name"
         class="s-table-item__status s-table-item__left__s-table-item__status"
         :color="colorStatus === 'white' ? 'dark' : colorStatus"
         :empty="colorStatus === 'white'"
-      >{{ data.header.status.name }}</s-badge>
+        >{{ data.header.status.name }}</s-badge
+      >
     </div>
     <div class="s-table-item__main">
       <div
@@ -25,9 +38,14 @@
       >
         <span
           class="s-table-item__value-label s-table-item__value__s-table-item__value-label dark-color"
-        >{{ item.label }}</span>
+          >{{ item.label }}</span
+        >
         <span class="s-table-item__value-name">
-          <s-link target>{{ k }}</s-link>
+          <s-link
+            :route="`index.php?module=${item.module}&record=${item.id}`"
+            target
+            >{{ k }}</s-link
+          >
         </span>
       </div>
     </div>

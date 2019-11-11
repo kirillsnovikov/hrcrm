@@ -1,5 +1,5 @@
 @mixin badge-base {
-  cursor: pointer;
+  // cursor: pointer;
   border-radius: 0.25rem;
   user-select: none;
   @content;
@@ -27,25 +27,25 @@
     } @else {
       @extend .white-color;
     }
-    &:hover {
-      @extend .#{$name}-bg-hover;
-    }
-    &:active {
-      @extend .#{$name}-bg-active;
-    }
+    // &:hover {
+    //   @extend .#{$name}-bg-hover;
+    // }
+    // &:active {
+    //   @extend .#{$name}-bg-active;
+    // }
   }
   .#{$name}-badge-empty {
     @extend %badge-base;
     // @extend %badge-padding;
     @extend .#{$name}-border;
     @extend .#{$name}-color;
-    &:hover {
-      @extend .#{$name}-bg-hover;
-      @extend .white-color;
-    }
-    &:active {
-      @extend .#{$name}-bg-active;
-      @extend .white-color;
-    }
+    // &:hover {
+    //   @extend .#{$name}-bg-hover;
+    //   @extend .white-color;
+    // }
+    // &:active {
+    //   @extend .#{$name}-bg-active;
+    //   @extend .white-color;
+    // }
   }
 }
