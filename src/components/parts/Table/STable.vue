@@ -10,8 +10,12 @@
 
 <script>
 import STableItem from 'Parts/Table/STableItem.vue';
+
 export default {
-  name: 's-table',
+  name: 'STable',
+  components: {
+    STableItem
+  },
   props: {
     data: {
       type: Object
@@ -23,7 +27,8 @@ export default {
       titleKeys: {
         title: 'NAME_ID',
         location: 'LOCATION_ID',
-        status: 'STATUS_ID'
+        status: 'STATUS_ID',
+        amount: 'AMOUNT'
       },
       dataKeys: [
         'BUSINESS_UNIT_ID',
@@ -33,14 +38,11 @@ export default {
       ]
     };
   },
-  components: {
-    STableItem
-  },
   computed: {
     parseTableData() {
       let tableData = [];
       // this.defineKeys();
-      console.log(this.data.columns);
+      // console.log(this.data.columns);
       if (this.data.data) {
         this.data.data.forEach(item => {
           let result = {};
@@ -57,7 +59,7 @@ export default {
           tableData.push(result);
         });
         if (process.env.NODE_ENV === 'development') {
-          console.log(tableData);
+          // console.log(tableData);
         }
         return tableData;
       }
@@ -88,10 +90,9 @@ export default {
     getBody(data) {
       let body = {};
       this.dataKeys.forEach(column => {
-        body[data[column]] = this.getColumnParams(
-          this.data.columns[column],
-          data
-        );
+        body[data[column]] = this.data.columns[column]
+          ? this.getColumnParams(this.data.columns[column], data)
+          : {};
       });
       return body;
     },
@@ -103,7 +104,12 @@ export default {
         } else if (param === 'module') {
           parameters[param] = column[param];
         } else {
-          parameters[param] = data[column[param]];
+          let colPar;
+          if ((colPar = column[param]) === 'HRPAC_VACANCY_NAMES_ID_C') {
+            parameters[param] = data['ID'];
+          } else {
+            parameters[param] = data[colPar];
+          }
         }
       });
       return parameters;

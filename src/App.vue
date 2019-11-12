@@ -1,37 +1,46 @@
 <template>
   <div id="app">
-    <s-input :type="'number'"></s-input>
+    <el-badge :value="8" class="item" type="success">
+      <el-button type="primary">Default</el-button>
+    </el-badge>
     <s-table :data="tableData"></s-table>
-    <!-- <s-badge :color="'success'" empty disabled>123</s-badge>
-    <s-badge :color="'danger'" empty>123</s-badge>
-    <s-badge :color="'info'" empty>123</s-badge>
-    <s-badge :color="'dark'" empty>123</s-badge>
-    <s-badge :color="'success'">123</s-badge>
-    <s-badge :color="'danger'">123</s-badge>
-    <s-badge :color="'info'" round disabled>123</s-badge>
-    <div @click="clickBtn"></div>-->
-    <div class="test">
-      <s-button @click="clickBtn" empty>Применить</s-button>
-    </div>
   </div>
 </template>
 
 <script>
-import SButton from 'Elements/Button/SButton';
-import SInput from 'Elements/Input/SInput';
-// import SBadge from 'Elements/Badge/SBadge';
 import STable from 'Parts/Table/STable';
 import tableData from 'Parts/Table/mockTable3';
+
 export default {
   components: {
-    SInput,
-    SButton,
-    // SBadge,
     STable
   },
   data() {
     return {
-      tableData: tableData
+      tableData: tableData,
+      options: [
+        {
+          value: 'Option1',
+          label: 'Option1'
+        },
+        {
+          value: 'Option2',
+          label: 'Option2'
+        },
+        {
+          value: 'Option3',
+          label: 'Option3'
+        },
+        {
+          value: 'Option4',
+          label: 'Option4'
+        },
+        {
+          value: 'Option5',
+          label: 'Option5'
+        }
+      ],
+      value1: []
     };
   },
   mounted() {

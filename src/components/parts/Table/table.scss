@@ -1,85 +1,63 @@
 .s-table {
-  @extend %flex;
-  flex-wrap: wrap;
-
-  // padding: 10px;
-  * {
-    box-sizing: border-box;
-  }
-  &__s-table-item {
-    margin-bottom: 1.25em;
-    margin-right: 2%;
-    &:nth-child(even) {
-      margin-right: 0;
-    }
-  }
+  @extend %flex-col;
 }
 
 .s-table-item {
+  @extend .white-bg;
   @extend %flex-center;
-  flex: 49%;
   @extend .border-radius;
   box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+  margin-bottom: 1.25em;
 
   &__left {
-    align-self: stretch;
-    @extend .white-bg;
-    @extend %flex-col;
+    @extend %flex;
+    flex-wrap: wrap;
     @extend .border-left-radius;
+    align-self: stretch;
     box-shadow: -47px -5px 58px -54px rgba($dark-color, 0.42) inset;
     padding: 0.5em 1em;
     border-right: 1px dashed $primary-color;
-    flex: 0 0 150px;
-    align-items: flex-start;
-    justify-content: space-around;
-    @extend %flex-col;
-
-    &__s-table-item__title {
-      flex: 0;
-    }
-
-    &__s-table-item__location {
-      flex: 1;
-    }
-
-    &__s-table-item__status {
-      flex: 0;
-    }
+    width: 20%;
   }
 
   &__title {
-    color: $primary-color;
-    font-size: 1.25em;
-  }
-
-  &__location {
-    font-size: 0.875em;
+    @extend %flex-center;
+    // flex: 10%;
+    width: 50%;
+    .el-link {
+      font-size: 1.25em;
+      margin-right: 0.5em;
+    }
   }
 
   &__status {
+    @extend %flex-center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  &__location {
+    @extend %flex-center;
+    width: 50%;
     font-size: 0.875em;
   }
 
-  &__main {
-    @extend .white-bg;
+  &__date {
+    @extend %flex-center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  &__medium {
     @extend .border-right-radius;
     @extend %flex-col;
-    // align-content: flex-start;
-    // flex-wrap: wrap;
     padding: 0.25em 1em;
-    // flex: 1;
-
-    &__s-table-item__value {
-      margin: 0.25em 0;
-    }
+    flex: 1;
+    margin: 0.25em 0;
   }
 
   &__value {
-    // flex: 100%;
-
-    &__s-table-item__value-label {
-      margin-right: 0.625em;
-    }
+    margin-right: 0.625em;
   }
 
   &__value-label {
@@ -90,5 +68,10 @@
 
   &__value-name {
     font-weight: bold;
+  }
+
+  &__right {
+    padding: 0.5em 1em;
+    width: 25%;
   }
 }

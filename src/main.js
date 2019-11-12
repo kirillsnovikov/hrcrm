@@ -2,7 +2,39 @@ import Vue from 'vue';
 import App from './App.vue';
 import axios from 'axios';
 
+import {
+  Button,
+  Link,
+  Badge,
+  Icon,
+  Progress,
+  Tag,
+  ButtonGroup
+} from 'element-ui';
+
+const components = {
+  Button,
+  Link,
+  Badge,
+  Icon,
+  Progress,
+  Tag,
+  ButtonGroup
+};
+
+for (let component of Object.values(components)) {
+  Vue.component(component.name, component);
+}
+
+import lang from 'element-ui/lib/locale/lang/en';
+import locale from 'element-ui/lib/locale';
+
+locale.use(lang);
+
+import '../theme/index.css';
 import './assets/scss/main.scss';
+// import './assets/scss/variables/element-variables.scss';
+// import 'element-ui/lib/theme-chalk/index.css';
 
 const libs = {
   axios: axios,

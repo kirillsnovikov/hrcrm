@@ -1,82 +1,107 @@
 <template>
-  <section class="s-table-item s-table__s-table-item">
+  <section class="s-table-item">
     <div class="s-table-item__left">
-      <div class="s-table-item__title s-table-item__left__s-table-item__title">
-        <s-link
-          :type="'underline'"
-          :activeColor="'dark'"
-          target
-          :route="
-            `index.php?module=${data.header.title.props.module}&record=${data.header.title.props.id}`
+      <div class="s-table-item__title">
+        <el-link
+          :type="'primary'"
+          :href="
+            `index.php?module=HRPAC_VACANCY&action=DetailView&record=${data.header.title.props.id}`
           "
-          >{{ data.header.title.name }}</s-link
+          >{{ data.header.title.name }}</el-link
+        >
+        <el-tag :size="'mini'">{{ data.header.amount.name }}</el-tag>
+      </div>
+      <div class="s-table-item__status">
+        <el-tag
+          v-if="data.header.status.name"
+          :type="colorStatus"
+          :effect="effect"
+          >{{ data.header.status.name }}</el-tag
         >
       </div>
-      <s-link
-        class="s-table-item__location s-table-item__left__s-table-item__location"
-        :type="'underline'"
-        :activeColor="'dark'"
-        :route="
-          `index.php?module=${data.header.location.props.module}&record=${data.header.location.props.id}`
-        "
-        target
-        >{{ data.header.location.name }}</s-link
-      >
-      <s-badge
-        v-if="data.header.status.name"
-        class="s-table-item__status s-table-item__left__s-table-item__status"
-        :color="colorStatus === 'white' ? 'dark' : colorStatus"
-        :empty="colorStatus === 'white'"
-        >{{ data.header.status.name }}</s-badge
-      >
+      <div class="s-table-item__location">
+        <el-link
+          :href="
+            `index.php?module=${data.header.location.props.module}&action=DetailView&record=${data.header.location.props.id}`
+          "
+          >{{ data.header.location.name }}</el-link
+        >
+      </div>
+      <div class="s-table-item__date">{{ `21.02.1998` }}</div>
     </div>
-    <div class="s-table-item__main">
+    <div class="s-table-item__medium">
       <div
-        class="s-table-item__value s-table-item__main__s-table-item__value"
+        class="s-table-item__value"
         v-for="(item, k) in data.body"
         :key="`${k + item}`"
       >
-        <span
-          class="s-table-item__value-label s-table-item__value__s-table-item__value-label dark-color"
-          >{{ item.label }}</span
-        >
         <span class="s-table-item__value-name">
           <s-link
-            :route="`index.php?module=${item.module}&record=${item.id}`"
-            target
+            :route="
+              `index.php?module=${item.module}&action=DetailView&record=${item.id}`
+            "
             >{{ k }}</s-link
           >
         </span>
       </div>
+    </div>
+    <div class="s-table-item__right">
+      <el-progress
+        :text-inside="true"
+        :stroke-width="25"
+        :percentage="percentage"
+        :color="customColors"
+      ></el-progress>
     </div>
   </section>
 </template>
 
 <script>
 import SLink from 'Elements/Link/SLink.vue';
-import SBadge from 'Elements/Badge/SBadge.vue';
+// import SBadge from 'Elements/Badge/SBadge.vue';
 const statuses = {
   Открыта: 'success',
-  Отменена: 'dark',
-  'На паузе': 'alert',
-  Закрыта: 'info',
-  Новая: 'white'
+  Отменена: 'info',
+  'На паузе': 'warning',
+  Закрыта: 'danger',
+  Новая: 'info'
 };
 export default {
+  name: 'STableItem',
   components: {
-    SLink,
-    SBadge
+    SLink
+    // SBadge
   },
   props: {
     data: {
       type: Object
     }
   },
+  data() {
+    return {
+      percentage: Math.ceil(Math.random() * 100),
+      customColors: [
+        { color: '#F56C6C', percentage: 30 },
+        { color: '#e6a23c', percentage: 40 },
+        { color: '#e6a23c', percentage: 60 },
+        { color: '#409EFF', percentage: 80 },
+        { color: '#67C23A', percentage: 100 }
+      ]
+    };
+  },
   computed: {
     colorStatus() {
+      console.log(this.data);
       let status = this.data.header.status.name;
       status = Object.keys(statuses).find(i => i === status);
       return statuses[status];
+    },
+    effect() {
+      if (this.data.header.status.name === 'Новая') {
+        return 'plain';
+      } else {
+        return 'dark';
+      }
     }
   }
 };
