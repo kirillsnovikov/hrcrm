@@ -1,12 +1,38 @@
 import Vue from 'vue';
-// import App from './App.vue';
 import axios from 'axios';
 
-import STable from 'Parts/Table/STable.vue';
-import SLink from 'Elements/Link/SLink.vue';
-import SButton from 'Elements/Button/SButton.vue';
-import SBadge from 'Elements/Badge/SBadge.vue';
+import {
+  Button,
+  Link,
+  Badge,
+  Icon,
+  Progress,
+  Tag,
+  ButtonGroup,
+  Tooltip
+} from 'element-ui';
 
+const components = {
+  Button,
+  Link,
+  Badge,
+  Icon,
+  Progress,
+  Tag,
+  ButtonGroup,
+  Tooltip
+};
+
+for (let component of Object.values(components)) {
+  Vue.component(component.name, component);
+}
+
+import lang from 'element-ui/lib/locale/lang/en';
+import locale from 'element-ui/lib/locale';
+
+locale.use(lang);
+
+import '../theme/index.css';
 import './assets/scss/main.scss';
 
 const libs = {
@@ -24,15 +50,15 @@ Object.keys(libs).map(libName => {
   });
 });
 
-const components = {
-  STable,
-  SLink,
-  SButton,
-  SBadge
+// Parts
+import STable from 'Parts/Table/STable';
+
+const parts = {
+  STable
 };
 
-Object.keys(components).forEach(name => {
-  Vue.component(name, components[name]);
+Object.keys(parts).forEach(name => {
+  Vue.component(name, parts[name]);
 });
 
-export default components;
+export default parts;

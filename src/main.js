@@ -9,7 +9,8 @@ import {
   Icon,
   Progress,
   Tag,
-  ButtonGroup
+  ButtonGroup,
+  Tooltip
 } from 'element-ui';
 
 const components = {
@@ -19,7 +20,8 @@ const components = {
   Icon,
   Progress,
   Tag,
-  ButtonGroup
+  ButtonGroup,
+  Tooltip
 };
 
 for (let component of Object.values(components)) {
