@@ -1,6 +1,11 @@
 <template>
   <section id="s-table" class="s-table">
-    <s-table-item v-for="item in parseTableData" :data="item" :key="item.id"></s-table-item>
+    <s-table-item
+      v-for="item in parseTableData"
+      :data="item"
+      :key="item.name_id.id"
+      :id="item.name_id.id"
+    ></s-table-item>
   </section>
 </template>
 
@@ -19,7 +24,7 @@ export default {
   },
   data() {
     return {
-      columnParams: ['label', 'module', 'id']
+      columnParams: ['label', 'module', 'id', 'value']
     };
   },
   computed: {
@@ -45,29 +50,30 @@ export default {
     },
     parseData(data) {
       let titles = {};
-      Object.keys(this.data.columns).forEach(value => {
-        Object.defineProperty(titles, this.data.columns[value]['name'], {
-          value: {
-            value: this.data.columns[value] ? data[value] : '',
-            props: this.data.columns[value]
-              ? this.getColumnParams(this.data.columns[value], data)
-              : {}
-          },
-          writable: true
+      Object.keys(this.data.columns).forEach(column => {
+        Object.defineProperty(titles, this.data.columns[column]['name'], {
+          value: this.data.columns[column]
+            ? this.getColumnParams(column, data)
+            : {},
+          writable: false
         });
       });
       return titles;
     },
     getColumnParams(column, data) {
+      let colData = this.data.columns[column];
+      // console.log('data', data);
       let parameters = {};
       this.columnParams.forEach(param => {
         if (param === 'label') {
-          parameters[param] = this.data.mod[column[param]];
+          parameters[param] = this.data.mod[colData[param]];
         } else if (param === 'module') {
-          parameters[param] = column[param];
+          parameters[param] = colData[param];
+        } else if (param === 'value') {
+          parameters[param] = colData ? data[column] : '';
         } else {
           let colPar;
-          if ((colPar = column[param]) === 'HRPAC_VACANCY_NAMES_ID_C') {
+          if ((colPar = colData[param]) === 'HRPAC_VACANCY_NAMES_ID_C') {
             parameters[param] = data['ID'];
           } else {
             parameters[param] = data[colPar];

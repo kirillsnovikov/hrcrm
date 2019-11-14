@@ -4,13 +4,14 @@
       <div class="s-table-item__left">
         <div class="s-table-item__title">
           <el-link
-            v-if="data.name_id"
+            v-if="id"
             :type="'primary'"
             :href="
-              `index.php?module=HRPAC_VACANCY&action=DetailView&record=${data.name_id.props.id}`
+              `index.php?module=HRPAC_VACANCY&action=DetailView&record=${id}`
             "
             >{{ data.name_id.value }}</el-link
           >
+          <div v-else>{{ data.name_id.value }}</div>
           <el-tag v-if="data.amount" :size="'mini'">{{
             data.amount.value
           }}</el-tag>
@@ -24,7 +25,7 @@
           <el-link
             v-if="data.location_id"
             :href="
-              `index.php?module=${data.location_id.props.module}&action=DetailView&record=${data.location_id.props.id}`
+              `index.php?module=${data.location_id.module}&action=DetailView&record=${data.location_id.id}`
             "
             >{{ data.location_id.value }}</el-link
           >
@@ -40,7 +41,7 @@
           <!-- <span class="s-table-item__value-name"> -->
           <el-link
             :href="
-              `index.php?module=${item.props.module}&action=DetailView&record=${item.props.id}`
+              `index.php?module=${item.module}&action=DetailView&record=${item.id}`
             "
             >{{ item.value }}</el-link
           >
@@ -64,10 +65,10 @@
         <div class="s-table-item__stack">{{ stack }}</div>
         <div class="s-table-item__salary">
           <div class="s-table-item__salary-min" v-if="data.salary_min">
-            {{ data.salary_min.value }}
+            {{ data.salary_min.value | salaryFormat }}
           </div>
           <div class="s-table-item__salary-max" v-if="data.salary_max">
-            {{ data.salary_max.value }}
+            {{ data.salary_max.value | salaryFormat }}
           </div>
           <div class="s-table-item__salary-val" v-if="data.salary_val">
             {{ data.salary_val.value }}
@@ -122,11 +123,22 @@ export default {
   props: {
     data: {
       type: Object
+    },
+    wide: {
+      type: Boolean,
+      default: false
+    },
+    id: {
+      type: String
+    },
+    type: {
+      type: String,
+      default: 'table'
     }
   },
   data() {
     return {
-      wideInfo: false,
+      wideInfo: this.wide,
       percentage: this.rand(0, 100),
       customColors: [
         { color: '#F56C6C', percentage: 30 },
@@ -141,6 +153,7 @@ export default {
         'project_link_id',
         'manager_id'
       ],
+      //отдел + рекрутер
       stack: stacks[this.rand(0, stacks.length - 1)],
       peoplesData: peoplesData
     };
@@ -160,12 +173,15 @@ export default {
     },
     defineBodyData() {
       let body = [];
-      this.bodyKeys.forEach(key => {
+      let bodyKeys = this.bodyKeys;
+      if (this.type === 'card') {
+        bodyKeys = this.bodyKeys.concat(['department_id', 'recruiter_id']);
+      }
+      bodyKeys.forEach(key => {
         body.push(
           this.data[key] ? this.data[key] : { value: 'DEFAULT', props: {} }
         );
       });
-      console.log(body);
       return body;
     },
     wideIcon() {

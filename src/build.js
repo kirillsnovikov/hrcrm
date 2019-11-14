@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import axios from 'axios';
 
+import './utils/filters';
+
 import {
   Button,
   Link,
