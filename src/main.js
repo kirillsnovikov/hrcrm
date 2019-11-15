@@ -12,7 +12,10 @@ import {
   Progress,
   Tag,
   ButtonGroup,
-  Tooltip
+  Tooltip,
+  Tabs,
+  TabPane,
+  Avatar
 } from 'element-ui';
 
 const components = {
@@ -23,7 +26,10 @@ const components = {
   Progress,
   Tag,
   ButtonGroup,
-  Tooltip
+  Tooltip,
+  Tabs,
+  TabPane,
+  Avatar
 };
 
 for (let component of Object.values(components)) {

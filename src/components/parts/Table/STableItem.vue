@@ -3,32 +3,27 @@
     <div class="s-table-item__top" @click.alt="wideInfo = !wideInfo">
       <div class="s-table-item__left">
         <div class="s-table-item__title">
-          <el-link
-            v-if="id"
+          <component
+            :is="data.name_id.link ? 'el-link' : 's-text'"
             :type="'primary'"
-            :href="
-              `index.php?module=HRPAC_VACANCY&action=DetailView&record=${id}`
-            "
-            >{{ data.name_id.value }}</el-link
-          >
-          <div v-else>{{ data.name_id.value }}</div>
-          <el-tag v-if="data.amount" :size="'mini'">{{
-            data.amount.value
-          }}</el-tag>
+            :href="data.name_id.link"
+            class="s-table-item__title-link"
+          >{{ data.name_id.value }}</component>
+          <el-tag v-if="data.amount" :size="'mini'">{{ data.amount.value }}</el-tag>
         </div>
         <div class="s-table-item__status">
-          <el-tag v-if="data.status_id" :type="colorStatus" :effect="effect">{{
-            data.status_id.value
-          }}</el-tag>
+          <el-tag
+            v-if="data.status_id"
+            :type="colorStatus"
+            :effect="effect"
+          >{{ data.status_id.value }}</el-tag>
         </div>
         <div class="s-table-item__location">
-          <el-link
+          <component
             v-if="data.location_id"
-            :href="
-              `index.php?module=${data.location_id.module}&action=DetailView&record=${data.location_id.id}`
-            "
-            >{{ data.location_id.value }}</el-link
-          >
+            :is="data.location_id.link ? 'el-link' : 's-text'"
+            :href="data.location_id.link"
+          >{{ data.name_id.value }}</component>
         </div>
         <div class="s-table-item__date">{{ `21.02.1998` }}</div>
       </div>
@@ -38,14 +33,11 @@
           v-for="(item, k) in defineBodyData"
           :key="`${k + item.value}`"
         >
-          <!-- <span class="s-table-item__value-name"> -->
-          <el-link
-            :href="
-              `index.php?module=${item.module}&action=DetailView&record=${item.id}`
-            "
-            >{{ item.value }}</el-link
-          >
-          <!-- </span> -->
+          <component
+            class="s-table-item__medium-link"
+            :is="item.link ? 'el-link' : 's-text'"
+            :href="item.link"
+          >{{ item.value }}</component>
         </div>
       </div>
       <div class="s-table-item__right">
@@ -64,15 +56,15 @@
       <div class="s-table-item__bottom-main">
         <div class="s-table-item__stack">{{ stack }}</div>
         <div class="s-table-item__salary">
-          <div class="s-table-item__salary-min" v-if="data.salary_min">
-            {{ data.salary_min.value | salaryFormat }}
-          </div>
-          <div class="s-table-item__salary-max" v-if="data.salary_max">
-            {{ data.salary_max.value | salaryFormat }}
-          </div>
-          <div class="s-table-item__salary-val" v-if="data.salary_val">
-            {{ data.salary_val.value }}
-          </div>
+          <div
+            class="s-table-item__salary-min"
+            v-if="data.salary_min"
+          >{{ data.salary_min.value | salaryFormat }}</div>
+          <div
+            class="s-table-item__salary-max"
+            v-if="data.salary_max"
+          >{{ data.salary_max.value | salaryFormat }}</div>
+          <div class="s-table-item__salary-val" v-if="data.salary_val">{{ data.salary_val.value }}</div>
         </div>
       </div>
       <div class="s-table-item__peoples">
@@ -84,8 +76,7 @@
               v-for="(people, i) in exchangePeoples"
               effect="plain"
               :key="`${i}_${people}`"
-              >{{ people }}</el-tag
-            >
+            >{{ people }}</el-tag>
           </div>
         </div>
         <div class="peoples s-table-item__peoples__peoples">
@@ -96,8 +87,7 @@
               v-for="(people, i) in recruiterPeoples"
               effect="plain"
               :key="`${i}_${people}`"
-              >{{ people }}</el-tag
-            >
+            >{{ people }}</el-tag>
           </div>
         </div>
       </div>
@@ -106,7 +96,9 @@
 </template>
 
 <script>
+import SText from 'Elements/Text/SText';
 import peoplesData from 'Parts/Table/mockPeoples.json';
+import { rand } from '@/utils/helpers';
 const statuses = {
   Открыта: 'success',
   Отменена: 'info',
@@ -128,18 +120,18 @@ export default {
       type: Boolean,
       default: false
     },
-    id: {
-      type: String
-    },
     type: {
       type: String,
       default: 'table'
     }
   },
+  components: {
+    SText
+  },
   data() {
     return {
       wideInfo: this.wide,
-      percentage: this.rand(0, 100),
+      percentage: rand(0, 100),
       customColors: [
         { color: '#F56C6C', percentage: 30 },
         { color: '#e6a23c', percentage: 40 },
@@ -154,9 +146,21 @@ export default {
         'manager_id'
       ],
       //отдел + рекрутер
-      stack: stacks[this.rand(0, stacks.length - 1)],
+      stack: stacks[rand(0, stacks.length - 1)],
       peoplesData: peoplesData
     };
+  },
+  beforeMount() {
+    // console.log(Object.keys(this.data));
+    for (let [key, value] of Object.entries(this.data)) {
+      let module = key === 'name_id' ? 'HRPAC_VACANCY' : value.module;
+      // console.log(module, value.id);
+      if (value.id && module) {
+        value[
+          'link'
+        ] = `index.php?module=${module}&action=DetailView&record=${value.id}`;
+      }
+    }
   },
   computed: {
     colorStatus() {
@@ -188,10 +192,10 @@ export default {
       return this.wideInfo ? 'el-icon-arrow-up' : 'el-icon-arrow-down';
     },
     exchangePeoples() {
-      return this.getPeoples(this.rand(5, 10));
+      return this.getPeoples(rand(5, 10));
     },
     recruiterPeoples() {
-      return this.getPeoples(this.rand(2, 5));
+      return this.getPeoples(rand(2, 5));
     }
   },
   methods: {
@@ -202,9 +206,7 @@ export default {
       let res = [];
       for (let i = 0; i < count; i++) {
         res.push(
-          this.peoplesData.peoples[
-            this.rand(0, this.peoplesData.peoples.length - 1)
-          ]
+          this.peoplesData.peoples[rand(0, this.peoplesData.peoples.length - 1)]
         );
       }
       return res;

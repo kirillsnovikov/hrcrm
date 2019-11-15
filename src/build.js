@@ -11,7 +11,10 @@ import {
   Progress,
   Tag,
   ButtonGroup,
-  Tooltip
+  Tooltip,
+  Tabs,
+  TabPane,
+  Avatar
 } from 'element-ui';
 
 const components = {
@@ -22,7 +25,10 @@ const components = {
   Progress,
   Tag,
   ButtonGroup,
-  Tooltip
+  Tooltip,
+  Tabs,
+  TabPane,
+  Avatar
 };
 
 for (let component of Object.values(components)) {
@@ -54,9 +60,11 @@ Object.keys(libs).map(libName => {
 
 // Parts
 import STable from 'Parts/Table/STable';
+import SCard from 'Parts/Card/SCard';
 
 const parts = {
-  STable
+  STable,
+  SCard
 };
 
 Object.keys(parts).forEach(name => {

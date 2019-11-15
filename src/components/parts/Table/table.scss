@@ -67,10 +67,14 @@
     @extend %flex-center;
     white-space: nowrap;
     width: 50%;
-    .el-link {
-      font-size: $--font-size-large;
-      margin-right: 0.5em;
-    }
+  }
+
+  &__title-link {
+    color: $--color-primary;
+    font-weight: bold;
+    margin-right: 0.5em;
+    font-size: 1.25em;
+    // text-decoration: underline;
   }
 
   &__status {
@@ -96,14 +100,20 @@
     @extend %flex;
     flex-wrap: wrap;
     flex: 1;
-    .el-link {
-      font-weight: bold;
-    }
+    // .el-link {
+    // }
   }
 
   &__medium-value {
     width: 50%;
     margin: 0.25em 0;
+  }
+
+  &__medium-link {
+    font-weight: bold;
+    font-size: 0.875em;
+    color: $--color-text-regular;
+    // text-decoration: underline;
   }
 
   &__right {

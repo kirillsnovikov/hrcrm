@@ -29,6 +29,7 @@ export default {
   },
   computed: {
     parseTableData() {
+      // console.log(this.data);
       let tableData = [];
       if (this.data.data) {
         this.data.data.forEach(item => {
@@ -51,11 +52,17 @@ export default {
     parseData(data) {
       let titles = {};
       Object.keys(this.data.columns).forEach(column => {
+        // titles[`${this.data.columns[column]['name']}`] = this.data.columns[
+        //   column
+        // ]
+        //   ? this.getColumnParams(column, data)
+        //   : {};
         Object.defineProperty(titles, this.data.columns[column]['name'], {
           value: this.data.columns[column]
             ? this.getColumnParams(column, data)
             : {},
-          writable: false
+          writable: true,
+          enumerable: true
         });
       });
       return titles;
