@@ -69,9 +69,14 @@ export default {
     },
     getColumnParams(column, data) {
       let colData = this.data.columns[column];
-      // console.log('data', data);
+      // console.log('colData', colData);
+      let columnParams = Object.keys(colData).concat(
+        this.columnParams.filter(param => {
+          return Object.keys(colData).indexOf(param) < 0;
+        })
+      );
       let parameters = {};
-      this.columnParams.forEach(param => {
+      columnParams.forEach(param => {
         if (param === 'label') {
           parameters[param] = this.data.mod[colData[param]];
         } else if (param === 'module') {
@@ -83,7 +88,8 @@ export default {
           if ((colPar = colData[param]) === 'HRPAC_VACANCY_NAMES_ID_C') {
             parameters[param] = data['ID'];
           } else {
-            parameters[param] = data[colPar];
+            // console.log('param', param);
+            parameters[param] = colPar;
           }
         }
       });

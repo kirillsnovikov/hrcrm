@@ -8,22 +8,24 @@
             :type="'primary'"
             :href="data.name_id.link"
             class="s-table-item__title-link"
-          >{{ data.name_id.value }}</component>
-          <el-tag v-if="data.amount" :size="'mini'">{{ data.amount.value }}</el-tag>
+            >{{ data.name_id.value }}</component
+          >
+          <el-tag v-if="data.amount" :size="'mini'">{{
+            data.amount.value
+          }}</el-tag>
         </div>
         <div class="s-table-item__status">
-          <el-tag
-            v-if="data.status_id"
-            :type="colorStatus"
-            :effect="effect"
-          >{{ data.status_id.value }}</el-tag>
+          <el-tag v-if="data.status_id" :type="colorStatus" :effect="effect">{{
+            data.status_id.value
+          }}</el-tag>
         </div>
         <div class="s-table-item__location">
           <component
             v-if="data.location_id"
             :is="data.location_id.link ? 'el-link' : 's-text'"
             :href="data.location_id.link"
-          >{{ data.name_id.value }}</component>
+            >{{ data.location_id.value }}</component
+          >
         </div>
         <div class="s-table-item__date">{{ `21.02.1998` }}</div>
       </div>
@@ -37,7 +39,8 @@
             class="s-table-item__medium-link"
             :is="item.link ? 'el-link' : 's-text'"
             :href="item.link"
-          >{{ item.value }}</component>
+            >{{ item.value }}</component
+          >
         </div>
       </div>
       <div class="s-table-item__right">
@@ -56,15 +59,25 @@
       <div class="s-table-item__bottom-main">
         <div class="s-table-item__stack">{{ stack }}</div>
         <div class="s-table-item__salary">
-          <div
-            class="s-table-item__salary-min"
-            v-if="data.salary_min"
-          >{{ data.salary_min.value | salaryFormat }}</div>
+          <div class="s-table-item__salary-min" v-if="data.salary_min">
+            {{
+              data.salary_min.value
+                | salaryFormat(data.salary_min.type, data.salary_min.precision)
+            }}
+          </div>
           <div
             class="s-table-item__salary-max"
+            v-bind:draggable="''"
             v-if="data.salary_max"
-          >{{ data.salary_max.value | salaryFormat }}</div>
-          <div class="s-table-item__salary-val" v-if="data.salary_val">{{ data.salary_val.value }}</div>
+          >
+            {{
+              data.salary_max.value
+                | salaryFormat(data.salary_min.type, data.salary_min.precision)
+            }}
+          </div>
+          <div class="s-table-item__salary-val" v-if="data.salary_val">
+            {{ data.salary_val.value }}
+          </div>
         </div>
       </div>
       <div class="s-table-item__peoples">
@@ -76,7 +89,8 @@
               v-for="(people, i) in exchangePeoples"
               effect="plain"
               :key="`${i}_${people}`"
-            >{{ people }}</el-tag>
+              >{{ people }}</el-tag
+            >
           </div>
         </div>
         <div class="peoples s-table-item__peoples__peoples">
@@ -87,7 +101,8 @@
               v-for="(people, i) in recruiterPeoples"
               effect="plain"
               :key="`${i}_${people}`"
-            >{{ people }}</el-tag>
+              >{{ people }}</el-tag
+            >
           </div>
         </div>
       </div>
@@ -161,6 +176,9 @@ export default {
         ] = `index.php?module=${module}&action=DetailView&record=${value.id}`;
       }
     }
+  },
+  mounted() {
+    // console.log(this.data);
   },
   computed: {
     colorStatus() {
