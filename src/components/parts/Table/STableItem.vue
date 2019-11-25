@@ -10,14 +10,14 @@
             class="s-table-item__title-link"
             >{{ data.name_id.value }}</component
           >
-          <el-tag v-if="data.amount" :size="'mini'">{{
-            data.amount.value
-          }}</el-tag>
+          <el-tag v-if="data.amount" :size="'mini'">
+            {{ data.amount.value }}
+          </el-tag>
         </div>
         <div class="s-table-item__status">
-          <el-tag v-if="data.status_id" :type="colorStatus" :effect="effect">{{
-            data.status_id.value
-          }}</el-tag>
+          <el-tag v-if="data.status_id" :type="colorStatus" :effect="effect">
+            {{ data.status_id.value }}
+          </el-tag>
         </div>
         <div class="s-table-item__location">
           <component

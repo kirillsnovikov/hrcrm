@@ -1,0 +1,101 @@
+.hr-title {
+  font-size: 1.625em;
+  color: $--color-primary;
+}
+
+.stage-form {
+  color: $--color-text-regular;
+
+  &__hr-title {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 0.4em;
+    color: $--color-primary;
+    &:after {
+      content: ':';
+    }
+  }
+
+  &__buttons {
+    margin: 1em 0;
+  }
+  &__input {
+    margin-bottom: 1em;
+  }
+  &__dnd {
+    @extend %flex;
+  }
+  &__dnd-left {
+    flex: 1;
+    margin-right: 1em;
+  }
+  &__dnd-right {
+    flex: 1;
+  }
+}
+
+.stage-list {
+  @extend %flex-col;
+  padding: 0.5em 1em;
+  &__item {
+    padding: 0.5em 1em;
+    border: $--border-base;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+    margin-bottom: 0.5em;
+    cursor: move;
+    &:last-child() {
+      margin-bottom: 0;
+    }
+  }
+
+  &_pos {
+    &_right {
+      box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+      border-radius: $--border-radius-base;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.hr-input {
+  @extend %flex-center;
+  font-size: 0.875em;
+  &__label {
+    margin-right: 0.625em;
+    width: 150px;
+    text-align: right;
+    &:before {
+      content: '*';
+      color: $--color-danger;
+      margin-right: 0.25em;
+    }
+  }
+  &__input {
+    width: 400px;
+  }
+}
+.hr-checkbox {
+  @extend %flex;
+  font-size: 0.875em;
+  &__label {
+    margin-right: 0.625em;
+    width: 150px;
+    text-align: right;
+  }
+  &__input {
+    width: 400px;
+  }
+}
+
+// .hr-input {
+//   @extend %input;
+// }
+
+// .hr-checkbox {
+//   @extend %input;
+// }

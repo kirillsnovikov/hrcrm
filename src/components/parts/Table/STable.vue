@@ -4,7 +4,6 @@
       v-for="item in parseTableData"
       :data="item"
       :key="item.name_id.id"
-      :id="item.name_id.id"
     ></s-table-item>
   </section>
 </template>

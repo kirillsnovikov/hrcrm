@@ -14,7 +14,9 @@ import {
   Tooltip,
   Tabs,
   TabPane,
-  Avatar
+  Avatar,
+  Input,
+  Checkbox
 } from 'element-ui';
 
 const components = {
@@ -28,7 +30,9 @@ const components = {
   Tooltip,
   Tabs,
   TabPane,
-  Avatar
+  Avatar,
+  Input,
+  Checkbox
 };
 
 for (let component of Object.values(components)) {
@@ -61,10 +65,12 @@ Object.keys(libs).map(libName => {
 // Parts
 import STable from 'Parts/Table/STable';
 import SCard from 'Parts/Card/SCard';
+import StageCreate from 'Parts/Stage/Create';
 
 const parts = {
   STable,
-  SCard
+  SCard,
+  StageCreate
 };
 
 Object.keys(parts).forEach(name => {

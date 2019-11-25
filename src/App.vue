@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <s-card :data="cardData"></s-card>
+    <!-- <s-card :data="cardData"></s-card> -->
     <!-- <el-badge :value="8" class="item" type="success">
       <el-button type="primary">Default</el-button>
     </el-badge>-->
-    <s-table :data="tableData"></s-table>
+    <!-- <s-table :data="tableData"></s-table> -->
+    <stage-create :stages="stages" :data="stageData"></stage-create>
   </div>
 </template>
 
 <script>
-import STable from 'Parts/Table/STable';
-import SCard from 'Parts/Card/SCard';
+import StageCreate from 'Parts/Stage/Create';
+// import STable from 'Parts/Table/STable';
+// import SCard from 'Parts/Card/SCard';
+import stages from 'Parts/Stage/stageCreateMock';
+import stageData from 'Parts/Stage/stageDataMock';
 import tableData from 'Parts/Table/mockTable3';
 import cardData from 'Parts/Card/mockCard';
 
 export default {
   components: {
-    SCard,
-    STable
+    StageCreate
+    // SCard,
+    // STable
   },
   data() {
     return {
       tableData: tableData,
+      stageData: stageData,
       cardData: cardData,
+      stages: stages,
       options: [
         {
           value: 'Option1',

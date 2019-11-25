@@ -15,7 +15,9 @@ import {
   Tooltip,
   Tabs,
   TabPane,
-  Avatar
+  Avatar,
+  Input,
+  Checkbox
 } from 'element-ui';
 
 const components = {
@@ -29,7 +31,9 @@ const components = {
   Tooltip,
   Tabs,
   TabPane,
-  Avatar
+  Avatar,
+  Input,
+  Checkbox
 };
 
 for (let component of Object.values(components)) {

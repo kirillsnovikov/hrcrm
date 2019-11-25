@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1deb66a5-b755-38eb-c46d-5dca5504e40a",
+    "name": "Резюме у Заказчика",
+    "activity": "1",
+    "color": "#ab9ac0",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  },
+  {
+    "id": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
+    "name": "Резюме у внешнего Заказчика",
+    "activity": "1",
+    "color": "#ab9ac0",
+    "required_stage": "not_required",
+    "required_position": null,
+    "position_sort": "-3"
+  },
+  {
+    "id": "5b8ea558-f775-8112-d2e4-5dca55c6118b",
+    "name": "Тестовое задание",
+    "activity": "1",
+    "color": "#ab9ac0",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  },
+  {
+    "id": "6a52057c-a51e-c125-154b-5dca55bb9681",
+    "name": "Интервью с заказчиком",
+    "activity": "1",
+    "color": "#ab9ac0",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  },
+  {
+    "id": "723e93e2-403c-d04e-7716-5dd4de4c71d9",
+    "name": "Добавлен/Откликнулся",
+    "activity": "1",
+    "color": "#f59d56",
+    "required_stage": "required",
+    "required_position": "required_top",
+    "position_sort": "3"
+  },
+  {
+    "id": "8416b460-7d0c-4cc1-e2e7-5dca55566054",
+    "name": "Первичное интервью с рекрутером",
+    "activity": "1",
+    "color": "#ffc000",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  },
+  {
+    "id": "a4b3a50e-577a-f78e-d62b-5dca56474689",
+    "name": "Интервью с внешним Заказчиком",
+    "activity": "1",
+    "color": "#ab9ac0",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  },
+  {
+    "id": "b91e9eba-efd0-7cd6-1c99-5dca5619aaf8",
+    "name": "Отказ",
+    "activity": "0",
+    "color": "#c05046",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  },
+  {
+    "id": "c0520b32-f7ea-858b-4ca6-5dca56388157",
+    "name": "Принят",
+    "activity": "0",
+    "color": "#00cc66",
+    "required_stage": "required",
+    "required_position": "required_bottom",
+    "position_sort": "1"
+  },
+  {
+    "id": "d9d3cffc-8ec0-9ba4-74a9-5dca56460314",
+    "name": "Подготовка к выходу",
+    "activity": "0",
+    "color": "#9dbb61",
+    "required_stage": "required",
+    "required_position": "required_bottom",
+    "position_sort": "2"
+  },
+  {
+    "id": "da56c3d2-4b84-d4f6-9a52-5dca56f7b688",
+    "name": "Оффер",
+    "activity": "1",
+    "color": "#4bacc6",
+    "required_stage": "required",
+    "required_position": "required_bottom",
+    "position_sort": "3"
+  },
+  {
+    "id": "e30b0c3e-b194-4f73-7437-5dca5585cf98",
+    "name": "Телефонное интервью",
+    "activity": "1",
+    "color": "#ffc000",
+    "required_stage": null,
+    "required_position": null,
+    "position_sort": null
+  }
+]
