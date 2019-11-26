@@ -7,9 +7,12 @@
   * {
     box-sizing: border-box;
   }
-  .test {
-    @extend %flex;
-  }
+}
+
+#content {
+  font-family: Arial, Helvetica, sans-serif;
+  background: $--color-white;
+  font-size: 16px;
 }
 
 @import 'Elements/Link/link.scss';

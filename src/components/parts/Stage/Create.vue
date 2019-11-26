@@ -4,19 +4,26 @@
       {{ data.name.value || 'Новый шаблон' }}
     </div>
     <div class="stage-form__buttons">
-      <el-button type="primary" @click="onSubmit">Сохранить</el-button>
+      <el-button type="primary" :disabled="name.length === 0" @click="onSubmit"
+        >Сохранить</el-button
+      >
       <el-button>Закрыть</el-button>
     </div>
     <div class="stage-form__inputs">
       <label class="hr-input stage-form__input">
         <span class="hr-input__label">Наименование</span>
-        <el-input
-          class="hr-input__input"
-          label="Option A"
-          maxlength="35"
-          show-word-limit
-          v-model="name"
-        ></el-input>
+        <div class="hr-input__input">
+          <el-input
+            label="Option A"
+            maxlength="35"
+            show-word-limit
+            v-model="name"
+            append="sdfsdffd"
+          ></el-input>
+          <span v-if="nameError && name.length === 0" class="hr-input__error"
+            >Обязательное поле</span
+          >
+        </div>
       </label>
       <label class="hr-checkbox stage-form__input">
         <span class="hr-checkbox__label">Основной шаблон</span>
@@ -43,36 +50,40 @@
       </div>
       <div class="stage-form__dnd-right">
         <div class="stage-form__title">Используемые этапы</div>
-        <div
-          class="stage-list__item"
-          v-for="(stage, i) in topStages"
-          :key="`${stage.name}_${i}`"
-          :style="{ background: stage.color }"
-        >
-          {{ stage.name }}
-        </div>
-        <draggable
-          class="stage-list stage-list_pos_right"
-          group="stages"
-          :list="customStages"
-          :style="{ height: stageHeight + 'px' }"
-        >
+        <div class="stage-list">
           <div
-            class="stage-list__item"
-            v-for="(stage, i) in customStages"
+            class="stage-list__item stage-list__item_fixed"
+            v-for="(stage, i) in topStages"
             :key="`${stage.name}_${i}`"
             :style="{ background: stage.color }"
           >
+            <i class="el-icon-circle-check"></i>
             {{ stage.name }}
           </div>
-        </draggable>
-        <div
-          class="stage-list__item"
-          v-for="(stage, i) in bottomStages"
-          :key="`${stage.name}_${i}`"
-          :style="{ background: stage.color }"
-        >
-          {{ stage.name }}
+          <draggable
+            class="stage-list stage-list_pos_right"
+            group="stages"
+            :list="customStages"
+            :style="{ height: stageHeight + 'px' }"
+          >
+            <div
+              class="stage-list__item"
+              v-for="(stage, i) in customStages"
+              :key="`${stage.name}_${i}`"
+              :style="{ background: stage.color }"
+            >
+              {{ stage.name }}
+            </div>
+          </draggable>
+          <div
+            class="stage-list__item stage-list__item_fixed"
+            v-for="(stage, i) in bottomStages"
+            :key="`${stage.name}_${i}`"
+            :style="{ background: stage.color }"
+          >
+            <i class="el-icon-circle-check"></i>
+            {{ stage.name }}
+          </div>
         </div>
       </div>
     </div>
@@ -96,7 +107,8 @@ export default {
   },
   data() {
     return {
-      name: null,
+      name: '',
+      nameError: false,
       mainTemplate: null,
       generalAccess: null,
       stageHeight: null,
@@ -136,51 +148,70 @@ export default {
         this.topStages.concat(this.customStages, this.bottomStages)
       );
       return stages;
+    },
+    checkError() {
+      return this.name ? false : true;
     }
   },
   methods: {
     onSubmit() {
+      this.nameError = false;
+      if (this.checkError) {
+        this.nameError = true;
+        return;
+      }
       Object.defineProperties(this.postData, {
+        name: {
+          value: this.name,
+          writable: true,
+          enumerable: true
+        },
         record: {
           value: this.data.id.value,
-          writable: true
+          writable: true,
+          enumerable: true
         },
         select_stage_data: {
           value: this.selectStages,
-          writable: true
+          writable: true,
+          enumerable: true
         },
         assigned_user_name: {
           value: this.data.assigned_user_name.value,
-          writable: true
+          writable: true,
+          enumerable: true
         },
         assigned_user_id: {
           value: this.data.assigned_user_id.value,
-          writable: true
+          writable: true,
+          enumerable: true
         },
         general_access: {
           value: this.generalAccess ? 1 : 0,
-          writable: true
+          writable: true,
+          enumerable: true
         },
         main_template: {
           value: this.mainTemplate ? 1 : 0,
-          writable: true
+          writable: true,
+          enumerable: true
         }
       });
+
       this.$axios
         .post(
-          'http://crmfront/index.php?module=STAGE_Templates&action=custom_save',
-          this.postData
+          '/index.php?module=STAGE_Templates&action=custom_save&to_pdf=true' +
+            '&data=' +
+            JSON.stringify(this.postData),
+          {}
         )
-        .then(res => console.log(res));
-
-      //   this.$axios
-      //     .post('https://reqres.in/api/users', this.postData)
-      //     .then(res => console.log(res));
-
-      console.log(this.postData);
+        .then(res => {
+          if (res.statusText === 'OK') {
+            location = '/index.php?module=STAGE_Templates';
+          }
+        });
     },
     handleStages(stages) {
-      //   console.log(stages);
       let handleStages = [];
       stages.forEach((stage, key) => {
         handleStages.push({
