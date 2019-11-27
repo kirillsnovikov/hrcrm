@@ -4,16 +4,10 @@
 }
 
 .s-card {
+  @extend %crm-font;
   color: $--color-text-regular;
   &__buttons {
     margin-bottom: 1em;
-  }
-
-  &__button {
-    height: auto !important;
-    line-height: normal !important;
-    text-transform: none !important;
-    cursor: not-allowed !important;
   }
 
   &__main {

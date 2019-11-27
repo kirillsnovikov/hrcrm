@@ -4,6 +4,7 @@
 }
 
 .stage-form {
+  @extend %crm-font;
   color: $--color-text-regular;
 
   &__hr-title {
@@ -20,7 +21,7 @@
     }
   }
 
-  &__buttons {
+  &__inline-buttons {
     margin: 1em 0;
   }
   &__input {
@@ -35,6 +36,26 @@
   }
   &__dnd-right {
     flex: 1;
+  }
+}
+
+.stage-view {
+  &__hr-title {
+    margin: 0.5em 0;
+  }
+  &__body {
+    width: 50%;
+  }
+  &__check {
+    @extend %flex-col;
+  }
+  &__check-icon {
+    color: $--color-success;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+  &__check-item {
+    margin: 0.5em;
   }
 }
 
@@ -91,6 +112,7 @@
     left: 0;
   }
 }
+
 .hr-checkbox {
   @extend %flex;
   font-size: 0.875em;
@@ -104,10 +126,12 @@
   }
 }
 
-// .hr-input {
-//   @extend %input;
-// }
-
-// .hr-checkbox {
-//   @extend %input;
-// }
+.inline-buttons {
+  @extend %flex;
+  &__btn {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

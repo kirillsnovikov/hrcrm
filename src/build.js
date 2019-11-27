@@ -66,11 +66,13 @@ Object.keys(libs).map(libName => {
 import STable from 'Parts/Table/STable';
 import SCard from 'Parts/Card/SCard';
 import StageCreate from 'Parts/Stage/Create';
+import StageView from 'Parts/Stage/View';
 
 const parts = {
   STable,
   SCard,
-  StageCreate
+  StageCreate,
+  StageView
 };
 
 Object.keys(parts).forEach(name => {

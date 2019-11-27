@@ -24,7 +24,7 @@
     "importable": "required",
     "duplicate_merge": "enabled",
     "merge_filter": "selected",
-    "value": ""
+    "value": "TITLE"
   },
   "date_entered": {
     "name": "date_entered",
@@ -284,7 +284,7 @@
     "merge_filter": "disabled",
     "len": "255",
     "size": "20",
-    "value": "0"
+    "value": "1"
   },
   "stage_templates_hrpac_selection_stage_1": {
     "name": "stage_templates_hrpac_selection_stage_1",

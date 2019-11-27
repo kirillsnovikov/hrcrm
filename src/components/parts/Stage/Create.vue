@@ -3,11 +3,17 @@
     <div class="hr-title stage-form__hr-title">
       {{ data.name.value || 'Новый шаблон' }}
     </div>
-    <div class="stage-form__buttons">
-      <el-button type="primary" :disabled="name.length === 0" @click="onSubmit"
+    <div class="inline-buttons stage-form__inline-buttons">
+      <el-button
+        class="inline-buttons__btn"
+        type="primary"
+        :disabled="name.length === 0"
+        @click="onSubmit"
         >Сохранить</el-button
       >
-      <el-button>Закрыть</el-button>
+      <a class="inline-buttons__btn" href="/index.php?module=STAGE_Templates">
+        <el-button>Закрыть</el-button>
+      </a>
     </div>
     <div class="stage-form__inputs">
       <label class="hr-input stage-form__input">
@@ -27,20 +33,26 @@
       </label>
       <label class="hr-checkbox stage-form__input">
         <span class="hr-checkbox__label">Основной шаблон</span>
-        <el-checkbox v-model="mainTemplate"></el-checkbox>
+        <el-checkbox
+          v-model="mainTemplate"
+          :checked="mainTemplate === '1'"
+        ></el-checkbox>
       </label>
       <label class="hr-checkbox stage-form__input">
         <span class="hr-checkbox__label">Общий доступ</span>
-        <el-checkbox v-model="generalAccess"></el-checkbox>
+        <el-checkbox
+          v-model="generalAccess"
+          :checked="generalAccess === '1'"
+        ></el-checkbox>
       </label>
     </div>
     <div class="stage-form__dnd">
       <div class="stage-form__dnd-left">
         <div class="stage-form__title">Неиспользуемые этапы</div>
-        <draggable class="stage-list" group="stages" :list="getStages">
+        <draggable class="stage-list" group="stages" :list="listStages">
           <div
             class="stage-list__item"
-            v-for="(stage, i) in getStages"
+            v-for="(stage, i) in listStages"
             :key="`${stage.name}_${i}`"
             :style="{ background: stage.color }"
           >
@@ -103,30 +115,39 @@ export default {
     },
     stages: {
       type: Array
+    },
+    detail: {
+      type: Array
     }
   },
   data() {
     return {
-      name: '',
+      name: this.data.name.value || '',
       nameError: false,
-      mainTemplate: null,
-      generalAccess: null,
+      mainTemplate:
+        this.data.main_template.value || this.data.main_template.default,
+      generalAccess:
+        this.data.general_access.value || this.data.general_access.default,
       stageHeight: null,
+      listStages: [],
       customStages: [],
       allSelectStages: [],
       postData: {}
     };
   },
   mounted() {
-    this.stageHeight = document.querySelector(
-      '.stage-form__dnd-left .stage-list'
-    ).offsetHeight;
+    this.defineStages();
   },
   computed: {
-    getStages() {
-      let stages = this.stages.filter(
+    detailStages() {
+      let stages = this.detail.filter(
         stage => stage.required_position === null
       );
+      if (stages.length > 0) {
+        stages.sort((prev, next) => prev.sort - next.sort);
+      } else {
+        stages = [];
+      }
       return stages;
     },
     topStages() {
@@ -216,10 +237,29 @@ export default {
       stages.forEach((stage, key) => {
         handleStages.push({
           id: stage.id,
-          sort: key
+          sort: key + 1
         });
       });
       return handleStages;
+    },
+    defineStages() {
+      this.customStages = this.detailStages;
+      let stages = this.stages.filter(
+        stage => stage.required_position === null
+      );
+      let cnt = stages.length;
+      stages.forEach((stage, i) => {
+        this.customStages.forEach(custom => {
+          if (custom.id === stage.id) {
+            stages.splice(i, 1);
+          }
+        });
+      });
+      this.listStages = stages;
+      setTimeout(() => {
+        let stageEl = document.querySelector('.stage-list__item');
+        this.stageHeight = (stageEl.offsetHeight + 8) * cnt + 8;
+      }, 0);
     }
   }
 };

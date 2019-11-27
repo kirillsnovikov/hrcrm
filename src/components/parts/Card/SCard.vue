@@ -1,18 +1,10 @@
 <template>
   <section class="s-card">
     <div class="s-card__buttons">
-      <el-button class="s-card__button" type="primary" disabled
-        >Править</el-button
-      >
-      <el-button class="s-card__button" type="primary" disabled
-        >Дублировать</el-button
-      >
-      <el-button class="s-card__button" type="primary" disabled
-        >Отправить на согласование</el-button
-      >
-      <el-button class="s-card__button" type="primary" disabled
-        >Подобрать кандидата</el-button
-      >
+      <el-button type="primary" disabled>Править</el-button>
+      <el-button type="primary" disabled>Дублировать</el-button>
+      <el-button type="primary" disabled>Отправить на согласование</el-button>
+      <el-button type="primary" disabled>Подобрать кандидата</el-button>
     </div>
     <div class="s-card__candidates">
       <div
@@ -21,9 +13,9 @@
         class="candidate"
       >
         <div class="candidate__main">
-          <el-link :type="'primary'" class="candidate__name">{{
-            candidate
-          }}</el-link>
+          <el-link :type="'primary'" class="candidate__name">
+            {{ candidate }}
+          </el-link>
           <span class="candidate__stage">Этап подбора</span>
         </div>
         <div class="candidate__close" @click="closeCandidate(candidate)">
@@ -40,9 +32,9 @@
     <div class="s-card__main">
       <div class="s-card__info">
         <el-tabs v-model="activeInfo">
-          <el-tab-pane label="Требования" name="description">
-            {{ data.description.value }}
-          </el-tab-pane>
+          <el-tab-pane label="Требования" name="description">{{
+            data.description.value
+          }}</el-tab-pane>
           <el-tab-pane label="История" name="history"
             >Тут будет какая-то история по данной вакансии</el-tab-pane
           >
