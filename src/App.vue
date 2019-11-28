@@ -5,7 +5,8 @@
       <el-button type="primary">Default</el-button>
     </el-badge>-->
     <!-- <s-table :data="tableData"></s-table> -->
-    <stage-view :stages="stagesUpdate" :data="stageData"></stage-view>
+    <selection :data="selectionData"></selection>
+    <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
     <!-- <stage-create
       :stages="stagesCreate"
       :data="stageData"
@@ -16,9 +17,11 @@
 
 <script>
 // import StageCreate from 'Parts/Stage/Create';
-import StageView from 'Parts/Stage/View';
+// import StageView from 'Parts/Stage/View';
+import Selection from 'Parts/Candidate/Selection';
 // import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
+import selectionData from 'Parts/Candidate/selectionMock';
 import stagesUpdate from 'Parts/Stage/stageUpdateMock';
 import stagesCreate from 'Parts/Stage/stageCreateMock';
 import stageData from 'Parts/Stage/stageDataMock';
@@ -28,7 +31,8 @@ import cardData from 'Parts/Card/mockCard';
 export default {
   components: {
     // StageCreate,
-    StageView
+    // StageView,
+    Selection
     // SCard,
     // STable
   },
@@ -39,6 +43,7 @@ export default {
       cardData: cardData,
       stagesUpdate: stagesUpdate,
       stagesCreate: stagesCreate,
+      selectionData: selectionData,
       options: [
         {
           value: 'Option1',

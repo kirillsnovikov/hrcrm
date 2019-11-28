@@ -1,0 +1,32 @@
+.candidate-sel {
+  @extend %crm-font;
+}
+
+.stages-panel {
+  @extend %flex-center;
+  &__item {
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    border: $--border-base;
+    border-right: none;
+    cursor: pointer;
+    &:first-child {
+      @extend .border-left-radius;
+    }
+    &:last-child {
+      @extend .border-right-radius;
+      border-right: $--border-base;
+    }
+    &_active {
+      color: $--color-white;
+      //   background-color: transparent;
+      // opacity: 0.3;
+      //   color: $--color-text-primary;
+    }
+  }
+  &__input {
+    position: fixed;
+    left: -1000px;
+    opacity: 0;
+  }
+}

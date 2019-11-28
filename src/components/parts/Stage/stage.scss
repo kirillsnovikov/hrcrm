@@ -40,6 +40,7 @@
 }
 
 .stage-view {
+  @extend %crm-font;
   &__hr-title {
     margin: 0.5em 0;
   }

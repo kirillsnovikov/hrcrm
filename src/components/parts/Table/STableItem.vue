@@ -39,7 +39,7 @@
             class="s-table-item__medium-link"
             :is="item.link ? 'el-link' : 's-text'"
             :href="item.link"
-            >{{ item.value }}</component
+            >{{ item.value | grade }}</component
           >
         </div>
       </div>
@@ -154,12 +154,7 @@ export default {
         { color: '#409EFF', percentage: 80 },
         { color: '#67C23A', percentage: 100 }
       ],
-      bodyKeys: [
-        'business_unit_id',
-        'grade_id',
-        'project_link_id',
-        'manager_id'
-      ],
+      bodyKeys: ['business_unit_id', 'grade', 'project_link_id', 'manager_id'],
       //отдел + рекрутер
       stack: stacks[rand(0, stacks.length - 1)],
       peoplesData: peoplesData

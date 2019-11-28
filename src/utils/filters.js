@@ -29,3 +29,14 @@ Vue.filter('salaryFormat', (str, type = 'decimal', precision = 2) => {
     return str.toFixed();
   }
 });
+
+Vue.filter('grade', str => {
+  let grades = str.match(/\^[\w]+\^/g);
+  if (grades !== null && grades.length > 0) {
+    let mapped = grades.map(grade => {
+      return grade.replace(/\^/g, '');
+    });
+    return mapped.join(', ');
+  }
+  return str;
+});
