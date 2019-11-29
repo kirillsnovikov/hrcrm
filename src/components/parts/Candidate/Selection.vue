@@ -1,53 +1,75 @@
 <template>
   <section class="candidate-sel">
-    <div class="stages-panel">
+    <div class="stages-panel candidate-sel__header">
       <label
         class="stages-panel__item"
-        :style="stageStyle(i)"
+        :style="stageStyle(stage)"
         @click="stageFilter"
-        v-for="(stage, i) in data.stages"
+        v-for="(stage, i) in currentStages"
         :key="`${stage.name}_${i}`"
       >
         {{ stage.name }}
         <input
           type="checkbox"
-          v-model="stageItems"
-          :value="i"
+          v-model="selectStageItems"
+          :value="stage.name"
           class="stages-panel__input"
         />
       </label>
     </div>
-    {{ stageItems }}
+    <candidate-list
+      class="candidate-sel__main"
+      :candidates="selectCandidates"
+    ></candidate-list>
+    <div class="vacancy-select candidate-sel__sidebar">
+      <el-radio
+        class="vacancy-select__item"
+        v-model="currentVacancy"
+        :label="i"
+        v-for="(vacancy, i) in data.vacancies"
+        :key="`${vacancy.name}_${i}`"
+        >{{ vacancy.name }}</el-radio
+      >
+    </div>
   </section>
 </template>
 
 <script>
-// import { hexToRgba } from '@/utils/helpers';
+import CandidateList from 'Parts/Candidate/List';
 
 export default {
   props: {
     data: Object
   },
+  components: {
+    CandidateList
+  },
   data() {
     return {
-      stageItems: []
+      selectStageItems: [],
+      currentVacancy: 0
     };
   },
   computed: {
-    // stageStyle(e) {
-    //   console.log(e);
-    //   return {
-    //     // background:
-    //   };
-    // }
+    selectCandidates() {
+      return this.data.vacancies[this.currentVacancy].candidates;
+    },
+    currentStages() {
+      return this.data.vacancies[this.currentVacancy].stages;
+    }
   },
   methods: {
     stageFilter() {},
-    stageStyle(i) {
-      let style = {};
-      if (this.stageItems.find(item => item === i) !== undefined) {
-        console.log(this.data.stages[i].color);
-        style.background = this.data.stages[i].color;
+    stageStyle(stage) {
+      // console.log(stage);
+      let style = {
+        color: stage.color
+      };
+      if (
+        this.selectStageItems.find(item => item === stage.name) !== undefined
+      ) {
+        console.log(stage.color);
+        style.background = stage.color;
         style.color = '#ffffff';
       }
       return style;

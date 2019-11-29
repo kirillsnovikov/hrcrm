@@ -1,15 +1,37 @@
 .candidate-sel {
+  * {
+    box-sizing: border-box;
+  }
   @extend %crm-font;
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    'header header'
+    'main sidebar';
+  grid-template-columns: auto 20%;
+  grid-template-rows: auto auto;
+  &__header {
+    grid-area: header;
+  }
+  &__main {
+    // grid-gap: 10px;
+    grid-area: main;
+  }
+  &__sidebar {
+    grid-area: sidebar;
+  }
 }
 
 .stages-panel {
   @extend %flex-center;
+  width: 100%;
   &__item {
     padding: 0.5em 1em;
     box-sizing: border-box;
     border: $--border-base;
     border-right: none;
     cursor: pointer;
+    flex: 1;
     &:first-child {
       @extend .border-left-radius;
     }
@@ -19,14 +41,21 @@
     }
     &_active {
       color: $--color-white;
-      //   background-color: transparent;
-      // opacity: 0.3;
-      //   color: $--color-text-primary;
     }
   }
   &__input {
     position: fixed;
     left: -1000px;
     opacity: 0;
+  }
+}
+
+.vacancy-select {
+  @extend %flex-col;
+  &__item {
+    @extend .border-radius;
+    padding: 0.5em 1em;
+    border: $--border-base;
+    margin: 0 0 0.5em 0;
   }
 }

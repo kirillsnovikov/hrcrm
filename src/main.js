@@ -17,7 +17,8 @@ import {
   TabPane,
   Avatar,
   Input,
-  Checkbox
+  Checkbox,
+  Radio
 } from 'element-ui';
 
 const components = {
@@ -33,7 +34,8 @@ const components = {
   TabPane,
   Avatar,
   Input,
-  Checkbox
+  Checkbox,
+  Radio
 };
 
 for (let component of Object.values(components)) {

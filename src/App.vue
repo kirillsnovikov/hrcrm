@@ -5,7 +5,7 @@
       <el-button type="primary">Default</el-button>
     </el-badge>-->
     <!-- <s-table :data="tableData"></s-table> -->
-    <selection :data="selectionData"></selection>
+    <selection :data="candidatesData"></selection>
     <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
     <!-- <stage-create
       :stages="stagesCreate"
@@ -21,7 +21,7 @@
 import Selection from 'Parts/Candidate/Selection';
 // import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
-import selectionData from 'Parts/Candidate/selectionMock';
+import candidatesData from 'Parts/Candidate/candidatesMock';
 import stagesUpdate from 'Parts/Stage/stageUpdateMock';
 import stagesCreate from 'Parts/Stage/stageCreateMock';
 import stageData from 'Parts/Stage/stageDataMock';
@@ -43,7 +43,7 @@ export default {
       cardData: cardData,
       stagesUpdate: stagesUpdate,
       stagesCreate: stagesCreate,
-      selectionData: selectionData,
+      candidatesData: candidatesData,
       options: [
         {
           value: 'Option1',
