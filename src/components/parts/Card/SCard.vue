@@ -1,10 +1,23 @@
 <template>
   <section class="s-card">
-    <div class="s-card__buttons">
-      <el-button type="primary" disabled>Править</el-button>
-      <el-button type="primary" disabled>Дублировать</el-button>
-      <el-button type="primary" disabled>Отправить на согласование</el-button>
-      <el-button type="primary" disabled>Подобрать кандидата</el-button>
+    <div class="inline-buttons s-card__inline-buttons">
+      <a
+        :href="
+          `/index.php?module=HRPAC_VACANCY&action=EditView&record=${data.id.value}`
+        "
+        class="inline-buttons__btn"
+      >
+        <el-button type="primary">Править</el-button>
+      </a>
+      <el-button class="inline-buttons__btn" type="primary" disabled
+        >Дублировать</el-button
+      >
+      <el-button class="inline-buttons__btn" type="primary" disabled
+        >Отправить на согласование</el-button
+      >
+      <el-button class="inline-buttons__btn" type="primary" disabled
+        >Подобрать кандидата</el-button
+      >
     </div>
     <div class="s-card__candidates">
       <div

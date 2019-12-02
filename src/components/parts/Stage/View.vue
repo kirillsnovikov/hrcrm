@@ -6,13 +6,17 @@
         <a
           class="inline-buttons__btn"
           :href="
-          `/index.php?module=STAGE_Templates&action=EditView&record=${data.id.value}`
-        "
+            `/index.php?module=STAGE_Templates&action=EditView&record=${data.id.value}`
+          "
         >
           <el-button type="primary">Править</el-button>
         </a>
-        <el-button class="inline-buttons__btn" type="success" disabled>Дублировать</el-button>
-        <el-button type="danger" disabled class="inline-buttons__btn">Удалить</el-button>
+        <el-button class="inline-buttons__btn" type="success" disabled
+          >Дублировать</el-button
+        >
+        <el-button type="danger" disabled class="inline-buttons__btn"
+          >Удалить</el-button
+        >
         <a href="/index.php?module=STAGE_Templates" class="inline-buttons__btn">
           <el-button>Закрыть</el-button>
         </a>
@@ -20,11 +24,17 @@
       <div class="stage-view__check">
         <div class="stage-view__check-item">
           <span>Основной шаблон</span>
-          <i class="el-icon-check stage-view__check-icon" v-if="data.main_template.value === '1'"></i>
+          <i
+            class="el-icon-check stage-view__check-icon"
+            v-if="data.main_template.value === '1'"
+          ></i>
         </div>
         <div class="stage-view__check-item">
           <span>Общий доступ</span>
-          <i class="el-icon-check stage-view__check-icon" v-if="data.general_access.value === '1'"></i>
+          <i
+            class="el-icon-check stage-view__check-icon"
+            v-if="data.general_access.value === '1'"
+          ></i>
         </div>
       </div>
       <div class="stage-list stage-view__stage-list">

@@ -6,7 +6,7 @@
 .s-card {
   @extend %crm-font;
   color: $--color-text-regular;
-  &__buttons {
+  &__inline-buttons {
     margin-bottom: 1em;
   }
 
