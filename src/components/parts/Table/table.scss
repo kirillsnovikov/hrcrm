@@ -64,23 +64,41 @@
     width: 25%;
   }
 
+  &__left-top {
+    width: 100%;
+    @extend %flex-center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
   &__title {
     @extend %flex-center;
-    white-space: nowrap;
-
-    flex: 1;
+    // max-width: 85%;
+    flex: 80%;
+    overflow: hidden;
+    margin-right: 0.5em;
   }
 
   &__title-link {
+    display: block;
     color: $--color-primary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
     font-weight: bold;
     margin-right: 0.5em;
     font-size: 1.25em;
-    // text-decoration: underline;
+    max-width: 90%;
+  }
+
+  &__title-tag {
   }
 
   &__status {
     @extend %flex-center;
+    // min-width: 25%;
+    flex: 20%;
     justify-content: flex-end;
   }
 

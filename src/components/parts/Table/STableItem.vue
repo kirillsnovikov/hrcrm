@@ -2,22 +2,32 @@
   <section class="s-table-item">
     <div class="s-table-item__top" @click.alt="wideInfo = !wideInfo">
       <div class="s-table-item__left">
-        <div class="s-table-item__title">
-          <component
-            :is="data.name_id.link ? 'el-link' : 's-text'"
-            :type="'primary'"
-            :href="data.name_id.link"
-            class="s-table-item__title-link"
-            >{{ data.name_id.value }}</component
-          >
-          <el-tag v-if="data.amount" :size="'mini'">
-            {{ data.amount.value }}
-          </el-tag>
-        </div>
-        <div class="s-table-item__status">
-          <el-tag v-if="data.status_id" :type="colorStatus" :effect="effect">
-            {{ data.status_id.value }}
-          </el-tag>
+        <div class="s-table-item__left-top">
+          <div class="s-table-item__title">
+            <el-tooltip :content="data.name_id.value" placement="top-start">
+              <component
+                :is="data.name_id.link ? 'el-link' : 's-text'"
+                :type="'primary'"
+                :href="data.name_id.link"
+                class="s-table-item__title-link"
+                >{{ data.name_id.value }}</component
+              >
+            </el-tooltip>
+            <el-tag
+              class="s-table-item__title-tag"
+              v-if="data.amount"
+              :size="'mini'"
+              >{{ data.amount.value }}</el-tag
+            >
+          </div>
+          <div class="s-table-item__status">
+            <el-tag
+              v-if="data.status_id"
+              :type="colorStatus"
+              :effect="effect"
+              >{{ data.status_id.value }}</el-tag
+            >
+          </div>
         </div>
         <div class="s-table-item__location">
           <component

@@ -7,7 +7,8 @@
       <el-button
         class="inline-buttons__btn"
         type="primary"
-        :disabled="name.length === 0"
+        :disabled="checkError"
+        :icon="okLoadIcon"
         @click="onSubmit"
         >Сохранить</el-button
       >
@@ -26,9 +27,9 @@
             v-model="name"
             append="sdfsdffd"
           ></el-input>
-          <span v-if="nameError && name.length === 0" class="hr-input__error"
+          <!-- <span v-if="checkError && name.length === 0" class="hr-input__error"
             >Обязательное поле</span
-          >
+          >-->
         </div>
       </label>
       <label class="hr-checkbox stage-form__input">
@@ -124,6 +125,8 @@ export default {
     return {
       name: this.data.name.value || '',
       nameError: false,
+      isStartPost: false,
+      okLoadIcon: '',
       mainTemplate:
         this.data.main_template.value || this.data.main_template.default,
       generalAccess:
@@ -176,11 +179,11 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.nameError = false;
-      if (this.checkError) {
-        this.nameError = true;
+      if (this.isStartPost) {
         return;
       }
+      this.isStartPost = true;
+      this.okLoadIcon = 'el-icon-loading';
       Object.defineProperties(this.postData, {
         name: {
           value: this.name,
@@ -228,6 +231,7 @@ export default {
         )
         .then(res => {
           if (res.statusText === 'OK') {
+            this.okLoadIcon = 'el-icon-check';
             location = '/index.php?module=STAGE_Templates';
           }
         });

@@ -24,7 +24,7 @@
     "importable": "required",
     "duplicate_merge": "enabled",
     "merge_filter": "selected",
-    "value": "TITLE"
+    "value": ""
   },
   "date_entered": {
     "name": "date_entered",
