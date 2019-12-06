@@ -10,23 +10,20 @@
                 :type="'primary'"
                 :href="data.name_id.link"
                 class="s-table-item__title-link"
-                >{{ data.name_id.value }}</component
-              >
+              >{{ data.name_id.value }}</component>
             </el-tooltip>
             <el-tag
               class="s-table-item__title-tag"
               v-if="data.amount"
               :size="'mini'"
-              >{{ data.amount.value }}</el-tag
-            >
+            >{{ data.amount.value }}</el-tag>
           </div>
           <div class="s-table-item__status">
             <el-tag
               v-if="data.status_id"
               :type="colorStatus"
               :effect="effect"
-              >{{ data.status_id.value }}</el-tag
-            >
+            >{{ data.status_id.value }}</el-tag>
           </div>
         </div>
         <div class="s-table-item__location">
@@ -34,8 +31,7 @@
             v-if="data.location_id"
             :is="data.location_id.link ? 'el-link' : 's-text'"
             :href="data.location_id.link"
-            >{{ data.location_id.value }}</component
-          >
+          >{{ data.location_id.value }}</component>
         </div>
         <div class="s-table-item__date">{{ `21.02.1998` }}</div>
       </div>
@@ -49,8 +45,7 @@
             class="s-table-item__medium-link"
             :is="item.link ? 'el-link' : 's-text'"
             :href="item.link"
-            >{{ item.value | grade }}</component
-          >
+          >{{ item.value | grade }}</component>
         </div>
       </div>
       <div class="s-table-item__right">
@@ -67,27 +62,21 @@
     </div>
     <div class="s-table-item__bottom" v-if="wideInfo">
       <div class="s-table-item__bottom-main">
-        <div class="s-table-item__stack">{{ stack }}</div>
+        <div class="s-table-item__stack">{{ data.stack.value }}</div>
         <div class="s-table-item__salary">
           <div class="s-table-item__salary-min" v-if="data.salary_min">
             {{
-              data.salary_min.value
-                | salaryFormat(data.salary_min.type, data.salary_min.precision)
+            data.salary_min.value
+            | salaryFormat(data.salary_min.type, data.salary_min.precision)
             }}
           </div>
-          <div
-            class="s-table-item__salary-max"
-            v-bind:draggable="''"
-            v-if="data.salary_max"
-          >
+          <div class="s-table-item__salary-max" v-bind:draggable="''" v-if="data.salary_max">
             {{
-              data.salary_max.value
-                | salaryFormat(data.salary_min.type, data.salary_min.precision)
+            data.salary_max.value
+            | salaryFormat(data.salary_min.type, data.salary_min.precision)
             }}
           </div>
-          <div class="s-table-item__salary-val" v-if="data.salary_val">
-            {{ data.salary_val.value }}
-          </div>
+          <div class="s-table-item__salary-val" v-if="data.salary_val">{{ data.salary_val.value }}</div>
         </div>
       </div>
       <div class="s-table-item__peoples">
@@ -99,8 +88,7 @@
               v-for="(people, i) in exchangePeoples"
               effect="plain"
               :key="`${i}_${people}`"
-              >{{ people }}</el-tag
-            >
+            >{{ people }}</el-tag>
           </div>
         </div>
         <div class="peoples s-table-item__peoples__peoples">
@@ -111,8 +99,7 @@
               v-for="(people, i) in recruiterPeoples"
               effect="plain"
               :key="`${i}_${people}`"
-              >{{ people }}</el-tag
-            >
+            >{{ people }}</el-tag>
           </div>
         </div>
       </div>
@@ -131,10 +118,6 @@ const statuses = {
   Закрыта: 'danger',
   Новая: 'info'
 };
-const stacks = [
-  'Siebel, Open UI, E-script',
-  'Front-аналитик, опыт работы в проектах DHW или BI или ETL. Разработчка ТЗ, Проектной документации.'
-];
 export default {
   name: 'STableItem',
   props: {
@@ -165,16 +148,12 @@ export default {
         { color: '#67C23A', percentage: 100 }
       ],
       bodyKeys: ['business_unit_id', 'grade', 'project_link_id', 'manager_id'],
-      //отдел + рекрутер
-      stack: stacks[rand(0, stacks.length - 1)],
       peoplesData: peoplesData
     };
   },
   beforeMount() {
-    // console.log(Object.keys(this.data));
     for (let [key, value] of Object.entries(this.data)) {
       let module = key === 'name_id' ? 'HRPAC_VACANCY' : value.module;
-      // console.log(module, value.id);
       if (value.id && module) {
         value[
           'link'
@@ -183,7 +162,7 @@ export default {
     }
   },
   mounted() {
-    // console.log(this.data);
+    console.log(this.data);
   },
   computed: {
     colorStatus() {

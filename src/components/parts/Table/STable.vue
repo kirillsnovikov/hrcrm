@@ -28,7 +28,6 @@ export default {
   },
   computed: {
     parseTableData() {
-      // console.log(this.data);
       let tableData = [];
       if (this.data.data) {
         this.data.data.forEach(item => {
@@ -51,11 +50,6 @@ export default {
     parseData(data) {
       let titles = {};
       Object.keys(this.data.columns).forEach(column => {
-        // titles[`${this.data.columns[column]['name']}`] = this.data.columns[
-        //   column
-        // ]
-        //   ? this.getColumnParams(column, data)
-        //   : {};
         Object.defineProperty(titles, this.data.columns[column]['name'], {
           value: this.data.columns[column]
             ? this.getColumnParams(column, data)
@@ -68,7 +62,6 @@ export default {
     },
     getColumnParams(column, data) {
       let colData = this.data.columns[column];
-      // console.log('colData', colData);
       let columnParams = Object.keys(colData).concat(
         this.columnParams.filter(param => {
           return Object.keys(colData).indexOf(param) < 0;
@@ -87,7 +80,6 @@ export default {
           if ((colPar = colData[param]) === 'HRPAC_VACANCY_NAMES_ID_C') {
             parameters[param] = data['ID'];
           } else {
-            // console.log('param', param);
             parameters[param] = colPar;
           }
         }
