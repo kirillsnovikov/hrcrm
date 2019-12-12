@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { plural } from '@/utils/helpers';
 
 Vue.filter('toupper', str => {
   if (!str) return '';
@@ -26,7 +27,9 @@ Vue.filter('salaryFormat', (str, type = 'decimal', precision = 2) => {
   if (type === 'decimal') {
     return parseFloat(str).toFixed(precision);
   } else {
-    return str.toFixed();
+    // var salary = Number(str).toFixed();
+    // console.log();
+    return Number(Number(str).toFixed()).toLocaleString();
   }
 });
 
@@ -40,3 +43,5 @@ Vue.filter('grade', str => {
   }
   return str;
 });
+
+Vue.filter('plural', plural);

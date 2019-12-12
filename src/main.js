@@ -18,7 +18,10 @@ import {
   Avatar,
   Input,
   Checkbox,
-  Radio
+  Radio,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 } from 'element-ui';
 
 const components = {
@@ -35,7 +38,10 @@ const components = {
   Avatar,
   Input,
   Checkbox,
-  Radio
+  Radio,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 };
 
 for (let component of Object.values(components)) {

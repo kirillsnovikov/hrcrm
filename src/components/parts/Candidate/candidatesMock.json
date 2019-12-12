@@ -13,7 +13,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "314"
           },
           "name": {
             "name": "name",
@@ -529,7 +529,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -621,7 +621,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -685,7 +685,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -811,7 +811,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -843,7 +843,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "758"
           },
           "name": {
             "name": "name",
@@ -1359,7 +1359,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -1451,7 +1451,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -1515,7 +1515,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -1641,7 +1641,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -1673,7 +1673,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "791"
           },
           "name": {
             "name": "name",
@@ -2189,7 +2189,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -2281,7 +2281,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -2345,7 +2345,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -2471,7 +2471,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -2503,7 +2503,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "635"
           },
           "name": {
             "name": "name",
@@ -3019,7 +3019,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -3111,7 +3111,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -3175,7 +3175,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -3301,7 +3301,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -3327,66 +3327,159 @@
       ],
       "stages": [
         {
-          "name": "Stage1",
-          "color": "#ffddaa",
+          "id": "723e93e2-403c-d04e-7716-5dd4de4c71d9",
+          "name": "Добавлен",
+          "activity": "1",
+          "color": "#f59d56",
+          "sort": "1",
+          "required_stage": "required",
+          "required_position": "required_top",
+          "position_sort": "3",
           "candidates_ids": [
-            1,
-            2,
-            3
+            "314"
           ]
         },
         {
-          "name": "Stage2",
-          "color": "#00ddff",
+          "id": "e30b0c3e-b194-4f73-7437-5dca5585cf98",
+          "name": "Телефонное интервью",
+          "activity": "1",
+          "color": "#ffc000",
+          "sort": "2",
+          "required_stage": null,
+          "required_position": null,
+          "position_sort": null,
           "candidates_ids": [
-            1,
-            2,
-            3
+            "758"
           ]
         },
         {
-          "name": "Stage3",
-          "color": "#ff00aa",
+          "id": "8416b460-7d0c-4cc1-e2e7-5dca55566054",
+          "name": "Первичное интервью с рекрутером",
+          "activity": "1",
+          "color": "#ffc000",
+          "sort": "3",
+          "required_stage": null,
+          "required_position": null,
+          "position_sort": null,
           "candidates_ids": [
-            1,
-            2,
-            3
+            "791"
           ]
         },
         {
-          "name": "Stage4",
-          "color": "#55ff00",
+          "id": "1deb66a5-b755-38eb-c46d-5dca5504e40a",
+          "name": "Резюме у Заказчика",
+          "activity": "1",
+          "color": "#ab9ac0",
+          "sort": "4",
+          "required_stage": null,
+          "required_position": null,
+          "position_sort": null,
           "candidates_ids": [
-            1,
-            2,
-            3
+            "635"
           ]
         },
         {
-          "name": "Stage5",
-          "color": "#3300ff",
+          "id": "6a52057c-a51e-c125-154b-5dca55bb9681",
+          "name": "Интервью с заказчиком",
+          "activity": "1",
+          "color": "#ab9ac0",
+          "sort": "5",
+          "required_stage": null,
+          "required_position": null,
+          "position_sort": null,
           "candidates_ids": [
-            1,
-            2,
-            3
+            "254"
           ]
         },
         {
-          "name": "Stage6",
-          "color": "#ffee00",
+          "id": "5b8ea558-f775-8112-d2e4-5dca55c6118b",
+          "name": "Тестовое задание",
+          "activity": "1",
+          "color": "#ab9ac0",
+          "sort": "6",
+          "required_stage": null,
+          "required_position": null,
+          "position_sort": null,
           "candidates_ids": [
-            1,
-            2,
-            3
+            "254"
           ]
         },
         {
-          "name": "Stage7",
-          "color": "#cc2244",
+          "id": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
+          "name": "Резюме у внешнего Заказчика",
+          "activity": "1",
+          "color": "#ab9ac0",
+          "sort": "7",
+          "required_stage": "not_required",
+          "required_position": null,
+          "position_sort": "-3",
           "candidates_ids": [
-            1,
-            2,
-            3
+            "254"
+          ]
+        },
+        {
+          "id": "a4b3a50e-577a-f78e-d62b-5dca56474689",
+          "name": "Интервью с внешним Заказчиком",
+          "activity": "1",
+          "color": "#ab9ac0",
+          "sort": "8",
+          "required_stage": null,
+          "required_position": null,
+          "position_sort": null,
+          "candidates_ids": [
+            "254"
+          ]
+        },
+        {
+          "id": "da56c3d2-4b84-d4f6-9a52-5dca56f7b688",
+          "name": "Оффер",
+          "activity": "1",
+          "color": "#4bacc6",
+          "sort": "9",
+          "required_stage": "required",
+          "required_position": "required_bottom",
+          "position_sort": "1",
+          "candidates_ids": [
+            "254"
+          ]
+        },
+        {
+          "id": "d9d3cffc-8ec0-9ba4-74a9-5dca56460314",
+          "name": "Подготовка к выходу",
+          "activity": "0",
+          "color": "#9dbb61",
+          "sort": "10",
+          "required_stage": "required",
+          "required_position": "required_bottom",
+          "position_sort": "2",
+          "candidates_ids": [
+            "254"
+          ]
+        },
+        {
+          "id": "c0520b32-f7ea-858b-4ca6-5dca56388157",
+          "name": "Принят",
+          "activity": "0",
+          "color": "#00cc66",
+          "sort": "11",
+          "required_stage": "required",
+          "required_position": "required_bottom",
+          "position_sort": "3",
+          "candidates_ids": [
+            "254"
+          ]
+        },
+        {
+          "id": "b91e9eba-efd0-7cd6-1c99-5dca5619aaf8",
+          "name": "Отказ",
+          "activity": "0",
+          "color": "#c05046",
+          "sort": "12",
+          "required_stage": "required",
+          "required_position": "required_bottom",
+          "position_sort": "4",
+          "candidates_ids": [
+            "254"
           ]
         }
       ]
@@ -3403,7 +3496,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "565"
           },
           "name": {
             "name": "name",
@@ -3919,7 +4012,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -4011,7 +4104,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -4075,7 +4168,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -4201,7 +4294,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -4233,7 +4326,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "777"
           },
           "name": {
             "name": "name",
@@ -4749,7 +4842,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -4841,7 +4934,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -4905,7 +4998,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -5031,7 +5124,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -5060,7 +5153,7 @@
           "name": "Stage1",
           "color": "#ffddaa",
           "candidates_ids": [
-            1,
+            "565",
             2,
             3
           ]
@@ -5069,7 +5162,7 @@
           "name": "Stage2",
           "color": "#00ddff",
           "candidates_ids": [
-            1,
+            "777",
             2,
             3
           ]
@@ -5133,7 +5226,7 @@
             "reportable": true,
             "comment": "Unique identifier",
             "inline_edit": false,
-            "value": ""
+            "value": "154"
           },
           "name": {
             "name": "name",
@@ -5649,7 +5742,7 @@
             "border": "",
             "width": "200",
             "height": "200",
-            "value": "https://sun9-29.userapi.com/c857628/v857628802/14b72/oGSgP7-i4gw.jpg?ava=1"
+            "value": "https://picsum.photos/id/"
           },
           "salary": {
             "required": false,
@@ -5741,7 +5834,7 @@
             "merge_filter": "disabled",
             "len": "100",
             "size": "20",
-            "value": "Младший помощник руководителя отдела управления руководителями"
+            "value": "Младший помощник руководителя отдела управления"
           },
           "experience_from": {
             "required": false,
@@ -5805,7 +5898,7 @@
             "size": "20",
             "enable_range_search": false,
             "dbType": "datetime",
-            "value": ""
+            "value": "21.08.2019"
           },
           "resume_text": {
             "required": false,
@@ -5931,7 +6024,7 @@
             "bean_name": "HRPAC_COMMENTS",
             "source": "non-db",
             "vname": "LBL_COMMENTS",
-            "value": ""
+            "value": "Хороший опыт"
           },
           "hrpac_selection_stage_hrpac_candidates_1": {
             "name": "hrpac_selection_stage_hrpac_candidates_1",
@@ -5960,7 +6053,7 @@
           "name": "Stage1",
           "color": "#ffddaa",
           "candidates_ids": [
-            1,
+            "154",
             2,
             3
           ]
@@ -6004,15 +6097,6 @@
         {
           "name": "Stage6",
           "color": "#ffee00",
-          "candidates_ids": [
-            1,
-            2,
-            3
-          ]
-        },
-        {
-          "name": "Stage7",
-          "color": "#cc2244",
           "candidates_ids": [
             1,
             2,

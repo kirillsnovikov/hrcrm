@@ -4,6 +4,7 @@
       v-for="(candidate, i) in candidates"
       :key="`_${i}`"
       :candidate="candidate"
+      :mod="mod"
     ></candidate-item>
   </section>
 </template>
@@ -15,6 +16,9 @@ export default {
   props: {
     candidates: {
       type: Array
+    },
+    mod: {
+      type: Object
     }
   },
   components: {

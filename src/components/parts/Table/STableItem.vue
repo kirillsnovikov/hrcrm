@@ -161,9 +161,6 @@ export default {
       }
     }
   },
-  mounted() {
-    console.log(this.data);
-  },
   computed: {
     colorStatus() {
       let status = this.data.status_id.value;
@@ -181,7 +178,10 @@ export default {
       let body = [];
       let bodyKeys = this.bodyKeys;
       if (this.type === 'card') {
-        bodyKeys = this.bodyKeys.concat(['department_id', 'recruiter_id']);
+        bodyKeys = this.bodyKeys.concat([
+          'department_id',
+          'assigned_user_name'
+        ]);
       }
       bodyKeys.forEach(key => {
         body.push(

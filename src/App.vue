@@ -4,24 +4,24 @@
     <!-- <el-badge :value="8" class="item" type="success">
       <el-button type="primary">Default</el-button>
     </el-badge>-->
-    <s-table :data="tableData"></s-table>
-    <!-- <selection :data="candidatesData"></selection> -->
+    <!-- <s-table :data="tableData"></s-table> -->
+    <selection :data="candidatesData"></selection>
     <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
-    <stage-create
+    <!-- <stage-create
       :stages="stagesCreate"
       :data="stageData"
       :detail="stagesUpdate"
-    ></stage-create>
+    ></stage-create>-->
   </div>
 </template>
 
 <script>
-import StageCreate from 'Parts/Stage/Create';
+// import StageCreate from 'Parts/Stage/Create';
 // import StageView from 'Parts/Stage/View';
-// import Selection from 'Parts/Candidate/Selection';
-import STable from 'Parts/Table/STable';
+import Selection from 'Parts/Candidate/Selection';
+// import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
-import candidatesData from 'Parts/Candidate/candidatesMock';
+import candidatesData from 'Parts/Candidate/candidatesMock2';
 // import stagesUpdate from 'Parts/Stage/stageUpdateMock';
 import stagesCreate from 'Parts/Stage/stageCreateMock';
 import stageData from 'Parts/Stage/stageDataMock';
@@ -30,11 +30,11 @@ import cardData from 'Parts/Card/mockCard';
 
 export default {
   components: {
-    StageCreate,
+    // StageCreate,
     // StageView,
-    // Selection
+    Selection
     // SCard,
-    STable
+    // STable
   },
   data() {
     return {
@@ -75,14 +75,8 @@ export default {
     //   .get('https://jsonplaceholder.typicode.com/todos')
     //   .then(response => {
     //     this.tableData = response.data;
-    //     console.log(this.tableData);
     //   })
     //   .catch(e => console.error(e));
-  },
-  methods: {
-    clickBtn() {
-      // console.log(e);
-    }
   }
 };
 </script>

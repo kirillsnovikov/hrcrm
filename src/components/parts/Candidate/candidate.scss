@@ -10,7 +10,7 @@
     'main sidebar';
   grid-template-columns: auto 20%;
   grid-template-rows: auto auto;
-  &__header {
+  &__stages-panel {
     grid-area: header;
   }
   &__main {
@@ -22,34 +22,6 @@
   }
 }
 
-.stages-panel {
-  @extend %flex-center;
-  width: 100%;
-  &__item {
-    padding: 0.5em 1em;
-    box-sizing: border-box;
-    border: $--border-base;
-    border-right: none;
-    cursor: pointer;
-    flex: 1;
-    &:first-child {
-      @extend .border-left-radius;
-    }
-    &:last-child {
-      @extend .border-right-radius;
-      border-right: $--border-base;
-    }
-    &_active {
-      color: $--color-white;
-    }
-  }
-  &__input {
-    position: fixed;
-    left: -1000px;
-    opacity: 0;
-  }
-}
-
 .vacancy-select {
   @extend %flex-col;
   &__item {
@@ -57,5 +29,154 @@
     padding: 0.5em 1em;
     border: $--border-base;
     margin: 0 0 0.5em 0;
+  }
+}
+
+.candidate-item {
+  @extend .border-radius;
+  background: $--color-white;
+  margin-bottom: 1.25em;
+  box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+  &__top {
+    padding: 0.5em 1em;
+    @extend %flex;
+    position: relative;
+
+    &-left {
+      margin-right: 1em;
+    }
+    &-right {
+      @extend %flex-col;
+      flex: 1;
+    }
+  }
+
+  &__button-down {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+  }
+
+  &__body {
+    @extend %flex;
+  }
+
+  &__info {
+    @extend %flex-col;
+    align-items: flex-start;
+    margin-right: 1em;
+    &-item {
+      margin-bottom: 0.5em;
+      font-size: 1em;
+    }
+  }
+
+  &__candidate-header {
+    margin-bottom: 1em;
+  }
+  &__bottom {
+    padding: 0.5em 1em;
+  }
+}
+
+.candidate-header {
+  @extend %flex-col;
+  flex: 1;
+
+  &__top {
+    @extend %flex;
+    justify-content: space-between;
+  }
+  &__bottom {
+    @extend %flex-center;
+  }
+
+  &__title {
+    @extend %flex-center;
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-right: 0.5em;
+    font-size: 1.25em;
+    color: $--color-primary;
+  }
+
+  &__age {
+    color: $--color-text-secondary;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 0.5em;
+    &::after {
+      content: ',';
+    }
+  }
+  &__salary {
+    color: $--color-text-secondary;
+    font-style: italic;
+    font-weight: bold;
+    &::after {
+      content: '₽';
+    }
+  }
+  &__vacancy {
+    font-weight: bold;
+    margin-right: 0.5em;
+    font-size: 1.25em;
+  }
+  &__stage {
+    padding: 0.25em 0.5em;
+    border-radius: $--border-radius-base;
+    color: $--color-white;
+  }
+  &__actions {
+    @extend %flex-center;
+    &-item {
+      @extend %flex-center;
+      @extend .border-radius;
+      margin-left: 0.25em;
+      font-size: 18px;
+      &.icon-whatsapp {
+        color: $whatsapp-color;
+        padding: 0.25em;
+        &:hover {
+          background: $whatsapp-color;
+          color: $--color-white;
+        }
+      }
+      .el-dropdown-link {
+        // font-size: 1.25em;
+        &:hover {
+          cursor: pointer;
+          color: $--color-primary;
+        }
+      }
+    }
+  }
+}
+
+.label-value {
+  @extend %flex;
+  &__label {
+    color: $--color-text-placeholder;
+    font-size: 0.875em;
+    margin-right: 0.5em;
+    &::after {
+      content: ':';
+    }
+  }
+  &__value {
+    font-size: 0.875em;
+  }
+}
+
+.candidate-fields {
+  @extend %flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+  &__label-value {
+    margin-bottom: 0.5em;
+    flex: 0 0 49%;
   }
 }

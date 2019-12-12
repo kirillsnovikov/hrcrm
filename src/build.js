@@ -17,7 +17,10 @@ import {
   Avatar,
   Input,
   Checkbox,
-  Radio
+  Radio,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 } from 'element-ui';
 
 const components = {
@@ -34,7 +37,10 @@ const components = {
   Avatar,
   Input,
   Checkbox,
-  Radio
+  Radio,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 };
 
 for (let component of Object.values(components)) {
@@ -69,12 +75,14 @@ import STable from 'Parts/Table/STable';
 import SCard from 'Parts/Card/SCard';
 import StageCreate from 'Parts/Stage/Create';
 import StageView from 'Parts/Stage/View';
+import Selection from 'Parts/Candidate/Selection';
 
 const parts = {
   STable,
   SCard,
   StageCreate,
-  StageView
+  StageView,
+  Selection
 };
 
 Object.keys(parts).forEach(name => {

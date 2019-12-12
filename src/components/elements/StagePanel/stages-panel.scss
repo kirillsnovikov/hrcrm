@@ -1,0 +1,34 @@
+.stages-panel {
+  @extend %flex;
+  width: 100%;
+  font-size: 0.75em;
+  &__item {
+    @extend %flex;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    border: $--border-base;
+    border-right: none;
+    cursor: pointer;
+    overflow: hidden;
+    &:first-child {
+      @extend .border-left-radius;
+    }
+    &:last-child {
+      @extend .border-right-radius;
+      border-right: $--border-base;
+    }
+    &_active {
+      color: $--color-white;
+    }
+  }
+  &__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__input {
+    position: fixed;
+    left: -1000px;
+    opacity: 0;
+  }
+}
