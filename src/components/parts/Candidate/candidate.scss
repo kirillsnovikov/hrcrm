@@ -25,10 +25,19 @@
 .vacancy-select {
   @extend %flex-col;
   &__item {
+    @extend %flex-center;
     @extend .border-radius;
     padding: 0.5em 1em;
     border: $--border-base;
     margin: 0 0 0.5em 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .el-radio__label {
+    @extend %flex-center;
+    justify-content: space-between;
+    flex: 1;
   }
 }
 
@@ -63,9 +72,14 @@
 
   &__info {
     @extend %flex-col;
+    flex: 0 0 200px;
+    overflow: hidden;
     align-items: flex-start;
     margin-right: 1em;
     &-item {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       margin-bottom: 0.5em;
       font-size: 1em;
     }

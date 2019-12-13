@@ -7,10 +7,11 @@
       :key="`${stage.name}_${i}`"
     >
       <span class="stages-panel__label">{{ stage.name }}</span>
+      <el-tag size="mini">{{ stage.count }}</el-tag>
       <input
         type="checkbox"
-        v-model="selectStageItems"
-        :value="`${currentVacancy}_${stage.name}`"
+        v-model="stageItems"
+        :value="`${currentVacancy}_${stage.id}_${stage.name}`"
         class="stages-panel__input"
       />
     </label>
@@ -23,19 +24,22 @@ export default {
     stages: {
       type: [Object, Array]
     },
+    selectStageItems: {
+      type: Array
+    },
     currentVacancy: {
-      type: Number
+      type: String
     }
   },
   data() {
     return {
-      selectStageItems: [],
+      stageItems: this.selectStageItems,
       panelWidth: 0
     };
   },
   watch: {
-    selectStageItems(newVal) {
-      this.$emit('selectStage', newVal);
+    stageItems(newVal) {
+      this.$emit('selectStages', newVal);
     }
   },
   mounted() {
@@ -49,23 +53,21 @@ export default {
           width: this.stageWidth
         };
         if (
-          this.selectStageItems.find(
-            item => item === `${this.currentVacancy}_${stage.name}`
-          ) !== undefined
+          this.stageItems.find(item => {
+            return item === `${this.currentVacancy}_${stage.id}_${stage.name}`;
+          }) !== undefined
         ) {
           style.background = stage.color;
           style.color = '#ffffff';
         }
         stage['style'] = style;
+        stage['count'] = stage.candidates_ids
+          ? `${stage.candidates_ids.length}`
+          : '0';
       });
-      // console.log(this.stages);
       return this.stages;
     },
     stageWidth() {
-      // if (this.$el) {
-      // console.log('this.el');
-      // }
-      // console.log(this.panelWidth / this.stages.length);
       return this.panelWidth / Object.keys(this.stages).length + 'px';
     }
   }

@@ -3,7 +3,8 @@
   width: 100%;
   font-size: 0.75em;
   &__item {
-    @extend %flex;
+    @extend %flex-center;
+    justify-content: space-between;
     padding: 0.5em 1em;
     box-sizing: border-box;
     border: $--border-base;

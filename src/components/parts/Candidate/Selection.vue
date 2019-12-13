@@ -1,25 +1,32 @@
 <template>
   <section class="candidate-sel">
     <stage-panel
-      @selectStage="select"
-      :currentVacancy="currentVacancy"
+      @selectStages="select"
       :stages="currentStages"
+      :selectStageItems="selectStages"
+      :currentVacancy="currentVacancy"
       class="candidate-sel__stages-panel"
     ></stage-panel>
     <candidate-list
+      v-if="candidates.length > 0"
       class="candidate-sel__main"
       :candidates="candidates"
       :mod="data.mod"
     ></candidate-list>
+    <el-tag v-else :type="'warning'" effect="dark">
+      {{ 'Нет кандидатов по заданным параметрам' }}
+    </el-tag>
     <div class="vacancy-select candidate-sel__sidebar">
       <el-radio
         class="vacancy-select__item"
         v-model="currentVacancy"
-        :label="i"
-        v-for="(vacancy, i) in data.data"
+        :label="vacancy.id"
+        v-for="(vacancy, i) in vacancies"
         :key="`${vacancy.name_id}_${i}`"
-        >{{ vacancy.name_id }}</el-radio
       >
+        <span>{{ vacancy.name_id }}</span>
+        <el-tag size="mini">{{ vacancy.candidatesCount }}</el-tag>
+      </el-radio>
     </div>
   </section>
 </template>
@@ -39,13 +46,28 @@ export default {
   },
   data() {
     return {
-      selectStageItems: [],
-      currentVacancy: 0
+      vacancies: [],
+      selectStages: [],
+      currentVacancy: ''
     };
+  },
+  created() {
+    this.vacancies = this.data.data;
+    this.currentVacancy = this.vacancies[0].id;
+    this.vacancies.forEach(vacancy => {
+      this.selectStages = this.selectStages.concat(
+        Object.values(vacancy.stages).map(
+          stage => `${vacancy.id}_${stage.id}_${stage.name}`
+        )
+      );
+      vacancy['candidatesCount'] = vacancy.candidates
+        ? vacancy.candidates.length
+        : 0;
+    });
   },
   computed: {
     selectVacancies() {
-      return this.data.data[this.currentVacancy];
+      return this.vacancies.find(vacancy => this.currentVacancy === vacancy.id);
     },
     currentStages() {
       return this.selectVacancies.stages;
@@ -53,18 +75,14 @@ export default {
     candidates() {
       let vacancy = this.selectVacancies;
       let stages = Object.values(vacancy.stages);
-      // console.log('stages', stages);
-      let candidatesIds = this.getCandidateIds(stages, this.selectStageItems);
-
+      let candidatesIds = this.getCandidateIds(stages, this.selectStages);
       let filteredCandidates = this.selectCandidatesByIds(
         vacancy.candidates,
         candidatesIds
       );
-      // console.log(filteredCandidates);
       filteredCandidates.map(candidate => {
         candidate['vacancy'] = vacancy.name_id;
         candidate['stage'] = stages.find(stage => {
-          // console.log('11', stage.candidates_ids);
           if (stage.candidates_ids) {
             return stage.candidates_ids.find(id => {
               return id === candidate.id.value;
@@ -72,13 +90,12 @@ export default {
           }
         });
       });
-      // console.log(filteredCandidates);
       return filteredCandidates;
     }
   },
   methods: {
     select(data) {
-      this.selectStageItems = data;
+      this.selectStages = data;
     },
     getCandidateIds(stages, selectStages) {
       let ids = [];
@@ -86,7 +103,7 @@ export default {
         selectStages.forEach(selectStageItem => {
           if (
             stage.name ===
-            selectStageItem.replace(`${this.currentVacancy}_`, '')
+            selectStageItem.replace(`${this.currentVacancy}_${stage.id}_`, '')
           ) {
             ids = ids.concat(stage.candidates_ids);
           }

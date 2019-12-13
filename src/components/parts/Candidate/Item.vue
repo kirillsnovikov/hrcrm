@@ -15,15 +15,21 @@
                 :underline="false"
                 :href="viewRoute"
                 type="primary"
-              >{{ fullName }}</el-link>
-              <div class="candidate-header__age">{{ this.candidate.age.value | plural }}</div>
-              <div class="candidate-header__salary">
+                >{{ fullName }}</el-link
+              >
+              <div class="candidate-header__age" v-if="candidate.age.value">
+                {{ candidate.age.value | plural }}
+              </div>
+              <div
+                class="candidate-header__salary"
+                v-if="candidate.salary.value"
+              >
                 {{
-                candidate.salary.value
-                | salaryFormat(
-                candidate.salary.type,
-                candidate.salary.precision
-                )
+                  candidate.salary.value
+                    | salaryFormat(
+                      candidate.salary.type,
+                      candidate.salary.precision
+                    )
                 }}
               </div>
             </div>
@@ -33,7 +39,10 @@
                 :underline="false"
                 class="candidate-header__actions-item icon-whatsapp"
               ></el-link>
-              <el-dropdown trigger="click" class="candidate-header__actions-item">
+              <el-dropdown
+                trigger="click"
+                class="candidate-header__actions-item"
+              >
                 <i class="el-dropdown-link el-icon-s-tools"></i>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item>
@@ -42,14 +51,16 @@
                       :underline="false"
                       icon="el-icon-edit"
                       class="candidate-header__actions-item"
-                    >Edit</el-link>
+                      >Edit</el-link
+                    >
                   </el-dropdown-item>
                   <el-dropdown-item>
                     <el-link
                       :underline="false"
                       icon="el-icon-delete"
                       class="candidate-header__actions-item"
-                    >Remove</el-link>
+                      >Remove</el-link
+                    >
                   </el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
@@ -60,7 +71,9 @@
             <div
               class="candidate-header__stage"
               :style="{ background: candidate.stage.color }"
-            >{{ candidate.stage.name }}</div>
+            >
+              {{ candidate.stage.name }}
+            </div>
           </div>
         </div>
         <div class="candidate-item__body">
@@ -75,14 +88,16 @@
               icon="el-icon-phone"
               :underline="false"
               v-if="phone"
-            >{{ phone }}</el-link>
+              >{{ phone }}</el-link
+            >
             <el-link
               class="candidate-item__mail candidate-item__info-item"
               :href="email"
               :underline="false"
               icon="el-icon-message"
               v-if="candidate.email.value"
-            >{{ candidate.email.value }}</el-link>
+              >{{ candidate.email.value }}</el-link
+            >
           </div>
           <div class="candidate-fields">
             <div
@@ -97,7 +112,12 @@
         </div>
       </div>
       <div class="candidate-item__button-down" @click="wideInfo = !wideInfo">
-        <el-button :disabled="!candidate.description.value" circle :icon="wideIcon" :size="'mini'"></el-button>
+        <el-button
+          :disabled="!candidate.description.value"
+          circle
+          :icon="wideIcon"
+          :size="'mini'"
+        ></el-button>
       </div>
     </div>
     <div
@@ -110,7 +130,6 @@
 
 <script>
 import { rand } from '@/utils/helpers';
-// import labels from './candidatesLabels';
 
 export default {
   props: {
@@ -131,12 +150,10 @@ export default {
         'comments',
         'last_post'
       ]
-      // labels: labels
     };
   },
   computed: {
     wideIcon() {
-      // console.log(this.candidate);
       return this.wideInfo ? 'el-icon-arrow-up' : 'el-icon-arrow-down';
     },
     fullName() {
@@ -167,7 +184,6 @@ export default {
           value: this.candidate[key].value
         });
       });
-      console.log('res', res);
       return res;
     },
     whatsapp() {
@@ -182,10 +198,10 @@ export default {
       return `tel:${tel}`;
     },
     viewRoute() {
-      return `/index.php?module=HRPAC_SELECT&action=DetailView&record=${this.candidate.id.value}`;
+      return `/index.php?module=HRPAC_CANDIDATES&action=DetailView&record=${this.candidate.id.value}`;
     },
     editRoute() {
-      return `/index.php?module=HRPAC_SELECT&action=EditView&record=${this.candidate.id.value}`;
+      return `/index.php?module=HRPAC_CANDIDATES&action=EditView&record=${this.candidate.id.value}`;
     }
   }
 };
