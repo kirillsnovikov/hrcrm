@@ -32,12 +32,18 @@
     margin: 0 0 0.5em 0;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    // text-overflow: ellipsis;
   }
   .el-radio__label {
     @extend %flex-center;
     justify-content: space-between;
+    overflow: hidden;
     flex: 1;
+    span:nth-child(1) {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
@@ -171,6 +177,7 @@
 
 .label-value {
   @extend %flex;
+  word-break: break-word;
   &__label {
     color: $--color-text-placeholder;
     font-size: 0.875em;
