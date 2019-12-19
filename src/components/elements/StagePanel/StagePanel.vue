@@ -6,7 +6,9 @@
       v-for="(stage, i) in getStages"
       :key="`${stage.name}_${i}`"
     >
-      <span class="stages-panel__label">{{ stage.name }}</span>
+      <el-tooltip :content="stage.name" placement="top-start">
+        <span class="stages-panel__label">{{ stage.name }}</span>
+      </el-tooltip>
       <el-tag size="mini">{{ stage.count }}</el-tag>
       <input
         type="checkbox"
@@ -37,11 +39,14 @@ export default {
       panelWidth: 0
     };
   },
-  watch: {
-    stageItems(newVal) {
-      this.$emit('selectStages', newVal);
-    }
-  },
+  // watch: {
+  //   selectStageItems(newVal) {
+  //     this.$emit('selectStages', newVal);
+  //   }
+  // },
+  // created() {
+  //   this.$eventHub.$on('resetStagePanel', this.reset())
+  // },
   mounted() {
     this.panelWidth = this.$el.offsetWidth;
   },
@@ -53,7 +58,7 @@ export default {
           width: this.stageWidth
         };
         if (
-          this.stageItems.find(item => {
+          this.selectStageItems.find(item => {
             return item === `${this.currentVacancy}_${stage.id}_${stage.name}`;
           }) !== undefined
         ) {

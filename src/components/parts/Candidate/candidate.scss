@@ -2,21 +2,24 @@
   * {
     box-sizing: border-box;
   }
+
   @extend %crm-font;
-  display: grid;
-  gap: 1em;
-  grid-template-areas:
-    'header header'
-    'main sidebar';
+  display            : grid;
+  gap                : 1em;
+  grid-template-areas: 'header header'
+  'main sidebar';
   grid-template-columns: auto 20%;
-  grid-template-rows: auto auto;
+  grid-template-rows   : auto auto;
+
   &__stages-panel {
     grid-area: header;
   }
+
   &__main {
     // grid-gap: 10px;
-    grid-area: main;
+    grid-area  : main;
   }
+
   &__sidebar {
     grid-area: sidebar;
   }
@@ -24,24 +27,53 @@
 
 .vacancy-select {
   @extend %flex-col;
+
   &__item {
     @extend %flex-center;
     @extend .border-radius;
-    padding: 0.5em 1em;
-    border: $--border-base;
-    margin: 0 0 0.5em 0;
-    overflow: hidden;
-    white-space: nowrap;
+    padding         : 0.5em 1em;
+    border          : $--border-base;
+    margin          : 0 0 0.5em 0;
+    overflow        : hidden;
+    white-space     : nowrap;
     // text-overflow: ellipsis;
   }
+
+  &__actions {
+    @extend %flex-center;
+    justify-content: space-evenly;
+    margin-bottom  : 0.5em;
+
+    &-item {
+      margin-left: 0.5em;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.icon-remove {
+        &:hover {
+          color: $--color-danger;
+        }
+      }
+
+      &.icon-checkbox-checked {
+        &:hover {
+          color: $--color-primary;
+        }
+      }
+    }
+  }
+
   .el-radio__label {
     @extend %flex-center;
     justify-content: space-between;
-    overflow: hidden;
-    flex: 1;
+    overflow       : hidden;
+    flex           : 1;
+
     span:nth-child(1) {
-      flex: 1;
-      overflow: hidden;
+      flex         : 1;
+      overflow     : hidden;
       text-overflow: ellipsis;
     }
   }
@@ -49,9 +81,10 @@
 
 .candidate-item {
   @extend .border-radius;
-  background: $--color-white;
+  background   : $--color-white;
   margin-bottom: 1.25em;
-  box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+  box-shadow   : -6px 4px 10px 0px rgba($dark-color, 0.42);
+
   &__top {
     padding: 0.5em 1em;
     @extend %flex;
@@ -60,6 +93,7 @@
     &-left {
       margin-right: 1em;
     }
+
     &-right {
       @extend %flex-col;
       flex: 1;
@@ -68,8 +102,8 @@
 
   &__button-down {
     position: absolute;
-    right: 0.5em;
-    bottom: 0.5em;
+    right   : 0.5em;
+    bottom  : 0.5em;
   }
 
   &__body {
@@ -78,22 +112,24 @@
 
   &__info {
     @extend %flex-col;
-    flex: 0 0 200px;
-    overflow: hidden;
-    align-items: flex-start;
+    flex        : 0 0 200px;
+    overflow    : hidden;
+    align-items : flex-start;
     margin-right: 1em;
+
     &-item {
-      white-space: nowrap;
-      overflow: hidden;
+      white-space  : nowrap;
+      overflow     : hidden;
       text-overflow: ellipsis;
       margin-bottom: 0.5em;
-      font-size: 1em;
+      font-size    : 1em;
     }
   }
 
   &__candidate-header {
     margin-bottom: 1em;
   }
+
   &__bottom {
     padding: 0.5em 1em;
   }
@@ -107,6 +143,7 @@
     @extend %flex;
     justify-content: space-between;
   }
+
   &__bottom {
     @extend %flex-center;
   }
@@ -116,59 +153,70 @@
   }
 
   &__name {
-    font-weight: bold;
+    font-weight : bold;
     margin-right: 0.5em;
-    font-size: 1.25em;
-    color: $--color-primary;
+    font-size   : 1.25em;
+    color       : $--color-primary;
   }
 
   &__age {
-    color: $--color-text-secondary;
-    font-style: italic;
-    font-weight: bold;
+    color       : $--color-text-secondary;
+    font-style  : italic;
+    font-weight : bold;
     margin-right: 0.5em;
+
     &::after {
       content: ',';
     }
   }
+
   &__salary {
-    color: $--color-text-secondary;
-    font-style: italic;
+    color      : $--color-text-secondary;
+    font-style : italic;
     font-weight: bold;
+
     &::after {
       content: '₽';
     }
   }
+
   &__vacancy {
-    font-weight: bold;
+    font-weight : bold;
     margin-right: 0.5em;
-    font-size: 1.25em;
+    font-size   : 1.25em;
   }
+
   &__stage {
-    padding: 0.25em 0.5em;
+    padding      : 0.25em 0.5em;
     border-radius: $--border-radius-base;
-    color: $--color-white;
+    color        : $--color-white;
   }
+
   &__actions {
     @extend %flex-center;
+
     &-item {
       @extend %flex-center;
       @extend .border-radius;
       margin-left: 0.25em;
-      font-size: 18px;
+      font-size  : 18px;
+
       &.icon-whatsapp {
-        color: $whatsapp-color;
+        color  : $whatsapp-color;
         padding: 0.25em;
+
         &:hover {
           background: $whatsapp-color;
-          color: $--color-white;
+          color     : $--color-white;
         }
       }
+
       .el-dropdown-link {
+
         // font-size: 1.25em;
-        &:hover {
+        &           :hover {
           cursor: pointer;
-          color: $--color-primary;
+          color : $--color-primary;
         }
       }
     }
@@ -178,14 +226,17 @@
 .label-value {
   @extend %flex;
   word-break: break-word;
+
   &__label {
-    color: $--color-text-placeholder;
-    font-size: 0.875em;
+    color       : $--color-text-placeholder;
+    font-size   : 0.875em;
     margin-right: 0.5em;
+
     &::after {
       content: ':';
     }
   }
+
   &__value {
     font-size: 0.875em;
   }
@@ -193,11 +244,12 @@
 
 .candidate-fields {
   @extend %flex;
-  flex-wrap: wrap;
+  flex-wrap      : wrap;
   justify-content: space-between;
-  flex: 1;
+  flex           : 1;
+
   &__label-value {
     margin-bottom: 0.5em;
-    flex: 0 0 49%;
+    flex         : 0 0 49%;
   }
 }

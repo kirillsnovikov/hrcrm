@@ -3,16 +3,17 @@
 @import 'utilites/utilites';
 
 #app {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-	* {
-		box-sizing: border-box;
-	} 
-	width: 1000px;
+  * {
+    box-sizing: border-box;
+  }
+
+  width: 1000px;
 }
 
 #content {
-	background: $--color-white;
+  background: $--color-white;
 }
 
 @import 'Elements/Link/link.scss';

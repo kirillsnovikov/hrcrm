@@ -1,6 +1,6 @@
 .hr-title {
   font-size: 1.625em;
-  color: $--color-primary;
+  color    : $--color-primary;
 }
 
 .stage-form {
@@ -12,10 +12,11 @@
   }
 
   &__title {
-    font-weight: bold;
-    font-size: 1em;
+    font-weight  : bold;
+    font-size    : 1em;
     margin-bottom: 0.4em;
-    color: $--color-primary;
+    color        : $--color-primary;
+
     &:after {
       content: ':';
     }
@@ -24,16 +25,20 @@
   &__inline-buttons {
     margin: 1em 0;
   }
+
   &__input {
     margin-bottom: 1em;
   }
+
   &__dnd {
     @extend %flex;
   }
+
   &__dnd-left {
-    flex: 1;
+    flex        : 1;
     margin-right: 1em;
   }
+
   &__dnd-right {
     flex: 1;
   }
@@ -41,20 +46,25 @@
 
 .stage-view {
   @extend %crm-font;
+
   &__hr-title {
     margin: 0.5em 0;
   }
+
   &__body {
     width: 50%;
   }
+
   &__check {
     @extend %flex-col;
   }
+
   &__check-icon {
-    color: $--color-success;
+    color      : $--color-success;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size  : 1.25em;
   }
+
   &__check-item {
     margin: 0.5em;
   }
@@ -63,16 +73,19 @@
 .stage-list {
   @extend %flex-col;
   padding: 0.5em 1em;
+
   &__item {
-    padding: 0.5em 1em;
-    border: $--border-base;
+    padding      : 0.5em 1em;
+    border       : $--border-base;
     border-radius: $--border-radius-base;
-    color: $--color-white;
+    color        : $--color-white;
     margin-bottom: 0.5em;
-    cursor: move;
+    cursor       : move;
+
     &:last-child() {
       margin-bottom: 0;
     }
+
     &_fixed {
       cursor: default;
     }
@@ -80,7 +93,7 @@
 
   &_pos {
     &_right {
-      box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+      box-shadow   : -6px 4px 10px 0px rgba($dark-color, 0.42);
       border-radius: $--border-radius-base;
       margin-bottom: 0.5em;
     }
@@ -90,38 +103,44 @@
 .hr-input {
   @extend %flex-center;
   font-size: 0.875em;
+
   &__label {
     margin-right: 0.625em;
-    width: 150px;
-    text-align: right;
+    width       : 150px;
+    text-align  : right;
+
     &:before {
-      content: '*';
-      color: $--color-danger;
+      content     : '*';
+      color       : $--color-danger;
       margin-right: 0.25em;
     }
   }
+
   &__input {
-    width: 400px;
+    width   : 400px;
     position: relative;
   }
+
   &__error {
-    position: absolute;
-    font-size: 0.625em;
+    position   : absolute;
+    font-size  : 0.625em;
     font-weight: bold;
-    bottom: -10px;
-    color: $--color-danger;
-    left: 0;
+    bottom     : -10px;
+    color      : $--color-danger;
+    left       : 0;
   }
 }
 
 .hr-checkbox {
   @extend %flex;
   font-size: 0.875em;
+
   &__label {
     margin-right: 0.625em;
-    width: 150px;
-    text-align: right;
+    width       : 150px;
+    text-align  : right;
   }
+
   &__input {
     width: 400px;
   }
@@ -129,8 +148,10 @@
 
 .inline-buttons {
   @extend %flex;
+
   &__btn {
     margin-left: 10px;
+
     &:first-child {
       margin-left: 0;
     }

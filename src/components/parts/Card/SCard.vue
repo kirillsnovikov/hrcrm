@@ -9,17 +9,25 @@
       >
         <el-button type="primary">Править</el-button>
       </a>
-      <el-button class="inline-buttons__btn" type="primary" disabled>Дублировать</el-button>
-      <el-button class="inline-buttons__btn" type="primary" disabled>Отправить на согласование</el-button>
-      <el-button class="inline-buttons__btn" type="primary" disabled>Подобрать кандидата</el-button>
+      <el-button class="inline-buttons__btn" type="primary" disabled
+        >Дублировать</el-button
+      >
+      <el-button class="inline-buttons__btn" type="primary" disabled
+        >Отправить на согласование</el-button
+      >
+      <el-button class="inline-buttons__btn" type="primary" disabled
+        >Подобрать кандидата</el-button
+      >
     </div>
     <div class="s-card__candidates">
-      <div :key="`${i}_${candidate}`" v-for="(candidate, i) in candidates" class="candidate">
+      <div
+        :key="`${i}_${candidate}`"
+        v-for="(candidate, i) in candidates"
+        class="candidate"
+      >
         <div class="candidate__main">
           <el-link :type="'primary'" class="candidate__name">
-            {{
-            candidate
-            }}
+            {{ candidate }}
           </el-link>
           <span class="candidate__stage">Этап подбора</span>
         </div>
@@ -28,12 +36,21 @@
         </div>
       </div>
     </div>
-    <s-table-item :type="'card'" :data="data" :wide="true" :id="data.id.value"></s-table-item>
+    <s-table-item
+      :type="'card'"
+      :data="data"
+      :wide="true"
+      :id="data.id.value"
+    ></s-table-item>
     <div class="s-card__main">
       <div class="s-card__info">
         <el-tabs v-model="activeInfo">
-          <el-tab-pane label="Требования" name="description">{{ data.description.value }}</el-tab-pane>
-          <el-tab-pane label="История" name="history">Тут будет какая-то история по данной вакансии</el-tab-pane>
+          <el-tab-pane label="Требования" name="description">
+            {{ data.description.value }}
+          </el-tab-pane>
+          <el-tab-pane label="История" name="history"
+            >Тут будет какая-то история по данной вакансии</el-tab-pane
+          >
         </el-tabs>
       </div>
       <div class="s-card__comments">

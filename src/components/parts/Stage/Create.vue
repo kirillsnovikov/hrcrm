@@ -252,12 +252,10 @@ export default {
         stage => stage.required_position === null
       );
       let cnt = stages.length;
-      stages.forEach((stage, i) => {
-        this.customStages.forEach(custom => {
-          if (custom.id === stage.id) {
-            stages.splice(i, 1);
-          }
-        });
+      stages = stages.filter(stage => {
+        return (
+          this.customStages.map(custom => custom.id).indexOf(stage.id) === -1
+        );
       });
       this.listStages = stages;
       setTimeout(() => {

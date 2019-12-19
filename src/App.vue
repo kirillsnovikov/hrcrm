@@ -11,7 +11,7 @@
       :stages="stagesCreate"
       :data="stageData"
       :detail="stagesUpdate"
-    ></stage-create>-->
+    ></stage-create> -->
   </div>
 </template>
 
@@ -22,7 +22,7 @@ import Selection from 'Parts/Candidate/Selection';
 // import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
 import candidatesData from 'Parts/Candidate/candidatesMock2';
-// import stagesUpdate from 'Parts/Stage/stageUpdateMock';
+import stagesUpdate from 'Parts/Stage/stageUpdateMock';
 import stagesCreate from 'Parts/Stage/stageCreateMock';
 import stageData from 'Parts/Stage/stageDataMock';
 import tableData from 'Parts/Table/mockTable3';
@@ -30,7 +30,7 @@ import cardData from 'Parts/Card/mockCard';
 
 export default {
   components: {
-    // StageCreate,
+    // StageCreate
     // StageView,
     Selection
     // SCard,
@@ -41,7 +41,7 @@ export default {
       tableData: tableData,
       stageData: stageData,
       cardData: cardData,
-      stagesUpdate: [],
+      stagesUpdate: stagesUpdate,
       stagesCreate: stagesCreate,
       candidatesData: candidatesData,
       options: [

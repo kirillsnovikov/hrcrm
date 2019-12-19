@@ -1,12 +1,24 @@
 <template>
   <section class="candidate-sel">
-    <stage-panel
-      @selectStages="select"
-      :stages="currentStages"
-      :selectStageItems="selectStages"
-      :currentVacancy="currentVacancy"
-      class="candidate-sel__stages-panel"
-    ></stage-panel>
+    <div class="stages-panel candidate-sel__stages-panel">
+      <label
+        class="stages-panel__item"
+        :style="stage.style"
+        v-for="(stage, i) in getStages"
+        :key="`${stage.name}_${i}`"
+      >
+        <el-tooltip :content="stage.name" placement="top-start">
+          <span class="stages-panel__label">{{ stage.name }}</span>
+        </el-tooltip>
+        <el-tag size="mini">{{ stage.count }}</el-tag>
+        <input
+          type="checkbox"
+          v-model="selectStageItems"
+          :value="`${currentVacancy}_${stage.id}_${stage.name}`"
+          class="stages-panel__input"
+        />
+      </label>
+    </div>
     <candidate-list
       v-if="candidates.length > 0"
       class="candidate-sel__main"
@@ -17,6 +29,17 @@
       {{ 'Нет кандидатов по заданным параметрам' }}
     </el-tag>
     <div class="vacancy-select candidate-sel__sidebar">
+      <div class="vacancy-select__actions">
+        <el-switch v-model="isSaveToLS" active-text="Сохранять"></el-switch>
+        <i
+          class="icon-checkbox-checked vacancy-select__actions-item"
+          @click="selectAll"
+        ></i>
+        <i
+          class="icon-remove vacancy-select__actions-item"
+          @click="resetAll"
+        ></i>
+      </div>
       <el-radio
         class="vacancy-select__item"
         v-model="currentVacancy"
@@ -32,7 +55,6 @@
 </template>
 
 <script>
-import StagePanel from 'Elements/StagePanel/StagePanel';
 import CandidateList from 'Parts/Candidate/List';
 import { uniq } from '@/utils/helpers';
 
@@ -41,29 +63,54 @@ export default {
     data: Object
   },
   components: {
-    StagePanel,
     CandidateList
   },
   data() {
     return {
       vacancies: [],
-      selectStages: [],
-      currentVacancy: ''
+      selectStageItems: [],
+      currentVacancy: '',
+      panelWidth: 0,
+      isSaveToLS: false
     };
   },
   created() {
     this.vacancies = this.data.data;
     this.currentVacancy = this.vacancies[0].id;
     this.vacancies.forEach(vacancy => {
-      this.selectStages = this.selectStages.concat(
-        Object.values(vacancy.stages).map(
-          stage => `${vacancy.id}_${stage.id}_${stage.name}`
-        )
-      );
       vacancy['candidatesCount'] = vacancy.candidates
         ? vacancy.candidates.length
         : 0;
     });
+    if (localStorage.selectStageItems) {
+      this.isSaveToLS = true;
+      this.selectStageItems = localStorage.selectStageItems.split(',');
+    } else {
+      this.vacancies.forEach(vacancy => {
+        this.selectStageItems = this.selectStageItems.concat(
+          Object.values(vacancy.stages).map(
+            stage => `${vacancy.id}_${stage.id}_${stage.name}`
+          )
+        );
+      });
+    }
+  },
+  mounted() {
+    this.panelWidth = this.$el.offsetWidth;
+  },
+  watch: {
+    selectStageItems(newVal) {
+      if (this.isSaveToLS) {
+        localStorage.selectStageItems = newVal;
+      }
+    },
+    isSaveToLS(save) {
+      if (save) {
+        localStorage.selectStageItems = this.selectStageItems;
+      } else {
+        delete localStorage.selectStageItems;
+      }
+    }
   },
   computed: {
     selectVacancies() {
@@ -75,7 +122,7 @@ export default {
     candidates() {
       let vacancy = this.selectVacancies;
       let stages = Object.values(vacancy.stages);
-      let candidatesIds = this.getCandidateIds(stages, this.selectStages);
+      let candidatesIds = this.getCandidateIds(stages, this.selectStageItems);
       let filteredCandidates = this.selectCandidatesByIds(
         vacancy.candidates,
         candidatesIds
@@ -91,16 +138,39 @@ export default {
         });
       });
       return filteredCandidates;
+    },
+    getStages() {
+      let stages = [];
+      Object.values(this.currentStages).forEach(stage => {
+        let style = {
+          color: stage.color,
+          width: this.stageWidth
+        };
+        if (
+          this.selectStageItems.find(item => {
+            return item === `${this.currentVacancy}_${stage.id}_${stage.name}`;
+          }) !== undefined
+        ) {
+          style.background = stage.color;
+          style.color = '#ffffff';
+        }
+        stage['style'] = style;
+        stage['count'] = stage.candidates_ids
+          ? `${stage.candidates_ids.length}`
+          : '0';
+        stages.push(stage);
+      });
+      return stages;
+    },
+    stageWidth() {
+      return this.panelWidth / Object.keys(this.currentStages).length + 'px';
     }
   },
   methods: {
-    select(data) {
-      this.selectStages = data;
-    },
-    getCandidateIds(stages, selectStages) {
+    getCandidateIds(stages, selectStageItems) {
       let ids = [];
       stages.forEach(stage => {
-        selectStages.forEach(selectStageItem => {
+        selectStageItems.forEach(selectStageItem => {
           if (
             stage.name ===
             selectStageItem.replace(`${this.currentVacancy}_${stage.id}_`, '')
@@ -122,6 +192,25 @@ export default {
         }
       });
       return res;
+    },
+    resetAll() {
+      this.selectStageItems = this.selectStageItems.filter(stage => {
+        return (
+          this.getStages
+            .map(
+              currStage =>
+                `${this.currentVacancy}_${currStage.id}_${currStage.name}`
+            )
+            .indexOf(stage) === -1
+        );
+      });
+    },
+    selectAll() {
+      this.getStages.forEach(stage => {
+        this.selectStageItems.push(
+          `${this.currentVacancy}_${stage.id}_${stage.name}`
+        );
+      });
     }
   }
 };

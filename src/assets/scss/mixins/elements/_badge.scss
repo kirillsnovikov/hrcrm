@@ -1,7 +1,6 @@
 @mixin badge-base {
-  // cursor: pointer;
   border-radius: 0.25rem;
-  user-select: none;
+  user-select  : none;
   @content;
 }
 
@@ -18,34 +17,24 @@
 @mixin badge-color($name, $color) {
   .#{$name}-badge {
     @extend %badge-base;
-    // @extend %badge-padding;
     @extend .#{$name}-bg;
-    @if $name == alert {
+
+    @if $name==alert {
       @extend .dark-color;
-    } @else if $name == white {
+    }
+
+    @else if $name==white {
       @extend .dark-color;
-    } @else {
+    }
+
+    @else {
       @extend .white-color;
     }
-    // &:hover {
-    //   @extend .#{$name}-bg-hover;
-    // }
-    // &:active {
-    //   @extend .#{$name}-bg-active;
-    // }
   }
+
   .#{$name}-badge-empty {
     @extend %badge-base;
-    // @extend %badge-padding;
     @extend .#{$name}-border;
     @extend .#{$name}-color;
-    // &:hover {
-    //   @extend .#{$name}-bg-hover;
-    //   @extend .white-color;
-    // }
-    // &:active {
-    //   @extend .#{$name}-bg-active;
-    //   @extend .white-color;
-    // }
   }
 }

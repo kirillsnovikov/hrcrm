@@ -5,14 +5,15 @@ module.exports = {
     'comment-empty-line-before': [
       'always',
       {
-        ignore: ['stylelint-commands', 'after-comment']
+        ignore: ['after-comment']
       }
     ],
+    'comment-whitespace-inside': 'always',
+    'number-leading-zero': 'always',
+    'no-invalid-double-slash-comments': true,
     'declaration-colon-space-after': 'always',
     'declaration-bang-space-after': 'never',
     'declaration-block-semicolon-newline-after': 'always',
-    // 'declaration-block-semicolon-space-after': 'never-single-line',
-    // 'declaration-colon-space-after': 'always-single-line',
     indentation: [
       2,
       {
@@ -27,6 +28,6 @@ module.exports = {
         ignore: ['after-comment']
       }
     ],
-    'unit-whitelist': ['em', 'rem', '%', 's', 'px']
+    'unit-whitelist': ['em', 'rem', '%', 's', 'px', 'ms']
   }
 };

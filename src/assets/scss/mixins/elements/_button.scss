@@ -11,31 +11,39 @@
 @mixin button-color($name, $color) {
   .#{$name}-button {
     @extend %button-base;
-    // @extend %button-padding;
     @extend .#{$name}-bg;
-    @if $name == alert {
+
+    @if $name==alert {
       @extend .dark-color;
-    } @else if $name == white {
+    }
+
+    @else if $name==white {
       @extend .dark-color;
-    } @else {
+    }
+
+    @else {
       @extend .white-color;
     }
+
     &:hover {
       @extend .#{$name}-bg-hover;
     }
+
     &:active {
       @extend .#{$name}-bg-active;
     }
   }
+
   .#{$name}-button-empty {
     @extend %button-base;
-    // @extend %button-padding;
     @extend .#{$name}-border;
     @extend .#{$name}-color;
+
     &:hover {
       @extend .#{$name}-bg-hover;
       @extend .white-color;
     }
+
     &:active {
       @extend .#{$name}-bg-active;
       @extend .white-color;

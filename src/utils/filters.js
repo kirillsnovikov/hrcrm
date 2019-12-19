@@ -27,8 +27,6 @@ Vue.filter('salaryFormat', (str, type = 'decimal', precision = 2) => {
   if (type === 'decimal') {
     return parseFloat(str).toFixed(precision);
   } else {
-    // var salary = Number(str).toFixed();
-    // console.log();
     return Number(Number(str).toFixed()).toLocaleString();
   }
 });

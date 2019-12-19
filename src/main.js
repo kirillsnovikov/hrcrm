@@ -21,7 +21,8 @@ import {
   Radio,
   Dropdown,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Switch
 } from 'element-ui';
 
 const components = {
@@ -41,7 +42,8 @@ const components = {
   Radio,
   Dropdown,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Switch
 };
 
 for (let component of Object.values(components)) {
