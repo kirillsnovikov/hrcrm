@@ -4,8 +4,8 @@
     <!-- <el-badge :value="8" class="item" type="success">
       <el-button type="primary">Default</el-button>
     </el-badge>-->
-    <!-- <s-table :data="tableData"></s-table> -->
-    <selection :data="candidatesData"></selection>
+    <s-table :data="tableData"></s-table>
+    <!-- <selection :data="candidatesData"></selection> -->
     <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
     <!-- <stage-create
       :stages="stagesCreate"
@@ -18,8 +18,8 @@
 <script>
 // import StageCreate from 'Parts/Stage/Create';
 // import StageView from 'Parts/Stage/View';
-import Selection from 'Parts/Candidate/Selection';
-// import STable from 'Parts/Table/STable';
+// import Selection from 'Parts/Candidate/Selection';
+import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
 import candidatesData from 'Parts/Candidate/candidatesMock2';
 import stagesUpdate from 'Parts/Stage/stageUpdateMock';
@@ -32,9 +32,9 @@ export default {
   components: {
     // StageCreate
     // StageView,
-    Selection
+    // Selection
     // SCard,
-    // STable
+    STable
   },
   data() {
     return {
