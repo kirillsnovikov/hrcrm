@@ -30,15 +30,15 @@
     </el-tag>
     <div class="vacancy-select candidate-sel__sidebar">
       <div class="vacancy-select__actions">
-        <el-switch v-model="isSaveToLS" active-text="Сохранять"></el-switch>
-        <i
-          class="icon-checkbox-checked vacancy-select__actions-item"
-          @click="selectAll"
-        ></i>
-        <i
-          class="icon-remove vacancy-select__actions-item"
-          @click="resetAll"
-        ></i>
+        <el-tooltip :content="'Выбрать все'" placement="top-start">
+          <i
+            class="icon-checkbox-checked vacancy-select__actions-item"
+            @click="selectAll"
+          ></i>
+        </el-tooltip>
+        <el-button class="vacancy-select__actions-item" @click="resetAll"
+          >Очистить</el-button
+        >
       </div>
       <el-radio
         class="vacancy-select__item"
@@ -70,47 +70,25 @@ export default {
       vacancies: [],
       selectStageItems: [],
       currentVacancy: '',
-      panelWidth: 0,
-      isSaveToLS: false
+      panelWidth: 0
     };
   },
   created() {
     this.vacancies = this.data.data;
     this.currentVacancy = this.vacancies[0].id;
     this.vacancies.forEach(vacancy => {
+      this.selectStageItems = this.selectStageItems.concat(
+        Object.values(vacancy.stages).map(
+          stage => `${vacancy.id}_${stage.id}_${stage.name}`
+        )
+      );
       vacancy['candidatesCount'] = vacancy.candidates
         ? vacancy.candidates.length
         : 0;
     });
-    if (localStorage.selectStageItems) {
-      this.isSaveToLS = true;
-      this.selectStageItems = localStorage.selectStageItems.split(',');
-    } else {
-      this.vacancies.forEach(vacancy => {
-        this.selectStageItems = this.selectStageItems.concat(
-          Object.values(vacancy.stages).map(
-            stage => `${vacancy.id}_${stage.id}_${stage.name}`
-          )
-        );
-      });
-    }
   },
   mounted() {
     this.panelWidth = this.$el.offsetWidth;
-  },
-  watch: {
-    selectStageItems(newVal) {
-      if (this.isSaveToLS) {
-        localStorage.selectStageItems = newVal;
-      }
-    },
-    isSaveToLS(save) {
-      if (save) {
-        localStorage.selectStageItems = this.selectStageItems;
-      } else {
-        delete localStorage.selectStageItems;
-      }
-    }
   },
   computed: {
     selectVacancies() {
