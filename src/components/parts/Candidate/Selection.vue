@@ -30,13 +30,18 @@
     </el-tag>
     <div class="vacancy-select candidate-sel__sidebar">
       <div class="vacancy-select__actions">
-        <el-tooltip :content="'Выбрать все'" placement="top-start">
-          <i
-            class="icon-checkbox-checked vacancy-select__actions-item"
-            @click="selectAll"
-          ></i>
-        </el-tooltip>
-        <el-button class="vacancy-select__actions-item" @click="resetAll"
+        <!-- <el-tooltip :content="'Выбрать все'" placement="top-start"> -->
+        <el-button
+          size="small"
+          class="vacancy-select__actions-item"
+          @click="selectAll"
+          >Выбрать</el-button
+        >
+        <!-- </el-tooltip> -->
+        <el-button
+          size="small"
+          class="vacancy-select__actions-item"
+          @click="resetAll"
           >Очистить</el-button
         >
       </div>
