@@ -41,28 +41,12 @@
 
   &__actions {
     @extend %flex-center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom  : 0.5em;
 
-    &-item {
-      margin-left: 0.5em;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &.icon-remove {
-        &:hover {
-          color: $--color-danger;
-        }
-      }
-
-      &.icon-checkbox-checked {
-        &:hover {
-          color: $--color-primary;
-        }
-      }
-    }
+    // &-item {
+    //   margin-left: 0.5em;
+    // }
   }
 
   .el-radio__label {
