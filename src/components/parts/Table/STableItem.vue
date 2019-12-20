@@ -67,7 +67,7 @@
     </div>
     <div class="s-table-item__bottom" v-if="wideInfo">
       <div class="s-table-item__bottom-main">
-        <div class="s-table-item__stack">{{ data.stack.value }}</div>
+        <div class="s-table-item__grade">{{ data.grade.value }}</div>
         <div class="s-table-item__salary">
           <div class="s-table-item__salary-min" v-if="data.salary_min">
             {{
@@ -160,7 +160,7 @@ export default {
         { color: '#409EFF', percentage: 80 },
         { color: '#67C23A', percentage: 100 }
       ],
-      bodyKeys: ['business_unit_id', 'grade', 'project_link_id', 'manager_id'],
+      bodyKeys: ['business_unit_id', 'stack', 'project_link_id', 'manager_id'],
       peoplesData: peoplesData
     };
   },
