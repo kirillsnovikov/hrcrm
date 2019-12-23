@@ -152,6 +152,9 @@ export default {
       ]
     };
   },
+  // mounted() {
+  //   console.log(this.candidate);
+  // },
   computed: {
     wideIcon() {
       return this.wideInfo ? 'el-icon-arrow-up' : 'el-icon-arrow-down';

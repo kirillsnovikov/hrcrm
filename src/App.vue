@@ -4,7 +4,11 @@
     <!-- <el-badge :value="8" class="item" type="success">
       <el-button type="primary">Default</el-button>
     </el-badge>-->
-    <s-table :data="tableData"></s-table>
+    <!-- <candidate-list
+      :candidates="candidatesDataList"
+      :mod="listLabelsMock"
+    ></candidate-list> -->
+    <!-- <s-table :data="tableData"></s-table> -->
     <!-- <selection :data="candidatesData"></selection> -->
     <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
     <!-- <stage-create
@@ -16,11 +20,16 @@
 </template>
 
 <script>
+import { getTableData } from './utils/table';
 // import StageCreate from 'Parts/Stage/Create';
 // import StageView from 'Parts/Stage/View';
 // import Selection from 'Parts/Candidate/Selection';
-import STable from 'Parts/Table/STable';
+// import CandidateList from 'Parts/Candidate/CandidateList';
+// import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
+import listDataMock from 'Parts/Candidate/listDataMock';
+import listColumnsMock from 'Parts/Candidate/listColumnsMock';
+import listLabelsMock from 'Parts/Candidate/listLabelsMock';
 import candidatesData from 'Parts/Candidate/candidatesMock2';
 import stagesUpdate from 'Parts/Stage/stageUpdateMock';
 import stagesCreate from 'Parts/Stage/stageCreateMock';
@@ -34,7 +43,8 @@ export default {
     // StageView,
     // Selection
     // SCard,
-    STable
+    // CandidateList
+    // STable
   },
   data() {
     return {
@@ -44,6 +54,8 @@ export default {
       stagesUpdate: stagesUpdate,
       stagesCreate: stagesCreate,
       candidatesData: candidatesData,
+      listLabelsMock: listLabelsMock,
+      candidatesDataList: null,
       options: [
         {
           value: 'Option1',
@@ -70,6 +82,11 @@ export default {
     };
   },
   mounted() {
+    this.candidatesDataList = getTableData(listDataMock, listColumnsMock);
+    // console.log(this.candidatesDataList);
+    // this.candidatesDataList.forEach(element => {
+    //   // console.log(element);
+    // });
     // const data;
     // this.$axios
     //   .get('https://jsonplaceholder.typicode.com/todos')

@@ -44,9 +44,9 @@
     justify-content: space-between;
     margin-bottom  : 0.5em;
 
-    // &-item {
-    //   margin-left: 0.5em;
-    // }
+    &-item {
+      flex: 1;
+    }
   }
 
   .el-radio__label {

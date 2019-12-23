@@ -60,15 +60,11 @@
 </template>
 
 <script>
-import CandidateList from 'Parts/Candidate/List';
 import { uniq } from '@/utils/helpers';
 
 export default {
   props: {
     data: Object
-  },
-  components: {
-    CandidateList
   },
   data() {
     return {
