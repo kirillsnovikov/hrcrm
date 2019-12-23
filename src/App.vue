@@ -11,7 +11,7 @@
       :stages="stagesCreate"
       :data="stageData"
       :detail="stagesUpdate"
-    ></stage-create> -->
+    ></stage-create>-->
   </div>
 </template>
 
@@ -70,6 +70,40 @@ export default {
     };
   },
   mounted() {
+    let data = [
+      { NAME: 'Alex', AGE: 20 },
+      { NAME: 'Bob', AGE: 25 },
+      { NAME: 'John', AGE: 30 }
+    ];
+    let cols = {
+      NAME: {
+        a: 1,
+        b: 2,
+        c: 3
+      },
+      AGE: {
+        d: 5,
+        e: 6,
+        f: 7,
+        g: 8
+      }
+    };
+
+    let result = [];
+
+    data.forEach(item => {
+      console.log(item);
+      Object.keys(cols).forEach(col => {
+        let params = {};
+        Object.keys(cols[col]).forEach(colParam => {
+          params[colParam] = cols[col][colParam];
+          params['test'] = item[col];
+        });
+        result.push(params);
+      });
+    });
+
+    console.log(result);
     // const data;
     // this.$axios
     //   .get('https://jsonplaceholder.typicode.com/todos')
