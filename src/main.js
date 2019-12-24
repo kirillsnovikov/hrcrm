@@ -22,7 +22,13 @@ import {
   Dropdown,
   DropdownMenu,
   DropdownItem,
-  Switch
+  Switch,
+  Steps,
+  Step,
+  Popover,
+  Dialog,
+  Form,
+  FormItem
 } from 'element-ui';
 
 const components = {
@@ -43,7 +49,13 @@ const components = {
   Dropdown,
   DropdownMenu,
   DropdownItem,
-  Switch
+  Switch,
+  Steps,
+  Step,
+  Popover,
+  Dialog,
+  Form,
+  FormItem
 };
 
 for (let component of Object.values(components)) {

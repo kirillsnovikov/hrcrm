@@ -27,4 +27,25 @@
     font-style: italic;
     font-size : 0.75em;
   }
+
+  &-form {
+    margin-bottom: 25px;
+
+    .el-form-item {
+      margin: 0;
+    }
+
+    .control-panel  > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+
+      &:before,
+      &:after {
+        content: unset;
+      }
+    }
+    
+  }
 }

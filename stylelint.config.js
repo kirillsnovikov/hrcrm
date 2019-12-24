@@ -28,6 +28,6 @@ module.exports = {
         ignore: ['after-comment']
       }
     ],
-    'unit-whitelist': ['em', 'rem', '%', 's', 'px', 'ms']
+    'unit-whitelist': ['em', 'rem', '%', 's', 'px', 'ms', 'deg']
   }
 };
