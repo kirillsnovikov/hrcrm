@@ -234,9 +234,15 @@ export default {
     const candidates = candidatesInfo.vacancies[0].candidates;
     const vacancy = candidatesInfo.vacancies[0].name;
     this.candidate = candidates[rand(0, candidates.length - 1)];
-    // временно, для тестовых данных
-    this.candidate.vacancy = vacancy;
     this.stages = candidatesInfo.vacancies[0].stages;
+    // временно, для тестовых данных
+    this.candidate = {
+      ...this.candidate,
+      vacancy,
+      stage: {
+        ...this.stages[0]
+      }
+    };
     // console.log(this.candidate);
   },
   methods: {
