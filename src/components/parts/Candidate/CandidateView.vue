@@ -129,7 +129,10 @@
         </div>
       </div>
     </div>
-    <candidate-item :candidate="candidate" :mod="mod"></candidate-item>
+    <candidate-list-item
+      :candidate="candidate"
+      :mod="mod"
+    ></candidate-list-item>
     <div class="s-card__main">
       <div class="s-card__info">
         <el-tabs v-model="activeInfo">
@@ -177,7 +180,7 @@
 </template>
 
 <script>
-import CandidateItem from 'Parts/Candidate/Item';
+import CandidateListItem from 'Parts/Candidate/CandidateListItem';
 import SComment from 'Elements/Comment/SComment';
 import SCommentForm from 'Elements/Comment/SCommentForm';
 import ResumeTabInfo from 'Parts/Candidate/ResumeTabInfo';
@@ -248,7 +251,7 @@ export default {
     }
   },
   components: {
-    CandidateItem,
+    CandidateListItem,
     SComment,
     SCommentForm,
     ResumeTabInfo
