@@ -1,16 +1,16 @@
 <template>
   <section class="candidate-list">
-    <candidate-item
+    <candidate-list-item
       v-for="(candidate, i) in candidates"
       :key="`_${i}`"
       :candidate="candidate"
       :mod="mod"
-    ></candidate-item>
+    ></candidate-list-item>
   </section>
 </template>
 
 <script>
-import CandidateItem from 'Parts/Candidate/Item';
+import CandidateListItem from 'Parts/Candidate/CandidateListItem';
 
 export default {
   props: {
@@ -22,7 +22,10 @@ export default {
     }
   },
   components: {
-    CandidateItem
+    CandidateListItem
+  },
+  mounted() {
+    // console.log(this.candidates);
   }
 };
 </script>

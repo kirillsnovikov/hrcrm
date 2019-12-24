@@ -304,3 +304,9 @@
     justify-content: space-between;
   }
 }
+
+.el-dropdown-menu {
+  &__item {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}

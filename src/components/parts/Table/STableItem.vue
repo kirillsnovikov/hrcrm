@@ -45,11 +45,24 @@
           v-for="(item, k) in defineBodyData"
           :key="`${k + item.value}`"
         >
+          <el-tooltip
+            v-if="item.name === 'stack'"
+            :content="item.value"
+            placement="top-start"
+          >
+            <component
+              class="s-table-item__medium-link s-table-item__medium-link_type_elipsis"
+              :is="item.link ? 'el-link' : 's-text'"
+              :href="item.link"
+              >{{ item.value }}</component
+            >
+          </el-tooltip>
           <component
+            v-else
             class="s-table-item__medium-link"
             :is="item.link ? 'el-link' : 's-text'"
             :href="item.link"
-            >{{ item.value | grade }}</component
+            >{{ item.value }}</component
           >
         </div>
       </div>
@@ -67,7 +80,7 @@
     </div>
     <div class="s-table-item__bottom" v-if="wideInfo">
       <div class="s-table-item__bottom-main">
-        <div class="s-table-item__grade">{{ data.grade.value }}</div>
+        <div class="s-table-item__grade">{{ data.grade.value | grade }}</div>
         <div class="s-table-item__salary">
           <div class="s-table-item__salary-min" v-if="data.salary_min">
             {{
