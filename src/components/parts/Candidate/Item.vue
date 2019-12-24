@@ -68,12 +68,12 @@
           </div>
           <div class="candidate-header__bottom">
             <div class="candidate-header__vacancy">{{ candidate.vacancy }}</div>
-            <div
+            <!-- <div
               class="candidate-header__stage"
               :style="{ background: candidate.stage.color }"
             >
               {{ candidate.stage.name }}
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="candidate-item__body">

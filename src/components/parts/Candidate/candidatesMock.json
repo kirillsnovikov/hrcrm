@@ -779,7 +779,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,
@@ -1609,7 +1609,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,
@@ -2439,7 +2439,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,
@@ -3269,7 +3269,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,
@@ -4262,7 +4262,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,
@@ -5092,7 +5092,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,
@@ -5992,7 +5992,7 @@
             "len": "255",
             "size": "20",
             "link_target": "_blank",
-            "value": ""
+            "value": "http://test-url"
           },
           "self_response": {
             "required": false,

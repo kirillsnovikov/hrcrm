@@ -21,7 +21,11 @@ import {
   Dropdown,
   DropdownMenu,
   DropdownItem,
-  Switch
+  Switch,
+  Steps,
+  Step,
+  Popover,
+  Dialog
 } from 'element-ui';
 
 const components = {
@@ -42,7 +46,11 @@ const components = {
   Dropdown,
   DropdownMenu,
   DropdownItem,
-  Switch
+  Switch,
+  Steps,
+  Step,
+  Popover,
+  Dialog
 };
 
 for (let component of Object.values(components)) {
