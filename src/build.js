@@ -89,14 +89,16 @@ import STable from 'Parts/Table/STable';
 import SCard from 'Parts/Card/SCard';
 import StageCreate from 'Parts/Stage/Create';
 import StageView from 'Parts/Stage/View';
-import Selection from 'Parts/Candidate/Selection';
+import CandidateSelection from 'Parts/Candidate/CandidateSelection';
+import CandidateList from 'Parts/Candidate/CandidateList';
 
 const parts = {
   STable,
   SCard,
   StageCreate,
   StageView,
-  Selection
+  CandidateSelection,
+  CandidateList
 };
 
 Object.keys(parts).forEach(name => {
@@ -104,3 +106,4 @@ Object.keys(parts).forEach(name => {
 });
 
 export default parts;
+export * from './utils/table';
