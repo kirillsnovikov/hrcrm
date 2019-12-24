@@ -22,7 +22,7 @@
 // import Selection from 'Parts/Candidate/Selection';
 // import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
-import CandidateView from 'Parts/Candidate/View';
+import CandidateView from 'Parts/Candidate/CandidateView';
 import candidatesData from 'Parts/Candidate/candidatesMock2';
 import stagesUpdate from 'Parts/Stage/stageUpdateMock';
 import stagesCreate from 'Parts/Stage/stageCreateMock';

@@ -177,7 +177,7 @@
 </template>
 
 <script>
-import CandidateItem from 'Parts/Candidate/Item';
+import CandidateItem from 'Parts/Candidate/CandidateItem';
 import SComment from 'Elements/Comment/SComment';
 import SCommentForm from 'Elements/Comment/SCommentForm';
 import ResumeTabInfo from 'Parts/Candidate/ResumeTabInfo';
