@@ -99,12 +99,7 @@
               <el-tooltip :content="stage.name" placement="top-start">
                 <span class="stages-panel__label">{{ stage.name }}</span>
               </el-tooltip>
-              <input
-                type="checkbox"
-                v-model="selectStageItems"
-                :value="`${currentVacancy}_${stage.id}_${stage.name}`"
-                class="stages-panel__input"
-              />
+              <input type="checkbox" class="stages-panel__input" />
             </label>
           </div>
         </div>
@@ -128,12 +123,7 @@
               <el-tooltip :content="stage.name" placement="top-start">
                 <span class="stages-panel__label">{{ stage.name }}</span>
               </el-tooltip>
-              <input
-                type="checkbox"
-                v-model="selectStageItems"
-                :value="`${currentVacancy}_${stage.id}_${stage.name}`"
-                class="stages-panel__input"
-              />
+              <input type="checkbox" class="stages-panel__input" />
             </label>
           </div>
         </div>
