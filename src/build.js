@@ -25,7 +25,9 @@ import {
   Steps,
   Step,
   Popover,
-  Dialog
+  Dialog,
+  Form,
+  FormItem
 } from 'element-ui';
 
 const components = {
@@ -50,7 +52,9 @@ const components = {
   Steps,
   Step,
   Popover,
-  Dialog
+  Dialog,
+  Form,
+  FormItem
 };
 
 for (let component of Object.values(components)) {

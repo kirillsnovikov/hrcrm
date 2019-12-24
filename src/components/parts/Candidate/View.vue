@@ -164,11 +164,15 @@
             <el-button
               class="inline-buttons__btn"
               type="primary"
-              @click="showCommentForm"
+              @click="commentFormVisible = true"
               >Комментарий</el-button
             >
           </div>
           <el-tab-pane label="Комментарии" name="comments">
+            <s-comment-form
+              :form-visible="commentFormVisible"
+              @set-form-visible="showCommentForm"
+            ></s-comment-form>
             <s-comment
               class="s-card__comments__s-comment"
               v-for="(comment, i) in comments"
@@ -185,6 +189,7 @@
 <script>
 import CandidateItem from 'Parts/Candidate/Item';
 import SComment from 'Elements/Comment/SComment';
+import SCommentForm from 'Elements/Comment/SCommentForm';
 import ResumeTabInfo from 'Parts/Candidate/ResumeTabInfo';
 import { rand } from '@/utils/helpers';
 import candidatesInfo from 'Parts/Candidate/candidatesMock';
@@ -231,7 +236,8 @@ export default {
       stages: [],
       activeStage: 1,
       relationDialogVisible: false,
-      stageDialogVisible: false
+      stageDialogVisible: false,
+      commentFormVisible: false
     };
   },
   created() {
@@ -244,11 +250,17 @@ export default {
     // console.log(this.candidate);
   },
   methods: {
-    showCommentForm() {}
+    showCommentForm({ flag, form }) {
+      this.commentFormVisible = flag;
+      if (form) {
+        // console.log(form);
+      }
+    }
   },
   components: {
     CandidateItem,
     SComment,
+    SCommentForm,
     ResumeTabInfo
   }
 };
