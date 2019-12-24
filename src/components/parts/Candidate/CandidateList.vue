@@ -25,7 +25,7 @@ export default {
     CandidateListItem
   },
   mounted() {
-    console.log(this.candidates);
+    // console.log(this.candidates);
   }
 };
 </script>
