@@ -1,26 +1,26 @@
 <template>
-  <section class="s-table-item">
-    <div class="s-table-item__top" @click.alt="wideInfo = !wideInfo">
-      <div class="s-table-item__left">
-        <div class="s-table-item__left-top">
-          <div class="s-table-item__title">
+  <section class="vacancy-table-item">
+    <div class="vacancy-table-item__top" @click.alt="wideInfo = !wideInfo">
+      <div class="vacancy-table-item__left">
+        <div class="vacancy-table-item__left-top">
+          <div class="vacancy-table-item__title">
             <el-tooltip :content="data.name_id.value" placement="top-start">
               <component
                 :is="data.name_id.link ? 'el-link' : 's-text'"
                 :type="'primary'"
                 :href="data.name_id.link"
-                class="s-table-item__title-link"
+                class="vacancy-table-item__title-link"
                 >{{ data.name_id.value }}</component
               >
             </el-tooltip>
             <el-tag
-              class="s-table-item__title-tag"
+              class="vacancy-table-item__title-tag"
               v-if="data.amount"
               :size="'mini'"
               >{{ data.amount.value }}</el-tag
             >
           </div>
-          <div class="s-table-item__status">
+          <div class="vacancy-table-item__status">
             <el-tag
               v-if="data.status_id"
               :type="colorStatus"
@@ -29,7 +29,7 @@
             >
           </div>
         </div>
-        <div class="s-table-item__location">
+        <div class="vacancy-table-item__location">
           <component
             v-if="data.location_id"
             :is="data.location_id.link ? 'el-link' : 's-text'"
@@ -37,11 +37,11 @@
             >{{ data.location_id.value }}</component
           >
         </div>
-        <div class="s-table-item__date">{{ `21.02.1998` }}</div>
+        <div class="vacancy-table-item__date">{{ `21.02.1998` }}</div>
       </div>
-      <div class="s-table-item__medium">
+      <div class="vacancy-table-item__medium">
         <div
-          class="s-table-item__medium-value"
+          class="vacancy-table-item__medium-value"
           v-for="(item, k) in defineBodyData"
           :key="`${k + item.value}`"
         >
@@ -51,7 +51,7 @@
             placement="top-start"
           >
             <component
-              class="s-table-item__medium-link s-table-item__medium-link_type_elipsis"
+              class="vacancy-table-item__medium-link vacancy-table-item__medium-link_type_elipsis"
               :is="item.link ? 'el-link' : 's-text'"
               :href="item.link"
               >{{ item.value }}</component
@@ -59,14 +59,14 @@
           </el-tooltip>
           <component
             v-else
-            class="s-table-item__medium-link"
+            class="vacancy-table-item__medium-link"
             :is="item.link ? 'el-link' : 's-text'"
             :href="item.link"
             >{{ item.value }}</component
           >
         </div>
       </div>
-      <div class="s-table-item__right">
+      <div class="vacancy-table-item__right">
         <el-progress
           :text-inside="true"
           :stroke-width="25"
@@ -74,22 +74,27 @@
           :color="customColors"
         ></el-progress>
       </div>
-      <div class="s-table-item__button-down" @click="wideInfo = !wideInfo">
+      <div
+        class="vacancy-table-item__button-down"
+        @click="wideInfo = !wideInfo"
+      >
         <el-button circle :icon="wideIcon" :size="'mini'"></el-button>
       </div>
     </div>
-    <div class="s-table-item__bottom" v-if="wideInfo">
-      <div class="s-table-item__bottom-main">
-        <div class="s-table-item__grade">{{ data.grade.value | grade }}</div>
-        <div class="s-table-item__salary">
-          <div class="s-table-item__salary-min" v-if="data.salary_min">
+    <div class="vacancy-table-item__bottom" v-if="wideInfo">
+      <div class="vacancy-table-item__bottom-main">
+        <div class="vacancy-table-item__grade">
+          {{ data.grade.value | grade }}
+        </div>
+        <div class="vacancy-table-item__salary">
+          <div class="vacancy-table-item__salary-min" v-if="data.salary_min">
             {{
               data.salary_min.value
                 | salaryFormat(data.salary_min.type, data.salary_min.precision)
             }}
           </div>
           <div
-            class="s-table-item__salary-max"
+            class="vacancy-table-item__salary-max"
             v-bind:draggable="''"
             v-if="data.salary_max"
           >
@@ -98,13 +103,13 @@
                 | salaryFormat(data.salary_min.type, data.salary_min.precision)
             }}
           </div>
-          <div class="s-table-item__salary-val" v-if="data.salary_val">
+          <div class="vacancy-table-item__salary-val" v-if="data.salary_val">
             {{ data.salary_val.value }}
           </div>
         </div>
       </div>
-      <div class="s-table-item__peoples">
-        <div class="peoples s-table-item__peoples__peoples">
+      <div class="vacancy-table-item__peoples">
+        <div class="peoples vacancy-table-item__peoples__peoples">
           <div class="peoples__label">{{ 'Бизнес' }}</div>
           <div class="peoples__tags">
             <el-tag
@@ -116,7 +121,7 @@
             >
           </div>
         </div>
-        <div class="peoples s-table-item__peoples__peoples">
+        <div class="peoples vacancy-table-item__peoples__peoples">
           <div class="peoples__label">{{ 'Рекрутеры' }}</div>
           <div class="peoples__tags">
             <el-tag
