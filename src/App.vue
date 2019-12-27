@@ -10,6 +10,7 @@
       :candidates-data="candidatesData"
       :data="cardData"
     ></candidate-view>
+    <!-- <vacancy-view :candidates="candidatesData" :data="cardData"></vacancy-view> -->
     <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
     <!-- <stage-create
       :stages="stagesCreate"
@@ -25,6 +26,7 @@
 // import Selection from 'Parts/Candidate/CandidateSelection';
 // import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
+// import VacancyView from 'Parts/Vacancy/VacancyView';
 import CandidateView from 'Parts/Candidate/CandidateView';
 import candidatesData from 'Parts/Candidate/candidatesMock2';
 import stagesUpdate from 'Parts/Stage/stageUpdateMock';
@@ -40,7 +42,8 @@ export default {
     // Selection,
     // SCard,
     // STable,
-    CandidateView
+    CandidateView,
+    // VacancyView 
   },
   data() {
     return {

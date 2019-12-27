@@ -1,5 +1,5 @@
 <template>
-  <div class="candidate-view s-card">
+  <div class="candidate-view">
     <el-dialog
       width="40%"
       title="Вы действительно хотите удалить связь с вакансией «Аналитик»?"
@@ -27,7 +27,7 @@
         </el-button>
       </div>
     </el-dialog>
-    <div class="inline-buttons s-card__inline-buttons">
+    <div class="inline-buttons candidate-view__inline-buttons">
       <a
         :href="
           `/index.php?module=HRPAC_VACANCY&action=EditView&record=${data.id.value}`
@@ -150,8 +150,8 @@
       :candidate="candidate"
       :mod="this.candidatesData.mod"
     ></candidate-list-item>
-    <div class="s-card__main">
-      <div class="s-card__info">
+    <div class="candidate-view__main">
+      <div class="candidate-view__info">
         <el-tabs v-model="activeInfo">
           <el-tab-pane
             label="Резюме (hh.ru)"
@@ -168,7 +168,7 @@
           >
         </el-tabs>
       </div>
-      <div class="s-card__comments">
+      <div class="candidate-view__comments">
         <el-tabs v-model="activeComments">
           <div class="inline-buttons stage-form__inline-buttons">
             <el-button
@@ -184,7 +184,7 @@
               @set-form-visible="showCommentForm"
             ></s-comment-form>
             <s-comment
-              class="s-card__comments__s-comment"
+              class="candidate-view__comments__s-comment"
               v-for="(comment, i) in comments"
               :data="comment"
               :key="`${i}_${comment.date}`"
