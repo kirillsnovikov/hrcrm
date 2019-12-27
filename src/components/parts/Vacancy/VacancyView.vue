@@ -121,7 +121,6 @@ export default {
       activeInfo: 'description',
       activeComments: 'comments',
       comments: comments,
-      panelWidth: 0,
       stages: [],
       candidateModule: 'HRPAC_CANDIDATES',
       vacancyModule: 'HRPAC_VACANCY'
@@ -129,19 +128,13 @@ export default {
   },
   mounted() {
     console.log(this.data);
-    this.panelWidth = this.$el.offsetWidth;
     this.stages = Object.values(this.candidates[0].stage_data);
     this.stages.forEach(stage => {
       if (!stage.candidates) {
         stage['candidates'] = [];
       }
       let style = {
-        background: stage.color,
-        color: '#ffffff',
-        width:
-          this.$el.offsetWidth /
-            Object.keys(this.candidates[0].stage_data).length +
-          'px'
+        background: stage.color
       };
       this.candidates.forEach(cand => {
         if (cand.this_stage === stage.id) {
