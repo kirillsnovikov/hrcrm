@@ -20,7 +20,7 @@
     </div>
     <div class="label-value">
       <span class="label-value__label">Ссылка на резюме</span>
-      <span class="label-value__value">
+      <span class="label-value__value label-value__value_wrap_normal">
         {{ candidate.resume_url.value }}
       </span>
     </div>

@@ -23,9 +23,6 @@ import {
   DropdownMenu,
   DropdownItem,
   Switch,
-  Steps,
-  Step,
-  Popover,
   Dialog,
   Form,
   FormItem
@@ -50,9 +47,6 @@ const components = {
   DropdownMenu,
   DropdownItem,
   Switch,
-  Steps,
-  Step,
-  Popover,
   Dialog,
   Form,
   FormItem

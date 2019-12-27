@@ -61,6 +61,7 @@
 
 <script>
 import { uniq } from '@/utils/helpers';
+import CandidateList from 'Parts/Candidate/CandidateList';
 
 export default {
   props: {
@@ -191,6 +192,9 @@ export default {
         );
       });
     }
+  },
+  components: {
+    CandidateList
   }
 };
 </script>
