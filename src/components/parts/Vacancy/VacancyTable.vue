@@ -1,20 +1,20 @@
 <template>
-  <section id="s-table" class="s-table">
-    <s-table-item
+  <section id="vacancy-table" class="vacancy-table">
+    <vacancy-table-item
       v-for="item in parseTableData"
       :data="item"
       :key="item.name_id.id"
-    ></s-table-item>
+    ></vacancy-table-item>
   </section>
 </template>
 
 <script>
-import STableItem from 'Parts/Table/STableItem.vue';
+import VacancyTableItem from 'Parts/Vacancy/VacancyTableItem.vue';
 
 export default {
   name: 'STable',
   components: {
-    STableItem
+    VacancyTableItem
   },
   props: {
     data: {
