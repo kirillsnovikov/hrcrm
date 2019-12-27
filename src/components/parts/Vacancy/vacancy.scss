@@ -34,12 +34,12 @@
   }
 }
 
-.s-table {
+.vacancy-table {
   @extend %flex-col;
   @extend %crm-font;
 }
 
-.s-table-item {
+.vacancy-table-item {
   @extend %flex-col;
   @extend .border-radius;
   background: $--color-white;

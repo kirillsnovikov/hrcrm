@@ -43,12 +43,12 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-    <s-table-item
+    <vacancy-table-item
       :type="'card'"
       :data="data"
       :wide="true"
       :id="data.id.value"
-    ></s-table-item>
+    ></vacancy-table-item>
     <div class="vacancy-view__main">
       <div class="vacancy-view__info">
         <el-tabs v-model="activeInfo">
@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import STableItem from 'Parts/Vacancy/VacancyTableItem';
+import VacancyTableItem from 'Parts/Vacancy/VacancyTableItem';
 import SComment from 'Elements/Comment/SComment';
 
 const comments = [
@@ -105,7 +105,7 @@ const comments = [
 ];
 export default {
   components: {
-    STableItem,
+    VacancyTableItem,
     SComment
   },
   props: {

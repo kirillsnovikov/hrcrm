@@ -79,16 +79,16 @@ Object.keys(libs).map(libName => {
 });
 
 // Parts
-import STable from 'Parts/Table/STable';
-import SCard from 'Parts/Card/SCard';
+import VacancyTable from 'Parts/Vacancy/VacancyTable';
+import VacancyView from 'Parts/Vacancy/VacancyView';
 import StageCreate from 'Parts/Stage/Create';
 import StageView from 'Parts/Stage/View';
 import CandidateSelection from 'Parts/Candidate/CandidateSelection';
 import CandidateList from 'Parts/Candidate/CandidateList';
 
 const parts = {
-  STable,
-  SCard,
+  VacancyTable,
+  VacancyView,
   StageCreate,
   StageView,
   CandidateSelection,
