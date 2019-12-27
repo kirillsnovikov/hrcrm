@@ -1,0 +1,244 @@
+%card-info {
+  padding: 0 1em 1em 1em;
+  box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+}
+
+.vacancy-view {
+  @extend %crm-font;
+  color: $--color-text-regular;
+
+  &__inline-buttons {
+    margin-bottom: 1em;
+  }
+
+  &__main {
+    @extend %flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    @extend .border-radius;
+    @extend %card-info;
+    flex: 1;
+    margin-right: 1em;
+  }
+
+  &__comments {
+    @extend .border-radius;
+    @extend %card-info;
+    flex: 1;
+
+    &__s-comment {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.s-table {
+  @extend %flex-col;
+  @extend %crm-font;
+}
+
+.s-table-item {
+  @extend %flex-col;
+  @extend .border-radius;
+  background: $--color-white;
+  margin-bottom: 1.25em;
+  box-shadow: -6px 4px 10px 0px rgba($dark-color, 0.42);
+
+  &__top {
+    @extend %flex-center;
+    padding: 0.5em 1em;
+    position: relative;
+  }
+
+  &__bottom {
+    @extend %flex-col;
+    @extend .border-bottom-radius;
+    background: $--border-color-lighter;
+    padding: 0.5em 1em;
+  }
+
+  &__bottom-main {
+    @extend %flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  &__grade {
+    flex: 1;
+    margin-right: 1em;
+  }
+
+  &__salary {
+    @extend %flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+    flex: 0;
+  }
+
+  &__salary-min {
+    &:after {
+      content: '-';
+      margin: 0 0.5em;
+    }
+  }
+
+  &__peoples {
+    @extend %flex;
+    justify-content: space-between;
+
+    &__peoples {
+      width: 50%;
+    }
+  }
+
+  &__left {
+    @extend %flex;
+    flex-wrap: wrap;
+    align-self: stretch;
+    margin-right: 1em;
+    width: 25%;
+  }
+
+  &__left-top {
+    width: 100%;
+    @extend %flex-center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @extend %flex-center;
+    flex: 80%;
+    overflow: hidden;
+    margin-right: 0.5em;
+  }
+
+  &__title-link {
+    display: block;
+    color: $--color-primary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-weight: bold;
+    margin-right: 0.5em;
+    font-size: 1.25em;
+    max-width: 90%;
+  }
+
+  &__status {
+    @extend %flex-center;
+    flex: 20%;
+    justify-content: flex-end;
+  }
+
+  &__location {
+    @extend %flex-center;
+    width: 50%;
+    font-size: 0.875em;
+  }
+
+  &__date {
+    @extend %flex-center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  &__medium {
+    @extend .border-right-radius;
+    @extend %flex;
+    flex-wrap: wrap;
+    flex: 1;
+
+    &-value {
+      width: 50%;
+      margin: 0.25em 0;
+      overflow: hidden;
+    }
+
+    &-link {
+      font-weight: bold;
+      font-size: 0.875em;
+      color: $--color-text-regular;
+
+      &_type_elipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__right {
+    width: 25%;
+    margin-right: 2em;
+  }
+
+  &__button-down {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+  }
+}
+
+.peoples {
+  @extend %flex-col;
+
+  &__label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+
+    &:after {
+      content: ':';
+    }
+  }
+
+  &__tags {
+    @extend %flex;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    margin: 0 0.5em 0.5em 0;
+  }
+}
+
+.stages-vacancy {
+  @extend %flex-center;
+  margin-bottom: 1em;
+
+  &__dropdown {
+    border: $--border-base;
+    border-right: none;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:first-child {
+      @extend .border-left-radius;
+    }
+
+    &:last-child {
+      @extend .border-right-radius;
+      border-right: $--border-base;
+    }
+  }
+
+  &__item {
+    @extend %flex-center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+  }
+
+  &__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__candidate-link {
+    text-decoration: none;
+  }
+}
