@@ -43,3 +43,23 @@ Vue.filter('grade', str => {
 });
 
 Vue.filter('plural', plural);
+
+Vue.filter('route', (module, action, id) => {
+  let types = {
+    view: 'DetailView',
+    edit: 'EditView'
+  };
+  let searchParams = new URLSearchParams();
+  let params = {
+    module: module,
+    action: types[action]
+  };
+  if (id) {
+    params['record'] = id;
+  }
+
+  for (let [key, value] of Object.entries(params)) {
+    searchParams.append(key, value);
+  }
+  return `/index.php?${searchParams}`;
+});
