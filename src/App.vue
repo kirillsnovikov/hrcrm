@@ -6,7 +6,10 @@
     </el-badge> -->
     <!-- <s-table :data="tableData"></s-table> -->
     <!-- <selection :data="candidatesData"></selection> -->
-    <candidate-view :mod="candidatesData.mod" :data="cardData"></candidate-view>
+    <candidate-view
+      :candidates-data="candidatesData"
+      :data="cardData"
+    ></candidate-view>
     <!-- <stage-view :stages="stagesUpdate" :data="stageData"></stage-view> -->
     <!-- <stage-create
       :stages="stagesCreate"
@@ -19,7 +22,7 @@
 <script>
 // import StageCreate from 'Parts/Stage/Create';
 // import StageView from 'Parts/Stage/View';
-// import Selection from 'Parts/Candidate/Selection';
+// import Selection from 'Parts/Candidate/CandidateSelection';
 // import STable from 'Parts/Table/STable';
 // import SCard from 'Parts/Card/SCard';
 import CandidateView from 'Parts/Candidate/CandidateView';

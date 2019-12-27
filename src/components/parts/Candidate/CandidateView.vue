@@ -14,12 +14,15 @@
     </el-dialog>
     <el-dialog
       width="40%"
-      title="Вы действительно хотите сменить этап подбора на «Оффер»?"
+      v-if="selectedStage"
+      :title="
+        `Вы действительно хотите сменить этап подбора на «${selectedStage.name}»?`
+      "
       :visible.sync="stageDialogVisible"
     >
       <div slot="footer" class="dialog-footer">
-        <el-button @click="stageDialogVisible = false">Отмена</el-button>
-        <el-button type="primary" @click="stageDialogVisible = false">
+        <el-button @click="cancelStageSelect">Отмена</el-button>
+        <el-button type="primary" @click="confirmStageSelect(selectedStage)">
           Ок
         </el-button>
       </div>
@@ -92,14 +95,21 @@
           <div class="stages-panel candidate-sel__stages-panel">
             <label
               class="stages-panel__item"
-              :style="{ background: stage.color }"
+              :style="stage.styles"
               v-for="(stage, i) in stages"
               :key="`${stage.id}_${i}`"
             >
               <el-tooltip :content="stage.name" placement="top-start">
                 <span class="stages-panel__label">{{ stage.name }}</span>
               </el-tooltip>
-              <input type="checkbox" class="stages-panel__input" />
+              <span class="stages-panel__date">dd.mm.yyyy</span>
+              <input
+                type="checkbox"
+                v-model="selectStageItems"
+                @change="selectStage(stage, i)"
+                class="stages-panel__input"
+                :value="`${currentVacancies}_${stage.id}_${stage.name}`"
+              />
             </label>
           </div>
         </div>
@@ -116,14 +126,21 @@
           <div class="stages-panel candidate-sel__stages-panel">
             <label
               class="stages-panel__item"
-              :style="{ background: stage.color }"
+              :style="stage.styles"
               v-for="(stage, i) in stages"
               :key="`${stage.id}_${i}`"
             >
               <el-tooltip :content="stage.name" placement="top-start">
                 <span class="stages-panel__label">{{ stage.name }}</span>
               </el-tooltip>
-              <input type="checkbox" class="stages-panel__input" />
+              <span class="stages-panel__date">dd.mm.yyyy</span>
+              <input
+                type="checkbox"
+                v-model="selectStageItems"
+                @change="selectStage(stage, i)"
+                class="stages-panel__input"
+                :value="`${currentVacancies}_${stage.id}_${stage.name}`"
+              />
             </label>
           </div>
         </div>
@@ -131,7 +148,7 @@
     </div>
     <candidate-list-item
       :candidate="candidate"
-      :mod="mod"
+      :mod="this.candidatesData.mod"
     ></candidate-list-item>
     <div class="s-card__main">
       <div class="s-card__info">
@@ -213,7 +230,7 @@ const comments = [
 
 export default {
   props: {
-    mod: {
+    candidatesData: {
       type: Object
     },
     data: {
@@ -227,17 +244,40 @@ export default {
       activeComments: 'comments',
       comments: comments,
       stages: [],
-      activeStage: 1,
       relationDialogVisible: false,
       stageDialogVisible: false,
-      commentFormVisible: false
+      commentFormVisible: false,
+      currentVacancies: [],
+      currentStage: {
+        id: '8416b460-7d0c-4cc1-e2e7-5dca55566054',
+        name: 'Первичное интервью с рекрутером',
+        activity: '1',
+        color: '#ffc000',
+        sort: '3',
+        required_stage: null,
+        required_position: null,
+        position_sort: null,
+        candidates_ids: ['791']
+      },
+      selectedStage: null,
+      selectStageItems: []
     };
   },
   created() {
     const candidates = candidatesInfo.vacancies[0].candidates;
     const vacancy = candidatesInfo.vacancies[0].name;
+
     this.candidate = candidates[rand(0, candidates.length - 1)];
     this.stages = candidatesInfo.vacancies[0].stages;
+    this.addStageStyles();
+    if (
+      !this.currentVacancies.filter(
+        vacancy => vacancy.id === this.candidatesData.data[0].id
+      ).length
+    ) {
+      this.currentVacancies.push(this.candidatesData.data[0].id);
+    }
+
     // временно, для тестовых данных
     this.candidate = {
       ...this.candidate,
@@ -246,14 +286,51 @@ export default {
         ...this.stages[0]
       }
     };
-    // console.log(this.candidate);
+  },
+  computed: {
+    stageWidth() {
+      return 100 / this.stages.length + '%';
+    }
   },
   methods: {
+    addStageStyles() {
+      const index = this.stages.findIndex(
+        stage => stage.id === this.currentStage.id
+      );
+      this.stages.map((stage, i) => {
+        const styles = {
+          width: this.stageWidth
+        };
+
+        if (i <= index) {
+          styles.background = stage.color;
+          styles.color = '#ffffff';
+        }
+        stage.styles = styles;
+      });
+    },
     showCommentForm({ flag, form }) {
       this.commentFormVisible = flag;
       if (form) {
         // console.log(form);
       }
+    },
+    selectStage(stage) {
+      this.selectedStage = null;
+
+      if (Number(stage.activity)) {
+        this.selectedStage = stage;
+        this.stageDialogVisible = true;
+      }
+    },
+    confirmStageSelect(stage) {
+      this.currentStage = stage;
+      this.addStageStyles();
+      this.selectedStage = null;
+    },
+    cancelStageSelect() {
+      this.stageDialogVisible = false;
+      this.selectedStage = null;
     }
   },
   components: {
