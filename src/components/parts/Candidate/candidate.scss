@@ -349,3 +349,69 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 }
+
+.candidate-form {
+  &__block {
+    float: left;
+
+    &_pos_left {
+      width: 60%;
+    }
+    
+    &_pos_right {
+      width: 20%;
+      margin: 0 10%;
+    }
+  }
+  
+  & > div,
+  .el-upload,
+  & > .candidate-form__upload,
+  .el-date-editor.el-input,
+  .el-select {
+    width: 100%;
+  }
+
+  & > .candidate-form__upload {
+    .el-upload__text {
+      line-height: 40px;
+    }
+  }
+
+  .el-form-item__label {
+    white-space: nowrap;
+  }
+  
+  .el-upload--picture-card,
+  .el-upload__text,
+  .el-upload-dragger {
+    height: auto;
+    width: 100%;
+  }
+
+  .form-item {
+    &_width_80 {
+      width: 80%;
+    }
+
+    &_width_63 {
+      width: 63%;
+    }
+    
+    &_width_35 {
+      width: 35%;
+    }
+    
+    &_width_18 {
+      width: 18%;
+    }
+
+    &:last-child {
+      float: right;
+    }
+  }
+}
+
+.candidate-edit__inline-buttons {
+  margin-bottom: 15px;
+}

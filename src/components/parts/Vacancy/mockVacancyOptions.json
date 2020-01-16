@@ -1,0 +1,226 @@
+{
+  "vacancy_names": [
+    {
+      "id": "143fcd09-dce2-93d1-6ab8-5db0b16666f4",
+      "name": "Аналитик"
+    },
+    {
+      "id": "47e495f4-e23f-bbdd-3210-5db15530b748",
+      "name": "QA инженер"
+    },
+    {
+      "id": "4ff5c19c-fe5c-d123-a34c-5de6745e9282",
+      "name": "Back-End Разработчик PHP"
+    },
+    {
+      "id": "63e93145-96af-8637-e4fe-5dea0728ff15",
+      "name": "Демо"
+    },
+    {
+      "id": "68580bbc-beb8-2904-9ae1-5db15561844a",
+      "name": "Другое"
+    },
+    {
+      "id": "6ac53229-34c5-a646-7158-5db155a23b8d",
+      "name": "Руководитель проектов"
+    },
+    {
+      "id": "947a2d3c-3d93-5afc-1d48-5db1568b7b7b",
+      "name": "Стажер"
+    },
+    {
+      "id": "b44797bd-c6ec-6b43-e229-5dee0afc1d43",
+      "name": "Аналитик с шаблоном"
+    },
+    {
+      "id": "ef9c9344-dab9-9492-72fe-5db0b0f6a358",
+      "name": "Менеджер по продажам"
+    },
+    {
+      "id": "f23f3bfe-6d18-4589-9438-5de9f6efee5b",
+      "name": "Новая вакансия с шаблоном"
+    }
+  ],
+  "vacancy_statuses": [
+    {
+      "id": "114590a2-5b15-65e0-e1bb-5d7915664203",
+      "name": "Отменена"
+    },
+    {
+      "id": "1aee87c3-34ae-4cd0-180d-5d7915809c95",
+      "name": "Открыта"
+    },
+    {
+      "id": "81762280-2ba3-6a36-af69-5d8cb251f5c3",
+      "name": "На паузе"
+    },
+    {
+      "id": "9be73123-3ece-2881-e51d-5d791595e112",
+      "name": "Закрыта"
+    },
+    {
+      "id": "f3580e7e-4732-b173-209d-5da47daa4009",
+      "name": "Новая"
+    }
+  ],
+  "business_units": [
+    {
+      "id": "22599dc2-1f44-dfe0-0b55-5d78d0d81f9b",
+      "name": "1С"
+    },
+    {
+      "id": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370",
+      "name": "CRM"
+    },
+    {
+      "id": "cd6cdf90-c4a0-cee3-2c77-5d78d1d75bdb",
+      "name": "BPM"
+    },
+    {
+      "id": "ce8efa2c-93b0-9c87-b7f5-5d78d13d4157",
+      "name": "Back"
+    },
+    {
+      "id": "dc43ad12-537e-94b4-f248-5d78d1ea8085",
+      "name": "ERP"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1068052a-0eaf-0bbd-f589-5d9e316f682c",
+      "name": "Oracle"
+    },
+    {
+      "id": "1e456ba9-60fd-d6cb-cd60-5d9e31d5f077",
+      "name": "ВТБ Digital Credit"
+    },
+    {
+      "id": "2014e598-f8bc-2fb8-22b5-5d9e31f0e607",
+      "name": "ВТБ RWA"
+    },
+    {
+      "id": "253eaa50-5f3d-181b-edf4-5d9e322e93db",
+      "name": "ВТБ ДБО МСБ"
+    },
+    {
+      "id": "2fb0a69f-854d-98ac-a019-5d935041352d",
+      "name": "Росатом, Звезда, IID-057"
+    },
+    {
+      "id": "3563429d-9dfa-07fd-320f-5d9e32c95ffb",
+      "name": "ВТБ СПМ"
+    },
+    {
+      "id": "384fa313-418a-bfca-c020-5d9e3220f8ce",
+      "name": "ВТБ Watchman"
+    },
+    {
+      "id": "45991499-bf41-34d3-2ff2-5d9350c78050",
+      "name": "ОСК, Роснефть, Звезда"
+    }
+  ],
+  "locations": [
+    {
+      "id": "102a62d6-3cfd-4981-6cfd-5e09bc37d966",
+      "name": "|+79268590368|lubov.lebedeva83|Lubov.Lebedeva83@gmail.com"
+    },
+    {
+      "id": "108063e5-9e71-87c0-2506-5e09b63843d3",
+      "name": "Армавир"
+    },
+    {
+      "id": "10839cdd-780b-fcd4-7e87-5e09b9cb81ca",
+      "name": "Лесной Городок"
+    },
+    {
+      "id": "10dab75a-a01f-bd48-7afc-5e05d4f8e5e8",
+      "name": "Истра"
+    },
+    {
+      "id": "1264543e-4792-5041-6eb2-5e09b5d22812",
+      "name": "Сергиев Посад"
+    },
+    {
+      "id": "12c55cd4-2b56-6c40-cd98-5e09b5174a3a",
+      "name": "Щелково"
+    },
+    {
+      "id": "144b89c1-e2cb-7bb8-d98a-5e09bbef9fe9",
+      "name": "Великобритания"
+    },
+    {
+      "id": "14679c58-c483-ca13-83ff-5e05d39e53b0",
+      "name": "Евпатория"
+    },
+    {
+      "id": "14d9f7e0-2cfc-d5d7-89e1-5e09b54803a5",
+      "name": "Лосино-Петровский"
+    },
+    {
+      "id": "156f6679-4a8e-381a-d3f2-5e09bb78d4da",
+      "name": "Кишинёв"
+    }
+  ],
+  "users_list": [
+    {
+      "id": "1",
+      "user_name": "admin",
+      "first_name": "",
+      "last_name": "Administrator"
+    },
+    {
+      "id": "115d11c3-f816-64a3-5db2-5df8d3cd4a3d",
+      "user_name": "dpletenev",
+      "first_name": "Дмитрий",
+      "last_name": "Плетенев"
+    },
+    {
+      "id": "11b650a0-a3b5-3b56-5a2c-5d9ae6f79347",
+      "user_name": "konst",
+      "first_name": "Константин",
+      "last_name": "Константинов"
+    },
+    {
+      "id": "144f32ef-aa72-b18f-bc7c-5e06114a7a71",
+      "user_name": "denivanov",
+      "first_name": "Денис",
+      "last_name": "Иванов"
+    },
+    {
+      "id": "15e2652d-336b-8e41-56fd-5da44fd67770",
+      "user_name": "rocshin",
+      "first_name": "Алексей",
+      "last_name": "Рощин"
+    },
+    {
+      "id": "165e87ba-c3fb-0328-ba64-5df8d3cb6b86",
+      "user_name": "atubalitsev",
+      "first_name": "Алексей",
+      "last_name": "Тубальцев"
+    },
+    {
+      "id": "176cfa2c-84ef-51b4-870c-5d91d47fc198",
+      "user_name": "a.smirnov",
+      "first_name": "Александр",
+      "last_name": "Смирнов"
+    },
+    {
+      "id": "1acf18a7-2190-30a1-e58a-5d9dcde829a6",
+      "user_name": "semen",
+      "first_name": "Семен",
+      "last_name": "Иванов"
+    },
+    {
+      "id": "1f2b37ba-1c1c-2421-4e05-5e0611cb60da",
+      "user_name": "nlkazakova",
+      "first_name": "Наталья",
+      "last_name": "Казакова"
+    },
+    {
+      "id": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e",
+      "user_name": "taubova",
+      "first_name": "Tamila",
+      "last_name": "Aubova"
+    }
+  ]
+}

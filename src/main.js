@@ -25,7 +25,13 @@ import {
   Switch,
   Dialog,
   Form,
-  FormItem
+  FormItem,
+  Select,
+  Option,
+  DatePicker,
+  Upload,
+  Row,
+  Col
 } from 'element-ui';
 
 const components = {
@@ -49,7 +55,13 @@ const components = {
   Switch,
   Dialog,
   Form,
-  FormItem
+  FormItem,
+  Select,
+  Option,
+  DatePicker,
+  Upload,
+  Row,
+  Col
 };
 
 for (let component of Object.values(components)) {

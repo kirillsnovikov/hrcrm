@@ -244,3 +244,34 @@
     text-decoration: none;
   }
 }
+
+.vacancy {
+  &-edit {
+    .el-form {
+      max-width: 800px;
+    }
+  
+    &__inline-buttons {
+      margin-bottom: 15px;
+    }
+
+    .form-item {
+      &_width_35 {
+        width: 35%;
+      }
+  
+      &_width_30 {
+        width: 30%;
+        margin-right: 2.5%;
+      }
+
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+
+  &-form__wrapper {
+    max-width: 600px; // 530
+  }
+}

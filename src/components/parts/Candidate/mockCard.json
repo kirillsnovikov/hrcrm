@@ -1,7 +1,7 @@
 {
   "id": {
     "name": "id",
-    "vname": "LaL_ID",
+    "vname": "LBL_ID",
     "type": "id",
     "required": true,
     "reportable": true,
@@ -722,17 +722,7 @@
       "name": "getCurrencyDropDown",
       "returns": "html"
     },
-    "value": "",
-    "options": {
-      "5b20f40f-df59-1388-6006-5d8bd555af10": {
-        "id": "5b20f40f-df59-1388-6006-5d8bd555af10",
-        "name": "Доллар США"
-      },
-      "-99": {
-        "id": "-99",
-        "name": "Рубли РФ"
-      }
-    }
+    "value": "US Dollars"
   },
   "amount": {
     "required": true,

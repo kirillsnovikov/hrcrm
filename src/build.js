@@ -24,7 +24,13 @@ import {
   Switch,
   Dialog,
   Form,
-  FormItem
+  FormItem,
+  Select,
+  Option,
+  DatePicker,
+  Upload,
+  Row,
+  Col
 } from 'element-ui';
 
 const components = {
@@ -48,7 +54,13 @@ const components = {
   Switch,
   Dialog,
   Form,
-  FormItem
+  FormItem,
+  Select,
+  Option,
+  DatePicker,
+  Upload,
+  Row,
+  Col
 };
 
 for (let component of Object.values(components)) {
@@ -85,6 +97,8 @@ import StageCreate from 'Parts/Stage/Create';
 import StageView from 'Parts/Stage/View';
 import CandidateSelection from 'Parts/Candidate/CandidateSelection';
 import CandidateList from 'Parts/Candidate/CandidateList';
+import CandidateView from 'Parts/Candidate/CandidateView';
+import CandidateEdit from 'Parts/Candidate/CandidateEdit';
 
 const parts = {
   VacancyTable,
@@ -92,7 +106,9 @@ const parts = {
   StageCreate,
   StageView,
   CandidateSelection,
-  CandidateList
+  CandidateList,
+  CandidateView,
+  CandidateEdit
 };
 
 Object.keys(parts).forEach(name => {

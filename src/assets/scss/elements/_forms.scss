@@ -1,0 +1,82 @@
+$error-color: #f56c6c;
+
+.el-select-dropdown__item span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.el-form {
+  border: 1px solid #e2e2e2;
+  padding: 30px 25px;
+  border-radius: 3px;
+  // margin: 0 auto;
+
+  h3, h2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  .candidate-form__section,
+  .vacancy-form__section {
+    display: inline-block;
+    // margin-top: 30px;
+    width: 100%;
+  }
+
+  .el-tag:not(:last-of-type) {
+    margin-right: 5px;
+  }
+  
+  .el-input {
+    input {
+      border-radius: 4px;
+      color: #606266;
+      background-color: #fff;
+    }
+
+    &:not(.el-input--prefix) input {
+      padding: 0 10px;
+    }
+  }
+
+  .el-date-editor.el-input,
+  .el-select {
+    width: 100%;
+  }
+
+  .el-textarea__inner {
+    height: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+
+  &-item {
+    &__label {
+      max-width: 250px;
+      line-height: 16px !important;
+      margin: 10px 0;
+      // white-space: nowrap;
+    }
+
+    &:not(.is-error) {
+      .el-input input {
+        border: 1px solid #dcdfe6;
+      }
+    }
+
+    &__error {
+      white-space: nowrap;
+    }
+  }
+
+  .is-error {
+    .el-select__caret,
+    .el-input__icon {
+      color: $error-color;
+    }
+  }
+
+  .el-upload__input {
+    display: none;
+  }
+}
