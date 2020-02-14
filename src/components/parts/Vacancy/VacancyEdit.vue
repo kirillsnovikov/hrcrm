@@ -1,5 +1,7 @@
 <template>
   <div class="vacancy-edit">
+    <link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.2.6/quill.min.js"></script>
     <h1>Вакансия</h1>
     <div class="inline-buttons vacancy-edit__inline-buttons">
       <el-button
@@ -32,6 +34,10 @@
               v-model="form.name_id"
               placeholder=""
               :rules="rules.name_id"
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
             >
               <el-option
                 v-for="vacancy in options.vacancy_names"
@@ -62,7 +68,14 @@
             prop="status_id"
             :rules="rules.status_id"
           >
-            <el-select v-model="form.status_id" placeholder="">
+            <el-select
+              v-model="form.status_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option
                 v-for="status in options.vacancy_statuses"
                 :key="status.id"
@@ -79,7 +92,14 @@
             prop="business_unit_id"
             :rules="rules.business_unit_id"
           >
-            <el-select v-model="form.business_unit_id" placeholder="">
+            <el-select
+              v-model="form.business_unit_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option
                 v-for="unit in options.business_units"
                 :key="unit.id"
@@ -93,7 +113,14 @@
             prop="department_id"
             :rules="rules.department_id"
           >
-            <el-select v-model="form.department_id" placeholder="">
+            <el-select
+              v-model="form.department_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option :label="'Test option'" :value="'werwr3'"></el-option>
               <!-- <el-option
                 v-for="name in fields.department_id.options"
@@ -104,7 +131,14 @@
             </el-select>
           </el-form-item>
           <el-form-item label="Проект" prop="project_link_id">
-            <el-select v-model="form.project_link_id" placeholder="">
+            <el-select
+              v-model="form.project_link_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option
                 v-for="project in options.projects"
                 :key="project.id"
@@ -118,7 +152,14 @@
             prop="location_id"
             :rules="rules.location_id"
           >
-            <el-select v-model="form.location_id" placeholder="">
+            <el-select
+              v-model="form.location_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option
                 v-for="location in options.locations"
                 :key="location.id"
@@ -133,6 +174,10 @@
               multiple
               placeholder=""
               @change="convertTagData(grade, 'grade')"
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
             >
               <el-option
                 v-for="(name, val) in fields.grade.options"
@@ -183,7 +228,14 @@
             label="Шаблоны этапов подбора"
             prop="stage_templates_name"
           >
-            <el-select v-model="form.stage_templates_name" placeholder="">
+            <el-select
+              v-model="form.stage_templates_name"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option :label="'test stage'" :value="'valer353'"></el-option>
               <!-- <el-option
                 v-for="name in fields.stage_templates_name.options"
@@ -201,7 +253,14 @@
             prop="supervisor_id"
             :rules="rules.supervisor_id"
           >
-            <el-select v-model="form.supervisor_id" placeholder="">
+            <el-select
+              v-model="form.supervisor_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option
                 v-for="user in options.users_list"
                 :key="user.id"
@@ -215,7 +274,15 @@
             prop="manager_id"
             :rules="rules.manager_id"
           >
-            <el-select v-model="form.manager_id" placeholder="">
+            <!-- Проверка на роль <Рекрутер> или <Нанимающий менеджер> -->
+            <el-select
+              v-model="form.manager_id"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
               <el-option
                 v-for="user in options.users_list"
                 :key="user.id"
@@ -225,7 +292,15 @@
             </el-select>
           </el-form-item>
           <el-form-item label="Рекрутер" prop="assigned_user_name">
-            <el-select v-model="form.assigned_user_name" placeholder="">
+            <el-select
+              v-model="form.assigned_user_name"
+              placeholder=""
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
+            >
+              <!-- Проверка на роль <Рекрутер> или <Нанимающий менеджер> -->
               <el-option
                 v-for="user in options.users_list"
                 :key="user.id"
@@ -240,6 +315,10 @@
               multiple
               placeholder=""
               @change="convertTagData(hr_participants, 'hr_participants')"
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
             >
               <el-option
                 v-for="user in options.users_list"
@@ -250,11 +329,16 @@
             </el-select>
           </el-form-item>
           <el-form-item label="Участники со стороны HR">
-            <el-select
+            <el-input type="textarea" :value="formatHtml"></el-input>
+            <!-- <el-select
               v-model="business_participants"
               multiple
               placeholder=""
               @change="convertTagData(business_participants, 'business_participants')"
+              filterable
+              autocomplete
+              auto-complete
+              no-match-text="Нет результатов поиска"
             >
               <el-option
                 v-for="user in options.users_list"
@@ -262,8 +346,13 @@
                 :label="`${user.first_name} ${user.last_name}`"
                 :value="`${user.first_name} ${user.last_name}`"
               ></el-option>
-            </el-select>
+            </el-select> -->
           </el-form-item>
+          <div id="editor">
+            <p>Hello World!</p>
+            <p>Some initial <strong>bold</strong> text</p>
+            <p><br></p>
+          </div>
         </div>
       </div>
     </el-form>
@@ -271,6 +360,13 @@
 </template>
 
 <script>
+const quill = new Quill('#editor', {
+  modules: {
+    toolbar: '#toolbar'
+  },
+  theme: 'snow'
+});
+
 export default {
   props: {
     fields: {
@@ -282,6 +378,7 @@ export default {
   },
   data() {
     return {
+      html: '&lt;div id=&quot;sugar_text_HH-React-Root&quot;&gt;test 11111&lt;div&gt;',
       resume_file: [],
       form: {},
       rules: {
@@ -353,6 +450,14 @@ export default {
       hr_participants: [],
       business_participants: []
     };
+  },
+  computed: {
+    formatHtml() {
+      return this.html
+        .replace(/&quot;/g, '"')
+        .replace(/&gt;/g, '>')
+        .replace(/&lt;/g, '<');
+    }
   },
   mounted() {
     for (let key in this.fields) {

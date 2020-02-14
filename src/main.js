@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import axios from 'axios';
+import store from './store';
 
 import './utils/filters';
 
@@ -95,12 +96,14 @@ Object.keys(libs).map(libName => {
 
 if (process.env.NODE_ENV === 'development') {
   new Vue({
+    store,
     render: h => h(App)
   }).$mount('#app');
 } else {
   // Vue.components('vue-app', App);
   new Vue({
     el: '#app',
+    store,
     components: {
       App
     },

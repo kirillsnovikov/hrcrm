@@ -49,10 +49,12 @@
         class="vacancy-select__item"
         v-model="currentVacancy"
         :label="vacancy.id"
+        :value="vacancy.id"
         v-for="(vacancy, i) in vacancies"
-        :key="`${vacancy.name_id}_${i}`"
+        @change="selectVacancy"
+        :key="`${vacancy.name}_${i}`"
       >
-        <span>{{ vacancy.name_id }}</span>
+        <span>{{ vacancy.name }}</span>
         <el-tag size="mini">{{ vacancy.candidatesCount }}</el-tag>
       </el-radio>
     </div>
@@ -60,6 +62,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { uniq } from '@/utils/helpers';
 import CandidateList from 'Parts/Candidate/CandidateList';
 
@@ -72,12 +75,16 @@ export default {
       vacancies: [],
       selectStageItems: [],
       currentVacancy: '',
-      panelWidth: 0
+      panelWidth: 0,
+      filteredCandidates: []
     };
   },
   created() {
-    this.vacancies = this.data.data;
-    this.currentVacancy = this.vacancies[0].id;
+    console.log(this.filters)
+    this.vacancies = this.data.vacancies;
+    this.currentVacancy = this.filters.length
+      ? this.filters.currentVacancy
+      : this.vacancies[0].id;
     this.vacancies.forEach(vacancy => {
       this.selectStageItems = this.selectStageItems.concat(
         Object.values(vacancy.stages).map(
@@ -93,6 +100,9 @@ export default {
     this.panelWidth = this.$el.offsetWidth;
   },
   computed: {
+    ...mapGetters({
+      filters: 'getFilters'
+    }),
     selectVacancies() {
       return this.vacancies.find(vacancy => this.currentVacancy === vacancy.id);
     },
@@ -191,6 +201,24 @@ export default {
           `${this.currentVacancy}_${stage.id}_${stage.name}`
         );
       });
+    },
+    selectVacancy() {
+      console.log('select', this.currentVacancy)
+      this.$store.dispatch('SAVE_FILTER_DATA', {
+        currentVacancy: this.currentVacancy,
+        stages: this.vacancies
+      });
+    }
+  },
+  watch: {
+    selectStageItems() {
+      if (this.selectStageItems) {
+        console.log('stage');
+        this.$store.dispatch('SAVE_FILTER_DATA', {
+          currentVacancy: this.currentVacancy,
+          stages: this.vacancies
+        });
+      }
     }
   },
   components: {

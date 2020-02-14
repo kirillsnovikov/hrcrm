@@ -363,6 +363,12 @@
       margin: 0 10%;
     }
   }
+
+  .uploaded {
+    .el-upload {
+      display: none;
+    }
+  }
   
   & > div,
   .el-upload,
@@ -372,7 +378,7 @@
     width: 100%;
   }
 
-  & > .candidate-form__upload {
+  & .upload-doc {
     .el-upload__text {
       line-height: 40px;
     }
