@@ -30,3 +30,27 @@ export const plural = function(str, type = 'year') {
 export const uniq = array => {
   return Array.from(new Set(array));
 };
+
+export const formatHtml = text => {
+  const replacement = [[/&quot;/g, '"'], [/&gt;/g, '>'], [/&lt;/g, '<']];
+
+  return text
+    .replace(...replacement[0])
+    .replace(...replacement[1])
+    .replace(...replacement[2]);
+};
+
+export const scrollToError = (fields, scroll_value) => {
+  const firstErrorField = Object.keys(fields)[0];
+  const stickyPanel =
+    document.querySelector('.inline-buttons').offsetHeight + 15;
+  const elem = document
+    .querySelector(`input[name=${firstErrorField}]`)
+    .closest('.el-form-item.row');
+
+  if (window.scrollY >= scroll_value) {
+    window.scroll(0, elem.offsetTop - stickyPanel);
+  } else {
+    window.scroll(0, elem.offsetTop - stickyPanel * 2);
+  }
+};

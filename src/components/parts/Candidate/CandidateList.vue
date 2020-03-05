@@ -3,8 +3,12 @@
     <candidate-list-item
       v-for="(candidate, i) in candidates"
       :key="`_${i}`"
+      :stages="stages"
       :candidate="candidate"
       :mod="mod"
+      @set-stage="selectStage"
+      :is-offer="isOffer"
+      :is-preparation="isPreparation"
     ></candidate-list-item>
   </section>
 </template>
@@ -19,13 +23,24 @@ export default {
     },
     mod: {
       type: Object
+    },
+    stages: {
+      type: Object
+    },
+    isOffer: {
+      type: Function
+    },
+    isPreparation: {
+      type: Function
     }
   },
   components: {
     CandidateListItem
   },
-  mounted() {
-    // console.log(this.candidates);
+  methods: {
+    selectStage(stage, currentStage, candidateId) {
+      this.$emit('set-stage', stage, currentStage, candidateId);
+    }
   }
 };
 </script>

@@ -1,0 +1,27 @@
+.el-pagination {
+  display: inline-block;
+
+  button {
+    &[disabled] {
+      line-height: 28px;
+      height: 28px;
+
+      i {
+        cursor: not-allowed !important;
+      }
+    }
+  }
+
+  span {
+    font-size: 16px !important;
+    margin: 0 5px;
+    color: #606266;
+  }
+}
+
+.pagination {
+  margin-bottom: 10px;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0;
+}

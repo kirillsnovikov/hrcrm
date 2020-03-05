@@ -249,6 +249,12 @@
   &-edit {
     .el-form {
       max-width: 800px;
+
+      &-item {
+        input[name=salary_max] + .el-form-item__error {
+          display: none !important;
+        }
+      }
     }
   
     &__inline-buttons {

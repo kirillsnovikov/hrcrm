@@ -1,23 +1,29 @@
 <template>
   <section id="vacancy-table" class="vacancy-table">
+    <pagination :urls="pageData.urls" :offsets="pageData.offsets"></pagination>
     <vacancy-table-item
       v-for="item in parseTableData"
       :data="item"
       :key="item.name_id.id"
     ></vacancy-table-item>
+    <pagination :urls="pageData.urls" :offsets="pageData.offsets"></pagination>
   </section>
 </template>
 
 <script>
 import VacancyTableItem from 'Parts/Vacancy/VacancyTableItem.vue';
+import Pagination from 'Elements/Pagination/Pagination.vue';
 
 export default {
-  name: 'STable',
   components: {
-    VacancyTableItem
+    VacancyTableItem,
+    Pagination
   },
   props: {
     data: {
+      type: Object
+    },
+    pageData: {
       type: Object
     }
   },
@@ -42,6 +48,11 @@ export default {
     }
   },
   methods: {
+    defineCurrentPage(page) {
+      if (page) {
+        this.currentPage = page;
+      }
+    },
     defineKeys() {
       this.dataKeys = Object.keys(this.data.columns).filter(
         key => Object.values(this.titleKeys).indexOf(key) === -1

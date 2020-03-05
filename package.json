@@ -11,14 +11,17 @@
     "build-comp": "vue-cli-service build --target wc --name s-table src/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
     "axios": "^0.19.0",
     "core-js": "^3.3.2",
     "element-ui": "^2.12.0",
     "form-data": "^3.0.0",
     "vue": "^2.6.10",
     "vue-the-mask": "^0.11.1",
-    "vuedraggable": "^2.23.2",
-    "vuex": "^3.1.2"
+    "vuedraggable": "^2.23.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",

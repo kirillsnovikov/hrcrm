@@ -1,9 +1,21 @@
 import Vue from 'vue';
 import App from './App.vue';
 import axios from 'axios';
-import store from './store';
 
 import './utils/filters';
+import './utils/directives';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import {
+  faTelegram,
+  faSkype,
+  faWhatsappSquare
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faTelegram, faSkype, faWhatsappSquare, faEnvelope);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 import {
   Button,
@@ -32,7 +44,12 @@ import {
   DatePicker,
   Upload,
   Row,
-  Col
+  Col,
+  Loading,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
 } from 'element-ui';
 
 const components = {
@@ -62,14 +79,19 @@ const components = {
   DatePicker,
   Upload,
   Row,
-  Col
+  Col,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
 };
 
 for (let component of Object.values(components)) {
   Vue.component(component.name, component);
 }
+Vue.use(Loading.directive);
 
-import lang from 'element-ui/lib/locale/lang/en';
+import lang from 'element-ui/lib/locale/lang/ru-RU';
 import locale from 'element-ui/lib/locale';
 
 locale.use(lang);
@@ -96,14 +118,12 @@ Object.keys(libs).map(libName => {
 
 if (process.env.NODE_ENV === 'development') {
   new Vue({
-    store,
     render: h => h(App)
   }).$mount('#app');
 } else {
   // Vue.components('vue-app', App);
   new Vue({
     el: '#app',
-    store,
     components: {
       App
     },

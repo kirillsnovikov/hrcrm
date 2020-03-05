@@ -18,8 +18,15 @@
   background: $--color-white;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @import 'Elements/Link/link.scss';
 @import 'Elements/Comment/comment.scss';
+@import 'Elements/Pagination/pagination.scss';
+@import 'Elements/ContactForm/ContactForm.scss';
 @import 'Elements/StagePanel/stages-panel.scss';
 @import 'Parts/Candidate/candidate.scss';
 @import 'Parts/Stage/stage.scss';

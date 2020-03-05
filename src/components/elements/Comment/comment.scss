@@ -1,6 +1,7 @@
 .s-comment {
   @extend %flex;
   min-height: 100px;
+  position: relative;
 
   &__avatar {
     width       : 75px;
@@ -30,9 +31,16 @@
 
   &-form {
     margin-bottom: 25px;
+    border: none;
+    padding: 0;
 
     .el-form-item {
       margin: 0;
+
+      &__label {
+        float: none;
+        margin-top: 0;
+      }
     }
 
     .control-panel  > div {
@@ -46,6 +54,49 @@
         content: unset;
       }
     }
+
+    .inline-buttons {
+      margin: 0;
+    }
     
+    .el-checkbox {
+      margin-bottom: 0;
+  
+      &__label {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__value {
+    max-height: 70px;
+    overflow-y: hidden;
+
+    &_height_full {
+      max-height: unset;
+      overflow-y: auto;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    height: 100%;
+  }
+
+  &__link {
+    position: absolute;
+    font-size: 12px;
+    border-bottom: 1px solid;
+    background: #fff;
+    bottom: 15px;
+    right: 0;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      background: #e5f7ff;
+    }
   }
 }

@@ -37,7 +37,7 @@
             >{{ data.location_id.value }}</component
           >
         </div>
-        <div class="vacancy-table-item__date">{{ `21.02.1998` }}</div>
+        <div class="vacancy-table-item__date">{{ `` }}</div>
       </div>
       <div class="vacancy-table-item__medium">
         <div
@@ -109,24 +109,30 @@
         </div>
       </div>
       <div class="vacancy-table-item__peoples">
-        <div class="peoples vacancy-table-item__peoples__peoples">
-          <div class="peoples__label">{{ 'Бизнес' }}</div>
+        <div
+          class="peoples vacancy-table-item__peoples__peoples"
+          v-if="additional_managers.length"
+        >
+          <div class="peoples__label">{{ 'Дополнительные менеджеры' }}</div>
           <div class="peoples__tags">
             <el-tag
               class="peoples__tag"
-              v-for="(people, i) in exchangePeoples"
+              v-for="(people, i) in additional_managers"
               effect="plain"
               :key="`${i}_${people}`"
               >{{ people }}</el-tag
             >
           </div>
         </div>
-        <div class="peoples vacancy-table-item__peoples__peoples">
-          <div class="peoples__label">{{ 'Рекрутеры' }}</div>
+        <div
+          class="peoples vacancy-table-item__peoples__peoples"
+          v-if="additional_assigned.length"
+        >
+          <div class="peoples__label">{{ 'Дополнительные рекрутеры' }}</div>
           <div class="peoples__tags">
             <el-tag
               class="peoples__tag"
-              v-for="(people, i) in recruiterPeoples"
+              v-for="(people, i) in additional_assigned"
               effect="plain"
               :key="`${i}_${people}`"
               >{{ people }}</el-tag
@@ -162,6 +168,10 @@ export default {
     type: {
       type: String,
       default: 'table'
+    },
+    percentage: {
+      type: Number,
+      default: 0
     }
   },
   components: {
@@ -170,7 +180,7 @@ export default {
   data() {
     return {
       wideInfo: this.wide,
-      percentage: rand(0, 100),
+      // percentage: rand(0, 100),
       customColors: [
         { color: '#F56C6C', percentage: 30 },
         { color: '#e6a23c', percentage: 40 },
@@ -179,7 +189,9 @@ export default {
         { color: '#67C23A', percentage: 100 }
       ],
       bodyKeys: ['business_unit_id', 'stack', 'project_link_id', 'manager_id'],
-      peoplesData: peoplesData
+      peoplesData: peoplesData,
+      additional_assigned: [],
+      additional_managers: []
     };
   },
   beforeMount() {
@@ -190,6 +202,16 @@ export default {
           'link'
         ] = `index.php?module=${module}&action=DetailView&record=${value.id}`;
       }
+    }
+
+    if (
+      this.data.hasOwnProperty('additional_assigned_ids') &&
+      this.data.hasOwnProperty('additional_managers_ids')
+    ) {
+      const recruters = this.data.additional_assigned_ids.value;
+      const managers = this.data.additional_managers_ids.value;
+      this.additional_assigned = recruters ? recruters.split(',') : [];
+      this.additional_managers = managers ? managers.split(',') : [];
     }
   },
   computed: {
@@ -223,12 +245,6 @@ export default {
     },
     wideIcon() {
       return this.wideInfo ? 'el-icon-arrow-up' : 'el-icon-arrow-down';
-    },
-    exchangePeoples() {
-      return this.getPeoples(rand(5, 10));
-    },
-    recruiterPeoples() {
-      return this.getPeoples(rand(2, 5));
     }
   },
   methods: {

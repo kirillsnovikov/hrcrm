@@ -3,13 +3,19 @@
     <div class="candidate-item__top">
       <div class="candidate-item__top-left">
         <div class="candidate-item__avatar">
-          <el-avatar :size="150" :src="avatar" shape="square"></el-avatar>
+          <el-avatar :size="100" :src="avatar" shape="square"></el-avatar>
         </div>
       </div>
       <div class="candidate-item__top-right">
         <div class="candidate-header candidate-item__candidate-header">
           <div class="candidate-header__top">
             <div class="candidate-header__title">
+              <div
+                class="candidate-header__number"
+                v-if="candidate.candidates_number"
+              >
+                <b>{{ candidate.candidates_number.value }}</b>
+              </div>
               <el-link
                 class="candidate-header__name"
                 :underline="false"
@@ -22,7 +28,7 @@
               </div>
               <div
                 class="candidate-header__salary"
-                v-if="candidate.salary.value"
+                v-if="Number(candidate.salary.value)"
               >
                 {{
                   candidate.salary.value
@@ -36,14 +42,39 @@
             <div class="candidate-header__actions">
               <el-link
                 :href="whatsapp"
+                target="_blank"
                 :underline="false"
-                class="candidate-header__actions-item icon-whatsapp"
+                class="candidate-header__actions-item el-icon icon-whatsapp"
               ></el-link>
               <el-dropdown
+                v-if="candidate.vacancy"
+                trigger="click"
+                class="candidate-header__actions-item"
+                @command="selectStage"
+              >
+                <i class="el-dropdown-link el-icon el-icon-s-data"></i>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item
+                    v-for="item in stages"
+                    :key="item.id"
+                    :command="item"
+                    :disabled="
+                      item.id === candidate.stage.id ||
+                        isAccepted ||
+                        isOffer(item, candidate.stage) ||
+                        isPreparation(item, candidate.stage)
+                    "
+                  >
+                    <span>{{ item.name }}</span>
+                  </el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+              <el-dropdown
+                v-if="candidate.vacancy"
                 trigger="click"
                 class="candidate-header__actions-item"
               >
-                <i class="el-dropdown-link el-icon-s-tools"></i>
+                <i class="el-dropdown-link el-icon el-icon-s-tools"></i>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item>
                     <el-link
@@ -51,7 +82,7 @@
                       :underline="false"
                       icon="el-icon-edit"
                       class="candidate-header__actions-item"
-                      >Edit</el-link
+                      >Править</el-link
                     >
                   </el-dropdown-item>
                   <el-dropdown-item>
@@ -59,7 +90,7 @@
                       :underline="false"
                       icon="el-icon-delete"
                       class="candidate-header__actions-item"
-                      >Remove</el-link
+                      >Удалить</el-link
                     >
                   </el-dropdown-item>
                 </el-dropdown-menu>
@@ -67,8 +98,11 @@
             </div>
           </div>
           <div class="candidate-header__bottom">
-            <div class="candidate-header__vacancy">{{ candidate.vacancy }}</div>
+            <div v-if="candidate.vacancy" class="candidate-header__vacancy">
+              {{ candidate.vacancy }}
+            </div>
             <div
+              v-if="candidate.stage"
               class="candidate-header__stage"
               :style="{ background: candidate.stage.color }"
             >
@@ -106,14 +140,15 @@
               :key="`${item.value}_${i}`"
             >
               <div class="label-value__label">{{ item.label }}</div>
-              <div class="label-value__value">{{ item.value }}</div>
+              <div class="label-value__value" v-html="item.value"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="candidate-item__button-down" @click="wideInfo = !wideInfo">
+      <div v-if="candidate.vacancy" class="candidate-item__button-down">
         <el-button
           :disabled="!candidate.description.value"
+          @click="showPreview"
           circle
           :icon="wideIcon"
           :size="'mini'"
@@ -129,7 +164,7 @@
 </template>
 
 <script>
-import { rand } from '@/utils/helpers';
+import { rand, formatHtml } from '@/utils/helpers';
 
 export default {
   props: {
@@ -138,6 +173,15 @@ export default {
     },
     mod: {
       type: Object
+    },
+    stages: {
+      type: Object
+    },
+    isOffer: {
+      type: Function
+    },
+    isPreparation: {
+      type: Function
     }
   },
   data() {
@@ -145,16 +189,14 @@ export default {
       wideInfo: false,
       bodyKeys: [
         'experience',
-        'resume_date_upd',
+        'created_by_name',
         'last_work',
-        'comments',
-        'last_post'
+        'resume_date_upd',
+        'last_post',
+        'comments'
       ]
     };
   },
-  // mounted() {
-  //   console.log(this.candidate);
-  // },
   computed: {
     wideIcon() {
       return this.wideInfo ? 'el-icon-arrow-up' : 'el-icon-arrow-down';
@@ -182,9 +224,15 @@ export default {
     mainInfo() {
       let res = [];
       this.bodyKeys.forEach(key => {
+        const value =
+          key === 'last_post' || key === 'last_work'
+            ? formatHtml(this.candidate[key].value)
+            : this.candidate[key].value;
+        const label = this.mod[this.candidate[key].vname];
+
         res.push({
-          label: this.mod[this.candidate[key].vname],
-          value: this.candidate[key].value
+          label,
+          value
         });
       });
       return res;
@@ -205,6 +253,24 @@ export default {
     },
     editRoute() {
       return `/index.php?module=HRPAC_CANDIDATES&action=EditView&record=${this.candidate.id.value}`;
+    },
+    isAccepted() {
+      return this.candidate.stage.isAccept;
+    }
+  },
+  methods: {
+    showPreview() {
+      if (this.candidate.description.value) {
+        this.wideInfo = !this.wideInfo;
+      }
+    },
+    selectStage(stage) {
+      this.$emit(
+        'set-stage',
+        stage,
+        this.candidate.stage,
+        this.candidate.id.value
+      );
     }
   }
 };
