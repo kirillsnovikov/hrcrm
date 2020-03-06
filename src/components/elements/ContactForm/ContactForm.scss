@@ -17,6 +17,10 @@
     float: left;
   }
 
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   &__panel {
     position: absolute;
     right: -80px;

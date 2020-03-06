@@ -177,11 +177,9 @@
         </el-menu>
         <contact-form
           :contacts="form.contacts"
-          :form="form"
-          :rules="rules"
-          :key="count"
           @delete-contact="deleteContact"
           @set-value="setContactValue"
+          @set-list="setContactList"
         ></contact-form>
       </div>
       <div class="candidate-form__section">
@@ -357,39 +355,6 @@ export default {
             trigger: 'blur'
           }
         ],
-        'E-mail': [
-          {
-            required: true,
-            message: 'Необходимо заполнить поле',
-            trigger: 'blur'
-          },
-          {
-            type: 'email',
-            message: 'Введенный email указан некорректно',
-            trigger: ['blur', 'change']
-          }
-        ],
-        phone: [
-          {
-            required: true,
-            message: 'Необходимо заполнить поле',
-            trigger: 'blur'
-          }
-        ],
-        Telegram: [
-          {
-            required: true,
-            message: 'Необходимо заполнить поле',
-            trigger: 'blur'
-          }
-        ],
-        Skype: [
-          {
-            required: true,
-            message: 'Необходимо заполнить поле',
-            trigger: 'blur'
-          }
-        ],
         resume_source_id: [
           {
             required: true,
@@ -410,7 +375,6 @@ export default {
           return time.getTime() > Date.now();
         }
       },
-      contacts: [],
       sources: [],
       loading: false,
       contactOpts: {
@@ -437,8 +401,7 @@ export default {
         }
       },
       selectedContactsOption: null,
-      activeContactItem: '1',
-      count: 0
+      activeContactItem: '1'
     };
   },
   mounted() {
@@ -530,7 +493,6 @@ export default {
           //   })
           //   .catch(err => console.log('save form error', err));
         } else {
-          console.log(valid, fields, this.$refs[formName], this)
           scrollToError(fields, SCROLL_VALUE);
           console.log('Заполните обязательные поля!');
           return false;
@@ -619,7 +581,8 @@ export default {
       switch (this.selectedContactsOption.type) {
         case 'phone':
           if (
-            !this.form.contacts.filter(item => item.value_type === 'phone').length
+            !this.form.contacts.filter(item => item.value_type === 'phone')
+              .length
           ) {
             label = 'Основной телефон';
           } else {
@@ -655,28 +618,34 @@ export default {
         value: ''
       });
       this.form[id] = '';
-      this.count++; // для перерендера
+      this.form = Object.assign({}, this.form);
     },
     deleteContact(item) {
-      const index = this.form.contacts.findIndex(
-        contact => contact.id === item.id
-      );
-      this.form.contacts.splice(index, 1);
-      // this.form.contacts.splice(index, 1);
+      const contacts = this.form.contacts;
+      const index = contacts.findIndex(contact => contact.id === item.id);
+      contacts.splice(index, 1);
+      this.$delete(this.form, item.id);
 
       if (item.value_type === 'phone' && item.label === 'Основной телефон') {
-        const index = this.form.contacts.findIndex(
-          it => it.value_type === 'phone'
-        );
+        const index = contacts.findIndex(it => it.value_type === 'phone');
         if (index !== -1) {
-          this.$set(this.form.contacts[index], 'label', 'Основной телефон');
+          this.$set(contacts[index], 'label', 'Основной телефон');
         }
       }
     },
     setContactValue(id, index, val) {
-      console.log(id, val, this.form[id])
+      console.log(id, val, this.form.contacts[index]);
       this.$set(this.form.contacts[index], 'value', val);
       this.$set(this.form, id, val);
+      this.form = Object.assign({}, this.form);
+      this.$refs.form.validateField(id);
+    },
+    setContactList(list) {
+      if (list) {
+        this.form.contacts = list;
+        // this.$refs.form.resetFields()
+        // this.form = Object.assign({}, this.form);
+      }
     }
   },
   watch: {
