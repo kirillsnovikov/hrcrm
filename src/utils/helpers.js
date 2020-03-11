@@ -45,7 +45,7 @@ export const scrollToError = (fields, scroll_value) => {
   const stickyPanel =
     document.querySelector('.inline-buttons').offsetHeight + 15;
   const elem = document
-    .querySelector(`input[name=${firstErrorField}]`)
+    .querySelector(`input[name="${firstErrorField}"]`)
     .closest('.el-form-item.row');
 
   if (window.scrollY >= scroll_value) {

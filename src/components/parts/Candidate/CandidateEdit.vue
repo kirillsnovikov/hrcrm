@@ -146,17 +146,15 @@
         <el-menu
           ref="menu"
           :collapse="true"
-          :default-active="activeContactItem"
           mode="horizontal"
           menu-trigger="click"
-          @open="handleMenuOpen"
           @select="selectContact"
         >
           <el-submenu index="1">
             <template slot="title">
               <el-button circle icon="el-icon-plus" size="mini"></el-button>
             </template>
-            <div class="el-menu-list" @mouseleave="handleMenuClose($event)">
+            <div class="el-menu-list">
               <el-menu-item-group v-for="(item, idx) in contactOpts" :key="idx">
                 <el-menu-item v-if="!item.submenu" :index="idx">
                   {{ item.title }}
@@ -180,6 +178,7 @@
           @delete-contact="deleteContact"
           @set-value="setContactValue"
           @set-list="setContactList"
+          class="candidate-form__block candidate-form__block_pos_left"
         ></contact-form>
       </div>
       <div class="candidate-form__section">
@@ -552,19 +551,6 @@ export default {
       //   cities.unshift(movedCity);
       // });
     },
-    handleMenuOpen() {
-      // this.$refs.menu.menuTrigger = 'hover';
-    },
-    handleMenuClose() {
-      // const self = this;
-      // const elClass = e.relatedTarget.className;
-      // if (elClass !== 'el-menu--horizontal' && elClass !== 'el-menu-item') {
-      //   setTimeout(function() {
-      //     self.$refs.menu.menuTrigger = 'click';
-      //     self.$refs.menu.openedMenus = [];
-      //   }, 1000);
-      // }
-    },
     selectContact(key, arr) {
       const [, ...activeKeys] = arr;
       this.selectedContactsOption = this.contactOpts;
@@ -620,9 +606,8 @@ export default {
       this.form[id] = '';
       this.form = Object.assign({}, this.form);
     },
-    deleteContact(item) {
+    deleteContact(item, index) {
       const contacts = this.form.contacts;
-      const index = contacts.findIndex(contact => contact.id === item.id);
       contacts.splice(index, 1);
       this.$delete(this.form, item.id);
 
@@ -632,6 +617,7 @@ export default {
           this.$set(contacts[index], 'label', 'Основной телефон');
         }
       }
+      // this.form = Object.assign({}, this.form);
     },
     setContactValue(id, index, val) {
       console.log(id, val, this.form.contacts[index]);
@@ -643,8 +629,14 @@ export default {
     setContactList(list) {
       if (list) {
         this.form.contacts = list;
-        // this.$refs.form.resetFields()
-        // this.form = Object.assign({}, this.form);
+        this.form.contacts
+          .filter(item => item.value_type === 'phone')
+          .map((item, idx) =>
+            idx === 0
+              ? (item.label = 'Основной телефон')
+              : (item.label = 'Дополнительный телефон')
+          );
+        this.form = Object.assign({}, this.form);
       }
     }
   },

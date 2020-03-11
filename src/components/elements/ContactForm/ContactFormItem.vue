@@ -9,13 +9,12 @@
       :maxlength="64"
     ></el-input>
     <!-- нельзя выделить текст в поле т.к. срабатывает событие drag -->
-    <!-- при перетаскивании валидация не меняется (порядок остается тот же) -->
-    <!-- на поле телефон не реактивно срабатывает валидация + ошибки скролла -->
     <div class="el-input el-input--medium" v-else>
       <the-mask
         :type="setContactsType(item.value_type)"
         :name="item.id"
         @change.native="$emit('set-value', item, index, fieldValue)"
+        @blur.native="$emit('set-value', item, index, fieldValue)"
         v-model="fieldValue"
         :masked="false"
         :mask="[
@@ -36,7 +35,7 @@
       <el-button
         size="mini"
         icon="el-icon-close"
-        @click="$emit('delete-contact', item)"
+        @click="$emit('delete-contact', item, index)"
       ></el-button>
       <a :href="setContactsLink(item)">
         <font-awesome-icon v-if="item.value" :icon="item.icon" size="2x">
@@ -76,6 +75,9 @@ export default {
           : {}
       ]
     };
+  },
+  mounted() {
+    this.fieldValue = this.item.value;
   },
   methods: {
     setContactsType(type) {

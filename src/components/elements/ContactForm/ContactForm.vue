@@ -1,16 +1,14 @@
 <template>
-  <div
-    class="candidate-form__block candidate-form__block_pos_left contact-form"
-    v-if="contacts.length"
-  >
-    <draggable v-model="list" :move="move">
+  <div class="contact-form" v-if="list.length">
+    <draggable v-model="list" @change="move" @dragstart="drag($event)">
       <div
-        v-for="(item, index) in contacts"
-        :key="index"
+        v-for="(item, index) in list"
+        :key="`${item.id}_${index}`"
         class="contact-form__item"
       >
         <contact-form-item
           :item="item"
+          :key="`${index}_${item.id}`"
           :index="index"
           @delete-contact="deleteContact"
           @set-value="setValue"
@@ -41,11 +39,17 @@ export default {
     setValue(item, idx, val) {
       this.$emit('set-value', item.id, idx, val);
     },
-    deleteContact(item) {
-      this.$emit('delete-contact', item);
+    deleteContact(item, idx) {
+      this.$emit('delete-contact', item, idx);
     },
     move() {
       this.$emit('set-list', this.list);
+    },
+    drag(ev, originalEv) {
+      console.log(ev, originalEv);
+      // if (originalEv.target.className === 'el-input__inner') {
+      //   return false;
+      // }
     }
   },
   components: { draggable, ContactFormItem }
