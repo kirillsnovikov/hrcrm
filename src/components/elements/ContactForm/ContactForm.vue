@@ -1,6 +1,10 @@
 <template>
   <div class="contact-form" v-if="list.length">
-    <draggable v-model="list" @change="move" @dragstart="drag($event)">
+    <draggable
+      v-model="list"
+      @change="$emit('set-list', list)"
+      handle=".handle"
+    >
       <div
         v-for="(item, index) in list"
         :key="`${item.id}_${index}`"
@@ -41,15 +45,6 @@ export default {
     },
     deleteContact(item, idx) {
       this.$emit('delete-contact', item, idx);
-    },
-    move() {
-      this.$emit('set-list', this.list);
-    },
-    drag(ev, originalEv) {
-      console.log(ev, originalEv);
-      // if (originalEv.target.className === 'el-input__inner') {
-      //   return false;
-      // }
     }
   },
   components: { draggable, ContactFormItem }

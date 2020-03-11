@@ -35,4 +35,13 @@
       }
     }
   }
+
+  label {
+    cursor: move;
+  }
+
+  .el-input-group__prepend {
+    padding: 7px;
+    cursor: move;
+  }
 }

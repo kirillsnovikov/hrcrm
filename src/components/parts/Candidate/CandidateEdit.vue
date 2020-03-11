@@ -620,11 +620,14 @@ export default {
       // this.form = Object.assign({}, this.form);
     },
     setContactValue(id, index, val) {
-      console.log(id, val, this.form.contacts[index]);
       this.$set(this.form.contacts[index], 'value', val);
       this.$set(this.form, id, val);
       this.form = Object.assign({}, this.form);
-      this.$refs.form.validateField(id);
+      let valid = false;
+      this.$refs.form.validateField(id, function(err) {
+        valid = !!err;
+      });
+      this.$set(this.form.contacts[index], 'valid', valid);
     },
     setContactList(list) {
       if (list) {

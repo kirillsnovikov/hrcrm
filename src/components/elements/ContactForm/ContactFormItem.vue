@@ -1,5 +1,6 @@
 <template>
-  <el-form-item :label="item.label" :rules="rules" :prop="item.id" class="row">
+  <el-form-item label="temp" :rules="rules" :prop="item.id" class="row">
+    <span slot="label" class="handle">{{ item.label }}</span>
     <el-input
       v-if="item.value_type !== 'phone'"
       :type="setContactsType(item.value_type)"
@@ -7,9 +8,16 @@
       @change="$emit('set-value', item, index, fieldValue)"
       v-model="fieldValue"
       :maxlength="64"
-    ></el-input>
-    <!-- нельзя выделить текст в поле т.к. срабатывает событие drag -->
-    <div class="el-input el-input--medium" v-else>
+    >
+      <i class="el-icon-rank handle" slot="prepend"></i>
+    </el-input>
+    <div
+      class="el-input el-input--medium el-input-group el-input-group--prepend"
+      v-else
+    >
+      <div class="el-input-group__prepend handle">
+        <i class="el-icon-rank"></i>
+      </div>
       <the-mask
         :type="setContactsType(item.value_type)"
         :name="item.id"
@@ -26,10 +34,10 @@
         class="el-input__inner"
         required
       ></the-mask>
-      <!-- <span class="el-input__suffix">
+      <span class="el-input__suffix">
         <span class="el-input__suffix-inner"></span>
-        <i class="el-input__icon el-input__validateIcon"></i>
-      </span> -->
+        <i :class="['el-input__icon el-input__validateIcon', validAttr]"></i>
+      </span>
     </div>
     <div class="contact-form__panel">
       <el-button
@@ -75,6 +83,16 @@ export default {
           : {}
       ]
     };
+  },
+  computed: {
+    validAttr() {
+      return typeof this.item.valid !== 'undefined' &&
+        this.item.valid !== undefined
+        ? this.item.valid
+          ? 'el-icon-circle-close'
+          : 'el-icon-circle-check'
+        : '';
+    }
   },
   mounted() {
     this.fieldValue = this.item.value;
