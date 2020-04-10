@@ -60,6 +60,7 @@
         "this_stage": "0",
         "date_done": "2020-02-27 10:00:20",
         "date_start_stage": "2020-01-21 12:56:44",
+        "icon": "добавлен.png",
         "candidates_ids": [
           "314"
         ]
@@ -72,60 +73,61 @@
         "sort": "2",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "4",
         "this_stage": "0",
         "date_done": "2020-02-27 15:11:33",
         "date_start_stage": "2020-03-06 09:44:43",
+        "icon": "телефонное интервью.png",
         "candidates_ids": [
           "758"
         ]
       },
-      "3" : {
+      "3": {
+        "id": "ee9ee580-e3b5-99e4-017c-5e296b75accd",
+        "name": "Назначено интервью с рекрутером",
+        "activity": "1",
+        "color": "#ffc000",
+        "sort": "3",
+        "required_stage": "not_required",
+        "required_position": null,
+        "position_sort": "3",
+        "this_stage": "0",
+        "date_done": "2020-02-27 15:11:33",
+        "date_start_stage": "2020-03-06 09:44:43",
+        "icon": "назначено интервью с рекрутером.png"
+      },
+      "4" : {
         "id": "8416b460-7d0c-4cc1-e2e7-5dca55566054",
         "name": "Первичное интервью с рекрутером",
         "activity": "1",
         "color": "#ffc000",
-        "sort": "3",
+        "sort": "4",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "4",
         "this_stage": "0",
         "date_done": "2020-02-27 15:14:33",
         "date_start_stage": "2020-03-06 09:45:43",
+        "icon": "интервью с рекрутером.png",
         "candidates_ids": [
           "791"
         ]
       },
-      "4" : {
+      "5" : {
         "id": "1deb66a5-b755-38eb-c46d-5dca5504e40a",
         "name": "Резюме у Заказчика",
-        "activity": "1",
-        "color": "#ab9ac0",
-        "sort": "4",
-        "required_stage": null,
-        "required_position": null,
-        "position_sort": null,
-        "this_stage": "0",
-        "date_done": "2020-02-27 15:18:33",
-        "date_start_stage": "2020-03-06 09:47:43",
-        "candidates_ids": [
-          "635"
-        ]
-      },
-      "5" : {
-        "id": "6a52057c-a51e-c125-154b-5dca55bb9681",
-        "name": "Интервью с заказчиком",
         "activity": "1",
         "color": "#ab9ac0",
         "sort": "5",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "5",
         "this_stage": "0",
-        "date_done": "2020-02-27 16:11:33",
-        "date_start_stage": "2020-03-06 10:44:43",
+        "date_done": "2020-02-27 15:18:33",
+        "date_start_stage": "2020-03-06 09:47:43",
+        "icon": "резюме у заказчика.png",
         "candidates_ids": [
-          "254"
+          "635"
         ]
       },
       "6" : {
@@ -136,106 +138,164 @@
         "sort": "6",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "6",
         "this_stage": "0",
         "date_done": "2020-02-27 16:12:33",
         "date_start_stage": "2020-03-06 10:45:43",
+        "icon": "тестовое задание.png",
         "candidates_ids": [
           "254"
         ]
       },
       "7" : {
         "id": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
-        "name": "Резюме у внешнего Заказчика",
+        "name": "Назначено интервью с внут. зак.",
         "activity": "1",
         "color": "#ab9ac0",
         "sort": "7",
         "required_stage": "not_required",
         "required_position": null,
-        "position_sort": "-3",
+        "position_sort": "7",
         "this_stage": "0",
         "date_done": "2020-02-27 16:21:33",
         "date_start_stage": "2020-03-06 11:44:43",
+        "icon": "назначено интервью с заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
-      "8" : {
-        "id": "a4b3a50e-577a-f78e-d62b-5dca56474689",
-        "name": "Интервью с внешним Заказчиком",
+      "8": {
+        "id": "6a52057c-a51e-c125-154b-5dca55bb9681",
+        "name": "Проведено интервью с внут. зак.",
         "activity": "1",
         "color": "#ab9ac0",
         "sort": "8",
-        "required_stage": null,
+        "required_stage": "not_required",
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "8",
         "this_stage": "0",
-        "date_done": "2020-02-27 17:11:33",
-        "date_start_stage": "2020-03-06 13:44:43",
+        "date_done": "2020-02-27 16:21:33",
+        "date_start_stage": "2020-03-06 11:44:43",
+        "icon": "проведено интервью с заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
-      "9" : {
-        "id": "da56c3d2-4b84-d4f6-9a52-5dca56f7b688",
-        "name": "Оффер",
+      "9": {
+        "id": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
+        "name": "Резюме у внешнего Заказчика",
         "activity": "1",
-        "color": "#4bacc6",
+        "color": "#ab9ac0",
         "sort": "9",
-        "required_stage": "required",
-        "required_position": "required_bottom",
-        "position_sort": "1",
+        "required_stage": "not_required",
+        "required_position": null,
+        "position_sort": "9",
         "this_stage": "0",
-        "date_done": "2020-02-28 15:11:33",
-        "date_start_stage": "2020-03-07 09:44:43",
+        "date_done": "2020-02-27 16:21:33",
+        "date_start_stage": "2020-03-06 11:44:43",
+        "icon": "резюме у внешнего заказчика.png",
         "candidates_ids": [
           "254"
         ]
       },
       "10" : {
-        "id": "d9d3cffc-8ec0-9ba4-74a9-5dca56460314",
-        "name": "Подготовка к выходу",
-        "activity": "0",
-        "color": "#9dbb61",
+        "id": "9f97f5f7-a818-435f-3b4e-5e296530665f",
+        "name": "Назначено интервью с внеш. зак.",
+        "activity": "1",
+        "color": "#ab9ac0",
         "sort": "10",
-        "required_stage": "required",
-        "required_position": "required_bottom",
-        "position_sort": "2",
-        "this_stage": "0",
-        "date_done": "2020-02-28 19:11:33",
-        "date_start_stage": "2020-03-16 09:44:43",
+        "required_stage": null,
+        "required_position": null,
+        "position_sort": "10",
+        "this_stage": "1",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "назначено интервью с внешним заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
       "11" : {
-        "id": "c0520b32-f7ea-858b-4ca6-5dca56388157",
-        "name": "Принят",
-        "activity": "0",
-        "color": "#00cc66",
+        "id": "a4b3a50e-577a-f78e-d62b-5dca56474689",
+        "name": "Проведено интервью с внеш. зак.",
+        "activity": "1",
+        "color": "#ab9ac0",
         "sort": "11",
-        "required_stage": "required",
-        "required_position": "required_bottom",
-        "position_sort": "3",
-        "this_stage": "0",
-        "date_done": "2020-02-29 17:11:33",
-        "date_start_stage": "2020-03-16 12:44:43",
+        "required_stage": null,
+        "required_position": null,
+        "position_sort": "11",
+        "this_stage": "1",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "проведено интервью с внешним заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
       "12" : {
+        "id": "da56c3d2-4b84-d4f6-9a52-5dca56f7b688",
+        "name": "Оффер",
+        "activity": "1",
+        "color": "#4bacc6",
+        "sort": "12",
+        "required_stage": "required",
+        "required_position": "required_bottom",
+        "position_sort": "12",
+        "this_stage": "1",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "оффер.png",
+        "candidates_ids": [
+          "254"
+        ]
+      },
+      "13" : {
+        "id": "d9d3cffc-8ec0-9ba4-74a9-5dca56460314",
+        "name": "Подготовка к выходу",
+        "activity": "0",
+        "color": "#9dbb61",
+        "sort": "13",
+        "required_stage": "required",
+        "required_position": "required_bottom",
+        "position_sort": "13",
+        "this_stage": "1",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "подготовка к выходу.png",
+        "candidates_ids": [
+          "254"
+        ]
+      },
+      "14" : {
+        "id": "c0520b32-f7ea-858b-4ca6-5dca56388157",
+        "name": "Принят",
+        "activity": "0",
+        "color": "#00cc66",
+        "sort": "14",
+        "required_stage": "required",
+        "required_position": "required_bottom",
+        "position_sort": "14",
+        "this_stage": "1",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "принят.png",
+        "candidates_ids": [
+          "254"
+        ]
+      },
+      "15" : {
         "id": "b91e9eba-efd0-7cd6-1c99-5dca5619aaf8",
         "name": "Отказ",
         "activity": "0",
         "color": "#c05046",
-        "sort": "12",
+        "sort": "15",
         "required_stage": "required",
         "required_position": "required_bottom",
-        "position_sort": "4",
+        "position_sort": "15",
         "this_stage": "1",
-        "date_done": "2020-02-29 17:11:33",
-        "date_start_stage": "2020-03-26 06:44:43",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "отказ.png",
         "candidates_ids": [
           "254"
         ]
@@ -293,7 +353,7 @@
   {
     "vacancy_id": "274d00e3-437e-2e2a-f753-5df34d74bcdd",
     "candidates_id": "4a1a2aa6-03ac-fd14-2f46-35ff26761e61",
-    "this_stage": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
+    "this_stage": "723e93e2-403c-d04e-7716-5dd4de4c71d9",
     "candidates_data": {
       "id": "4a1a2aa6-03ac-fd14-2f46-35ff26761e61",
       "name": "",
@@ -348,9 +408,10 @@
         "required_stage": "required",
         "required_position": "required_top",
         "position_sort": "3",
-        "this_stage": "0",
+        "this_stage": "1",
         "date_done": "2020-02-27 10:00:20",
         "date_start_stage": "2020-01-21 12:56:44",
+        "icon": "добавлен.png",
         "candidates_ids": [
           "314"
         ]
@@ -363,60 +424,61 @@
         "sort": "2",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "4",
         "this_stage": "0",
-        "date_done": "2020-02-27 15:11:33",
-        "date_start_stage": "2020-03-06 09:44:43",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "телефонное интервью.png",
         "candidates_ids": [
           "758"
         ]
       },
-      "3" : {
+      "3": {
+        "id": "ee9ee580-e3b5-99e4-017c-5e296b75accd",
+        "name": "Назначено интервью с рекрутером",
+        "activity": "1",
+        "color": "#ffc000",
+        "sort": "3",
+        "required_stage": "not_required",
+        "required_position": null,
+        "position_sort": "3",
+        "this_stage": "0",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "назначено интервью с рекрутером.png"
+      },
+      "4" : {
         "id": "8416b460-7d0c-4cc1-e2e7-5dca55566054",
         "name": "Первичное интервью с рекрутером",
         "activity": "1",
         "color": "#ffc000",
-        "sort": "3",
+        "sort": "4",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "4",
         "this_stage": "0",
-        "date_done": "2020-02-27 15:14:33",
-        "date_start_stage": "2020-03-06 09:45:43",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "интервью с рекрутером.png",
         "candidates_ids": [
           "791"
         ]
       },
-      "4" : {
+      "5" : {
         "id": "1deb66a5-b755-38eb-c46d-5dca5504e40a",
         "name": "Резюме у Заказчика",
-        "activity": "1",
-        "color": "#ab9ac0",
-        "sort": "4",
-        "required_stage": null,
-        "required_position": null,
-        "position_sort": null,
-        "this_stage": "0",
-        "date_done": "2020-02-27 15:18:33",
-        "date_start_stage": "2020-03-06 09:47:43",
-        "candidates_ids": [
-          "635"
-        ]
-      },
-      "5" : {
-        "id": "6a52057c-a51e-c125-154b-5dca55bb9681",
-        "name": "Интервью с заказчиком",
         "activity": "1",
         "color": "#ab9ac0",
         "sort": "5",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "5",
         "this_stage": "0",
-        "date_done": "2020-02-27 16:11:33",
-        "date_start_stage": "2020-03-06 10:44:43",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "резюме у заказчика.png",
         "candidates_ids": [
-          "254"
+          "635"
         ]
       },
       "6" : {
@@ -427,106 +489,164 @@
         "sort": "6",
         "required_stage": null,
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "6",
         "this_stage": "0",
-        "date_done": "2020-02-27 16:12:33",
-        "date_start_stage": "2020-03-06 10:45:43",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "тестовое задание.png",
         "candidates_ids": [
           "254"
         ]
       },
       "7" : {
         "id": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
-        "name": "Резюме у внешнего Заказчика",
+        "name": "Назначено интервью с внут. зак.",
         "activity": "1",
         "color": "#ab9ac0",
         "sort": "7",
         "required_stage": "not_required",
         "required_position": null,
-        "position_sort": "-3",
-        "this_stage": "1",
-        "date_done": "2020-02-27 16:21:33",
-        "date_start_stage": "2020-03-06 11:44:43",
+        "position_sort": "7",
+        "this_stage": "0",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "назначено интервью с заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
-      "8" : {
-        "id": "a4b3a50e-577a-f78e-d62b-5dca56474689",
-        "name": "Интервью с внешним Заказчиком",
+      "8": {
+        "id": "6a52057c-a51e-c125-154b-5dca55bb9681",
+        "name": "Проведено интервью с внут. зак.",
         "activity": "1",
         "color": "#ab9ac0",
         "sort": "8",
-        "required_stage": null,
+        "required_stage": "not_required",
         "required_position": null,
-        "position_sort": null,
+        "position_sort": "8",
         "this_stage": "0",
         "date_done": "",
         "date_start_stage": "",
+        "icon": "проведено интервью с заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
-      "9" : {
-        "id": "da56c3d2-4b84-d4f6-9a52-5dca56f7b688",
-        "name": "Оффер",
+      "9": {
+        "id": "5b4cc78c-f6bd-004c-4111-5dca55e2eba1",
+        "name": "Резюме у внешнего Заказчика",
         "activity": "1",
-        "color": "#4bacc6",
+        "color": "#ab9ac0",
         "sort": "9",
-        "required_stage": "required",
-        "required_position": "required_bottom",
-        "position_sort": "1",
+        "required_stage": "not_required",
+        "required_position": null,
+        "position_sort": "9",
         "this_stage": "0",
         "date_done": "",
         "date_start_stage": "",
+        "icon": "резюме у внешнего заказчика.png",
         "candidates_ids": [
           "254"
         ]
       },
       "10" : {
-        "id": "d9d3cffc-8ec0-9ba4-74a9-5dca56460314",
-        "name": "Подготовка к выходу",
-        "activity": "0",
-        "color": "#9dbb61",
+        "id": "9f97f5f7-a818-435f-3b4e-5e296530665f",
+        "name": "Назначено интервью с внеш. зак.",
+        "activity": "1",
+        "color": "#ab9ac0",
         "sort": "10",
-        "required_stage": "required",
-        "required_position": "required_bottom",
-        "position_sort": "2",
+        "required_stage": null,
+        "required_position": null,
+        "position_sort": "10",
         "this_stage": "0",
         "date_done": "",
         "date_start_stage": "",
+        "icon": "назначено интервью с внешним заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
       "11" : {
-        "id": "c0520b32-f7ea-858b-4ca6-5dca56388157",
-        "name": "Принят",
-        "activity": "0",
-        "color": "#00cc66",
+        "id": "a4b3a50e-577a-f78e-d62b-5dca56474689",
+        "name": "Проведено интервью с внеш. зак.",
+        "activity": "1",
+        "color": "#ab9ac0",
         "sort": "11",
-        "required_stage": "required",
-        "required_position": "required_bottom",
-        "position_sort": "3",
+        "required_stage": null,
+        "required_position": null,
+        "position_sort": "11",
         "this_stage": "0",
         "date_done": "",
         "date_start_stage": "",
+        "icon": "проведено интервью с внешним заказчиком.png",
         "candidates_ids": [
           "254"
         ]
       },
       "12" : {
+        "id": "da56c3d2-4b84-d4f6-9a52-5dca56f7b688",
+        "name": "Оффер",
+        "activity": "1",
+        "color": "#4bacc6",
+        "sort": "12",
+        "required_stage": "required",
+        "required_position": "required_bottom",
+        "position_sort": "12",
+        "this_stage": "0",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "оффер.png",
+        "candidates_ids": [
+          "254"
+        ]
+      },
+      "13" : {
+        "id": "d9d3cffc-8ec0-9ba4-74a9-5dca56460314",
+        "name": "Подготовка к выходу",
+        "activity": "0",
+        "color": "#9dbb61",
+        "sort": "13",
+        "required_stage": "required",
+        "required_position": "required_bottom",
+        "position_sort": "13",
+        "this_stage": "0",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "подготовка к выходу.png",
+        "candidates_ids": [
+          "254"
+        ]
+      },
+      "14" : {
+        "id": "c0520b32-f7ea-858b-4ca6-5dca56388157",
+        "name": "Принят",
+        "activity": "0",
+        "color": "#00cc66",
+        "sort": "14",
+        "required_stage": "required",
+        "required_position": "required_bottom",
+        "position_sort": "14",
+        "this_stage": "0",
+        "date_done": "",
+        "date_start_stage": "",
+        "icon": "принят.png",
+        "candidates_ids": [
+          "254"
+        ]
+      },
+      "15" : {
         "id": "b91e9eba-efd0-7cd6-1c99-5dca5619aaf8",
         "name": "Отказ",
         "activity": "0",
         "color": "#c05046",
-        "sort": "12",
+        "sort": "15",
         "required_stage": "required",
         "required_position": "required_bottom",
-        "position_sort": "4",
+        "position_sort": "15",
         "this_stage": "0",
         "date_done": "",
         "date_start_stage": "",
+        "icon": "отказ.png",
         "candidates_ids": [
           "254"
         ]

@@ -59,10 +59,12 @@
                     :key="item.id"
                     :command="item"
                     :disabled="
-                      item.id === candidate.stage.id ||
-                        isAccepted ||
-                        isOffer(item, candidate.stage) ||
-                        isPreparation(item, candidate.stage)
+                      Boolean(
+                        item.id === candidate.stage.id ||
+                          isAccepted ||
+                          isOffer(item, candidate.stage) ||
+                          isPreparation(item, candidate.stage)
+                      )
                     "
                   >
                     <span>{{ item.name }}</span>
@@ -175,7 +177,7 @@ export default {
       type: Object
     },
     stages: {
-      type: Object
+      type: [Object, Array]
     },
     isOffer: {
       type: Function
@@ -186,6 +188,7 @@ export default {
   },
   data() {
     return {
+      no_profile_photo: require('@/assets/img/no-photo.jpg'),
       wideInfo: false,
       bodyKeys: [
         'experience',

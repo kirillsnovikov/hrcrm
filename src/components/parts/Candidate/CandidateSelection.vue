@@ -200,7 +200,7 @@ import Dialog from 'Elements/Dialog/Dialog';
 
 export default {
   props: {
-    data: Object
+    data: [Object, Array]
   },
   data() {
     return {
@@ -440,11 +440,11 @@ export default {
           res.push(candidate);
         }
       });
-      res.sort((a, b) =>
-        b.date_vacancy_candidates_rel.localeCompare(
-          a.date_vacancy_candidates_rel
-        )
-      );
+      // res.sort((a, b) =>
+      //   b.date_vacancy_candidates_rel.localeCompare(
+      //     a.date_vacancy_candidates_rel
+      //   )
+      // );
       return res;
     },
     resetAll() {

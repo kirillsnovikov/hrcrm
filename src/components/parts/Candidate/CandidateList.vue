@@ -25,7 +25,7 @@ export default {
       type: Object
     },
     stages: {
-      type: Object
+      type: [Object, Array]
     },
     isOffer: {
       type: Function

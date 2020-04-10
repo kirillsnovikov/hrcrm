@@ -46,8 +46,8 @@ export default {
       type: String
     },
     limit: {
-      type: [Number, String],
-      default: ''
+      type: Number,
+      default: 0
     },
     size: {
       type: Number,

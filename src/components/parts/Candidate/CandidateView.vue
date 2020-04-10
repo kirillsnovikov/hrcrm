@@ -1,5 +1,6 @@
 <template>
   <div class="candidate-view">
+    <!-- <img :src="require(`@/assets/img/${'отказ.png'}`)"> -->
     <Dialog
       v-if="is_visible.candidate_dialog"
       title="Вы действительно хотите удалить эту запись?"
@@ -286,7 +287,10 @@
               :key="`${stage.id}_${i}`"
             >
               <el-tooltip :content="stage.name" placement="top-start">
-                <span class="stages-panel__label">{{ stage.name }}</span>
+                <span v-if="!stage.icon" class="stages-panel__label">
+                  {{ stage.name }}
+                </span>
+                <img v-else :src="stageIcon(stage.icon)" :alt="stage.name" />
               </el-tooltip>
               <span class="stages-panel__date" v-if="stage.date_start_stage">
                 {{ formatDate(stage.date_start_stage || '') }}
@@ -674,6 +678,10 @@ export default {
   methods: {
     stageWidth(stagesAmount) {
       return 100 / stagesAmount + '%';
+    },
+    stageIcon(icon) {
+      // ссылка не понадобится, к тому же скомпиленная не будет работать
+      return icon ? require(`@/assets/img/${icon}`) : '';
     },
     formatDate(date) {
       return new Date(date).toLocaleDateString();

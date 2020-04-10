@@ -5,6 +5,7 @@
 
   &__item {
     @extend %flex-center;
+    position       : relative;
     justify-content: space-between;
     padding        : 0.5em 1em;
     box-sizing     : border-box;
@@ -12,6 +13,12 @@
     border-right   : none;
     cursor         : pointer;
     overflow       : hidden;
+    text-align     : center;
+    background     : #eaeaea;
+
+    &.no-focus {
+      cursor: default;
+    }
 
     &:first-child {
       @extend .border-left-radius;
@@ -31,11 +38,20 @@
     overflow     : hidden;
     text-overflow: ellipsis;
     white-space  : nowrap;
+    line-height  : 29px;
   }
 
   &__input {
     position: fixed;
     left    : -1000px;
     opacity : 0;
+  }
+
+  &__date {
+    margin-top: 4px;
+  }
+
+  img {
+    max-height: 25px;
   }
 }
