@@ -32,11 +32,28 @@
       margin-bottom: 1em;
     }
   }
+
+  .el-table {
+    &__header-wrapper {
+      .el-checkbox {
+        display: none;
+      }
+    }
+  }
 }
 
 .vacancy-table {
   @extend %flex-col;
   @extend %crm-font;
+}
+
+.table-top-nav {
+  @extend %flex;
+  margin-bottom: 0.5em;
+
+  &__right {
+    flex: 1;
+  }
 }
 
 .vacancy-table-item {
@@ -98,19 +115,22 @@
     flex-wrap: wrap;
     align-self: stretch;
     margin-right: 1em;
-    width: 25%;
+    width: 40%;
   }
-
-  &__left-top {
-    width: 100%;
-    @extend %flex-center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  
+  &__left {
+    &-top,
+    &-bottom {
+      width: 100%;
+      @extend %flex-center;
+      flex-wrap: nowrap;
+    }
   }
 
   &__title {
     @extend %flex-center;
     flex: 80%;
+    height: 100%;
     overflow: hidden;
     margin-right: 0.5em;
   }
@@ -123,9 +143,24 @@
     text-overflow: ellipsis;
     text-align: left;
     font-weight: bold;
-    margin-right: 0.5em;
     font-size: 1.25em;
     max-width: 90%;
+  }
+
+  &__title-link + .el-tag {
+    margin-left: 0.5em;
+  }
+
+  &__cv-link {
+    position: relative;
+    top: -10px;
+    margin: 0 8px;
+
+    svg {
+      height: 20px;
+      width: 20px !important;
+      color: #606266;
+    }
   }
 
   &__status {
@@ -135,9 +170,15 @@
   }
 
   &__location {
-    @extend %flex-center;
-    width: 50%;
     font-size: 0.875em;
+    margin-right: 30px;
+    line-height: 22px;
+    display: inline-block;
+  }
+
+  &__reason {
+    display: inline-block;
+    font-size: 14px;
   }
 
   &__date {
@@ -153,9 +194,13 @@
     flex: 1;
 
     &-value {
-      width: 50%;
+      width: 49%;
       margin: 0.25em 0;
       overflow: hidden;
+
+      &:nth-child(odd) {
+        margin-right: 6px;
+      }
     }
 
     &-link {
@@ -172,7 +217,7 @@
   }
 
   &__right {
-    width: 25%;
+    width: 17%;
     margin-right: 2em;
   }
 
@@ -205,58 +250,16 @@
   }
 }
 
-.stages-vacancy {
-  @extend %flex-center;
-  margin-bottom: 1em;
-
-  &__dropdown {
-    border: $--border-base;
-    border-right: none;
-    cursor: pointer;
-    overflow: hidden;
-    flex: 1;
-
-    &:first-child {
-      @extend .border-left-radius;
-    }
-
-    &:last-child {
-      @extend .border-right-radius;
-      border-right: $--border-base;
-    }
-  }
-
-  &__item {
-    @extend %flex-center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 0.5em 1em;
-    color: $--color-white;
-  }
-
-  &__label {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &__candidate-link {
-    text-decoration: none;
-  }
-}
-
 .vacancy {
   &-edit {
     .el-form {
-      max-width: 800px;
-
       &-item {
-        input[name=salary_max] + .el-form-item__error {
+        input[name='salary_max'] + .el-form-item__error {
           display: none !important;
         }
       }
     }
-  
+
     &__inline-buttons {
       margin-bottom: 15px;
     }
@@ -265,7 +268,7 @@
       &_width_35 {
         width: 35%;
       }
-  
+
       &_width_30 {
         width: 30%;
         margin-right: 2.5%;
@@ -275,9 +278,14 @@
         float: right;
       }
     }
+
+    .inline-buttons__btn {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
   }
 
   &-form__wrapper {
-    max-width: 600px; // 530
+    width: 60%;
   }
 }

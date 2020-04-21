@@ -7,6 +7,7 @@
     @extend %flex-center;
     position       : relative;
     justify-content: space-between;
+    min-height     : 40px;
     padding        : 0.5em 1em;
     box-sizing     : border-box;
     border         : $--border-base;
@@ -15,9 +16,19 @@
     overflow       : hidden;
     text-align     : center;
     background     : #eaeaea;
+    margin: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 
     &.no-focus {
       cursor: default;
+    }
+
+    &--grid {
+      grid-template-columns: 1fr 0fr;
+      display: grid;
     }
 
     &:first-child {
@@ -38,7 +49,7 @@
     overflow     : hidden;
     text-overflow: ellipsis;
     white-space  : nowrap;
-    line-height  : 29px;
+    line-height  : 25px;
   }
 
   &__input {
@@ -49,9 +60,39 @@
 
   &__date {
     margin-top: 4px;
+    font-size: 10px;
   }
 
   img {
     max-height: 25px;
+    margin: 0 auto;
+  }
+
+  &__dropdown {
+    border: $--border-base;
+    border-right: none;
+    cursor: pointer;
+    overflow: hidden;
+    flex: 1;
+
+    &:first-child {
+      @extend .border-left-radius;
+    }
+
+    &:last-child {
+      @extend .border-right-radius;
+      border-right: $--border-base;
+    }
+  }
+
+  &__candidate-link {
+    text-decoration: none;
+  }
+
+  .el-tag--mini {
+    width: 18px;
+    min-width: 15px;
+    text-align: center;
+    padding: 0;
   }
 }

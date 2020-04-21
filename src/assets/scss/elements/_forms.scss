@@ -1,7 +1,25 @@
 $error-color: #f56c6c;
 
-.el-select-dropdown__item span {
-  font-family: Arial, Helvetica, sans-serif;
+.nav .dropdown-menu {
+  z-index: 9999;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+  z-index: 9030 !important;
+}
+
+.el-select-dropdown {
+  z-index: 3000 !important;
+
+  &__item {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+
+    span {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
 }
 
 .el-form--label-top .el-form-item__label {
@@ -14,11 +32,17 @@ $error-color: #f56c6c;
   font-weight: bold;
 }
 
-.el-tabs__header {
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -moz-user-focus: none;
+.el-tabs {
+  &__header {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-focus: none;
+  }
+
+  &__content {
+    min-height: 50px;
+  }
 }
 
 .collapsedSidebar {
@@ -31,7 +55,26 @@ $error-color: #f56c6c;
 
 .expandedSidebar {
   .inline-buttons.scroll {
-    @media screen and (min-width: 1300px) {
+    @media screen and (min-width: 1900px) {
+      left: 12%;
+    }
+
+    @media screen and (min-width: 1800px) and (max-width: 1899px) {
+      left: 13%;
+    }
+
+    @media screen and (min-width: 1600px) and (max-width: 1799px) {
+      left: 14%;
+    }
+    @media screen and (min-width: 1500px) and (max-width: 1599px) {
+      left: 15%;
+    }
+
+    @media screen and (min-width: 1400px) and (max-width: 1499px) {
+      left: 16%;
+    }
+
+    @media screen and (min-width: 1300px) and (max-width: 1399px) {
       left: 17%;
     }
 
@@ -50,10 +93,11 @@ $error-color: #f56c6c;
   padding: 7px 0;
   position: relative;
   background: #ffffff;
+  flex-wrap: wrap;
 
   &.scroll {
     position: fixed;
-    z-index: 100;
+    z-index: 9000;
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 2.8%;
@@ -70,6 +114,14 @@ $error-color: #f56c6c;
 
     @media screen and (max-width: 749px) {
       top: 0;
+    }
+  }
+
+  &__btn {
+    margin: 0 10px 10px 0 !important;
+
+    &:last-child {
+      margin-right: 0 !important;
     }
   }
 }
@@ -93,6 +145,11 @@ $error-color: #f56c6c;
   &.el-popper {
     margin-top: 0;
   }
+
+  &.el-popper--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 form {
@@ -115,7 +172,7 @@ form {
 
   h3, h2 {
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .candidate-form__section,
@@ -159,8 +216,11 @@ form {
   }
 
   &-item {
+    margin-right: 0;
+    margin-left: 0;
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     &:last-child {
@@ -168,15 +228,17 @@ form {
     }
 
     &__error {
-      top: 0%;
+      top: 3px;
       left: 6px;
       z-index: 0;
+      font-size: 11px;
     }
 
     &__label {
       max-width: 250px;
       line-height: 16px !important;
-      margin: 10px 0;
+      margin: 7px 0;
+      font-size: 13px;
       // white-space: nowrap;
     }
 
@@ -196,6 +258,7 @@ form {
 
     &.is-error input {
       border-color: $error-color !important;
+      background-color: transparent !important;
     }
 
     &__error {
@@ -236,6 +299,40 @@ form {
   }
 }
 
+.table-list {
+  .el-dialog {
+    max-width: 1200px;
+    width: 80%;
+
+    &__header {
+      padding: 0;
+    }
+  }
+
+  h4 {
+    background: #f4f4f5;
+    padding: 10px;
+  }
+
+  form {
+    margin-bottom: 30px !important;
+  }
+
+  &__query {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .el-form-item {
+      width: 48%;
+
+      label {
+        float: none;
+      }
+    }
+  }
+}
+
 .el-dialog {
   .el-form {
     border: none;
@@ -245,6 +342,44 @@ form {
   &__headerbtn {
     top: 8px;
     right: 8px;
+  }
+
+  .title {
+    margin-bottom: 22px;
+    display: block;
+    word-break: break-word;
+  }
+
+  p {
+    word-break: break-word;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .amountWrap {
+    border: 1px solid #e2e2e2;
+    padding: 30px;
+
+    input[type=number] {
+      text-align: center;
+    }
+
+    .dialog-footer {
+      text-align: right;
+      margin-top: 30px;
+
+      button {
+        width: 48%;
+      }
+    }
+  }
+
+  label {
+    font-weight: normal;
   }
 }
 
@@ -266,6 +401,10 @@ form {
   }
 }
 
+.el-avatar > img {
+  width: 100% !important;
+}
+
 .el-tooltip__popper {
   h5 {
     margin: 0;
@@ -275,22 +414,18 @@ form {
 }
 
 .fa {
-  &-envelope {
-    color: #4dabf7;
-  }
-
-  &-skype {
-    background-color: #fff;
-    color: #4dabf7;
-  }
-
-  &-telegram {
+  &-contact-icon {
     background-color: #fff;
     color: #4dabf7;
   }
 
   &-whatsapp-square {
-    background-color: #fff;
     color: #25d366;
+  }
+}
+
+.el-table {
+  th > .cell {
+    word-break: break-word;
   }
 }

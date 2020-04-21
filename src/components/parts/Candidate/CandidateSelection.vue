@@ -339,6 +339,7 @@ export default {
       return this.selectVacancies.stages;
     },
     candidates() {
+      console.log('candidates')
       let vacancy = this.selectVacancies;
       let stages = Object.values(vacancy.stages);
       let candidatesIds = this.getCandidateIds(stages, this.unselectStageItems);
@@ -360,6 +361,7 @@ export default {
       return filteredCandidates;
     },
     getStages() {
+      console.log('getStages', this.currentStages, this.unselectStageItems)
       let stages = [];
       Object.values(this.currentStages).forEach(stage => {
         let style = {
@@ -416,6 +418,7 @@ export default {
       return text;
     },
     getCandidateIds(stages, unselectStages) {
+      console.log('get candidate id')
       let ids = [];
       stages.forEach(stage => {
         if (

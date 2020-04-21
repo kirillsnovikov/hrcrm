@@ -3,7 +3,6 @@
     <candidate-list-item
       v-for="(candidate, i) in candidates"
       :key="`_${i}`"
-      :stages="stages"
       :candidate="candidate"
       :mod="mod"
       @set-stage="selectStage"
@@ -23,9 +22,6 @@ export default {
     },
     mod: {
       type: Object
-    },
-    stages: {
-      type: [Object, Array]
     },
     isOffer: {
       type: Function
