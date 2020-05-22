@@ -1,12 +1,112 @@
-.filter-form {
-  border: none;
-  padding: 20px 0;
+.filter-wrapper {
+  h4,
+  .el-collapse-item {
+    &__header {
+      background: #f4f4f5;
+      padding: 10px;
+      height: 30px;
+      font-weight: bold;
+      color: #606266;
+    }
 
-  h4 {
-    background: #f4f4f5;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
+    &__wrap {
+      border: none;
+    }
+
+    &__content {
+      padding: 0;
+    }
+  }
+
+  .filter-icon {
+    margin-left: 5px;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+
+    &.is-active {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+
+  .inline-buttons {
+    margin: 0;
+
+    &__btn {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .saved-filters {
+    .el-tag {
+      cursor: default;
+      margin-left: 10px;
+      margin-bottom: 5px;
+
+      &:hover > .el-tag__close {
+        visibility: visible;
+        opacity: 1;
+        display: inline-block;
+      }
+
+      &__close {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    &__header {
+      // margin-bottom: 10px;
+
+      .el-button {
+        padding: 5px;
+
+        &+.el-button {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    &__setting-item {
+      // margin-top: 5px;
+  
+      .el-input {
+        width: auto;
+        margin-right: 10px;
+      }
+    }
+    
+    &__new {
+      display: inline-block;
+
+      .el-input {
+        margin-left: 0;
+        margin-right: 5px;
+        width: 120px;
+
+        input {
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.filter-form {
+  &__filter {
+    margin-left: 5px;
+
+    &-label {
+      font-weight: bold;
+    }
+  }
+
+  &.el-form {
+    border: none;
+    padding: 20px 0;
   }
 
   .el-input, .el-select,
@@ -15,19 +115,24 @@
     width: 300px !important;
   }
 
-  .el-form-item__content {
-    // text-align: center;
-    & > div:not(:first-child) {
-      margin-left: 5px;
-    }
+  .el-form-item {
+    display: inline-block;
 
-    & > div:first-child {
-      font-weight: bold;
+    &__label {
+      max-width: unset;
+      line-height: 28px !important;
+      margin: 0;
     }
   }
 
   .el-button--mini {
     padding: 7px;
     margin-left: 3px;
+    max-height: 28px;
+
+    svg {
+      height: 12px;
+      width: 12px;
+    }
   }
 }

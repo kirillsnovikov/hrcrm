@@ -7,6 +7,7 @@ import './utils/directives';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faSortAlphaUp, faSortAlphaDown, faRandom } from '@fortawesome/free-solid-svg-icons';
 import {
   faTelegram,
   faSkype,
@@ -14,7 +15,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faTelegram, faSkype, faWhatsappSquare, faEnvelope);
+library.add(faTelegram, faSkype, faWhatsappSquare, faEnvelope, faSortAlphaUp, faSortAlphaDown, faRandom);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 import {
@@ -31,6 +32,8 @@ import {
   Avatar,
   Input,
   Checkbox,
+  // CheckboxButton,
+  // CheckboxGroup,
   Radio,
   Dropdown,
   DropdownMenu,
@@ -50,6 +53,11 @@ import {
   Submenu,
   MenuItem,
   MenuItemGroup,
+  Collapse,
+  CollapseItem,
+  Popover
+  // Carousel,
+  // CarouselItem,
 } from 'element-ui';
 
 const components = {
@@ -66,6 +74,8 @@ const components = {
   Avatar,
   Input,
   Checkbox,
+  // CheckboxButton,
+  // CheckboxGroup,
   Radio,
   Dropdown,
   DropdownMenu,
@@ -84,6 +94,11 @@ const components = {
   Submenu,
   MenuItem,
   MenuItemGroup,
+  Collapse,
+  CollapseItem,
+  Popover
+  // Carousel,
+  // CarouselItem,
 };
 
 for (let component of Object.values(components)) {

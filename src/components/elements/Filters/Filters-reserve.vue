@@ -1,70 +1,25 @@
 <template>
   <div class="filter-wrapper">
+    <!-- мои фильтры -->
+    <!-- сортировка отдельно -->
+    <!-- форма фильтров: с/ без настроек -->
+    <!-- можно создать второй коллапс для моих фильтров -->
+    <template>
+      <!-- <el-carousel :autoplay="false" arrow="hover" indicator-position="none" height="50px">
+        <el-carousel-item v-for="item in 4" :key="item">
+          <span>{{ item }}</span>
+          <span>{{ item }}</span>
+          <span>{{ item }}</span>
+          <span>{{ item }}</span>
+          <span>{{ item }}</span>
+        </el-carousel-item>
+      </el-carousel> -->
+    </template>
     <el-collapse v-model="activeFilter" accordion>
       <el-collapse-item name="1">
         <template slot="title">
           Фильтры<i :class="filterClass"></i>
         </template>
-        <!-- <template v-html="content">{{ content }}</template> -->
-        <filterr
-          v-for="id in [1, 2, 12]"
-          :key="id"
-          :id="id"
-          url="http://test.ru"
-          image="photo.jpg"
-          title="Товар 1"
-          :cart-items="[{ id: 1 }, { id: 12 }, { id: 123 }]"
-          class="snippet"
-        >
-        </filterr>
-        <el-form
-          status-icon
-          class="vacancy-form demo-ruleForm"
-          label-width="250px"
-          size="medium"
-          style="max-width: 700px; margin: 0 auto;"
-        >
-          <el-form-item label="Ссылка на тест" class="row test">
-            <el-input v-model.lazy="test_url"></el-input>
-            <el-popover
-              placement="top-start"
-              width="auto"
-              trigger="hover"
-              :offset="4"
-            >
-              <span>
-                Чтобы ссылка на тест была уникальной,<br />
-                подставьте "?id=" в конец ссылки
-              </span>
-              <i slot="reference" class="el-icon-info"></i>
-            </el-popover>
-          </el-form-item>
-          <el-form-item label="Ссылка на тест (вариант 2)" class="row">
-            <el-tooltip
-              content="Подставьте '?id=' в конец ссылки"
-              placement="top-start"
-              effect="light"
-            >
-              <el-input v-model.lazy="test_url"></el-input>
-            </el-tooltip>
-          </el-form-item>
-          <el-form-item label="Ссылка на тест (вариант 3)" class="row test-2">
-            <!-- <el-input
-              v-model.lazy="test_url"
-              suffix-icon="el-icon-info"
-            ></el-input>
-            <div class="el-form-item__error">
-              Подставьте '?id=' в конец ссылки
-            </div> -->
-            <el-input v-model="test_url">
-              <i slot="prefix" class="el-input__icon el-icon-info"></i>
-            </el-input>
-            <div class="el-form-item__error">
-              Подставьте '?id=' в конец ссылки
-            </div>
-          </el-form-item>
-        </el-form>
-
         <div class="saved-filters">
           <span><b>Мои фильтры</b></span>
           <div class="saved-filters__header">
@@ -137,7 +92,6 @@
               default-first-option
               @change="selectFilter(filters[i].opt, filter.name, i)"
               no-match-text="Нет результатов поиска"
-              class="filter-form__filter-label"
             >
               <el-option
                 v-for="(label, name) in menuOpts"
@@ -146,29 +100,11 @@
                 :value="name"
               ></el-option>
             </el-select>
-            <!-- <the-mask
-              type="text"
-              :name="filter.name"
-              placeholder="От"
-              :masked="false"
-              disabled
-              class="filter-form__filter"
-              :mask="[
-                '### ',
-                '# ###',
-                '## ###',
-                '### ### ',
-                '# ### ###',
-                '## ### ###'
-              ]"
-              v-model.lazy.trim="form[filter.name]"
-            ></the-mask> -->
             <el-input
               v-if="filter.field_type === 'text'"
               v-model="form[filter.name]"
               clearable
               :name="filter.name"
-              class="filter-form__filter"
             ></el-input>
             <el-select
               v-if="filter.field_type === 'select'"
@@ -177,7 +113,6 @@
               :multiple="filter.multiselect"
               clearable
               placeholder=""
-              class="filter-form__filter"
             >
               <el-option
                 v-for="(name, val) in getOpts"
@@ -188,13 +123,12 @@
             </el-select>
             <el-date-picker
               v-if="filter.field_type === 'datetime'"
-              v-model="form[filter.name]"
               type="date"
               :name="filter.name"
               :format="`${datepicker.dateFormat}`"
               :value-format="`${datepicker.dateFormat}`"
+              v-model="form[filter.name]"
               :picker-options="pickerOptions"
-              class="filter-form__filter"
             ></el-date-picker>
             <el-button
               size="mini"
@@ -208,36 +142,70 @@
               @click="addFilter(i)"
             ></el-button>
           </el-form-item>
-          <el-form-item
-            prop="sortByColumn"
-            label="Сортировать по колонке:"
-            label-width="305px"
-            label-position="right"
-            class="saved-filters__setting-item"
-          >
-            <el-select
-              v-model="form['sortByColumn']"
-              name="sortByColumn"
-              placeholder=""
-              size="mini"
-            >
-              <el-option
-                v-for="(col, i) in cols"
-                :key="`${col}_${i}`"
-                :label="col"
-                :value="col"
-              ></el-option>
-            </el-select>
-            <el-form-item prop="sortBy">
-              <el-tooltip content="Тип сортировки" effect="light">
-                <el-button size="mini" @click="sortBy">
-                  <font-awesome-icon size="2x" :icon="sortIcon">
-                  </font-awesome-icon>
-                </el-button>
-              </el-tooltip>
-            </el-form-item>
-          </el-form-item>
         </el-form>
+        <div class="saved-filters__sort">
+          <!-- <el-select
+            v-model="myActiveFilter"
+            name="abc"
+            placeholder=""
+            size="mini"
+            @change="selectSavedFilter"
+          >
+            <el-option label="--не выбрано--" value=""></el-option>
+            <el-option
+              v-for="(filter, i) in savedFilters"
+              :key="`${filter}_${i}`"
+              :label="filter"
+              :value="filter"
+            ></el-option>
+          </el-select> -->
+          <div
+            prop="saved_search_name"
+            label="Сохранить фильтр как"
+            class="saved-filters__settings"
+          >
+            <!-- <div
+              prop="saved_search_name"
+              label="Сохранить фильтр как"
+              class="saved-filters__setting-item"
+            >
+              <label for="saved_search_name">Сохранить фильтр как:</label>
+              <el-input
+                v-model="saved_search_name"
+                name="saved_search_name"
+                size="mini"
+              ></el-input>
+              <el-button @click="saveFilter" type="primary" size="mini">
+                Сохранить
+              </el-button>
+            </div> -->
+            <div prop="" class="saved-filters__setting-item">
+              <label for="">Сортировать по колонке:</label>
+              <el-select
+                v-model="sortByColumn"
+                name=""
+                placeholder=""
+                size="mini"
+              >
+                <el-option
+                  v-for="(col, i) in cols"
+                  :key="`${col}_${i}`"
+                  :label="col"
+                  :value="col"
+                ></el-option>
+              </el-select>
+            </div>
+            <div prop="" class="saved-filters__setting-item">
+              <label for="">Сортировка:</label>
+              <el-radio v-model="sortBy" label="DESC" size="mini">
+                Восходящая
+              </el-radio>
+              <el-radio v-model="sortBy" label="ASC" size="mini">
+                Нисходящая
+              </el-radio>
+            </div>
+          </div>
+        </div>
         <div class="inline-buttons">
           <el-button
             class="inline-buttons__btn"
@@ -246,7 +214,10 @@
           >
             Найти
           </el-button>
-          <el-button class="inline-buttons__btn" @click="resetForm">
+          <el-button
+            class="inline-buttons__btn"
+            @click="$refs.filterForm.resetFields()"
+          >
             Очистить
           </el-button>
         </div>
@@ -257,47 +228,15 @@
 
 <script>
 import './filters.scss';
-import Filterr from 'Elements/Filters/Filter';
-// import { mask, TheMask } from 'vue-the-mask';
-
-// const MyAwesomeList = items => `<ul>
-//       <li
-//       v-for="item in ${items}"
-//       :text="item.text"
-//       class="my-fancy-item"
-//     >{{ item.text }}</li>
-//   </ul>`;
 
 export default {
-  // directives: { mask },
   props: {
     opts: {
       type: Object
     }
   },
-  template: `<ul>
-      <li
-      v-for="item in items"
-      :text="item.text"
-      class="my-fancy-item"
-    >{{ item.text }}</li>
-  </ul>`,
   data() {
     return {
-      items: [
-        {
-          text: 'zs',
-          id: 1
-        },
-        {
-          text: 'zs0',
-          id: 12
-        },
-        {
-          text: 'zs1',
-          id: 13
-        }
-      ],
       datepicker: {
         dateFormat: 'dd.MM.yyyy',
         timeFormat: 'dd.MM.yyyy',
@@ -343,38 +282,23 @@ export default {
           value: ''
         }
       ],
-      title: 'Товар 1',
       menuOpts: {},
       form: {},
       filters: [],
-      savedFilters: [
-        'мой фильтр 1',
-        'мой фильтр 2',
-        'мой фильтр 3',
-        'мой фильтр 4',
-        'мой фильтр 5',
-        'мой фильтр 6',
-        'мой фильтр 7',
-        'мой фильтр 8',
-        'мой фильтр 9',
-        'мой фильтр 10',
-        'мой фильтр 11',
-        'мой фильтр 12'
-      ],
+      savedFilters: ['мой фильтр 1', 'мой фильтр 2', 'мой фильтр 3', 'мой фильтр 4', 'мой фильтр 5', 'мой фильтр 6', 'мой фильтр 7', 'мой фильтр 8', 'мой фильтр 9', 'мой фильтр 10', 'мой фильтр 11', 'мой фильтр 12'],
       myActiveFilter: '',
       saved_search_name: '',
-      // sortByColumn: '',
+      sortByColumn: '',
       cols: [1, 2, 3, 4, 5, 6],
-      // sortBy: '',
+      sortBy: '',
       inputVisible: false,
-      inputValue: '',
-      test_url: '/test'
+      inputValue: ''
     };
   },
   beforeMount() {
+    // сортировка
     // мультивыбор?
     // первое дефолтное поле - полное имя (кандидаты) и наименование (вакансии)
-    this.sortIcon;
     this.filterList.map(filter => {
       // настройки для двойных полей, типа возраст, оклад+валюта
       switch (filter.type) {
@@ -421,8 +345,8 @@ export default {
     this.$set(this.form, this.filterList[0].name, '');
     // } else {
     //   console.log('обработать сохраненные фильтры');
-    // для своих фильтров отображаем свои списки опций:
-    // this.updateFilterList()
+      // для своих фильтров отображаем свои списки опций:
+      // this.updateFilterList()
     // }
   },
   computed: {
@@ -434,22 +358,9 @@ export default {
         'filter-icon el-icon-arrow-right',
         this.activeFilter ? 'is-active' : ''
       ];
-    },
-    sortIcon() {
-      const isDesc = this.form['sortBy'] === 'DESC';
-      const isAsc = this.form['sortBy'] === 'ASC';
-      return isDesc
-        ? ['fas', 'sort-alpha-up']
-        : isAsc
-        ? ['fas', 'sort-alpha-down']
-        : ['fas', 'random'];
     }
   },
   methods: {
-    resetForm() {
-      this.$refs.filterForm.resetFields();
-      this.sortIcon;
-    },
     updateFilterList() {
       const selectedOpts = Array.from(this.filters, ({ opt }) => opt);
       this.filters.map(({ opt }, i) => {
@@ -471,17 +382,6 @@ export default {
         this.updateFilterList();
         // console.log('delete', idx, this.filters);
       }
-    },
-    editFilter(idx, filter) {
-      // проверка на удаление единственного фильтра
-      // установить дисейбл для кнопок удаления, добавления
-      console.log(idx, filter);
-      // if (this.filters.length > 1) {
-      //   this.filters.splice(idx, 1);
-      //   this.$delete(this.form, filter);
-      //   this.updateFilterList();
-      //   // console.log('delete', idx, this.filters);
-      // }
     },
     addFilter(idx) {
       let list = [...this.filterList];
@@ -518,14 +418,8 @@ export default {
     findByFilter() {},
     findBySavedFilter() {},
     testClose(tag) {
-      console.log('close');
+      console.log('close')
       this.savedFilters.splice(this.savedFilters.indexOf(tag), 1);
-    },
-    sortBy() {
-      const isDesc = this.form['sortBy'] === 'DESC';
-      const sortValue = isDesc ? 'ASC' : 'DESC';
-      this.$set(this.form, 'sortBy', sortValue);
-      this.sortIcon;
     },
     showInput() {
       this.inputVisible = true;
@@ -541,8 +435,7 @@ export default {
       this.inputVisible = false;
       this.inputValue = '';
     }
-  },
-  components: { Filterr /*, TheMask*/ }
+  }
 };
 </script>
 
@@ -563,45 +456,4 @@ export default {
 .el-carousel__item:nth-child(2n+1) {
   background-color: #d3dce6;
 } */
-.el-icon-info {
-  z-index: 1;
-  color: #ffbe5a;
-  font-size: 18px;
-  background: #ffffff;
-}
-.test .el-icon-info {
-  position: absolute;
-  top: -7px;
-  left: -5px;
-}
-.filter-wrapper .el-form .test-2 .el-icon-info {
-  /* top: -9px;
-  position: relative; */
-  top: 2px;
-    position: absolute;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  font-size: 14px;
-  line-height: 14px !important;
-}
-/*.el-input__prefix {
-   height: auto !important;
-} */
-.el-form .el-form-item__error {
-  padding: 0;
-  color: #e6a23c;
-  margin-left: 15px;
-}
-
-.test-2 .el-input input {
-  padding-left: 20px;
-}
-
-.el-popover {
-  padding: 7px !important;
-  font-size: 13px !important;
-  transform: translateY(10px);
-  /* color: #e6a23c !important; */
-}
 </style>
