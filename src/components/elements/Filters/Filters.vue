@@ -6,7 +6,7 @@
           Фильтры<i :class="filterClass"></i>
         </template>
         <!-- <template v-html="content">{{ content }}</template> -->
-        <filterr
+        <!-- <filterr
           v-for="id in [1, 2, 12]"
           :key="id"
           :id="id"
@@ -16,7 +16,7 @@
           :cart-items="[{ id: 1 }, { id: 12 }, { id: 123 }]"
           class="snippet"
         >
-        </filterr>
+        </filterr> -->
         <el-form
           status-icon
           class="vacancy-form demo-ruleForm"
@@ -24,8 +24,46 @@
           size="medium"
           style="max-width: 700px; margin: 0 auto;"
         >
-          <el-form-item label="Ссылка на тест" class="row test">
-            <el-input v-model.lazy="test_url"></el-input>
+          <el-form-item
+            label="Желательные навыки"
+            prop="desirable_skills_ids"
+            class="row"
+          >
+            <el-select
+              v-model="form.desirable_skills_ids"
+              class="el-form-item form-item"
+              @visible-change="handleBlur($event, 'desirable_skills_ids')"
+              placeholder=""
+              filterable
+              multiple
+            >
+              <el-option
+                v-for="option in [{id:'1', name: 'qwerr'}, {id:'2', name: '44dfsfr'}]"
+                :key="option.id"
+                :label="option.name"
+                :value="option.id"
+              ></el-option>
+              <div slot="empty">
+                <p class="el-select-dropdown__empty">
+                  No data
+                </p>
+                <div class="add-skill-btn">
+                  <span>
+                    Добавить
+                  </span>
+                </div>
+              </div>
+            </el-select>
+        </el-form-item>
+          <!-- <text-editor
+            name="resume_text"
+            label="Резюме"
+            :text="form.resume_text"
+            :max-length="3000"
+            @set-text-value="setTextValue"
+          ></text-editor> -->
+          <!-- <el-form-item label="Ссылка на тест" class="row test">
+            <el-input v-model.lazy="test_url" type="textarea" @input.native="input" @change="change"></el-input>
             <el-popover
               placement="top-start"
               width="auto"
@@ -38,8 +76,72 @@
               </span>
               <i slot="reference" class="el-icon-info"></i>
             </el-popover>
+          </el-form-item> -->
+          <!-- <el-form-item
+            label="Ключевые навыки"
+            prop="stack"
+            class="row"
+          >
+            <el-select
+              v-model="stack"
+              name="stack"
+              class="el-form-item form-item"
+              @input.native="handleChange($event, 'stack')"
+              placeholder=""
+              filterable
+              multiple
+              :multiple-limit="3"
+            >
+              <el-option
+                v-for="(option, key) in fields.stack.options"
+                :key="key"
+                :label="option"
+                :value="key"
+              ></el-option>
+              <div v-if="hasSkillOptions('stack')" slot="empty">
+                <p class="el-select-dropdown__empty">Не найдено...</p>
+                <div class="add-skill-btn">
+                  <span @click="addNewSkill('stack')">Добавить</span>
+                </div>
+              </div>
+              <p v-else slot="empty" class="el-select-dropdown__empty">
+                Справочник пуст
+              </p>
+            </el-select>
           </el-form-item>
-          <el-form-item label="Ссылка на тест (вариант 2)" class="row">
+          <el-form-item
+            label="Желательные навыки"
+            prop="desirable_skills"
+            class="row"
+          >
+            <el-select
+              v-model="desirable_skills"
+              name="desirable_skills"
+              class="el-form-item form-item"
+              @input.native="handleChange($event, 'desirable_skills')"
+              @change="handleChange($event, 'desirable_skills')"
+              placeholder=""
+              filterable
+              multiple
+            >
+              <el-option
+                v-for="(option, key) in fields.desirable_skills.options"
+                :key="key"
+                :label="option"
+                :value="key"
+              ></el-option>
+              <div v-if="hasSkillOptions('desirable_skills')" slot="empty">
+                <p class="el-select-dropdown__empty">Не найдено...</p>
+                <div class="add-skill-btn">
+                  <span @click="addNewSkill('desirable_skills')">Добавить</span>
+                </div>
+              </div>
+              <p v-else slot="empty" class="el-select-dropdown__empty">
+                Справочник пуст
+              </p>
+            </el-select>
+          </el-form-item> -->
+          <!-- <el-form-item label="Ссылка на тест (вариант 2)" class="row">
             <el-tooltip
               content="Подставьте '?id=' в конец ссылки"
               placement="top-start"
@@ -47,22 +149,15 @@
             >
               <el-input v-model.lazy="test_url"></el-input>
             </el-tooltip>
-          </el-form-item>
-          <el-form-item label="Ссылка на тест (вариант 3)" class="row test-2">
-            <!-- <el-input
-              v-model.lazy="test_url"
-              suffix-icon="el-icon-info"
-            ></el-input>
-            <div class="el-form-item__error">
-              Подставьте '?id=' в конец ссылки
-            </div> -->
+          </el-form-item> -->
+          <!-- <el-form-item label="Ссылка на тест (вариант 3)" class="row test-2">
             <el-input v-model="test_url">
               <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
             <div class="el-form-item__error">
               Подставьте '?id=' в конец ссылки
             </div>
-          </el-form-item>
+          </el-form-item> -->
         </el-form>
 
         <div class="saved-filters">
@@ -257,7 +352,8 @@
 
 <script>
 import './filters.scss';
-import Filterr from 'Elements/Filters/Filter';
+// import TextEditor from 'Elements/TextEditor/TextEditor';
+// import Filterr from 'Elements/Filters/Filter';
 // import { mask, TheMask } from 'vue-the-mask';
 
 // const MyAwesomeList = items => `<ul>
@@ -368,12 +464,35 @@ export default {
       // sortBy: '',
       inputVisible: false,
       inputValue: '',
-      test_url: '/test'
+      test_url: '/test',
+      fields: {},
+      stack: '',
+      desirable_skills: ''
     };
   },
   beforeMount() {
     // мультивыбор?
     // первое дефолтное поле - полное имя (кандидаты) и наименование (вакансии)
+    this.form.resume_text = `<br>- разработка и согласование методики </span><span class="highlighted">тестирования</span><span>: создание тестовых сценариев и тест-кейсов на основании технического задания;`;
+    this.fields.stack = {
+      ...this.fields.stack,
+      options: {
+        java: 'Java',
+        js: 'JavaScript',
+        php: 'PHP',
+        python: 'Python'
+      },
+      value: ['java']
+    };
+    this.fields.desirable_skills = {
+      value: ['java-ee'],
+      options: {
+        nginx: 'Nginx',
+        'java-ee': 'Java EE',
+        gulp: 'Gulp',
+        nodejs: 'Node.js'
+      }
+    };
     this.sortIcon;
     this.filterList.map(filter => {
       // настройки для двойных полей, типа возраст, оклад+валюта
@@ -446,6 +565,18 @@ export default {
     }
   },
   methods: {
+    setTextValue(text) {
+      this.$set(this.form, 'resume_text', text);
+    },
+    handleBlur(visible, name) {
+      console.log(visible, name);
+    },
+    handleChange(e, name) {
+      console.log(this[name], e.target.value);
+      // if (this.form[name].length === 3) {
+
+      // }
+    },
     resetForm() {
       this.$refs.filterForm.resetFields();
       this.sortIcon;
@@ -540,9 +671,22 @@ export default {
       }
       this.inputVisible = false;
       this.inputValue = '';
-    }
+    },
+    input() {
+      if (this.test_url.length > 20) {
+        this.test_url = this.test_url.slice(0, 20);
+      }
+      console.log(123, 'input', this.test_url, this.test_url.length);
+    },
+    change() {
+      console.log('change', this.test_url);
+    },
+    hasSkillOptions() {},
+    addNewSkill() {}
   },
-  components: { Filterr /*, TheMask*/ }
+  components: {
+    /*TextEditor , Filterr, TheMask*/
+  }
 };
 </script>
 
@@ -578,7 +722,7 @@ export default {
   /* top: -9px;
   position: relative; */
   top: 2px;
-    position: absolute;
+  position: absolute;
   left: 0;
   width: 14px;
   height: 14px;
