@@ -289,3 +289,13 @@
     width: 60%;
   }
 }
+
+.el-tooltip__popper {
+  z-index: 3100 !important;
+}
+
+.el-select-dropdown .el-icon-view {
+  position: absolute;
+  right: 20px;
+  line-height: 2;
+}

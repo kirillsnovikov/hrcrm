@@ -7,7 +7,7 @@
     "reportable": true,
     "comment": "Unique identifier",
     "inline_edit": false,
-    "value": "59800791-d44b-2fcb-8e60-5de7b0376a3c"
+    "value": "300039dc-b966-876c-6ea2-5e39661bc451"
   },
   "name": {
     "name": "name",
@@ -17,9 +17,7 @@
     "dbType": "varchar",
     "len": "255",
     "unified_search": false,
-    "full_text_search": {
-      "boost": 3
-    },
+    "full_text_search": { "boost": 3 },
     "required": false,
     "importable": "required",
     "duplicate_merge": "disabled",
@@ -29,11 +27,11 @@
     "comments": "",
     "help": "",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "size": "20",
-    "value": ""
+    "value": "Разработчик"
   },
   "date_entered": {
     "name": "date_entered",
@@ -68,14 +66,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "reportable": true,
     "unified_search": false,
     "merge_filter": "disabled",
     "size": "20",
     "dbType": "datetime",
     "autocomplete": false,
-    "value": "12/04/2019 16:11"
+    "value": "04.02.2020 15:40"
   },
   "date_modified": {
     "name": "date_modified",
@@ -103,7 +101,7 @@
     },
     "inline_edit": false,
     "autocomplete": false,
-    "value": "12/06/2019 09:46"
+    "value": "06.08.2020 12:05"
   },
   "modified_user_id": {
     "name": "modified_user_id",
@@ -119,7 +117,7 @@
     "comment": "User who last modified record",
     "massupdate": false,
     "inline_edit": false,
-    "value": "414b1deb-7849-b28a-1040-5dc2a2fea41c"
+    "value": "1"
   },
   "modified_by_name": {
     "name": "modified_by_name",
@@ -135,7 +133,7 @@
     "duplicate_merge": "disabled",
     "massupdate": false,
     "inline_edit": false,
-    "value": "Алексей Сидоркин"
+    "value": "Admin Administrator"
   },
   "created_by": {
     "name": "created_by",
@@ -150,7 +148,7 @@
     "comment": "User who created record",
     "massupdate": false,
     "inline_edit": false,
-    "value": "46cb0aea-4c93-e2fe-7310-5d94906f087c"
+    "value": "1bb00a81-b50b-9493-d7e2-5e01e92e8153"
   },
   "created_by_name": {
     "name": "created_by_name",
@@ -167,7 +165,8 @@
     "importable": "false",
     "massupdate": false,
     "inline_edit": false,
-    "value": "Ruslan Maslennikov"
+    "db_concat_fields": ["first_name", "last_name"],
+    "value": "Ekaterina Kozhevnikova"
   },
   "description": {
     "name": "description",
@@ -176,7 +175,7 @@
     "comment": "Full text of the note",
     "rows": "6",
     "cols": "80",
-    "required": false,
+    "required": true,
     "massupdate": 0,
     "no_default": false,
     "comments": "Full text of the note",
@@ -184,14 +183,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
-    "unified_search": false,
+    "unified_search": true,
     "merge_filter": "disabled",
     "size": "20",
     "studio": "visible",
-    "value": ""
+    "value": "&lt;p&gt;sdsdfdsfdsf&lt;/p&gt;"
   },
   "deleted": {
     "name": "deleted",
@@ -239,7 +238,8 @@
     "audited": true,
     "comment": "User ID assigned to record",
     "duplicate_merge": "disabled",
-    "value": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e"
+    "acl_field": ["DetailView", "EditView", "Delete"],
+    "value": "1bb00a81-b50b-9493-d7e2-5e01e92e8153"
   },
   "assigned_user_name": {
     "name": "assigned_user_name",
@@ -253,8 +253,8 @@
     "id_name": "assigned_user_id",
     "module": "Users",
     "duplicate_merge": "disabled",
-    "required": true,
-    "value": "Tamila Aubova"
+    "required": false,
+    "value": "Ekaterina Kozhevnikova"
   },
   "assigned_user_link": {
     "name": "assigned_user_link",
@@ -293,14 +293,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370"
+    "value": "6b6b228c-8fca-16a9-348a-5d78d186353d"
   },
   "business_unit_id": {
     "required": true,
@@ -315,7 +315,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -328,7 +328,7 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": "CRM"
+    "value": "Digital"
   },
   "hrpac_departments_id_c": {
     "required": false,
@@ -342,14 +342,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": "ded8fa09-7e90-ec72-675d-5d9dc905ca65"
+    "value": "881cc1f7-da00-ca52-ea31-5e0615936dea"
   },
   "department_id": {
     "required": true,
@@ -364,7 +364,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -377,7 +377,7 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": "Проектный офис"
+    "value": "Digital/Департамент разработки, Отдел разработки прикладного программного обеспечения"
   },
   "project_id_c": {
     "required": false,
@@ -391,14 +391,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": ""
+    "value": "1e456ba9-60fd-d6cb-cd60-5d9e31d5f077"
   },
   "project_link_id": {
     "required": false,
@@ -413,7 +413,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -426,7 +426,7 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": ""
+    "value": "ВТБ Digital Credit"
   },
   "hrpac_cities_id_c": {
     "required": false,
@@ -441,7 +441,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
@@ -464,7 +464,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -491,14 +491,15 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e"
+    "acl_field": ["DetailView", "EditView", "Delete"],
+    "value": "939c72d7-9f85-7254-2e5f-5e061369a7c1"
   },
   "manager_id": {
     "required": true,
@@ -513,7 +514,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -526,7 +527,7 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": "Tamila Aubova"
+    "value": "Илья Милютин"
   },
   "user_id1_c": {
     "required": false,
@@ -540,14 +541,15 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": "1acf18a7-2190-30a1-e58a-5d9dcde829a6"
+    "acl_field": ["DetailView", "EditView"],
+    "value": "939c72d7-9f85-7254-2e5f-5e061369a7c1"
   },
   "supervisor_id": {
     "required": true,
@@ -562,7 +564,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -575,7 +577,7 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": "Семен Иванов"
+    "value": "Илья Милютин"
   },
   "hrpac_vacancy_statuses_id_c": {
     "required": false,
@@ -590,14 +592,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": "f3580e7e-4732-b173-209d-5da47daa4009"
+    "value": "81762280-2ba3-6a36-af69-5d8cb251f5c3"
   },
   "status_id": {
     "required": true,
@@ -613,7 +615,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -626,7 +628,7 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": "Новая"
+    "value": "На паузе"
   },
   "salary_min": {
     "required": false,
@@ -640,7 +642,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -663,7 +665,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -672,30 +674,7 @@
     "size": "20",
     "enable_range_search": false,
     "precision": "2",
-    "value": "0.000000"
-  },
-  "salary_val": {
-    "required": false,
-    "name": "salary_val",
-    "vname": "LBL_SALARY_VAL",
-    "type": "currency",
-    "massupdate": 0,
-    "no_default": false,
-    "comments": "",
-    "help": "",
-    "importable": "true",
-    "duplicate_merge": "disabled",
-    "duplicate_merge_dom_value": "0",
-    "audited": false,
-    "inline_edit": true,
-    "reportable": true,
-    "unified_search": false,
-    "merge_filter": "disabled",
-    "len": 26,
-    "size": "20",
-    "enable_range_search": false,
-    "precision": 6,
-    "value": "$"
+    "value": "200000.000000"
   },
   "currency_id": {
     "required": false,
@@ -709,7 +688,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -718,16 +697,50 @@
     "size": "20",
     "dbType": "id",
     "studio": "visible",
-    "function": {
-      "name": "getCurrencyDropDown",
-      "returns": "html"
-    },
-    "value": "US Dollars"
+    "function": { "name": "getCurrencyDropDown", "returns": "html" },
+    "value": "Рубли РФ",
+    "symbol": "₽",
+    "options": {
+      "5b20f40f-df59-1388-6006-5d8bd555af10": {
+        "id": "5b20f40f-df59-1388-6006-5d8bd555af10",
+        "name": "Доллар США",
+        "symbol": "$",
+        "iso4217": "USD",
+        "conversion_rate": "67.86",
+        "status": "Active",
+        "deleted": "0",
+        "date_entered": "2019-09-25 20:58:53",
+        "date_modified": "2019-10-03 09:03:40",
+        "created_by": "1"
+      },
+      "c0e65035-444d-cabd-b65a-5d8bd4bd1eb3": {
+        "id": "c0e65035-444d-cabd-b65a-5d8bd4bd1eb3",
+        "name": "Евро",
+        "symbol": "€",
+        "iso4217": "EUR",
+        "conversion_rate": "76.81",
+        "status": "Active",
+        "deleted": "0",
+        "date_entered": "2019-09-25 20:57:19",
+        "date_modified": "2019-09-25 20:58:59",
+        "created_by": "1"
+      },
+      "-99": {
+        "id": "-99",
+        "name": "Рубли РФ",
+        "symbol": "₽",
+        "iso4217": "RUB",
+        "conversion_rate": 1,
+        "status": "System",
+        "deleted": "0",
+        "created_by": "1"
+      }
+    }
   },
   "amount": {
     "required": true,
     "name": "amount",
-    "vname": "LBL_AMOUNT",
+    "vname": "LBL_AMOUNT_START",
     "type": "int",
     "massupdate": 0,
     "no_default": false,
@@ -737,7 +750,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -748,11 +761,7 @@
     "disable_num_format": "",
     "min": 0,
     "max": false,
-    "validation": {
-      "type": "range",
-      "min": 0,
-      "max": false
-    },
+    "validation": { "type": "range", "min": 0, "max": false },
     "value": "1"
   },
   "stack": {
@@ -767,16 +776,16 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
-    "unified_search": false,
+    "unified_search": true,
     "merge_filter": "disabled",
     "size": "20",
     "studio": "visible",
     "rows": "4",
     "cols": "20",
-    "value": "p aefvfjebeb;ejj vjas   sa o dgv sfjsjhsv hjalhs lfahlfhkalfs"
+    "value": ".NET + AngularJSWeb APIMVC"
   },
   "date_accept": {
     "required": false,
@@ -790,7 +799,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -811,7 +820,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -832,14 +841,14 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": 0,
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": false,
     "unified_search": false,
     "merge_filter": "disabled",
     "len": 36,
     "size": "20",
-    "value": "947a2d3c-3d93-5afc-1d48-5db1568b7b7b"
+    "value": "6ac53229-34c5-a646-7158-5db155a23b8d"
   },
   "name_id": {
     "required": true,
@@ -854,7 +863,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "unified_search": false,
@@ -867,7 +876,56 @@
     "rname": "name",
     "quicksearch": "enabled",
     "studio": "visible",
-    "value": "Стажер"
+    "value": "Разработчик"
+  },
+  "hrpac_vacancy_template_names_id_c": {
+    "required": false,
+    "name": "hrpac_vacancy_names_id_c",
+    "vname": "LBL_TEMPLATE_NAMES_ID",
+    "type": "id",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": 0,
+    "audited": true,
+    "inline_edit": true,
+    "reportable": false,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": 36,
+    "size": "20",
+    "value": ""
+  },
+  "template_name": {
+    "required": true,
+    "source": "non-db",
+    "name": "name_id",
+    "vname": "LBL_TEMPLATE_NAME",
+    "type": "relate",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": true,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": "255",
+    "size": "20",
+    "id_name": "hrpac_vacancy_names_id_c",
+    "ext2": "HRPAC_VACANCY_TEMPLATE_NAMES",
+    "module": "HRPAC_VACANCY_TEMPLATE_NAMES",
+    "rname": "name",
+    "quicksearch": "enabled",
+    "studio": "visible",
+    "value": ""
   },
   "other_name": {
     "name": "other_name",
@@ -886,14 +944,14 @@
     "comments": "Другое",
     "help": "",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "inline_edit": true,
     "reportable": true,
     "size": "20",
     "value": ""
   },
   "grade": {
-    "required": false,
+    "required": true,
     "name": "grade",
     "vname": "LBL_GRADE",
     "type": "multienum",
@@ -903,7 +961,7 @@
     "importable": "true",
     "duplicate_merge": "disabled",
     "duplicate_merge_dom_value": "0",
-    "audited": false,
+    "audited": true,
     "reportable": false,
     "options": {
       "intern": "Стажёр",
@@ -915,7 +973,2078 @@
     "studio": "visible",
     "isMultiSelect": true,
     "autocomplete": false,
-    "value": "Стажёр, Грэйд 1, Грэйд 2"
+    "value": "grade2,grade3,grade4"
+  },
+  "additional_managers_ids": {
+    "name": "additional_managers_ids",
+    "vname": "LBL_HRPAC_VACANCY_USERS_ADDITIONAL_MANAGERS",
+    "type": "relate",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "source": "non-db",
+    "rel_link": "hrpac_vacancy_users_additional_managers",
+    "table": "users",
+    "fields_in_table": ["id", "first_name", "last_name"],
+    "detail_format": ["last_name", "first_name"],
+    "acl_field": ["DetailView", "EditView"],
+    "value": [],
+    "option": [
+      { "id": "1", "first_name": "Admin", "last_name": "Administrator" },
+      {
+        "id": "1031faef-b5ed-c6b8-b008-5e0613c4a796",
+        "first_name": "Константин",
+        "last_name": "Кеглев"
+      },
+      {
+        "id": "151a9d11-b887-ba18-e905-5df8d9d191f4",
+        "first_name": "Вероника",
+        "last_name": "Миронова"
+      },
+      {
+        "id": "1acf18a7-2190-30a1-e58a-5d9dcde829a6",
+        "first_name": "Семен",
+        "last_name": "Иванов"
+      },
+      {
+        "id": "1bb00a81-b50b-9493-d7e2-5e01e92e8153",
+        "first_name": "Ekaterina",
+        "last_name": "Kozhevnikova"
+      },
+      {
+        "id": "1e2603b9-f733-7a30-ac61-5e0613a3c7e7",
+        "first_name": "Антон",
+        "last_name": "Спирин"
+      },
+      {
+        "id": "1e7b04e7-1ffd-04d2-1eb5-5e0613b71c26",
+        "first_name": "Иван",
+        "last_name": "Семёнов"
+      },
+      {
+        "id": "1fc6b19d-f69f-a92c-f168-5df8d9713fe9",
+        "first_name": "Дмитрий",
+        "last_name": "Плетенев"
+      },
+      {
+        "id": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e",
+        "first_name": "Tamila",
+        "last_name": "Aubova"
+      },
+      {
+        "id": "22ecc4d8-ce72-e668-4cee-5e0613eed8eb",
+        "first_name": "Лидия",
+        "last_name": "Красовских"
+      },
+      {
+        "id": "255482c5-3682-8278-cabd-5e33ef34153f",
+        "first_name": "Евгений",
+        "last_name": "Горшков"
+      },
+      {
+        "id": "25ec74c6-1452-8496-bc27-5e4bef9090d5",
+        "first_name": "Evgeniya",
+        "last_name": "Mityaeva"
+      },
+      {
+        "id": "29f5df65-d922-6ffc-3079-5de6446d41ad",
+        "first_name": "Tatyana",
+        "last_name": "Ruban"
+      },
+      {
+        "id": "2a55f0ad-a5a9-e2f4-13db-5df8d97ac328",
+        "first_name": "Алексей",
+        "last_name": "Рощин"
+      },
+      {
+        "id": "2e977622-2b36-0246-0f7b-5e06136033df",
+        "first_name": "Игорь",
+        "last_name": "Кудрявцев"
+      },
+      {
+        "id": "2fd229da-2489-e332-05ee-5e0613ab6293",
+        "first_name": "Сергей",
+        "last_name": "Тарасов"
+      },
+      {
+        "id": "304ca346-e7ba-5c27-f4fc-5e26b50def16",
+        "first_name": "Ekaterina",
+        "last_name": "Markova"
+      },
+      {
+        "id": "34ec92f7-7fa2-547b-7f5c-5df8d940be44",
+        "first_name": "Анатолий",
+        "last_name": "Савчук"
+      },
+      {
+        "id": "390673f7-9345-a853-0f72-5df8d9b69f73",
+        "first_name": "Андрей",
+        "last_name": "Асташенко"
+      },
+      {
+        "id": "3a8cad3b-d6f2-eff7-6f71-5e0613c7a101",
+        "first_name": "Сергей",
+        "last_name": "Лущиков"
+      },
+      {
+        "id": "40107618-5453-76bf-91f7-5e0613222bfa",
+        "first_name": "Сергей",
+        "last_name": "Ульянов"
+      },
+      {
+        "id": "40c8af6e-d43e-bf41-f303-5e37cdf76a0e",
+        "first_name": "Павел",
+        "last_name": "Одинец"
+      },
+      {
+        "id": "414b1deb-7849-b28a-1040-5dc2a2fea41c",
+        "first_name": "Алексей",
+        "last_name": "Сидоркин"
+      },
+      {
+        "id": "4397e3c6-8b7d-1fb4-7bee-5df8d910bc6d",
+        "first_name": "Андрей",
+        "last_name": "Денисов"
+      },
+      {
+        "id": "44b8238f-6d47-d896-a95f-5ea6be027538",
+        "first_name": "Daniil",
+        "last_name": "Klimov"
+      },
+      {
+        "id": "44e8c58a-15d8-0591-44e5-5def52115d87",
+        "first_name": "Ulyana",
+        "last_name": "Antonova"
+      },
+      {
+        "id": "45c8e29d-a253-9442-1c31-5df8d9940ea4",
+        "first_name": "Кристина",
+        "last_name": "Соколова"
+      },
+      {
+        "id": "464b1c05-a281-d5bf-c65f-5e9d713a980d",
+        "first_name": "Aleksandrv",
+        "last_name": "Sozdatelev"
+      },
+      {
+        "id": "46cb0aea-4c93-e2fe-7310-5d94906f087c",
+        "first_name": "Ruslan",
+        "last_name": "Maslennikov"
+      },
+      {
+        "id": "46dae151-7cf7-6070-c835-5e0613ba8e43",
+        "first_name": "Андрей",
+        "last_name": "Любушкин"
+      },
+      {
+        "id": "492e3208-4a4b-5234-7f6f-5d76471f5b1c",
+        "first_name": "Ольга",
+        "last_name": "Миронова"
+      },
+      {
+        "id": "4bedad44-436c-806f-9f9a-5de644d459dc",
+        "first_name": "Valentina",
+        "last_name": "Filyaeva"
+      },
+      {
+        "id": "4bef31aa-30d6-5389-9e91-5e06130c99e6",
+        "first_name": "Елена",
+        "last_name": "Щелконогова"
+      },
+      {
+        "id": "4dfb0382-2fbb-a7b4-dc83-5df8d941634b",
+        "first_name": "Кирилл",
+        "last_name": "Степанов"
+      },
+      {
+        "id": "5039322c-006a-8a4a-cd9c-5df8d91a54ed",
+        "first_name": "Анна",
+        "last_name": "Тарасова"
+      },
+      {
+        "id": "511f031b-204a-3840-b9fb-5e0613c3e7d4",
+        "first_name": "Алексей",
+        "last_name": "Катрич"
+      },
+      {
+        "id": "541ed8e1-0552-1f43-d3c9-5e61ece7e7c9",
+        "first_name": "Manager",
+        "last_name": "Test"
+      },
+      {
+        "id": "553d9090-fc9f-3d1a-7fb3-5e061323dbfb",
+        "first_name": "Дмитрий",
+        "last_name": "Макаровский"
+      },
+      {
+        "id": "583c221e-0321-9210-caf2-5df8d915f70a",
+        "first_name": "Игорь",
+        "last_name": "Баннов"
+      },
+      {
+        "id": "5c505f38-11e4-86a8-36dc-5e96b3ed46a8",
+        "first_name": "Ruslan",
+        "last_name": "Maslennikov"
+      },
+      {
+        "id": "5ca9c689-aeb5-33ca-a01a-5e031d553208",
+        "first_name": "Oleg",
+        "last_name": "Shchetkin"
+      },
+      {
+        "id": "5e797f4c-0bb8-5bcf-c8b5-5e0613efefa1",
+        "first_name": "Ренат",
+        "last_name": "Урманов"
+      },
+      {
+        "id": "6052b372-9cc7-f1ea-6166-5e0613c8a413",
+        "first_name": "Алексей",
+        "last_name": "Максимкин"
+      },
+      {
+        "id": "62d0c1a6-2b2d-f690-5391-5df8d993b918",
+        "first_name": "Владимир",
+        "last_name": "Воронов"
+      },
+      {
+        "id": "6373f764-83cc-aa7f-27d3-5e4a937f7898",
+        "first_name": "Алексей",
+        "last_name": "Кузнецов"
+      },
+      {
+        "id": "6cf5e79a-ca41-c1a8-3e02-5e0613107237",
+        "first_name": "Юрий",
+        "last_name": "Мацыгин"
+      },
+      {
+        "id": "6d2bd07a-a661-f65e-d632-5df8d9f62462",
+        "first_name": "Елена",
+        "last_name": "Денисова"
+      },
+      {
+        "id": "73438a80-27e5-c551-64a6-5d8e1aadd0ed",
+        "first_name": "Vladimir",
+        "last_name": "Samoshkin"
+      },
+      {
+        "id": "73fdebd8-f8e1-be8d-8323-5e0613ab143b",
+        "first_name": "Данила",
+        "last_name": "Клоков"
+      },
+      {
+        "id": "777842f9-dc7d-b63d-a01b-5df8d9643405",
+        "first_name": "Дмитрий",
+        "last_name": "Дербенцов"
+      },
+      {
+        "id": "7f35ed25-c814-1020-35a2-5e79f4949410",
+        "first_name": "Ilya",
+        "last_name": "Sychev"
+      },
+      {
+        "id": "81db45ab-1584-5ea3-bb83-5df8d941343a",
+        "first_name": "Кирилл",
+        "last_name": "Игнатенков"
+      },
+      {
+        "id": "84e78061-7189-f300-f53e-5e8f2f4d426c",
+        "first_name": "p",
+        "last_name": "Test"
+      },
+      {
+        "id": "857786fb-60e6-010d-5861-5e0613406733",
+        "first_name": "Павел",
+        "last_name": "Фрунза"
+      },
+      {
+        "id": "88d2de1e-3a0b-6278-16b7-5e0613db41e5",
+        "first_name": "Арсений",
+        "last_name": "Метелин"
+      },
+      {
+        "id": "8b35d6d6-768c-f703-9a38-5d89d442700b",
+        "first_name": "Viktor",
+        "last_name": "Fink"
+      },
+      {
+        "id": "8c1bcd30-a809-4a27-3162-5df8d983d7cd",
+        "first_name": "Евгений",
+        "last_name": "Илларионов"
+      },
+      {
+        "id": "8dacdf9e-8c26-8bab-f959-5e26b809bbdc",
+        "first_name": "Irina",
+        "last_name": "Kolchanova"
+      },
+      {
+        "id": "91fc1a70-ae99-1299-b1c2-5e05db7e370f",
+        "first_name": "Viktoriya",
+        "last_name": "Pisareva"
+      },
+      {
+        "id": "939c72d7-9f85-7254-2e5f-5e061369a7c1",
+        "first_name": "Илья",
+        "last_name": "Милютин"
+      },
+      {
+        "id": "96677bed-af1a-5680-c5d5-5df8d9c697b2",
+        "first_name": "Елена",
+        "last_name": "Киристова"
+      },
+      {
+        "id": "993c26e3-9800-ccb4-7667-5e26b67d0575",
+        "first_name": "Elena",
+        "last_name": "Dorokhova"
+      },
+      {
+        "id": "99a867e9-73ba-6801-90a9-5e0613db7fe5",
+        "first_name": "Алексей",
+        "last_name": "Аврамов"
+      },
+      {
+        "id": "a1be3098-17df-0fd4-8401-5e6b338b9470",
+        "first_name": "Ntcn",
+        "last_name": "Ntcn"
+      },
+      {
+        "id": "a3b4f8e8-3e19-5361-0f8c-5e7a21a0b1f0",
+        "first_name": "Александра",
+        "last_name": "Сычева"
+      },
+      {
+        "id": "a46b1c4b-3f9f-0222-209b-5e0613e7255c",
+        "first_name": "Александр",
+        "last_name": "Антонов"
+      },
+      {
+        "id": "a51d0a21-6615-368f-ff97-5de64c16ab94",
+        "first_name": "Regina",
+        "last_name": "Khachaturian"
+      },
+      {
+        "id": "a697ae50-deee-70ba-5268-5e06136742ef",
+        "first_name": "Ксения",
+        "last_name": "Морозова"
+      },
+      {
+        "id": "a6b24c22-48da-dd08-decf-5e7336ba7cb6",
+        "first_name": "Иван",
+        "last_name": "Тестировщик"
+      },
+      {
+        "id": "a6b24c23-48db-dd09-decf-5e7336ba7cb7",
+        "first_name": "Иван",
+        "last_name": "Тестеров"
+      },
+      {
+        "id": "a6be5ae7-37ac-11f6-a412-5df8d92f9595",
+        "first_name": "Антон",
+        "last_name": "Клянчин"
+      },
+      {
+        "id": "a7aab879-e954-1759-53e1-5e01eaf91816",
+        "first_name": "Екатерина",
+        "last_name": "Соболева"
+      },
+      {
+        "id": "a82304e1-5e93-a963-4afc-5df8d9b13479",
+        "first_name": "Константин",
+        "last_name": "Масейкин"
+      },
+      {
+        "id": "aff1d017-074b-6cbe-8cd4-5e06133ea44e",
+        "first_name": "Азат",
+        "last_name": "Валеев"
+      },
+      {
+        "id": "b027392a-a78b-2f44-8fee-5e399bbc8a38",
+        "first_name": "Александр",
+        "last_name": "Красильников"
+      },
+      {
+        "id": "b1252ab3-08ec-7a9e-7072-5e0613ebfd9b",
+        "first_name": "Юрий",
+        "last_name": "Николаев"
+      },
+      {
+        "id": "b15ecc3d-510f-611b-a594-5df8d9dba672",
+        "first_name": "Михаил",
+        "last_name": "Козин"
+      },
+      {
+        "id": "b650935e-ba66-499f-6f83-5d931fb1b950",
+        "first_name": "Olga",
+        "last_name": "Denisova"
+      },
+      {
+        "id": "bdb29437-5434-6d27-568a-5df8d9809655",
+        "first_name": "Алексей",
+        "last_name": "Колесников"
+      },
+      {
+        "id": "bf08ef9e-8c2f-a703-ae84-5e16e6216bdd",
+        "first_name": "Agniya",
+        "last_name": "Hamaganova"
+      },
+      {
+        "id": "c19d52d1-90f2-7e2a-5540-5e0613594e6a",
+        "first_name": "Олег",
+        "last_name": "Власенко"
+      },
+      {
+        "id": "c33866bd-69c4-20ae-f16c-5e0613039238",
+        "first_name": "Роман",
+        "last_name": "Павленко"
+      },
+      {
+        "id": "c4178301-17a9-1a9c-f7ee-5da4276848c6",
+        "first_name": "Vladimir",
+        "last_name": "Prazdnikov"
+      },
+      {
+        "id": "c565ca59-00af-66d2-7f33-5e01e97308f1",
+        "first_name": "Aleksandr",
+        "last_name": "Temlyantsev"
+      },
+      {
+        "id": "c864a4c3-493d-b9f5-c0bf-5df8d9a13601",
+        "first_name": "Анастасия",
+        "last_name": "Купцова"
+      },
+      {
+        "id": "cb9bf00d-474a-9293-7349-5def4883baae",
+        "first_name": "Elvira",
+        "last_name": "Makhmutova"
+      },
+      {
+        "id": "cc8a88c2-bf37-1a86-9b80-5e06139676ac",
+        "first_name": "Татьяна",
+        "last_name": "Дасмаева"
+      },
+      {
+        "id": "d08d0ad9-fef1-263e-59a9-5e0613294440",
+        "first_name": "Наталья",
+        "last_name": "Симагина"
+      },
+      {
+        "id": "d2feae2f-2601-9b24-141d-5e4278afb6bd",
+        "first_name": "Veronika",
+        "last_name": "Batrakova"
+      },
+      {
+        "id": "d354ec84-b524-0283-62c0-5df8d953ed69",
+        "first_name": "Татьяна",
+        "last_name": "Курбанова"
+      },
+      {
+        "id": "d3e974ca-c7c5-3a74-db35-5e06139345d8",
+        "first_name": "Илья",
+        "last_name": "Правский"
+      },
+      {
+        "id": "d7a7849c-4597-82cf-3754-5e061313072b",
+        "first_name": "Дмитрий",
+        "last_name": "Шохалевич"
+      },
+      {
+        "id": "da6ddbd1-fda0-0a2e-826f-5d8e2015e8bd",
+        "first_name": "Boris",
+        "last_name": "Minakov"
+      },
+      {
+        "id": "ddee2e74-88a6-6902-a29d-5df8d90f173c",
+        "first_name": "Роман",
+        "last_name": "Леонов"
+      },
+      {
+        "id": "e0093b57-7b23-25a1-2ac0-5e2ae52d99ff",
+        "first_name": "Olesya",
+        "last_name": "Belousova"
+      },
+      {
+        "id": "e018b649-99d5-00f2-7145-5e0613913358",
+        "first_name": "Ирина",
+        "last_name": "Прошина"
+      },
+      {
+        "id": "e2700ac8-4986-ac52-3b3c-5df8d9aa8cd6",
+        "first_name": "Алексей",
+        "last_name": "Тубальцев"
+      },
+      {
+        "id": "e2757f31-3fd2-d50e-0ad7-5e06139eb944",
+        "first_name": "Денис",
+        "last_name": "Иванов"
+      },
+      {
+        "id": "e2c1ba11-677e-50f9-bbcd-5e3d021e11f8",
+        "first_name": "Григорий",
+        "last_name": "Церетели"
+      },
+      {
+        "id": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3",
+        "first_name": "Андрей",
+        "last_name": "Рябов"
+      },
+      {
+        "id": "e6231097-ac96-b249-5ff0-5de64573b66c",
+        "first_name": "Ksenia",
+        "last_name": "Selezneva"
+      },
+      {
+        "id": "e86547de-a688-ca82-eacc-5df8d990a130",
+        "first_name": "Дмитрий",
+        "last_name": "Макаров"
+      },
+      {
+        "id": "e9b79c73-e54e-adf0-b960-5d762148665e",
+        "first_name": "HR",
+        "last_name": "CRM"
+      },
+      {
+        "id": "eb1d42b0-9198-f197-9997-5e06137291ec",
+        "first_name": "Никита",
+        "last_name": "Самохвалов"
+      },
+      {
+        "id": "ec8dea46-f6a0-62d9-92b7-5def48cf91e1",
+        "first_name": "Alena",
+        "last_name": "Karmakulova"
+      },
+      {
+        "id": "ed7192ce-b730-6b27-3ca8-5e0613584c62",
+        "first_name": "Наталья",
+        "last_name": "Казакова"
+      },
+      {
+        "id": "eec893ed-68a0-8306-6c60-5e3d028730fa",
+        "first_name": "Тимур",
+        "last_name": "Порошин"
+      },
+      {
+        "id": "f33f181e-55ea-9e19-9fc7-5e9039467f42",
+        "first_name": "Maksim",
+        "last_name": "Bondarenko"
+      },
+      {
+        "id": "f41e53ff-02ec-6ac8-cc01-5df8d9ca017d",
+        "first_name": "Ильвир",
+        "last_name": "Марванов"
+      }
+    ],
+    "names_val": ""
+  },
+  "additional_assigned_ids": {
+    "name": "additional_assigned_ids",
+    "vname": "LBL_HRPAC_VACANCY_USERS_1_FROM_USERS_TITLE",
+    "type": "relate",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "source": "non-db",
+    "rel_link": "hrpac_vacancy_users_additional_assigned",
+    "table": "users",
+    "fields_in_table": ["id", "first_name", "last_name"],
+    "detail_format": ["last_name", "first_name"],
+    "acl_field": ["DetailView", "EditView"],
+    "value": [],
+    "option": [
+      { "id": "1", "first_name": "Admin", "last_name": "Administrator" },
+      {
+        "id": "1031faef-b5ed-c6b8-b008-5e0613c4a796",
+        "first_name": "Константин",
+        "last_name": "Кеглев"
+      },
+      {
+        "id": "151a9d11-b887-ba18-e905-5df8d9d191f4",
+        "first_name": "Вероника",
+        "last_name": "Миронова"
+      },
+      {
+        "id": "1acf18a7-2190-30a1-e58a-5d9dcde829a6",
+        "first_name": "Семен",
+        "last_name": "Иванов"
+      },
+      {
+        "id": "1bb00a81-b50b-9493-d7e2-5e01e92e8153",
+        "first_name": "Ekaterina",
+        "last_name": "Kozhevnikova"
+      },
+      {
+        "id": "1e2603b9-f733-7a30-ac61-5e0613a3c7e7",
+        "first_name": "Антон",
+        "last_name": "Спирин"
+      },
+      {
+        "id": "1e7b04e7-1ffd-04d2-1eb5-5e0613b71c26",
+        "first_name": "Иван",
+        "last_name": "Семёнов"
+      },
+      {
+        "id": "1fc6b19d-f69f-a92c-f168-5df8d9713fe9",
+        "first_name": "Дмитрий",
+        "last_name": "Плетенев"
+      },
+      {
+        "id": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e",
+        "first_name": "Tamila",
+        "last_name": "Aubova"
+      },
+      {
+        "id": "22ecc4d8-ce72-e668-4cee-5e0613eed8eb",
+        "first_name": "Лидия",
+        "last_name": "Красовских"
+      },
+      {
+        "id": "255482c5-3682-8278-cabd-5e33ef34153f",
+        "first_name": "Евгений",
+        "last_name": "Горшков"
+      },
+      {
+        "id": "25ec74c6-1452-8496-bc27-5e4bef9090d5",
+        "first_name": "Evgeniya",
+        "last_name": "Mityaeva"
+      },
+      {
+        "id": "29f5df65-d922-6ffc-3079-5de6446d41ad",
+        "first_name": "Tatyana",
+        "last_name": "Ruban"
+      },
+      {
+        "id": "2a55f0ad-a5a9-e2f4-13db-5df8d97ac328",
+        "first_name": "Алексей",
+        "last_name": "Рощин"
+      },
+      {
+        "id": "2e977622-2b36-0246-0f7b-5e06136033df",
+        "first_name": "Игорь",
+        "last_name": "Кудрявцев"
+      },
+      {
+        "id": "2fd229da-2489-e332-05ee-5e0613ab6293",
+        "first_name": "Сергей",
+        "last_name": "Тарасов"
+      },
+      {
+        "id": "304ca346-e7ba-5c27-f4fc-5e26b50def16",
+        "first_name": "Ekaterina",
+        "last_name": "Markova"
+      },
+      {
+        "id": "34ec92f7-7fa2-547b-7f5c-5df8d940be44",
+        "first_name": "Анатолий",
+        "last_name": "Савчук"
+      },
+      {
+        "id": "390673f7-9345-a853-0f72-5df8d9b69f73",
+        "first_name": "Андрей",
+        "last_name": "Асташенко"
+      },
+      {
+        "id": "3a8cad3b-d6f2-eff7-6f71-5e0613c7a101",
+        "first_name": "Сергей",
+        "last_name": "Лущиков"
+      },
+      {
+        "id": "40107618-5453-76bf-91f7-5e0613222bfa",
+        "first_name": "Сергей",
+        "last_name": "Ульянов"
+      },
+      {
+        "id": "40c8af6e-d43e-bf41-f303-5e37cdf76a0e",
+        "first_name": "Павел",
+        "last_name": "Одинец"
+      },
+      {
+        "id": "414b1deb-7849-b28a-1040-5dc2a2fea41c",
+        "first_name": "Алексей",
+        "last_name": "Сидоркин"
+      },
+      {
+        "id": "4397e3c6-8b7d-1fb4-7bee-5df8d910bc6d",
+        "first_name": "Андрей",
+        "last_name": "Денисов"
+      },
+      {
+        "id": "44b8238f-6d47-d896-a95f-5ea6be027538",
+        "first_name": "Daniil",
+        "last_name": "Klimov"
+      },
+      {
+        "id": "44e8c58a-15d8-0591-44e5-5def52115d87",
+        "first_name": "Ulyana",
+        "last_name": "Antonova"
+      },
+      {
+        "id": "45c8e29d-a253-9442-1c31-5df8d9940ea4",
+        "first_name": "Кристина",
+        "last_name": "Соколова"
+      },
+      {
+        "id": "464b1c05-a281-d5bf-c65f-5e9d713a980d",
+        "first_name": "Aleksandrv",
+        "last_name": "Sozdatelev"
+      },
+      {
+        "id": "46cb0aea-4c93-e2fe-7310-5d94906f087c",
+        "first_name": "Ruslan",
+        "last_name": "Maslennikov"
+      },
+      {
+        "id": "46dae151-7cf7-6070-c835-5e0613ba8e43",
+        "first_name": "Андрей",
+        "last_name": "Любушкин"
+      },
+      {
+        "id": "492e3208-4a4b-5234-7f6f-5d76471f5b1c",
+        "first_name": "Ольга",
+        "last_name": "Миронова"
+      },
+      {
+        "id": "4bedad44-436c-806f-9f9a-5de644d459dc",
+        "first_name": "Valentina",
+        "last_name": "Filyaeva"
+      },
+      {
+        "id": "4bef31aa-30d6-5389-9e91-5e06130c99e6",
+        "first_name": "Елена",
+        "last_name": "Щелконогова"
+      },
+      {
+        "id": "4dfb0382-2fbb-a7b4-dc83-5df8d941634b",
+        "first_name": "Кирилл",
+        "last_name": "Степанов"
+      },
+      {
+        "id": "5039322c-006a-8a4a-cd9c-5df8d91a54ed",
+        "first_name": "Анна",
+        "last_name": "Тарасова"
+      },
+      {
+        "id": "511f031b-204a-3840-b9fb-5e0613c3e7d4",
+        "first_name": "Алексей",
+        "last_name": "Катрич"
+      },
+      {
+        "id": "541ed8e1-0552-1f43-d3c9-5e61ece7e7c9",
+        "first_name": "Manager",
+        "last_name": "Test"
+      },
+      {
+        "id": "553d9090-fc9f-3d1a-7fb3-5e061323dbfb",
+        "first_name": "Дмитрий",
+        "last_name": "Макаровский"
+      },
+      {
+        "id": "583c221e-0321-9210-caf2-5df8d915f70a",
+        "first_name": "Игорь",
+        "last_name": "Баннов"
+      },
+      {
+        "id": "5c505f38-11e4-86a8-36dc-5e96b3ed46a8",
+        "first_name": "Ruslan",
+        "last_name": "Maslennikov"
+      },
+      {
+        "id": "5ca9c689-aeb5-33ca-a01a-5e031d553208",
+        "first_name": "Oleg",
+        "last_name": "Shchetkin"
+      },
+      {
+        "id": "5e797f4c-0bb8-5bcf-c8b5-5e0613efefa1",
+        "first_name": "Ренат",
+        "last_name": "Урманов"
+      },
+      {
+        "id": "6052b372-9cc7-f1ea-6166-5e0613c8a413",
+        "first_name": "Алексей",
+        "last_name": "Максимкин"
+      },
+      {
+        "id": "62d0c1a6-2b2d-f690-5391-5df8d993b918",
+        "first_name": "Владимир",
+        "last_name": "Воронов"
+      },
+      {
+        "id": "6373f764-83cc-aa7f-27d3-5e4a937f7898",
+        "first_name": "Алексей",
+        "last_name": "Кузнецов"
+      },
+      {
+        "id": "6cf5e79a-ca41-c1a8-3e02-5e0613107237",
+        "first_name": "Юрий",
+        "last_name": "Мацыгин"
+      },
+      {
+        "id": "6d2bd07a-a661-f65e-d632-5df8d9f62462",
+        "first_name": "Елена",
+        "last_name": "Денисова"
+      },
+      {
+        "id": "73438a80-27e5-c551-64a6-5d8e1aadd0ed",
+        "first_name": "Vladimir",
+        "last_name": "Samoshkin"
+      },
+      {
+        "id": "73fdebd8-f8e1-be8d-8323-5e0613ab143b",
+        "first_name": "Данила",
+        "last_name": "Клоков"
+      },
+      {
+        "id": "777842f9-dc7d-b63d-a01b-5df8d9643405",
+        "first_name": "Дмитрий",
+        "last_name": "Дербенцов"
+      },
+      {
+        "id": "7f35ed25-c814-1020-35a2-5e79f4949410",
+        "first_name": "Ilya",
+        "last_name": "Sychev"
+      },
+      {
+        "id": "81db45ab-1584-5ea3-bb83-5df8d941343a",
+        "first_name": "Кирилл",
+        "last_name": "Игнатенков"
+      },
+      {
+        "id": "84e78061-7189-f300-f53e-5e8f2f4d426c",
+        "first_name": "p",
+        "last_name": "Test"
+      },
+      {
+        "id": "857786fb-60e6-010d-5861-5e0613406733",
+        "first_name": "Павел",
+        "last_name": "Фрунза"
+      },
+      {
+        "id": "88d2de1e-3a0b-6278-16b7-5e0613db41e5",
+        "first_name": "Арсений",
+        "last_name": "Метелин"
+      },
+      {
+        "id": "8b35d6d6-768c-f703-9a38-5d89d442700b",
+        "first_name": "Viktor",
+        "last_name": "Fink"
+      },
+      {
+        "id": "8c1bcd30-a809-4a27-3162-5df8d983d7cd",
+        "first_name": "Евгений",
+        "last_name": "Илларионов"
+      },
+      {
+        "id": "8dacdf9e-8c26-8bab-f959-5e26b809bbdc",
+        "first_name": "Irina",
+        "last_name": "Kolchanova"
+      },
+      {
+        "id": "91fc1a70-ae99-1299-b1c2-5e05db7e370f",
+        "first_name": "Viktoriya",
+        "last_name": "Pisareva"
+      },
+      {
+        "id": "939c72d7-9f85-7254-2e5f-5e061369a7c1",
+        "first_name": "Илья",
+        "last_name": "Милютин"
+      },
+      {
+        "id": "96677bed-af1a-5680-c5d5-5df8d9c697b2",
+        "first_name": "Елена",
+        "last_name": "Киристова"
+      },
+      {
+        "id": "993c26e3-9800-ccb4-7667-5e26b67d0575",
+        "first_name": "Elena",
+        "last_name": "Dorokhova"
+      },
+      {
+        "id": "99a867e9-73ba-6801-90a9-5e0613db7fe5",
+        "first_name": "Алексей",
+        "last_name": "Аврамов"
+      },
+      {
+        "id": "a1be3098-17df-0fd4-8401-5e6b338b9470",
+        "first_name": "Ntcn",
+        "last_name": "Ntcn"
+      },
+      {
+        "id": "a3b4f8e8-3e19-5361-0f8c-5e7a21a0b1f0",
+        "first_name": "Александра",
+        "last_name": "Сычева"
+      },
+      {
+        "id": "a46b1c4b-3f9f-0222-209b-5e0613e7255c",
+        "first_name": "Александр",
+        "last_name": "Антонов"
+      },
+      {
+        "id": "a51d0a21-6615-368f-ff97-5de64c16ab94",
+        "first_name": "Regina",
+        "last_name": "Khachaturian"
+      },
+      {
+        "id": "a697ae50-deee-70ba-5268-5e06136742ef",
+        "first_name": "Ксения",
+        "last_name": "Морозова"
+      },
+      {
+        "id": "a6b24c22-48da-dd08-decf-5e7336ba7cb6",
+        "first_name": "Иван",
+        "last_name": "Тестировщик"
+      },
+      {
+        "id": "a6b24c23-48db-dd09-decf-5e7336ba7cb7",
+        "first_name": "Иван",
+        "last_name": "Тестеров"
+      },
+      {
+        "id": "a6be5ae7-37ac-11f6-a412-5df8d92f9595",
+        "first_name": "Антон",
+        "last_name": "Клянчин"
+      },
+      {
+        "id": "a7aab879-e954-1759-53e1-5e01eaf91816",
+        "first_name": "Екатерина",
+        "last_name": "Соболева"
+      },
+      {
+        "id": "a82304e1-5e93-a963-4afc-5df8d9b13479",
+        "first_name": "Константин",
+        "last_name": "Масейкин"
+      },
+      {
+        "id": "aff1d017-074b-6cbe-8cd4-5e06133ea44e",
+        "first_name": "Азат",
+        "last_name": "Валеев"
+      },
+      {
+        "id": "b027392a-a78b-2f44-8fee-5e399bbc8a38",
+        "first_name": "Александр",
+        "last_name": "Красильников"
+      },
+      {
+        "id": "b1252ab3-08ec-7a9e-7072-5e0613ebfd9b",
+        "first_name": "Юрий",
+        "last_name": "Николаев"
+      },
+      {
+        "id": "b15ecc3d-510f-611b-a594-5df8d9dba672",
+        "first_name": "Михаил",
+        "last_name": "Козин"
+      },
+      {
+        "id": "b650935e-ba66-499f-6f83-5d931fb1b950",
+        "first_name": "Olga",
+        "last_name": "Denisova"
+      },
+      {
+        "id": "bdb29437-5434-6d27-568a-5df8d9809655",
+        "first_name": "Алексей",
+        "last_name": "Колесников"
+      },
+      {
+        "id": "bf08ef9e-8c2f-a703-ae84-5e16e6216bdd",
+        "first_name": "Agniya",
+        "last_name": "Hamaganova"
+      },
+      {
+        "id": "c19d52d1-90f2-7e2a-5540-5e0613594e6a",
+        "first_name": "Олег",
+        "last_name": "Власенко"
+      },
+      {
+        "id": "c33866bd-69c4-20ae-f16c-5e0613039238",
+        "first_name": "Роман",
+        "last_name": "Павленко"
+      },
+      {
+        "id": "c4178301-17a9-1a9c-f7ee-5da4276848c6",
+        "first_name": "Vladimir",
+        "last_name": "Prazdnikov"
+      },
+      {
+        "id": "c565ca59-00af-66d2-7f33-5e01e97308f1",
+        "first_name": "Aleksandr",
+        "last_name": "Temlyantsev"
+      },
+      {
+        "id": "c864a4c3-493d-b9f5-c0bf-5df8d9a13601",
+        "first_name": "Анастасия",
+        "last_name": "Купцова"
+      },
+      {
+        "id": "cb9bf00d-474a-9293-7349-5def4883baae",
+        "first_name": "Elvira",
+        "last_name": "Makhmutova"
+      },
+      {
+        "id": "cc8a88c2-bf37-1a86-9b80-5e06139676ac",
+        "first_name": "Татьяна",
+        "last_name": "Дасмаева"
+      },
+      {
+        "id": "d08d0ad9-fef1-263e-59a9-5e0613294440",
+        "first_name": "Наталья",
+        "last_name": "Симагина"
+      },
+      {
+        "id": "d2feae2f-2601-9b24-141d-5e4278afb6bd",
+        "first_name": "Veronika",
+        "last_name": "Batrakova"
+      },
+      {
+        "id": "d354ec84-b524-0283-62c0-5df8d953ed69",
+        "first_name": "Татьяна",
+        "last_name": "Курбанова"
+      },
+      {
+        "id": "d3e974ca-c7c5-3a74-db35-5e06139345d8",
+        "first_name": "Илья",
+        "last_name": "Правский"
+      },
+      {
+        "id": "d7a7849c-4597-82cf-3754-5e061313072b",
+        "first_name": "Дмитрий",
+        "last_name": "Шохалевич"
+      },
+      {
+        "id": "da6ddbd1-fda0-0a2e-826f-5d8e2015e8bd",
+        "first_name": "Boris",
+        "last_name": "Minakov"
+      },
+      {
+        "id": "ddee2e74-88a6-6902-a29d-5df8d90f173c",
+        "first_name": "Роман",
+        "last_name": "Леонов"
+      },
+      {
+        "id": "e0093b57-7b23-25a1-2ac0-5e2ae52d99ff",
+        "first_name": "Olesya",
+        "last_name": "Belousova"
+      },
+      {
+        "id": "e018b649-99d5-00f2-7145-5e0613913358",
+        "first_name": "Ирина",
+        "last_name": "Прошина"
+      },
+      {
+        "id": "e2700ac8-4986-ac52-3b3c-5df8d9aa8cd6",
+        "first_name": "Алексей",
+        "last_name": "Тубальцев"
+      },
+      {
+        "id": "e2757f31-3fd2-d50e-0ad7-5e06139eb944",
+        "first_name": "Денис",
+        "last_name": "Иванов"
+      },
+      {
+        "id": "e2c1ba11-677e-50f9-bbcd-5e3d021e11f8",
+        "first_name": "Григорий",
+        "last_name": "Церетели"
+      },
+      {
+        "id": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3",
+        "first_name": "Андрей",
+        "last_name": "Рябов"
+      },
+      {
+        "id": "e6231097-ac96-b249-5ff0-5de64573b66c",
+        "first_name": "Ksenia",
+        "last_name": "Selezneva"
+      },
+      {
+        "id": "e86547de-a688-ca82-eacc-5df8d990a130",
+        "first_name": "Дмитрий",
+        "last_name": "Макаров"
+      },
+      {
+        "id": "e9b79c73-e54e-adf0-b960-5d762148665e",
+        "first_name": "HR",
+        "last_name": "CRM"
+      },
+      {
+        "id": "eb1d42b0-9198-f197-9997-5e06137291ec",
+        "first_name": "Никита",
+        "last_name": "Самохвалов"
+      },
+      {
+        "id": "ec8dea46-f6a0-62d9-92b7-5def48cf91e1",
+        "first_name": "Alena",
+        "last_name": "Karmakulova"
+      },
+      {
+        "id": "ed7192ce-b730-6b27-3ca8-5e0613584c62",
+        "first_name": "Наталья",
+        "last_name": "Казакова"
+      },
+      {
+        "id": "eec893ed-68a0-8306-6c60-5e3d028730fa",
+        "first_name": "Тимур",
+        "last_name": "Порошин"
+      },
+      {
+        "id": "f33f181e-55ea-9e19-9fc7-5e9039467f42",
+        "first_name": "Maksim",
+        "last_name": "Bondarenko"
+      },
+      {
+        "id": "f41e53ff-02ec-6ac8-cc01-5df8d9ca017d",
+        "first_name": "Ильвир",
+        "last_name": "Марванов"
+      }
+    ],
+    "names_val": ""
+  },
+  "spectators_ids": {
+    "name": "spectators_ids",
+    "vname": "LBL_HRPAC_VACANCY_USERS_SPECTATOR",
+    "type": "relate",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "source": "non-db",
+    "rel_link": "hrpac_vacancy_users_spectator",
+    "table": "users",
+    "fields_in_table": ["id", "first_name", "last_name"],
+    "detail_format": ["last_name", "first_name"],
+    "acl_field": ["DetailView"],
+    "value": [],
+    "option": [
+      { "id": "1", "first_name": "Admin", "last_name": "Administrator" },
+      {
+        "id": "1031faef-b5ed-c6b8-b008-5e0613c4a796",
+        "first_name": "Константин",
+        "last_name": "Кеглев"
+      },
+      {
+        "id": "151a9d11-b887-ba18-e905-5df8d9d191f4",
+        "first_name": "Вероника",
+        "last_name": "Миронова"
+      },
+      {
+        "id": "1acf18a7-2190-30a1-e58a-5d9dcde829a6",
+        "first_name": "Семен",
+        "last_name": "Иванов"
+      },
+      {
+        "id": "1bb00a81-b50b-9493-d7e2-5e01e92e8153",
+        "first_name": "Ekaterina",
+        "last_name": "Kozhevnikova"
+      },
+      {
+        "id": "1e2603b9-f733-7a30-ac61-5e0613a3c7e7",
+        "first_name": "Антон",
+        "last_name": "Спирин"
+      },
+      {
+        "id": "1e7b04e7-1ffd-04d2-1eb5-5e0613b71c26",
+        "first_name": "Иван",
+        "last_name": "Семёнов"
+      },
+      {
+        "id": "1fc6b19d-f69f-a92c-f168-5df8d9713fe9",
+        "first_name": "Дмитрий",
+        "last_name": "Плетенев"
+      },
+      {
+        "id": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e",
+        "first_name": "Tamila",
+        "last_name": "Aubova"
+      },
+      {
+        "id": "22ecc4d8-ce72-e668-4cee-5e0613eed8eb",
+        "first_name": "Лидия",
+        "last_name": "Красовских"
+      },
+      {
+        "id": "255482c5-3682-8278-cabd-5e33ef34153f",
+        "first_name": "Евгений",
+        "last_name": "Горшков"
+      },
+      {
+        "id": "25ec74c6-1452-8496-bc27-5e4bef9090d5",
+        "first_name": "Evgeniya",
+        "last_name": "Mityaeva"
+      },
+      {
+        "id": "29f5df65-d922-6ffc-3079-5de6446d41ad",
+        "first_name": "Tatyana",
+        "last_name": "Ruban"
+      },
+      {
+        "id": "2a55f0ad-a5a9-e2f4-13db-5df8d97ac328",
+        "first_name": "Алексей",
+        "last_name": "Рощин"
+      },
+      {
+        "id": "2e977622-2b36-0246-0f7b-5e06136033df",
+        "first_name": "Игорь",
+        "last_name": "Кудрявцев"
+      },
+      {
+        "id": "2fd229da-2489-e332-05ee-5e0613ab6293",
+        "first_name": "Сергей",
+        "last_name": "Тарасов"
+      },
+      {
+        "id": "304ca346-e7ba-5c27-f4fc-5e26b50def16",
+        "first_name": "Ekaterina",
+        "last_name": "Markova"
+      },
+      {
+        "id": "34ec92f7-7fa2-547b-7f5c-5df8d940be44",
+        "first_name": "Анатолий",
+        "last_name": "Савчук"
+      },
+      {
+        "id": "390673f7-9345-a853-0f72-5df8d9b69f73",
+        "first_name": "Андрей",
+        "last_name": "Асташенко"
+      },
+      {
+        "id": "3a8cad3b-d6f2-eff7-6f71-5e0613c7a101",
+        "first_name": "Сергей",
+        "last_name": "Лущиков"
+      },
+      {
+        "id": "40107618-5453-76bf-91f7-5e0613222bfa",
+        "first_name": "Сергей",
+        "last_name": "Ульянов"
+      },
+      {
+        "id": "40c8af6e-d43e-bf41-f303-5e37cdf76a0e",
+        "first_name": "Павел",
+        "last_name": "Одинец"
+      },
+      {
+        "id": "414b1deb-7849-b28a-1040-5dc2a2fea41c",
+        "first_name": "Алексей",
+        "last_name": "Сидоркин"
+      },
+      {
+        "id": "4397e3c6-8b7d-1fb4-7bee-5df8d910bc6d",
+        "first_name": "Андрей",
+        "last_name": "Денисов"
+      },
+      {
+        "id": "44b8238f-6d47-d896-a95f-5ea6be027538",
+        "first_name": "Daniil",
+        "last_name": "Klimov"
+      },
+      {
+        "id": "44e8c58a-15d8-0591-44e5-5def52115d87",
+        "first_name": "Ulyana",
+        "last_name": "Antonova"
+      },
+      {
+        "id": "45c8e29d-a253-9442-1c31-5df8d9940ea4",
+        "first_name": "Кристина",
+        "last_name": "Соколова"
+      },
+      {
+        "id": "464b1c05-a281-d5bf-c65f-5e9d713a980d",
+        "first_name": "Aleksandrv",
+        "last_name": "Sozdatelev"
+      },
+      {
+        "id": "46cb0aea-4c93-e2fe-7310-5d94906f087c",
+        "first_name": "Ruslan",
+        "last_name": "Maslennikov"
+      },
+      {
+        "id": "46dae151-7cf7-6070-c835-5e0613ba8e43",
+        "first_name": "Андрей",
+        "last_name": "Любушкин"
+      },
+      {
+        "id": "492e3208-4a4b-5234-7f6f-5d76471f5b1c",
+        "first_name": "Ольга",
+        "last_name": "Миронова"
+      },
+      {
+        "id": "4bedad44-436c-806f-9f9a-5de644d459dc",
+        "first_name": "Valentina",
+        "last_name": "Filyaeva"
+      },
+      {
+        "id": "4bef31aa-30d6-5389-9e91-5e06130c99e6",
+        "first_name": "Елена",
+        "last_name": "Щелконогова"
+      },
+      {
+        "id": "4dfb0382-2fbb-a7b4-dc83-5df8d941634b",
+        "first_name": "Кирилл",
+        "last_name": "Степанов"
+      },
+      {
+        "id": "5039322c-006a-8a4a-cd9c-5df8d91a54ed",
+        "first_name": "Анна",
+        "last_name": "Тарасова"
+      },
+      {
+        "id": "511f031b-204a-3840-b9fb-5e0613c3e7d4",
+        "first_name": "Алексей",
+        "last_name": "Катрич"
+      },
+      {
+        "id": "541ed8e1-0552-1f43-d3c9-5e61ece7e7c9",
+        "first_name": "Manager",
+        "last_name": "Test"
+      },
+      {
+        "id": "553d9090-fc9f-3d1a-7fb3-5e061323dbfb",
+        "first_name": "Дмитрий",
+        "last_name": "Макаровский"
+      },
+      {
+        "id": "583c221e-0321-9210-caf2-5df8d915f70a",
+        "first_name": "Игорь",
+        "last_name": "Баннов"
+      },
+      {
+        "id": "5c505f38-11e4-86a8-36dc-5e96b3ed46a8",
+        "first_name": "Ruslan",
+        "last_name": "Maslennikov"
+      },
+      {
+        "id": "5ca9c689-aeb5-33ca-a01a-5e031d553208",
+        "first_name": "Oleg",
+        "last_name": "Shchetkin"
+      },
+      {
+        "id": "5e797f4c-0bb8-5bcf-c8b5-5e0613efefa1",
+        "first_name": "Ренат",
+        "last_name": "Урманов"
+      },
+      {
+        "id": "6052b372-9cc7-f1ea-6166-5e0613c8a413",
+        "first_name": "Алексей",
+        "last_name": "Максимкин"
+      },
+      {
+        "id": "62d0c1a6-2b2d-f690-5391-5df8d993b918",
+        "first_name": "Владимир",
+        "last_name": "Воронов"
+      },
+      {
+        "id": "6373f764-83cc-aa7f-27d3-5e4a937f7898",
+        "first_name": "Алексей",
+        "last_name": "Кузнецов"
+      },
+      {
+        "id": "6cf5e79a-ca41-c1a8-3e02-5e0613107237",
+        "first_name": "Юрий",
+        "last_name": "Мацыгин"
+      },
+      {
+        "id": "6d2bd07a-a661-f65e-d632-5df8d9f62462",
+        "first_name": "Елена",
+        "last_name": "Денисова"
+      },
+      {
+        "id": "73438a80-27e5-c551-64a6-5d8e1aadd0ed",
+        "first_name": "Vladimir",
+        "last_name": "Samoshkin"
+      },
+      {
+        "id": "73fdebd8-f8e1-be8d-8323-5e0613ab143b",
+        "first_name": "Данила",
+        "last_name": "Клоков"
+      },
+      {
+        "id": "777842f9-dc7d-b63d-a01b-5df8d9643405",
+        "first_name": "Дмитрий",
+        "last_name": "Дербенцов"
+      },
+      {
+        "id": "7f35ed25-c814-1020-35a2-5e79f4949410",
+        "first_name": "Ilya",
+        "last_name": "Sychev"
+      },
+      {
+        "id": "81db45ab-1584-5ea3-bb83-5df8d941343a",
+        "first_name": "Кирилл",
+        "last_name": "Игнатенков"
+      },
+      {
+        "id": "84e78061-7189-f300-f53e-5e8f2f4d426c",
+        "first_name": "p",
+        "last_name": "Test"
+      },
+      {
+        "id": "857786fb-60e6-010d-5861-5e0613406733",
+        "first_name": "Павел",
+        "last_name": "Фрунза"
+      },
+      {
+        "id": "88d2de1e-3a0b-6278-16b7-5e0613db41e5",
+        "first_name": "Арсений",
+        "last_name": "Метелин"
+      },
+      {
+        "id": "8b35d6d6-768c-f703-9a38-5d89d442700b",
+        "first_name": "Viktor",
+        "last_name": "Fink"
+      },
+      {
+        "id": "8c1bcd30-a809-4a27-3162-5df8d983d7cd",
+        "first_name": "Евгений",
+        "last_name": "Илларионов"
+      },
+      {
+        "id": "8dacdf9e-8c26-8bab-f959-5e26b809bbdc",
+        "first_name": "Irina",
+        "last_name": "Kolchanova"
+      },
+      {
+        "id": "91fc1a70-ae99-1299-b1c2-5e05db7e370f",
+        "first_name": "Viktoriya",
+        "last_name": "Pisareva"
+      },
+      {
+        "id": "939c72d7-9f85-7254-2e5f-5e061369a7c1",
+        "first_name": "Илья",
+        "last_name": "Милютин"
+      },
+      {
+        "id": "96677bed-af1a-5680-c5d5-5df8d9c697b2",
+        "first_name": "Елена",
+        "last_name": "Киристова"
+      },
+      {
+        "id": "993c26e3-9800-ccb4-7667-5e26b67d0575",
+        "first_name": "Elena",
+        "last_name": "Dorokhova"
+      },
+      {
+        "id": "99a867e9-73ba-6801-90a9-5e0613db7fe5",
+        "first_name": "Алексей",
+        "last_name": "Аврамов"
+      },
+      {
+        "id": "a1be3098-17df-0fd4-8401-5e6b338b9470",
+        "first_name": "Ntcn",
+        "last_name": "Ntcn"
+      },
+      {
+        "id": "a3b4f8e8-3e19-5361-0f8c-5e7a21a0b1f0",
+        "first_name": "Александра",
+        "last_name": "Сычева"
+      },
+      {
+        "id": "a46b1c4b-3f9f-0222-209b-5e0613e7255c",
+        "first_name": "Александр",
+        "last_name": "Антонов"
+      },
+      {
+        "id": "a51d0a21-6615-368f-ff97-5de64c16ab94",
+        "first_name": "Regina",
+        "last_name": "Khachaturian"
+      },
+      {
+        "id": "a697ae50-deee-70ba-5268-5e06136742ef",
+        "first_name": "Ксения",
+        "last_name": "Морозова"
+      },
+      {
+        "id": "a6b24c22-48da-dd08-decf-5e7336ba7cb6",
+        "first_name": "Иван",
+        "last_name": "Тестировщик"
+      },
+      {
+        "id": "a6b24c23-48db-dd09-decf-5e7336ba7cb7",
+        "first_name": "Иван",
+        "last_name": "Тестеров"
+      },
+      {
+        "id": "a6be5ae7-37ac-11f6-a412-5df8d92f9595",
+        "first_name": "Антон",
+        "last_name": "Клянчин"
+      },
+      {
+        "id": "a7aab879-e954-1759-53e1-5e01eaf91816",
+        "first_name": "Екатерина",
+        "last_name": "Соболева"
+      },
+      {
+        "id": "a82304e1-5e93-a963-4afc-5df8d9b13479",
+        "first_name": "Константин",
+        "last_name": "Масейкин"
+      },
+      {
+        "id": "aff1d017-074b-6cbe-8cd4-5e06133ea44e",
+        "first_name": "Азат",
+        "last_name": "Валеев"
+      },
+      {
+        "id": "b027392a-a78b-2f44-8fee-5e399bbc8a38",
+        "first_name": "Александр",
+        "last_name": "Красильников"
+      },
+      {
+        "id": "b1252ab3-08ec-7a9e-7072-5e0613ebfd9b",
+        "first_name": "Юрий",
+        "last_name": "Николаев"
+      },
+      {
+        "id": "b15ecc3d-510f-611b-a594-5df8d9dba672",
+        "first_name": "Михаил",
+        "last_name": "Козин"
+      },
+      {
+        "id": "b650935e-ba66-499f-6f83-5d931fb1b950",
+        "first_name": "Olga",
+        "last_name": "Denisova"
+      },
+      {
+        "id": "bdb29437-5434-6d27-568a-5df8d9809655",
+        "first_name": "Алексей",
+        "last_name": "Колесников"
+      },
+      {
+        "id": "bf08ef9e-8c2f-a703-ae84-5e16e6216bdd",
+        "first_name": "Agniya",
+        "last_name": "Hamaganova"
+      },
+      {
+        "id": "c19d52d1-90f2-7e2a-5540-5e0613594e6a",
+        "first_name": "Олег",
+        "last_name": "Власенко"
+      },
+      {
+        "id": "c33866bd-69c4-20ae-f16c-5e0613039238",
+        "first_name": "Роман",
+        "last_name": "Павленко"
+      },
+      {
+        "id": "c4178301-17a9-1a9c-f7ee-5da4276848c6",
+        "first_name": "Vladimir",
+        "last_name": "Prazdnikov"
+      },
+      {
+        "id": "c565ca59-00af-66d2-7f33-5e01e97308f1",
+        "first_name": "Aleksandr",
+        "last_name": "Temlyantsev"
+      },
+      {
+        "id": "c864a4c3-493d-b9f5-c0bf-5df8d9a13601",
+        "first_name": "Анастасия",
+        "last_name": "Купцова"
+      },
+      {
+        "id": "cb9bf00d-474a-9293-7349-5def4883baae",
+        "first_name": "Elvira",
+        "last_name": "Makhmutova"
+      },
+      {
+        "id": "cc8a88c2-bf37-1a86-9b80-5e06139676ac",
+        "first_name": "Татьяна",
+        "last_name": "Дасмаева"
+      },
+      {
+        "id": "d08d0ad9-fef1-263e-59a9-5e0613294440",
+        "first_name": "Наталья",
+        "last_name": "Симагина"
+      },
+      {
+        "id": "d2feae2f-2601-9b24-141d-5e4278afb6bd",
+        "first_name": "Veronika",
+        "last_name": "Batrakova"
+      },
+      {
+        "id": "d354ec84-b524-0283-62c0-5df8d953ed69",
+        "first_name": "Татьяна",
+        "last_name": "Курбанова"
+      },
+      {
+        "id": "d3e974ca-c7c5-3a74-db35-5e06139345d8",
+        "first_name": "Илья",
+        "last_name": "Правский"
+      },
+      {
+        "id": "d7a7849c-4597-82cf-3754-5e061313072b",
+        "first_name": "Дмитрий",
+        "last_name": "Шохалевич"
+      },
+      {
+        "id": "da6ddbd1-fda0-0a2e-826f-5d8e2015e8bd",
+        "first_name": "Boris",
+        "last_name": "Minakov"
+      },
+      {
+        "id": "ddee2e74-88a6-6902-a29d-5df8d90f173c",
+        "first_name": "Роман",
+        "last_name": "Леонов"
+      },
+      {
+        "id": "e0093b57-7b23-25a1-2ac0-5e2ae52d99ff",
+        "first_name": "Olesya",
+        "last_name": "Belousova"
+      },
+      {
+        "id": "e018b649-99d5-00f2-7145-5e0613913358",
+        "first_name": "Ирина",
+        "last_name": "Прошина"
+      },
+      {
+        "id": "e2700ac8-4986-ac52-3b3c-5df8d9aa8cd6",
+        "first_name": "Алексей",
+        "last_name": "Тубальцев"
+      },
+      {
+        "id": "e2757f31-3fd2-d50e-0ad7-5e06139eb944",
+        "first_name": "Денис",
+        "last_name": "Иванов"
+      },
+      {
+        "id": "e2c1ba11-677e-50f9-bbcd-5e3d021e11f8",
+        "first_name": "Григорий",
+        "last_name": "Церетели"
+      },
+      {
+        "id": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3",
+        "first_name": "Андрей",
+        "last_name": "Рябов"
+      },
+      {
+        "id": "e6231097-ac96-b249-5ff0-5de64573b66c",
+        "first_name": "Ksenia",
+        "last_name": "Selezneva"
+      },
+      {
+        "id": "e86547de-a688-ca82-eacc-5df8d990a130",
+        "first_name": "Дмитрий",
+        "last_name": "Макаров"
+      },
+      {
+        "id": "e9b79c73-e54e-adf0-b960-5d762148665e",
+        "first_name": "HR",
+        "last_name": "CRM"
+      },
+      {
+        "id": "eb1d42b0-9198-f197-9997-5e06137291ec",
+        "first_name": "Никита",
+        "last_name": "Самохвалов"
+      },
+      {
+        "id": "ec8dea46-f6a0-62d9-92b7-5def48cf91e1",
+        "first_name": "Alena",
+        "last_name": "Karmakulova"
+      },
+      {
+        "id": "ed7192ce-b730-6b27-3ca8-5e0613584c62",
+        "first_name": "Наталья",
+        "last_name": "Казакова"
+      },
+      {
+        "id": "eec893ed-68a0-8306-6c60-5e3d028730fa",
+        "first_name": "Тимур",
+        "last_name": "Порошин"
+      },
+      {
+        "id": "f33f181e-55ea-9e19-9fc7-5e9039467f42",
+        "first_name": "Maksim",
+        "last_name": "Bondarenko"
+      },
+      {
+        "id": "f41e53ff-02ec-6ac8-cc01-5df8d9ca017d",
+        "first_name": "Ильвир",
+        "last_name": "Марванов"
+      }
+    ],
+    "names_val": ""
+  },
+  "reason_for_opening_id": {
+    "required": false,
+    "name": "reason_for_opening_id",
+    "vname": "LBL_REASON_FOR_OPENING_ID",
+    "type": "id",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": 0,
+    "audited": true,
+    "inline_edit": true,
+    "reportable": false,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": 36,
+    "size": "20",
+    "value": "6c1502cd-7cf2-fa1b-1ac7-5e788e953b8b"
+  },
+  "reason_for_opening": {
+    "required": true,
+    "source": "non-db",
+    "name": "reason_for_opening",
+    "vname": "LBL_REASON_FOR_OPENING",
+    "type": "relate",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": true,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": "255",
+    "size": "20",
+    "id_name": "reason_for_opening_id",
+    "ext2": "HRPAC_Reason_for_Opening",
+    "module": "HRPAC_Reason_for_Opening",
+    "rname": "name",
+    "quicksearch": "enabled",
+    "studio": "visible",
+    "value": "Замена"
+  },
+  "progresbar": {
+    "required": false,
+    "source": "non-db",
+    "name": "progresbar",
+    "vname": "LBL_PROGRESBAR",
+    "type": "int",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "size": "20",
+    "studio": "visible",
+    "value": 14
+  },
+  "additional_managers": {
+    "name": "additional_managers",
+    "type": "link",
+    "relationship": "additional_managers",
+    "source": "non-db",
+    "link_type": "one",
+    "vname": "LBL_ADDITIONAL_MANAGERS",
+    "value": ""
+  },
+  "spectators": {
+    "name": "spectators",
+    "type": "link",
+    "relationship": "spectators",
+    "source": "non-db",
+    "link_type": "one",
+    "vname": "LBL_SPECTATORS",
+    "value": ""
+  },
+  "additional_assigned": {
+    "name": "additional_assigned",
+    "type": "link",
+    "relationship": "additional_assigned",
+    "source": "non-db",
+    "link_type": "one",
+    "vname": "LBL_ADDITIONAL_ASSIGNED",
+    "value": ""
+  },
+  "vacansy_url": {
+    "required": false,
+    "name": "vacansy_url",
+    "vname": "LBL_VACANSY_URL",
+    "type": "url",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": true,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": "255",
+    "size": "20",
+    "link_target": "_blank",
+    "value": ""
+  },
+  "test_url": {
+    "required": false,
+    "name": "test_url",
+    "vname": "LBL_TEST_URL",
+    "type": "url",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": true,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": "255",
+    "size": "20",
+    "link_target": "_blank",
+    "value": ""
+  },
+  "amount_final": {
+    "required": true,
+    "name": "amount_final",
+    "vname": "LBL_AMOUNT",
+    "source": "non-db",
+    "type": "int",
+    "massupdate": 0,
+    "no_default": false,
+    "default": "1",
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": true,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": "255",
+    "size": "20",
+    "enable_range_search": false,
+    "disable_num_format": "",
+    "min": 0,
+    "max": false,
+    "validation": { "type": "range", "min": 0, "max": false },
+    "value": 1
+  },
+  "ssc": {
+    "name": "ssc",
+    "vname": "LBL_SSC",
+    "type": "link",
+    "relationship": "vacancy_ssc",
+    "module": "HRPAC_SELECTION_STAGE_CANDIDATES_1",
+    "bean_name": "HRPAC_SELECTION_STAGE_CANDIDATES_1",
+    "source": "non-db",
+    "value": ""
+  },
+  "stack_skills_ids": {
+    "name": "stack_skills_ids",
+    "vname": "LBL_HRPAC_STACK_SKILLS_HRPAC_VACANCY",
+    "type": "relate",
+    "front_field_type": "stack",
+    "required": true,
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "source": "non-db",
+    "rel_link": "hrpac_stack_skills_hrpac_vacancy",
+    "table": "hrpac_skills",
+    "fields_in_table": ["id", "name"],
+    "detail_format": ["name"],
+    "value": [
+      "12dfb0aa-0dd2-0ccd-0ef6-5ee9e6a02efb",
+      "15e9e5bb-986d-60ed-5d4d-5ee9e6380e63",
+      "18b22a70-a5d7-071a-9283-5ee9c4299b84"
+    ],
+    "option": [
+      { "id": "12dfb0aa-0dd2-0ccd-0ef6-5ee9e6a02efb", "name": "CRM" },
+      { "id": "15e9e5bb-986d-60ed-5d4d-5ee9e6380e63", "name": "Oracle" },
+      { "id": "18b22a70-a5d7-071a-9283-5ee9c4299b84", "name": "Gulp" },
+      { "id": "1d5498a6-66e2-d4f6-1325-5ee9c4cc754c", "name": "JavaScript" },
+      { "id": "25db77a3-ed92-d11d-c7af-5f0f319c1219", "name": "Vim" },
+      { "id": "3781bc42-7724-45d0-208c-5ee9c44978ef", "name": "Webpack" },
+      {
+        "id": "3bece146-887d-af3a-8f6b-5f2416edea52",
+        "name": "Конфигурация Dedicated Client + Tools Конфигурация бизнес-логики (data layer, bus layer, ui layer)"
+      },
+      { "id": "430ae15a-071c-98e7-8632-5f06d657f2ec", "name": "PHP" },
+      { "id": "4a44f363-5c9d-f97b-bf09-5f0326e55d25", "name": "Less" },
+      { "id": "613224ee-9f23-6d8c-3b31-5f1171283f33", "name": "5675" },
+      { "id": "6c695983-8278-7bb7-d1a0-5f0daf39821e", "name": "Chai" },
+      { "id": "84a5fd92-bf74-2b9b-73ca-5ee9c4b0aa29", "name": "Java" },
+      { "id": "9142629c-a87b-1717-4814-5f06d8f3cb93", "name": "React" },
+      { "id": "b4a34645-9a37-55ab-22af-5f06d8c3119e", "name": "Photoshop" },
+      { "id": "b8c70dda-cea5-148e-52a4-5f0f31705a84", "name": "Ajax" },
+      { "id": "c3a0632f-c974-69d6-b567-5ee9e7799526", "name": "Siebel UI" },
+      { "id": "c44db48e-bfb2-acb1-f3cc-5f06e4ce3dd8", "name": "Git" },
+      { "id": "d57fe1b7-1ca5-c55a-9957-5ee9c41faf54", "name": "Nginx" },
+      { "id": "e2c75ef7-2b95-c7b5-6673-5ee9e69604c3", "name": "SAS" },
+      { "id": "e9c397e3-3a8e-86c4-b79a-5f0dab6f65ab", "name": "Mocha" },
+      { "id": "f030e6e8-c8c8-9288-5d1f-5f06d555b110", "name": "Angular" }
+    ],
+    "names_val": "CRM,Oracle,Gulp"
+  },
+  "desirable_skills_ids": {
+    "name": "desirable_skills_ids",
+    "vname": "LBL_HRPAC_DESIRABLE_SKILLS_HRPAC_VACANCY",
+    "type": "relate",
+    "front_field_type": "desirable",
+    "required": false,
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "source": "non-db",
+    "rel_link": "hrpac_desirable_skills_hrpac_vacancy",
+    "table": "hrpac_skills",
+    "fields_in_table": ["id", "name"],
+    "detail_format": ["name"],
+    "value": [],
+    "option": [
+      { "id": "12dfb0aa-0dd2-0ccd-0ef6-5ee9e6a02efb", "name": "CRM" },
+      { "id": "15e9e5bb-986d-60ed-5d4d-5ee9e6380e63", "name": "Oracle" },
+      { "id": "18b22a70-a5d7-071a-9283-5ee9c4299b84", "name": "Gulp" },
+      { "id": "1d5498a6-66e2-d4f6-1325-5ee9c4cc754c", "name": "JavaScript" },
+      { "id": "25db77a3-ed92-d11d-c7af-5f0f319c1219", "name": "Vim" },
+      { "id": "3781bc42-7724-45d0-208c-5ee9c44978ef", "name": "Webpack" },
+      {
+        "id": "3bece146-887d-af3a-8f6b-5f2416edea52",
+        "name": "Конфигурация Dedicated Client + Tools Конфигурация бизнес-логики (data layer, bus layer, ui layer)"
+      },
+      { "id": "430ae15a-071c-98e7-8632-5f06d657f2ec", "name": "PHP" },
+      { "id": "4a44f363-5c9d-f97b-bf09-5f0326e55d25", "name": "Less" },
+      { "id": "613224ee-9f23-6d8c-3b31-5f1171283f33", "name": "5675" },
+      { "id": "6c695983-8278-7bb7-d1a0-5f0daf39821e", "name": "Chai" },
+      { "id": "84a5fd92-bf74-2b9b-73ca-5ee9c4b0aa29", "name": "Java" },
+      { "id": "9142629c-a87b-1717-4814-5f06d8f3cb93", "name": "React" },
+      { "id": "b4a34645-9a37-55ab-22af-5f06d8c3119e", "name": "Photoshop" },
+      { "id": "b8c70dda-cea5-148e-52a4-5f0f31705a84", "name": "Ajax" },
+      { "id": "c3a0632f-c974-69d6-b567-5ee9e7799526", "name": "Siebel UI" },
+      { "id": "c44db48e-bfb2-acb1-f3cc-5f06e4ce3dd8", "name": "Git" },
+      { "id": "d57fe1b7-1ca5-c55a-9957-5ee9c41faf54", "name": "Nginx" },
+      { "id": "e2c75ef7-2b95-c7b5-6673-5ee9e69604c3", "name": "SAS" },
+      { "id": "e9c397e3-3a8e-86c4-b79a-5f0dab6f65ab", "name": "Mocha" },
+      { "id": "f030e6e8-c8c8-9288-5d1f-5f06d555b110", "name": "Angular" }
+    ],
+    "names_val": ""
+  },
+  "hrpac_vacancy_difficulty_level_id": {
+    "required": false,
+    "name": "hrpac_vacancy_difficulty_level_id",
+    "vname": "LBL_HRPAC_VACANCY_DIFFICULTY_LEVEL_ID",
+    "type": "id",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": 0,
+    "audited": false,
+    "inline_edit": true,
+    "reportable": false,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": 36,
+    "size": "20",
+    "value": "4ac3e4e5-61f9-a9ba-b3bc-5f17fc9e0245"
+  },
+  "hrpac_vacancy_difficulty_level_name": {
+    "required": true,
+    "source": "non-db",
+    "name": "hrpac_vacancy_difficulty_level_name",
+    "vname": "LBL_HRPAC_VACANCY_DIFFICULTY_LEVEL_NAME",
+    "type": "relate",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": false,
+    "inline_edit": true,
+    "reportable": true,
+    "unified_search": false,
+    "merge_filter": "disabled",
+    "len": "255",
+    "size": "20",
+    "id_name": "hrpac_vacancy_difficulty_level_id",
+    "ext2": "HRPAC_VACANCY_DIFFICULTY_LEVEL",
+    "module": "HRPAC_VACANCY_DIFFICULTY_LEVEL",
+    "rname": "name",
+    "quicksearch": "enabled",
+    "studio": "visible",
+    "value": "Базовая"
+  },
+  "hrpac_skills_hrpac_vacancy": {
+    "name": "hrpac_skills_hrpac_vacancy",
+    "type": "link",
+    "relationship": "hrpac_skills_hrpac_vacancy",
+    "source": "non-db",
+    "module": "HRPAC_SKILLS",
+    "bean_name": "HRPAC_SKILLS",
+    "vname": "LBL_HRPAC_SKILLS_HRPAC_VACANCY_FROM_HRPAC_SKILLS_TITLE",
+    "value": ""
+  },
+  "hrpac_stack_skills_hrpac_vacancy": {
+    "name": "hrpac_stack_skills_hrpac_vacancy",
+    "type": "link",
+    "relationship": "hrpac_stack_skills_hrpac_vacancy",
+    "source": "non-db",
+    "module": "HRPAC_SKILLS",
+    "bean_name": "HRPAC_SKILLS",
+    "vname": "LBL_HRPAC_STACK_SKILLS_HRPAC_VACANCY_FROM_HRPAC_SKILLS_TITLE",
+    "value": {}
+  },
+  "hrpac_desirable_skills_hrpac_vacancy": {
+    "name": "hrpac_desirable_skills_hrpac_vacancy",
+    "type": "link",
+    "relationship": "hrpac_desirable_skills_hrpac_vacancy",
+    "source": "non-db",
+    "module": "HRPAC_SKILLS",
+    "bean_name": "HRPAC_SKILLS",
+    "vname": "LBL_HRPAC_DESIRABLE_SKILLS_HRPAC_VACANCY_FROM_HRPAC_SKILLS_TITLE",
+    "value": {}
   },
   "hrpac_vacancy_hrpac_candidates_1": {
     "name": "hrpac_vacancy_hrpac_candidates_1",
@@ -927,16 +3056,150 @@
     "vname": "LBL_HRPAC_VACANCY_HRPAC_CANDIDATES_1_FROM_HRPAC_CANDIDATES_TITLE",
     "value": ""
   },
-  "stage_templates_hrpac_vacancy_1": {
-    "name": "stage_templates_hrpac_vacancy_1",
-    "type": "link",
-    "relationship": "stage_templates_hrpac_vacancy_1",
+  "hrpac_vacancy_name_us": {
+    "name": "hrpac_vacancy_name_us",
+    "required": false,
+    "vname": "LBL_HRPAC_VACANCY_NAME_US",
+    "type": "varchar",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": false,
+    "unified_search": true,
+    "merge_filter": "disabled",
+    "len": "3",
+    "size": "20",
     "source": "non-db",
-    "module": "STAGE_Templates",
-    "bean_name": "STAGE_Templates",
-    "vname": "LBL_STAGE_TEMPLATES_HRPAC_VACANCY_1_FROM_STAGE_TEMPLATES_TITLE",
-    "id_name": "stage_templates_id",
+    "studio": { "visible": false },
     "value": ""
+  },
+  "hrpac_vacancy_business_units_us": {
+    "name": "hrpac_vacancy_business_units_us",
+    "required": false,
+    "vname": "LBL_HRPAC_VACANCY_BUSINESS_UNITS_USS",
+    "type": "varchar",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": false,
+    "unified_search": true,
+    "merge_filter": "disabled",
+    "len": "3",
+    "size": "20",
+    "source": "non-db",
+    "studio": { "visible": false },
+    "value": ""
+  },
+  "hrpac_vacancy_departments_us": {
+    "name": "hrpac_vacancy_departments_us",
+    "required": false,
+    "vname": "LBL_HRPAC_VACANCY_DEPARTMENTS_US",
+    "type": "varchar",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": false,
+    "unified_search": true,
+    "merge_filter": "disabled",
+    "len": "3",
+    "size": "20",
+    "source": "non-db",
+    "studio": { "visible": false },
+    "value": ""
+  },
+  "hrpac_vacancy_projects_us": {
+    "name": "hrpac_vacancy_projects_us",
+    "required": false,
+    "vname": "LBL_HRPAC_VACANCY_PROJECTS_US",
+    "type": "varchar",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": false,
+    "unified_search": true,
+    "merge_filter": "disabled",
+    "len": "3",
+    "size": "20",
+    "source": "non-db",
+    "studio": { "visible": false },
+    "value": ""
+  },
+  "hrpac_vacancy_supervisor_us": {
+    "name": "hrpac_vacancy_supervisor_us",
+    "required": false,
+    "vname": "LBL_HRPAC_VACANCY_SUPERVISOR_US",
+    "type": "varchar",
+    "massupdate": 0,
+    "no_default": false,
+    "comments": "",
+    "help": "",
+    "importable": "true",
+    "duplicate_merge": "disabled",
+    "duplicate_merge_dom_value": "0",
+    "audited": true,
+    "inline_edit": false,
+    "reportable": false,
+    "unified_search": true,
+    "merge_filter": "disabled",
+    "len": "3",
+    "size": "20",
+    "source": "non-db",
+    "studio": { "visible": false },
+    "value": ""
+  },
+  "hrpac_vacancy_users_additional_assigned": {
+    "name": "hrpac_vacancy_users_additional_assigned",
+    "type": "link",
+    "relationship": "hrpac_vacancy_users_additional_assigned",
+    "source": "non-db",
+    "module": "Users",
+    "bean_name": "User",
+    "vname": "LBL_HRPAC_VACANCY_USERS_1_FROM_USERS_TITLE",
+    "value": {}
+  },
+  "hrpac_vacancy_users_additional_managers": {
+    "name": "hrpac_vacancy_users_additional_managers",
+    "type": "link",
+    "relationship": "hrpac_vacancy_users_additional_managers",
+    "source": "non-db",
+    "module": "Users",
+    "bean_name": "User",
+    "vname": "LBL_HRPAC_VACANCY_USERS_ADDITIONAL_MANAGERS",
+    "value": {}
+  },
+  "hrpac_vacancy_users_spectator": {
+    "name": "hrpac_vacancy_users_spectator",
+    "type": "link",
+    "relationship": "hrpac_vacancy_users_spectator",
+    "source": "non-db",
+    "module": "Users",
+    "bean_name": "User",
+    "vname": "LBL_HRPAC_VACANCY_USERS_SPECTATOR",
+    "value": {}
   },
   "stage_templates_name": {
     "required": true,
@@ -950,7 +3213,19 @@
     "table": "stage_templates",
     "module": "STAGE_Templates",
     "rname": "name",
-    "value": "тест"
+    "value": "Основной шаблон",
+    "visibility": "disabled"
+  },
+  "stage_templates_hrpac_vacancy_1": {
+    "name": "stage_templates_hrpac_vacancy_1",
+    "type": "link",
+    "relationship": "stage_templates_hrpac_vacancy_1",
+    "source": "non-db",
+    "module": "STAGE_Templates",
+    "bean_name": "STAGE_Templates",
+    "vname": "LBL_STAGE_TEMPLATES_HRPAC_VACANCY_1_FROM_STAGE_TEMPLATES_TITLE",
+    "id_name": "stage_templates_id",
+    "value": ""
   },
   "stage_templates_id": {
     "name": "stage_templates_id",
@@ -960,6 +3235,6 @@
     "reportable": false,
     "side": "right",
     "vname": "LBL_STAGE_TEMPLATES_HRPAC_VACANCY_1_FROM_HRPAC_VACANCY_TITLE",
-    "value": "96714fb4-8b73-4443-03c4-5dcd98897d7c"
+    "value": "70cfbc39-6e00-f5ad-fb22-5de515f99b40"
   }
 }

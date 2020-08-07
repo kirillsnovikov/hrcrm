@@ -1,226 +1,1718 @@
 {
   "vacancy_names": [
     {
+      "id": "143e66e9-cf62-fdde-80f1-5de6663f2ee3",
+      "name": "Функциональный архитектор"
+    },
+    {
       "id": "143fcd09-dce2-93d1-6ab8-5db0b16666f4",
-      "name": "Аналитик"
+      "name": "Стажер-разработчик"
+    },
+    { "id": "1d180d72-af56-f6c1-681d-5de666c33c7b", "name": "Методолог" },
+    { "id": "20081463-95d7-f64a-f4ea-5e26ead8eb6c", "name": "Менеджер" },
+    {
+      "id": "2a3f97a6-354c-9a83-e920-5e3035740515",
+      "name": "Ведущий аналитик"
+    },
+    {
+      "id": "2cf60153-bc26-3c9d-6075-5de666777fce",
+      "name": "Руководитель проекта"
+    },
+    { "id": "32422e33-c23f-90c6-20de-5e26ed0ddf05", "name": "Эксперт" },
+    {
+      "id": "341405a9-dda7-7cfc-22dc-5de66089c442",
+      "name": "Интеграционный аналитик"
+    },
+    {
+      "id": "37f7afd6-0f60-5bbc-0929-5de660ff1822",
+      "name": "Стажер-консультант"
+    },
+    {
+      "id": "3af4e1b6-7914-c978-bf51-5de666c68d5b",
+      "name": "Заместитель руководителя проектов"
+    },
+    {
+      "id": "3b31af1d-480f-4e63-8f09-5de6600ac7a9",
+      "name": "Младший специалист по тестированию"
+    },
+    {
+      "id": "3c1bd683-dbb3-ae34-7d18-5de6664c7b39",
+      "name": "Персональный ассистент"
+    },
+    {
+      "id": "3cb06670-802f-80d6-8743-5de666fcf101",
+      "name": "Администратор проектов"
+    },
+    {
+      "id": "3e15315d-78be-ece3-76ba-5de665e3bca8",
+      "name": "Ведущий специалист по машинному обучению"
+    },
+    { "id": "4020ffb1-37c9-d9bc-b572-5de66535f8c8", "name": "Архитектор" },
+    {
+      "id": "4139a6fc-b91b-d8e4-71dd-5de660a8fd88",
+      "name": "Ведущий специалист по тестированию"
+    },
+    {
+      "id": "41b212f0-eec1-e345-9efd-5de660623dce",
+      "name": "Специалист по тестированию"
+    },
+    {
+      "id": "457c4953-cd15-3c62-147b-5e033d826aec",
+      "name": "Младший специалист по технической поддержке"
+    },
+    {
+      "id": "467be24e-3669-90f4-a5f9-5de6608267c9",
+      "name": "Бизнес-Аналитик"
     },
     {
       "id": "47e495f4-e23f-bbdd-3210-5db15530b748",
-      "name": "QA инженер"
+      "name": "Ведущий разработчик"
+    },
+    { "id": "48b73e60-27e7-1f56-0483-5de66665d141", "name": "Казначей" },
+    {
+      "id": "499aa3d6-5340-8b19-e9ee-5e42c4988dbd",
+      "name": "Заместитель главного бухгалтера"
     },
     {
-      "id": "4ff5c19c-fe5c-d123-a34c-5de6745e9282",
-      "name": "Back-End Разработчик PHP"
+      "id": "49a8c906-892d-23a9-1022-5de666af1d03",
+      "name": "Руководитель тендерного отдела"
     },
     {
-      "id": "63e93145-96af-8637-e4fe-5dea0728ff15",
-      "name": "Демо"
+      "id": "4d84f619-bcff-672a-2c19-5de660644ec0",
+      "name": "Стажер-аналитик"
     },
+    {
+      "id": "55272193-2939-ce9b-9595-5de6663e2506",
+      "name": "Координатор продаж"
+    },
+    {
+      "id": "5c14795e-73a0-738c-d5e6-5de660ae0c67",
+      "name": "Системный аналитик"
+    },
+    { "id": "64e2aefd-8047-f4e3-36e8-5de66698ceb7", "name": "Администратор" },
     {
       "id": "68580bbc-beb8-2904-9ae1-5db15561844a",
-      "name": "Другое"
+      "name": "Тимлид разработки"
     },
     {
-      "id": "6ac53229-34c5-a646-7158-5db155a23b8d",
+      "id": "6a3aed12-c077-b3f4-9477-5de6661ce160",
       "name": "Руководитель проектов"
+    },
+    { "id": "6ac53229-34c5-a646-7158-5db155a23b8d", "name": "Разработчик" },
+    { "id": "709e1eaf-c396-a2f2-7404-5de6660046ce", "name": "Инженер" },
+    { "id": "731eee35-bc99-71ca-2163-5de666ba4920", "name": "Юрист" },
+    {
+      "id": "76b2630b-1de4-f370-f972-5de666cdfdc0",
+      "name": "Менеджер по подбору персонала"
+    },
+    { "id": "7b2892f2-82e5-f812-1e84-5de674de6147", "name": "Офис менеджер" },
+    {
+      "id": "83257b96-1ffa-bbf2-d9a3-5de6609dd34c",
+      "name": "Тимлид тестирования"
+    },
+    {
+      "id": "849a2709-b640-5636-786d-5de6628a0b07",
+      "name": "Руководитель группы консультантов"
+    },
+    {
+      "id": "8904de05-9624-4ec1-6b8a-5e43c1e2862d",
+      "name": "Руководитель функциональной группы"
     },
     {
       "id": "947a2d3c-3d93-5afc-1d48-5db1568b7b7b",
-      "name": "Стажер"
+      "name": "Интеграционный разработчик"
+    },
+    { "id": "aac57d9b-277c-9710-ffd1-5de66675fccf", "name": "Бухгалтер" },
+    {
+      "id": "ab6cc760-852b-3d7b-21d2-5de666addc09",
+      "name": "Руководитель направления"
     },
     {
-      "id": "b44797bd-c6ec-6b43-e229-5dee0afc1d43",
-      "name": "Аналитик с шаблоном"
+      "id": "b0e8bdb7-c06a-7190-79b2-5de6667d9503",
+      "name": "Младший специалист по подбору персонала"
     },
+    {
+      "id": "ca78dccc-2a4f-6e8c-e04a-5de6616beda2",
+      "name": "Ведущий консультант"
+    },
+    {
+      "id": "ccba01dd-c95e-6794-886c-5e1c479ac933",
+      "name": "Ведущий системный аналитик"
+    },
+    {
+      "id": "d55517e4-1163-1821-4fa3-5de660c03425",
+      "name": "Стажер-тестировщик"
+    },
+    {
+      "id": "d8d60463-745a-de36-d5f6-5de661168822",
+      "name": "Младший консультант"
+    },
+    {
+      "id": "dd31b046-921c-277b-0202-5e300262a1cd",
+      "name": "Ведущий бизнес аналитик"
+    },
+    { "id": "e58cf4a4-8858-9344-e731-5de660e6802c", "name": "Аналитик" },
+    {
+      "id": "e8994e2a-3e84-544b-17a9-5e1c64452448",
+      "name": "Старший финансовый менеджер"
+    },
+    {
+      "id": "e9bc54ed-d752-dc62-aa3b-5de666a3b77d",
+      "name": "Технический писатель"
+    },
+    { "id": "edf77fa3-0f8b-482d-dd9a-5de6615fecd6", "name": "Консультант" },
     {
       "id": "ef9c9344-dab9-9492-72fe-5db0b0f6a358",
       "name": "Менеджер по продажам"
+    }
+  ],
+  "vacancy_template_names": [
+    {
+      "id": "143e66e9-cf62-fdde-80f1-5de6663f2ee1",
+      "name": "Тестовый шаблон 1"
     },
     {
-      "id": "f23f3bfe-6d18-4589-9438-5de9f6efee5b",
-      "name": "Новая вакансия с шаблоном"
+      "id": "143fcd09-dce2-93d1-6ab8-5db0b16666f6",
+      "name": "Тестовый шаблон 2"
     }
   ],
   "vacancy_statuses": [
-    {
-      "id": "114590a2-5b15-65e0-e1bb-5d7915664203",
-      "name": "Отменена"
-    },
-    {
-      "id": "1aee87c3-34ae-4cd0-180d-5d7915809c95",
-      "name": "Открыта"
-    },
-    {
-      "id": "81762280-2ba3-6a36-af69-5d8cb251f5c3",
-      "name": "На паузе"
-    },
-    {
-      "id": "9be73123-3ece-2881-e51d-5d791595e112",
-      "name": "Закрыта"
-    },
-    {
-      "id": "f3580e7e-4732-b173-209d-5da47daa4009",
-      "name": "Новая"
-    }
+    { "id": "114590a2-5b15-65e0-e1bb-5d7915664203", "name": "Отменена" },
+    { "id": "1aee87c3-34ae-4cd0-180d-5d7915809c95", "name": "Открыта" },
+    { "id": "81762280-2ba3-6a36-af69-5d8cb251f5c3", "name": "На паузе" },
+    { "id": "9be73123-3ece-2881-e51d-5d791595e112", "name": "Закрыта" },
+    { "id": "f3580e7e-4732-b173-209d-5da47daa4009", "name": "Новая" }
   ],
   "business_units": [
-    {
-      "id": "22599dc2-1f44-dfe0-0b55-5d78d0d81f9b",
-      "name": "1С"
-    },
-    {
-      "id": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370",
-      "name": "CRM"
-    },
-    {
-      "id": "cd6cdf90-c4a0-cee3-2c77-5d78d1d75bdb",
-      "name": "BPM"
-    },
-    {
-      "id": "ce8efa2c-93b0-9c87-b7f5-5d78d13d4157",
-      "name": "Back"
-    },
-    {
-      "id": "dc43ad12-537e-94b4-f248-5d78d1ea8085",
-      "name": "ERP"
-    }
+    { "id": "22599dc2-1f44-dfe0-0b55-5d78d0d81f9b", "name": "1С" },
+    { "id": "6b6b228c-8fca-16a9-348a-5d78d186353d", "name": "Digital" },
+    { "id": "6d3dd96e-8b06-6da6-fe13-5d78d1e62370", "name": "CRM" },
+    { "id": "cd6cdf90-c4a0-cee3-2c77-5d78d1d75bdb", "name": "BPM" },
+    { "id": "ce8efa2c-93b0-9c87-b7f5-5d78d13d4157", "name": "Back" },
+    { "id": "dc43ad12-537e-94b4-f248-5d78d1ea8085", "name": "ERP" }
   ],
   "projects": [
-    {
-      "id": "1068052a-0eaf-0bbd-f589-5d9e316f682c",
-      "name": "Oracle"
-    },
+    { "id": "1068052a-0eaf-0bbd-f589-5d9e316f682c", "name": "Oracle" },
     {
       "id": "1e456ba9-60fd-d6cb-cd60-5d9e31d5f077",
       "name": "ВТБ Digital Credit"
     },
-    {
-      "id": "2014e598-f8bc-2fb8-22b5-5d9e31f0e607",
-      "name": "ВТБ RWA"
-    },
-    {
-      "id": "253eaa50-5f3d-181b-edf4-5d9e322e93db",
-      "name": "ВТБ ДБО МСБ"
-    },
+    { "id": "1e95cb35-cd08-8afa-41f6-5e03565c81a6", "name": "ВТБ АХД" },
+    { "id": "2014e598-f8bc-2fb8-22b5-5d9e31f0e607", "name": "ВТБ RWA" },
+    { "id": "253eaa50-5f3d-181b-edf4-5d9e322e93db", "name": "ВТБ ДБО МСБ" },
     {
       "id": "2fb0a69f-854d-98ac-a019-5d935041352d",
       "name": "Росатом, Звезда, IID-057"
     },
-    {
-      "id": "3563429d-9dfa-07fd-320f-5d9e32c95ffb",
-      "name": "ВТБ СПМ"
-    },
-    {
-      "id": "384fa313-418a-bfca-c020-5d9e3220f8ce",
-      "name": "ВТБ Watchman"
-    },
+    { "id": "3563429d-9dfa-07fd-320f-5d9e32c95ffb", "name": "ВТБ СПМ" },
+    { "id": "384fa313-418a-bfca-c020-5d9e3220f8ce", "name": "ВТБ Watchman" },
     {
       "id": "45991499-bf41-34d3-2ff2-5d9350c78050",
       "name": "ОСК, Роснефть, Звезда"
-    }
+    },
+    {
+      "id": "4f5a762c-6354-b5c1-10e4-5d9e33c165ad",
+      "name": "МИГ, Роснефть Звезда"
+    },
+    { "id": "52384b55-9bb3-3fee-af79-5d9e32fe68d5", "name": "Звезда" },
+    { "id": "574c082e-d421-bead-c922-5d95d4758579", "name": "Сбер" },
+    {
+      "id": "5a356eaf-a21f-f754-24e2-5e32a6a405b8",
+      "name": "РусГидро Налоговый мониторинг"
+    },
+    { "id": "5d5b331a-62e7-f3a1-6ce2-5d9e31078199", "name": "ВТБ ДБО" },
+    { "id": "5df3f6e3-8890-c24d-7573-5d9e32ebc1d1", "name": "ВТБ ФХД" },
+    { "id": "6384cebe-71a3-2ec7-b5e6-5d9350e43112", "name": "Согаз" },
+    {
+      "id": "63b43f27-df3a-7dee-67ec-5d9e315e6131",
+      "name": "Vaillant UPPULS"
+    },
+    { "id": "709983ee-9e92-7c0f-2f79-5d95d46b54ad", "name": "ВТБ ЕФР" },
+    {
+      "id": "7301afc1-14c9-7b0a-9cce-5d9e32042e46",
+      "name": "ВТБ Экосистема"
+    },
+    { "id": "7605389d-4a85-6c0f-c18e-5d9e322917cb", "name": "ВТБ Лизинг" },
+    { "id": "76870b5f-dc38-61ac-d992-5d9e3354a8b5", "name": "Росбанк" },
+    { "id": "7a17c7fe-a539-bbba-8876-5d9e32a1d019", "name": "Ингосстрах" },
+    { "id": "7baef54e-b183-63ef-292a-5d9e3322caa9", "name": "Открытие" },
+    { "id": "7e4ef08e-0556-d2da-296b-5d9e32f0f816", "name": "ВТБ ПКБ" },
+    { "id": "80fe5a29-9738-fc4d-beeb-5e03560f4b56", "name": "СБРФ Siebel" },
+    { "id": "9510d29c-c6e3-8d78-d364-5d9350c746cc", "name": "СБРФ.DataLake" },
+    { "id": "975628c9-cf7d-fccf-0026-5d9e319c1ce3", "name": "ВТБ" },
+    { "id": "9d4f90cc-fac9-0f33-add9-5d9350b75663", "name": "Роснефть" },
+    { "id": "9d58b52f-308b-6c4d-2e14-5d9e3186be4f", "name": "Rocket Siebel" },
+    { "id": "ac27b254-dc4e-7455-79f8-5d9e335327e9", "name": "Сбер datalike" },
+    { "id": "bded5417-2195-67d2-d969-5e450950a91c", "name": "Большой театр" },
+    { "id": "d58ba721-96da-c839-e57e-5d9e3241ef1c", "name": "ВТБ ЕМБП" },
+    { "id": "d724b50c-ac46-ff17-5097-5e1c7d23c0ca", "name": "ВТБ Гаусс" },
+    { "id": "dbf300e5-0062-ee81-5781-5d9e327c4d3b", "name": "ВТБ Ипотека" },
+    { "id": "e028030f-9bb9-d653-50e3-5d9e34177e88", "name": "ФОК" },
+    { "id": "eca70fba-e233-c4c7-c854-5d93501b523f", "name": "РГС" }
   ],
   "locations": [
+    { "id": "77f28e78-fccb-ac0c-8759-5d7919a2be4e", "name": "Москва" },
     {
-      "id": "102a62d6-3cfd-4981-6cfd-5e09bc37d966",
-      "name": "|+79268590368|lubov.lebedeva83|Lubov.Lebedeva83@gmail.com"
+      "id": "d740fa55-d087-9bf8-40b0-0c72316b6a55",
+      "name": "Санкт-Петербург"
+    },
+    { "id": "ce01c067-3134-6471-7128-5e0a0d9bdb53", "name": "Абакан" },
+    { "id": "f2a2b03a-6c7b-8411-a088-ddbe337a2568", "name": "Абдулино" },
+    {
+      "id": "d934f618-6a17-961f-e7b6-5e0a122cf622",
+      "name": "Аксай (Ростовская область)"
+    },
+    { "id": "e0f36314-6bd6-f02c-d9da-5e0a0ff99925", "name": "Актау" },
+    { "id": "310ad034-30ea-334b-d860-5e0a0d34168a", "name": "Алматы" },
+    { "id": "bf285b05-1048-96e6-3605-5e0a0d9e2fda", "name": "Алушта" },
+    { "id": "2e09ec57-69f0-97e4-0056-5e0a0ffd6311", "name": "Альметьевск" },
+    { "id": "c1811944-02d3-213c-7d0a-b33edec52867", "name": "Апрелевка" },
+    { "id": "63defa2a-3ff1-7a95-6504-5e0a0faeff5b", "name": "Армавир" },
+    { "id": "87d6f9c9-5510-71fc-ef4b-5e0a1221d063", "name": "Арсеньев" },
+    { "id": "7206b7ba-2ae1-ade2-ff12-5e0a0fc5822a", "name": "Артем" },
+    { "id": "55e1a15a-114e-3a08-706f-5e0a0e2293ad", "name": "Архангельск" },
+    { "id": "48d15d5d-2ce5-e149-1b2e-5e0a0dcc4cd9", "name": "Астрахань" },
+    { "id": "c6c1d11c-275c-092e-1d1f-5e0a0f6076f0", "name": "Атырау" },
+    { "id": "89e7e354-383b-1e17-6a49-5e0a0dc4c276", "name": "Балаково" },
+    { "id": "0949a7e9-fc38-2c2c-ac6d-cc90402a5806", "name": "Балашиха" },
+    { "id": "9a8efa4e-a846-56b7-a5d2-5e0a11842276", "name": "Балашов" },
+    { "id": "add93a32-4795-6918-d17c-5e0a0d986273", "name": "Барнаул" },
+    { "id": "ebd21cd0-2fb1-a7f3-5082-5d9598452028", "name": "Белгород" },
+    { "id": "1c8fe27c-7214-5082-3867-5e0a0db7a49b", "name": "Белокуриха" },
+    { "id": "3372a0a4-c97d-dc06-071c-5e0a0e7839ce", "name": "Бердск" },
+    { "id": "d9956b21-408b-d972-4819-5e0a0dc28551", "name": "Бишкек" },
+    {
+      "id": "c94bb65a-20c8-dcb0-5ead-5e0a0ee33c4d",
+      "name": "Большой Камень"
+    },
+    { "id": "9ab3835f-b2c3-a241-ede6-5e0a0d59fedf", "name": "Борисов" },
+    { "id": "1a974a8e-8a67-2381-49d1-5e0a0f721dc7", "name": "Борисоглебск" },
+    { "id": "131f022f-968b-74ec-5fb3-b376a8e89d41", "name": "Бразилия" },
+    { "id": "34256be8-c7cd-fc68-fe2d-5e0a11342483", "name": "Бронницы" },
+    { "id": "46d41c74-90aa-c5f2-4853-5e0a0e3316fb", "name": "Брянск" },
+    {
+      "id": "ec7c8510-0daa-7b75-6389-5e0a0dc6e124",
+      "name": "Великий Новгород"
     },
     {
-      "id": "108063e5-9e71-87c0-2506-5e09b63843d3",
-      "name": "Армавир"
-    },
-    {
-      "id": "10839cdd-780b-fcd4-7e87-5e09b9cb81ca",
-      "name": "Лесной Городок"
-    },
-    {
-      "id": "10dab75a-a01f-bd48-7afc-5e05d4f8e5e8",
-      "name": "Истра"
-    },
-    {
-      "id": "1264543e-4792-5041-6eb2-5e09b5d22812",
-      "name": "Сергиев Посад"
-    },
-    {
-      "id": "12c55cd4-2b56-6c40-cd98-5e09b5174a3a",
-      "name": "Щелково"
-    },
-    {
-      "id": "144b89c1-e2cb-7bb8-d98a-5e09bbef9fe9",
+      "id": "4c6b64ee-67b1-7451-51bd-5e0a134f07b9",
       "name": "Великобритания"
     },
+    { "id": "df942f4b-baaa-c6e2-1726-5e0a0f8e207d", "name": "Верхняя Пышма" },
+    { "id": "9675786b-1891-bb58-1272-5e0a0d274fb8", "name": "Видное" },
+    { "id": "d8d9351a-af2b-4b1b-99f0-5e0a0d95f18f", "name": "Витебск" },
+    { "id": "f24c7267-1417-250c-5349-885f82b5ceff", "name": "Владивосток" },
+    { "id": "f0ec5f33-5c73-e94b-2acd-5e0a0fbe0d01", "name": "Владикавказ" },
+    { "id": "aa865092-3ba0-5b77-96f1-5e0a0eaaf6ba", "name": "Владимир" },
     {
-      "id": "14679c58-c483-ca13-83ff-5e05d39e53b0",
-      "name": "Евпатория"
+      "id": "98eb7faa-d261-03af-1451-5e0a14318c4a",
+      "name": "Владимирская область"
+    },
+    { "id": "94e344c7-69a6-cefc-1441-5e0a0fdcfb71", "name": "Волгоград" },
+    { "id": "bb6634ae-0912-fac4-87d5-5e0a11a65057", "name": "Волгодонск" },
+    {
+      "id": "7d8a1785-28d4-5497-bd1f-527ac3a710a2",
+      "name": "Волжский(Волгоградская область)"
+    },
+    { "id": "9693cc27-fa77-6587-90a4-5e0a0d2caf86", "name": "Вологда" },
+    { "id": "46ac080d-ca6e-96c2-90ec-5d791910eb2c", "name": "Воронеж" },
+    { "id": "7273b528-e680-cb63-481b-5e0a10e139fb", "name": "Воскресенск" },
+    { "id": "9a99f1c1-502e-185c-8eaf-5e0a0f9b6006", "name": "Воскресенское" },
+    { "id": "b6b5fd5e-6092-8d17-70d0-5e0a0f81ef99", "name": "Выкса" },
+    { "id": "eaab6551-ce1c-e335-7b3f-9fbe38f094c0", "name": "Геленджик" },
+    { "id": "25e4a0b1-db16-62ed-11a8-5e0a0e1c9e60", "name": "Голицыно" },
+    { "id": "35602283-90ec-b5ab-60b4-5e0a130c6240", "name": "Гомель" },
+    { "id": "242e2925-52b1-f4f7-5c26-5e0a0d79e2e2", "name": "Грозный" },
+    { "id": "e1780011-4c63-6790-a9fd-5e0a0ffcbd26", "name": "Губкин" },
+    {
+      "id": "5aec04b2-e230-0f85-9e21-5e0a12d3c277",
+      "name": "Дзержинск (Нижегородская область)"
+    },
+    { "id": "caae0a35-caff-8ab3-47e1-5e0a113a7723", "name": "Дзержинский" },
+    { "id": "1e2b6b25-de93-35d4-fc18-5e0a13dabe0d", "name": "Димитровград" },
+    { "id": "4236c1db-214e-0f4a-0d80-5e0a0de39913", "name": "Дмитров" },
+    { "id": "452cdab6-536e-787d-626a-5e0a0db822f6", "name": "Долгопрудный" },
+    { "id": "a394f517-229b-2d3d-20f5-5e0a0d887f3d", "name": "Домодедово" },
+    {
+      "id": "7485da5f-7db4-ada0-1b39-5e60c82eb34a",
+      "name": "Донецк (Украина)"
+    },
+    { "id": "4b28c8f2-d79e-cb4d-4f7b-5e0a12efe799", "name": "Дрезна" },
+    { "id": "4ba1dad6-e63f-a08a-b64c-5e0a109c2bd0", "name": "Дубна" },
+    { "id": "754d3ccf-6e8a-c68b-4a63-5e0a0d0abe42", "name": "Евпатория" },
+    { "id": "4fc416fc-6ad4-0ec0-8530-5e0a1286ca4b", "name": "Егорьевск" },
+    { "id": "389b6fa9-71c7-c057-a816-5e0a0d1e80fd", "name": "Екатеринбург" },
+    {
+      "id": "4d6ad408-118d-daf7-d395-5e0a12e2f4f8",
+      "name": "Ермолино (Калужская область)"
+    },
+    { "id": "167d25b4-999f-b046-e3de-5e0a11271dd7", "name": "Ефремов" },
+    {
+      "id": "326a00fb-1100-cbcb-dc7c-5e0a0d48917b",
+      "name": "Железнодорожный"
+    },
+    { "id": "bde70a26-88e2-d752-366c-5e0a0e729028", "name": "Жуковский" },
+    { "id": "e6ab9d20-6775-c9ac-6fb8-5e0a0dfc9150", "name": "Звенигород" },
+    { "id": "ac7fcfe4-cdae-d5c5-c33a-5e0a0d5f7e3e", "name": "Зеленоград" },
+    {
+      "id": "3d470b7a-e8df-30d3-7501-5e0a0edb81f9",
+      "name": "Зеленодольск (Республика Татарстан)"
     },
     {
-      "id": "14d9f7e0-2cfc-d5d7-89e1-5e09b54803a5",
+      "id": "615da7af-2e27-3252-db7c-5e0a0edf6b1a",
+      "name": "Иваново (Ивановская область)"
+    },
+    { "id": "1007b743-a296-fc4e-3dbc-5e0a0d75aef0", "name": "Ивантеевка" },
+    { "id": "9833dbaf-dc54-2588-eaf1-5e0a0df1bfc2", "name": "Ижевск" },
+    { "id": "76c89c53-7027-07d6-dfcd-57e2bef0f6c2", "name": "Израиль" },
+    { "id": "612bffa0-466d-9e6c-d60c-5e0a0f427d92", "name": "Иннополис" },
+    { "id": "a8b9b7be-e1f4-157f-e99b-5e0a0d36ba61", "name": "Иркутск" },
+    { "id": "306cd4c3-a5fe-99bc-e5de-5e0a0e664f7e", "name": "Истра" },
+    { "id": "100de550-57e7-b338-b403-5e0a0de00cac", "name": "Ишимбай" },
+    { "id": "53577986-4a85-56df-f767-5e0a0d4af8cd", "name": "Йошкар-Ола" },
+    { "id": "809088fb-467c-7b18-054b-c761aa3c15ea", "name": "Казань" },
+    { "id": "24c87e07-a4b3-5012-9952-5e0a0d580d4c", "name": "Калининград" },
+    { "id": "391c7a2b-3a9d-84ee-de3f-5e0a0e1e9459", "name": "Калуга" },
+    {
+      "id": "7e8267f1-02d2-4a0b-7a0a-5e0a12749465",
+      "name": "Каменск-Уральский"
+    },
+    { "id": "a540bd85-8552-dddf-e095-5e0a13b853c8", "name": "Канада" },
+    { "id": "60930482-ee27-13c5-0f80-5e0a12bf75a9", "name": "Каспийск" },
+    { "id": "e1afa360-39ed-39e4-babc-5e0a1059265b", "name": "Кашира" },
+    { "id": "7aa26abe-fdf1-a578-7eaa-5e0a0eb2cc4c", "name": "Кемерово" },
+    { "id": "2e51497b-0d5c-a2c5-001e-5e0a127658a1", "name": "Киев" },
+    { "id": "7f80a244-f7e9-65b0-bfe8-5e0a13979583", "name": "Кипр" },
+    { "id": "5c556ec8-9662-bcba-3e98-5e0a0d9f3b9b", "name": "Киров" },
+    {
+      "id": "c81213f9-347a-acd8-ea0a-0a6f5ec93b05",
+      "name": "Киров (Кировская область)"
+    },
+    { "id": "df54b472-7d01-3460-5d95-5e0a11244ed4", "name": "Кисловодск" },
+    { "id": "bab08179-e84f-7fe2-ba89-5e0a13a0a0eb", "name": "Кишинёв" },
+    { "id": "8b329312-11e3-59e5-9e80-5e0a11543cc0", "name": "Климовск" },
+    { "id": "b31826d0-59bf-bc36-8499-5e0a108e08af", "name": "Кокошкино" },
+    { "id": "92e45302-19ba-313d-f785-5e0a0fb15613", "name": "Коломна" },
+    { "id": "bca6c6bd-103c-af59-5abe-5e0a13ecee76", "name": "Колпино" },
+    {
+      "id": "7e493b7a-9a2a-7ccf-adac-5e0a1116f5b5",
+      "name": "Комсомольск-на-Амуре"
+    },
+    { "id": "13ee20df-fab3-71a2-1aa8-5e0a0ddc340e", "name": "Королев" },
+    { "id": "cd2d9804-d1a9-8678-3ce8-5e0a0e07c39c", "name": "Кострома" },
+    { "id": "3c720bc5-d165-7fbe-551a-5e0a0d6ac0a6", "name": "Котельники" },
+    { "id": "ac67a614-7a0b-f6b3-22c0-5e0a11f8ca78", "name": "Красково" },
+    { "id": "ba09da6b-f982-681e-56c9-ea93f8957c1e", "name": "Красногорск" },
+    { "id": "65c6873f-81cf-96ca-4335-cad6f4ca6cd9", "name": "Краснодар" },
+    {
+      "id": "80f37939-d459-d304-ef87-5e0a114ec1e8",
+      "name": "Краснознаменск (Московская область)"
+    },
+    { "id": "e304e052-32ab-f71d-891c-5e0a0eb59d19", "name": "Красноярск" },
+    { "id": "19884e1f-4e13-9b02-882b-5e0a116ac24c", "name": "Кременки" },
+    { "id": "3beefed7-f64e-f759-25d0-5e0a0ef1134b", "name": "Кубинка" },
+    { "id": "1798802c-8670-5dd4-70a4-5e0a11e3548a", "name": "Кумертау" },
+    { "id": "1437dcce-719d-36cf-03a2-5e0a11bc157c", "name": "Курган" },
+    { "id": "27f86102-ca28-5db7-ee43-5e0a0d94e5cc", "name": "Курск" },
+    { "id": "a7d41825-4c3b-48b9-baa4-5e9eda010a1d", "name": "Курчатов" },
+    { "id": "4cf1fc7c-b5ec-e743-bade-5e0a0fedf3d6", "name": "Латвия" },
+    {
+      "id": "8bed613c-e30d-72c3-3d24-5e0a1159767e",
+      "name": "Лесной Городок"
+    },
+    { "id": "2c49daf1-95b4-7afd-647f-5e0a0d79bdac", "name": "Липецк" },
+    { "id": "399612f0-99fd-7a9a-4df9-5e0a12ffc6fc", "name": "Лиски" },
+    { "id": "681fcc1d-b357-424b-bbe4-5e0a0df5be31", "name": "Лобня" },
+    {
+      "id": "e5f335a2-1657-19fb-39d0-5e0a0e1500b5",
       "name": "Лосино-Петровский"
     },
+    { "id": "22099068-4ffc-50d0-b94d-5e0a1261e635", "name": "Луганск" },
+    { "id": "525e9118-78ba-6047-c012-5e0a0df03a76", "name": "Лыткарино" },
+    { "id": "98875019-5ec0-f73f-986b-4ded25a02ee7", "name": "Люберцы" },
+    { "id": "54bcfc1a-bb87-3d71-3214-5e0a0fc2cc1a", "name": "Магадан" },
+    { "id": "c1899cb5-4cb7-58ef-5c8a-5e0a0f0f5c19", "name": "Магнитогорск" },
+    { "id": "3e631a77-1fd5-d953-4066-5e0a0d94d0a8", "name": "Малгобек" },
+    { "id": "c58a023a-2209-4236-b908-5e0a10f416e2", "name": "Малоярославец" },
+    { "id": "e3079bb2-63c5-d464-d96f-5e0a0d91fb40", "name": "Махачкала" },
     {
-      "id": "156f6679-4a8e-381a-d3f2-5e09bb78d4da",
-      "name": "Кишинёв"
-    }
+      "id": "65ee3353-34ec-80fd-ac88-5e0a138bcefe",
+      "name": "Минеральные Воды"
+    },
+    { "id": "b483021a-794d-6188-bcf6-5e0a0dcb506a", "name": "Минск" },
+    { "id": "527ffc6b-366a-20ee-f4e2-5e0a13ed2db8", "name": "Могилев" },
+    { "id": "3bf48930-554c-0e25-946f-5e0a11d09464", "name": "Московский" },
+    { "id": "9b0ac09c-7dce-c316-9974-5e0a13ea2cc2", "name": "Мурманск" },
+    { "id": "80db809a-c4a8-893c-832b-5e0a0dedcfa5", "name": "Мытищи" },
+    {
+      "id": "16903fa5-cfae-c6db-2a19-5e0a0fc2086c",
+      "name": "Набережные Челны"
+    },
+    { "id": "dc61a52f-1c54-25c3-3984-5e0a105b887e", "name": "Наро-Фоминск" },
+    { "id": "9aaddeec-d5cf-5644-0802-5e0a10ca3f33", "name": "Находка" },
+    {
+      "id": "61cb53c2-cdee-44e3-33ca-5e0a104e1823",
+      "name": "Некрасовский (Московская область)"
+    },
+    { "id": "ac0571bb-d9c6-d088-1b00-5e0a1384da09", "name": "Нефтекамск" },
+    {
+      "id": "57aa00fb-a35f-4f25-b3a0-49fc5c7d9bfa",
+      "name": "Нижний Новгород"
+    },
+    { "id": "ca1dc648-2acf-d08f-8c6f-5e0a12643648", "name": "Нижний Тагил" },
+    { "id": "9cad1c2f-cffa-b1e6-97f8-78d9d8a329f8", "name": "Новодвинск" },
+    { "id": "517cb265-592e-38a3-c57e-71a0ebf4c121", "name": "Новокузнецк" },
+    {
+      "id": "822e1fbc-64a0-e9af-e3cc-5e0a118b31a2",
+      "name": "Новокуйбышевск"
+    },
+    { "id": "5a7432f4-3fc9-d7ec-dfaf-5e0a14e9e603", "name": "Новополоцк" },
+    { "id": "23e3d670-7017-a2e1-d4a1-5e0a0d5ab6e1", "name": "Новосибирск" },
+    {
+      "id": "e5f43ce0-02f5-180a-b880-5e0a14218bf9",
+      "name": "Новочебоксарск"
+    },
+    { "id": "8b15f561-3691-8699-41f9-5e0a0f3dc2ee", "name": "Новочеркасск" },
+    { "id": "89750fca-b2bf-973c-017f-5e0a0ebeb407", "name": "Новый Уренгой" },
+    { "id": "b10b4f14-869f-8390-f791-b1ae1816e667", "name": "Нур-Султан" },
+    { "id": "d717f3bb-b5fb-6e2e-548f-5e0a0d82a72e", "name": "Обнинск" },
+    { "id": "208626ed-4d23-ff14-c112-5e0a139849e9", "name": "Одесса" },
+    { "id": "135afb8f-2ec0-22b4-9a11-5e0a0dc24972", "name": "Одинцово" },
+    {
+      "id": "f3ab2d2e-440a-4f12-b556-5e0a125a2d24",
+      "name": "Октябрьский (Московская область)"
+    },
+    { "id": "d9e85176-29f3-e209-88b3-5e0a0d5f37fe", "name": "Омск" },
+    { "id": "f1a784c6-ea7a-a09e-8e53-5e0a0e6584a1", "name": "Орел" },
+    { "id": "6bc101cf-82b2-a6b2-932a-5e0a0f3ad52b", "name": "Оренбург" },
+    { "id": "59d613ea-3c19-db88-b731-5e0a0ddcad2a", "name": "Орехово-Зуево" },
+    { "id": "a10925b8-fb52-abe2-a146-5e0a0fa25734", "name": "Орск" },
+    {
+      "id": "912316d6-bced-d0ae-3623-5e0a0ff409a2",
+      "name": "Павловск (Воронежская область)"
+    },
+    {
+      "id": "12a50b43-0681-3551-840e-5e0a0fbe47b2",
+      "name": "Павловский Посад"
+    },
+    { "id": "8cc784c4-e54c-516d-a5a2-5e0a0db8a061", "name": "Пенза" },
+    {
+      "id": "af6cab3b-071f-7c4b-09a7-5e0a0f5e2282",
+      "name": "Переславль-Залесский"
+    },
+    { "id": "eebf486e-b8cb-dc86-50f8-5e0a0df351fa", "name": "Пермь" },
+    { "id": "917b0423-3407-a770-a42e-5e0a0e28bee9", "name": "Петрозаводск" },
+    {
+      "id": "b9236df0-e585-4a1c-ea6b-5e0a0e71929b",
+      "name": "Подольск (Московская область)"
+    },
+    { "id": "63822c78-0d4a-6630-034d-5e0a11d0c044", "name": "Польша" },
+    { "id": "d0faaf87-d420-b9ff-851d-5e0a0e961c56", "name": "Протвино" },
+    { "id": "96bca240-dd83-ca25-0638-5e0a101178cc", "name": "Псков" },
+    {
+      "id": "889ff66e-7d12-441c-dec4-5e0a0da776a0",
+      "name": "Пушкино (Московская область)"
+    },
+    { "id": "95887158-53ac-8055-e313-5e0a0d489600", "name": "Пятигорск" },
+    { "id": "139e765f-5f1e-a75d-dc67-356bcca8a563", "name": "Раменское" },
+    { "id": "8b769304-77d2-4bb4-604d-5e0a0e7a3b1c", "name": "Реутов" },
+    { "id": "3e8b817a-c93e-541a-29c5-5e0a0e914ae2", "name": "Россия" },
+    { "id": "7f53c12f-a5fd-b92f-ea7a-5e0a11320c44", "name": "Россошь" },
+    {
+      "id": "5dcc0985-9633-6eda-e53e-5e0a0d79eefd",
+      "name": "Ростов-на-Дону"
+    },
+    { "id": "aac3292e-c0a0-a82d-e1dc-5e0a0fc95a84", "name": "Руза" },
+    { "id": "1e0783ec-b2bd-ebfb-4c10-5e0a0df62288", "name": "Рыбинск" },
+    { "id": "ef98994b-8c42-beba-dd6f-5d9dba90ce86", "name": "Рязань" },
+    { "id": "bab699f8-ae7e-049d-431a-5e0a0f8b8476", "name": "Саки" },
+    { "id": "ada18225-0d7b-77ab-890d-99db5959f2b5", "name": "Самара" },
+    { "id": "8d82a6d5-bc7a-b75d-87ab-8712e8f285ef", "name": "Саранск" },
+    { "id": "6bf834e0-2514-33cd-4789-e8caf39f3f7a", "name": "Саратов" },
+    { "id": "b1ed816d-7e6a-503a-0d5c-5e0a0e751eee", "name": "Саров" },
+    { "id": "46c6bdd2-b49e-2230-db27-5e0a1117bd95", "name": "Севастополь" },
+    { "id": "e0ef21a4-de0c-d892-ebce-5e0a0e722d87", "name": "Селятино" },
+    { "id": "5cf441a9-7c8f-e1dc-f1f2-5e0a0eb96291", "name": "Сергиев Посад" },
+    { "id": "57a0c2fa-9adb-f4ec-2f9d-5e0a137ecb4c", "name": "Серов" },
+    { "id": "7a6ff06a-be51-9018-8e26-5e0a0ed63988", "name": "Серпухов" },
+    { "id": "24965b04-d148-47e9-8887-5e0a0df39b64", "name": "Симферополь" },
+    { "id": "7fb26438-38c8-51c2-2a30-5e0a0f0ca33f", "name": "Смоленск" },
+    { "id": "364dc15c-067d-fd82-eaf6-5e0a110cc688", "name": "Солнечногорск" },
+    { "id": "33420f4a-89ef-bd2e-41bb-5e0a12e61751", "name": "Сосновый Бор" },
+    { "id": "90a86d7d-4790-c6e3-3c75-5e0a0dbae94b", "name": "Сочи" },
+    { "id": "324e90d5-738c-8772-4e47-5e0a0fef6ace", "name": "Ставрополь" },
+    { "id": "3a452b44-6bb8-47b9-f1fc-5e0a0fa7b8ea", "name": "Старый Оскол" },
+    { "id": "45b50fe6-0bd4-1b08-f64d-5e0a0f952539", "name": "Стрежевой" },
+    { "id": "2b420bb1-546c-7e0f-aac7-5e0a13d58c9a", "name": "Сумы" },
+    { "id": "224f96e4-2bdf-73d6-367a-5e0a0e3047ad", "name": "Сургут" },
+    { "id": "4e3c029f-192c-2a85-35fe-5e0a14839a99", "name": "США" },
+    { "id": "5b39a6a7-b025-7721-0db1-5e0a124a2c41", "name": "Сызрань" },
+    { "id": "9bfabfa4-93d1-e90a-8f60-5e0a0f835512", "name": "Сыктывкар" },
+    { "id": "1db75aaa-2776-9580-1fbf-5e0a0d46e8aa", "name": "Таганрог" },
+    { "id": "55390308-22d7-24aa-1dea-48c4c66526b3", "name": "Таджикистан" },
+    { "id": "e348cb28-3e15-624c-997c-5e0a0d56e56f", "name": "Тамбов" },
+    { "id": "df7ba011-5770-ed4d-cb62-5e0a1354b6f5", "name": "Ташкент" },
+    { "id": "13318db9-b726-1ef5-0842-5e0a1362af0b", "name": "Тбилиси" },
+    { "id": "8227b2ca-a5e4-4f2c-9104-6c8145e78ea1", "name": "Тверь" },
+    { "id": "a36db69b-aa98-c421-bebb-5e0a0d157783", "name": "Тольятти" },
+    { "id": "38c20e29-b462-5a7a-444e-5e0a11a704b8", "name": "Томилино" },
+    { "id": "5333efbc-a087-fbd0-6d45-3d4e2932034a", "name": "Томск" },
+    { "id": "c4019ec9-1600-7e4a-431f-5e0a135ad406", "name": "Тосно" },
+    {
+      "id": "72f3c384-9e2b-379b-1e5a-5e0a0e095733",
+      "name": "Троицк (Московская область)"
+    },
+    { "id": "1e39b010-9771-16bf-0e0c-5e0a0e882889", "name": "Тула" },
+    { "id": "18b2b2ab-94a2-c3a8-5c40-5e0a0d858f09", "name": "Тюмень" },
+    { "id": "cae2f7fa-c627-7a29-9331-5e0a102c8b6d", "name": "Улан-Удэ" },
+    { "id": "345cfe03-f95a-6971-3d32-5e0a0d41c81a", "name": "Ульяновск" },
+    { "id": "f09948b3-1ed0-3b2a-bc0d-5e0a0f4ba81c", "name": "Уральск" },
+    { "id": "5d997bd9-a911-4f99-adc0-075d3ba91401", "name": "Усмань" },
+    {
+      "id": "d3a01409-d5c9-7943-2b2b-5e0a105cf697",
+      "name": "Усть-Каменогорск"
+    },
+    { "id": "e1cc0056-7bd3-c3d5-97df-2959e4c046e1", "name": "Уфа" },
+    { "id": "e2e2f2d7-4878-b33f-d6a4-5e0a105b571b", "name": "Ухта" },
+    {
+      "id": "23e7cb8d-a53e-0d6a-0337-5e0a128880da",
+      "name": "Фокино (Приморский край)"
+    },
+    { "id": "8d366713-96b4-2b39-ae83-5e0a0f936e29", "name": "Фрязино" },
+    { "id": "35ed95a3-7357-b4a6-6e1a-ad609debdf72", "name": "Хабаровск" },
+    {
+      "id": "40a3d5b5-1f04-76b4-757c-5e0a0d5e9e28",
+      "name": "Ханты-Мансийск"
+    },
+    { "id": "41320d14-79f9-083c-7fc3-5e0a0f3aa039", "name": "Харьков" },
+    { "id": "ac0903d3-e92b-dba2-b6b0-5e0a0d606b43", "name": "Химки" },
+    { "id": "1bdbec82-8707-bb1a-b429-5e0a11ae87fc", "name": "Хотьково" },
+    { "id": "25431b7f-fc91-2906-7561-5e0a0d62c861", "name": "Чебоксары" },
+    { "id": "34d00dea-1219-3b26-e9ca-5e0a0d5090ad", "name": "Челябинск" },
+    { "id": "3ecb2215-871d-03b7-c4b3-5e0a0d4ef56e", "name": "Череповец" },
+    { "id": "8a46b962-4724-2ddc-cd08-5e0a13c328bc", "name": "Чернигов" },
+    { "id": "7df31820-b8b4-6d14-5fa3-669ce638242d", "name": "Черноголовка" },
+    { "id": "6990b007-f6bf-ba05-6081-5e0a0da8f0ac", "name": "Чехия" },
+    { "id": "6dcf33f6-a441-4002-c143-5e0a0e0a93a6", "name": "Чехов" },
+    { "id": "9010abde-3658-a4b2-6195-5e0a13ecc700", "name": "Чистополь" },
+    { "id": "39275338-b6ef-8bb8-5b42-5e0a0d6eb19d", "name": "Чита" },
+    { "id": "5ace8d7b-f609-6e79-57bb-6732aac7f8bb", "name": "Шахты" },
+    { "id": "5927f955-8c22-7402-1741-5e0a0f04ce83", "name": "Шымкент" },
+    { "id": "27f774a4-37a5-b304-3d2b-5e0a0eb4da8d", "name": "Щелково" },
+    { "id": "1d40a2cc-d8e1-df28-3899-5e0a0e32ae48", "name": "Щербинка" },
+    { "id": "433e7b5b-77f9-081a-7e1e-3a97a3d74c65", "name": "Электрогорск" },
+    { "id": "8ffb1baa-d8e1-c9dc-e396-5e0a10ee59ff", "name": "Электросталь" },
+    { "id": "d0405b4c-6c54-ca27-ffc7-5e0a1246261d", "name": "Энгельс" },
+    { "id": "803e5ef3-a81b-5082-7e38-5e0a0fd503ce", "name": "Эстония" },
+    { "id": "a9f5dd5e-ba29-170f-21e4-5e0a0ec0bdf6", "name": "Юбилейный" },
+    {
+      "id": "deb960eb-93aa-4ebf-c564-5e0a10bc5a82",
+      "name": "Южно-Сахалинск"
+    },
+    { "id": "d020b4ce-39e8-1b58-2499-5e0a13d00a2e", "name": "Якутск" },
+    { "id": "a24aa842-c13a-8b88-4d73-5e0a13972f9f", "name": "Ялта" },
+    { "id": "901d0f66-6598-7864-bb07-5e0a0d393207", "name": "Ярославль" },
+    { "id": "abe896dc-1638-8735-4c8b-8a031a290941", "name": "Almaty" },
+    { "id": "a216f0e8-fc31-ad85-1518-185cc85fe095", "name": "Balashikha" },
+    { "id": "71c048cf-3274-2bde-4a0f-c08faf1df70b", "name": "Dolgoprudny" },
+    { "id": "87d3fc9e-bdd5-1c3f-9543-75c69f27797c", "name": "Karaganda" },
+    { "id": "71e06aa0-eb8a-e545-ee6c-a4c77aafab18", "name": "Kazan" },
+    { "id": "cd510cec-faa6-bd66-d461-8c2bf1a2e7d2", "name": "Kostanay" },
+    { "id": "f7f89dd9-4e17-d3cc-0526-6310d8aa6a03", "name": "Krasnogorsk" },
+    { "id": "9e040e59-d6a6-6c42-9562-5e0a0d4033e7", "name": "location_id" },
+    { "id": "77c2b958-ba27-16bb-4569-bd7d62253351", "name": "Moscow" },
+    { "id": "8d3a228e-95c7-fbb6-2ea3-9776e68555f5", "name": "Novosibirsk" },
+    {
+      "id": "1309171c-cc8c-03d0-1057-52879fd698ff",
+      "name": "Saint Petersburg"
+    },
+    { "id": "896b83a1-f2f2-4f0a-b9b0-f04d8fa7b53f", "name": "Samara" },
+    { "id": "21e50e64-0cf8-0f99-8555-c1906a2b23f1", "name": "Tomsk" },
+    { "id": "5baeb70b-dd4f-0da9-048b-25f5bd45cfac", "name": "Ufa" },
+    { "id": "302c6dbe-c005-b2dc-6b72-fd7e8a14f526", "name": "Yekaterinburg" }
   ],
   "users_list": [
     {
       "id": "1",
       "user_name": "admin",
-      "first_name": "",
-      "last_name": "Administrator"
+      "first_name": "Admin",
+      "last_name": "Administrator",
+      "name": "Admin Administrator"
     },
     {
-      "id": "115d11c3-f816-64a3-5db2-5df8d3cd4a3d",
-      "user_name": "dpletenev",
-      "first_name": "Дмитрий",
-      "last_name": "Плетенев"
-    },
-    {
-      "id": "11b650a0-a3b5-3b56-5a2c-5d9ae6f79347",
-      "user_name": "konst",
+      "id": "1031faef-b5ed-c6b8-b008-5e0613c4a796",
+      "user_name": "kkeglev",
       "first_name": "Константин",
-      "last_name": "Константинов"
+      "last_name": "Кеглев",
+      "name": "Константин Кеглев"
     },
     {
-      "id": "144f32ef-aa72-b18f-bc7c-5e06114a7a71",
-      "user_name": "denivanov",
-      "first_name": "Денис",
-      "last_name": "Иванов"
-    },
-    {
-      "id": "15e2652d-336b-8e41-56fd-5da44fd67770",
-      "user_name": "rocshin",
-      "first_name": "Алексей",
-      "last_name": "Рощин"
-    },
-    {
-      "id": "165e87ba-c3fb-0328-ba64-5df8d3cb6b86",
-      "user_name": "atubalitsev",
-      "first_name": "Алексей",
-      "last_name": "Тубальцев"
-    },
-    {
-      "id": "176cfa2c-84ef-51b4-870c-5d91d47fc198",
-      "user_name": "a.smirnov",
-      "first_name": "Александр",
-      "last_name": "Смирнов"
+      "id": "151a9d11-b887-ba18-e905-5df8d9d191f4",
+      "user_name": "vmironova",
+      "first_name": "Вероника",
+      "last_name": "Миронова",
+      "name": "Вероника Миронова"
     },
     {
       "id": "1acf18a7-2190-30a1-e58a-5d9dcde829a6",
       "user_name": "semen",
       "first_name": "Семен",
-      "last_name": "Иванов"
+      "last_name": "Иванов",
+      "name": "Семен Иванов"
     },
     {
-      "id": "1f2b37ba-1c1c-2421-4e05-5e0611cb60da",
-      "user_name": "nlkazakova",
-      "first_name": "Наталья",
-      "last_name": "Казакова"
+      "id": "1bb00a81-b50b-9493-d7e2-5e01e92e8153",
+      "user_name": "ekozhevnikova",
+      "first_name": "Ekaterina",
+      "last_name": "Kozhevnikova",
+      "name": "Ekaterina Kozhevnikova"
+    },
+    {
+      "id": "1e2603b9-f733-7a30-ac61-5e0613a3c7e7",
+      "user_name": "avspirin",
+      "first_name": "Антон",
+      "last_name": "Спирин",
+      "name": "Антон Спирин"
+    },
+    {
+      "id": "1e7b04e7-1ffd-04d2-1eb5-5e0613b71c26",
+      "user_name": "isemenov",
+      "first_name": "Иван",
+      "last_name": "Семёнов",
+      "name": "Иван Семёнов"
+    },
+    {
+      "id": "1fc6b19d-f69f-a92c-f168-5df8d9713fe9",
+      "user_name": "dpletenev",
+      "first_name": "Дмитрий",
+      "last_name": "Плетенев",
+      "name": "Дмитрий Плетенев"
     },
     {
       "id": "22d8c252-e900-5d62-c3bd-5dc2b81ca68e",
       "user_name": "taubova",
       "first_name": "Tamila",
-      "last_name": "Aubova"
+      "last_name": "Aubova",
+      "name": "Tamila Aubova"
+    },
+    {
+      "id": "22ecc4d8-ce72-e668-4cee-5e0613eed8eb",
+      "user_name": "lkrasovskikh",
+      "first_name": "Лидия",
+      "last_name": "Красовских",
+      "name": "Лидия Красовских"
+    },
+    {
+      "id": "255482c5-3682-8278-cabd-5e33ef34153f",
+      "user_name": "egorshkov",
+      "first_name": "Евгений",
+      "last_name": "Горшков",
+      "name": "Евгений Горшков"
+    },
+    {
+      "id": "25ec74c6-1452-8496-bc27-5e4bef9090d5",
+      "user_name": "emityaeva",
+      "first_name": "Evgeniya",
+      "last_name": "Mityaeva",
+      "name": "Evgeniya Mityaeva"
+    },
+    {
+      "id": "29f5df65-d922-6ffc-3079-5de6446d41ad",
+      "user_name": "truban",
+      "first_name": "Tatyana",
+      "last_name": "Ruban",
+      "name": "Tatyana Ruban"
+    },
+    {
+      "id": "2a55f0ad-a5a9-e2f4-13db-5df8d97ac328",
+      "user_name": "aroschin",
+      "first_name": "Алексей",
+      "last_name": "Рощин",
+      "name": "Алексей Рощин"
+    },
+    {
+      "id": "2e977622-2b36-0246-0f7b-5e06136033df",
+      "user_name": "ikudryavtsev",
+      "first_name": "Игорь",
+      "last_name": "Кудрявцев",
+      "name": "Игорь Кудрявцев"
+    },
+    {
+      "id": "2fd229da-2489-e332-05ee-5e0613ab6293",
+      "user_name": "starasov",
+      "first_name": "Сергей",
+      "last_name": "Тарасов",
+      "name": "Сергей Тарасов"
+    },
+    {
+      "id": "304ca346-e7ba-5c27-f4fc-5e26b50def16",
+      "user_name": "esmarkova",
+      "first_name": "Ekaterina",
+      "last_name": "Markova",
+      "name": "Ekaterina Markova"
+    },
+    {
+      "id": "34ec92f7-7fa2-547b-7f5c-5df8d940be44",
+      "user_name": "asavchuk",
+      "first_name": "Анатолий",
+      "last_name": "Савчук",
+      "name": "Анатолий Савчук"
+    },
+    {
+      "id": "390673f7-9345-a853-0f72-5df8d9b69f73",
+      "user_name": "aastashenko",
+      "first_name": "Андрей",
+      "last_name": "Асташенко",
+      "name": "Андрей Асташенко"
+    },
+    {
+      "id": "3a8cad3b-d6f2-eff7-6f71-5e0613c7a101",
+      "user_name": "slushchikov",
+      "first_name": "Сергей",
+      "last_name": "Лущиков",
+      "name": "Сергей Лущиков"
+    },
+    {
+      "id": "40107618-5453-76bf-91f7-5e0613222bfa",
+      "user_name": "sulyanov",
+      "first_name": "Сергей",
+      "last_name": "Ульянов",
+      "name": "Сергей Ульянов"
+    },
+    {
+      "id": "40c8af6e-d43e-bf41-f303-5e37cdf76a0e",
+      "user_name": "Podinets",
+      "first_name": "Павел",
+      "last_name": "Одинец",
+      "name": "Павел Одинец"
+    },
+    {
+      "id": "414b1deb-7849-b28a-1040-5dc2a2fea41c",
+      "user_name": "asidorkin",
+      "first_name": "Алексей",
+      "last_name": "Сидоркин",
+      "name": "Алексей Сидоркин"
+    },
+    {
+      "id": "4397e3c6-8b7d-1fb4-7bee-5df8d910bc6d",
+      "user_name": "adenisov",
+      "first_name": "Андрей",
+      "last_name": "Денисов",
+      "name": "Андрей Денисов"
+    },
+    {
+      "id": "44b8238f-6d47-d896-a95f-5ea6be027538",
+      "user_name": "dklimov",
+      "first_name": "Daniil",
+      "last_name": "Klimov",
+      "name": "Daniil Klimov"
+    },
+    {
+      "id": "44e8c58a-15d8-0591-44e5-5def52115d87",
+      "user_name": "uantonova",
+      "first_name": "Ulyana",
+      "last_name": "Antonova",
+      "name": "Ulyana Antonova"
+    },
+    {
+      "id": "45c8e29d-a253-9442-1c31-5df8d9940ea4",
+      "user_name": "ksokolova",
+      "first_name": "Кристина",
+      "last_name": "Соколова",
+      "name": "Кристина Соколова"
+    },
+    {
+      "id": "464b1c05-a281-d5bf-c65f-5e9d713a980d",
+      "user_name": "asozdatelev",
+      "first_name": "Aleksandrv",
+      "last_name": "Sozdatelev",
+      "name": "Aleksandrv Sozdatelev"
+    },
+    {
+      "id": "46cb0aea-4c93-e2fe-7310-5d94906f087c",
+      "user_name": "rmaslennikov",
+      "first_name": "Ruslan",
+      "last_name": "Maslennikov",
+      "name": "Ruslan Maslennikov"
+    },
+    {
+      "id": "46dae151-7cf7-6070-c835-5e0613ba8e43",
+      "user_name": "alyubushkin",
+      "first_name": "Андрей",
+      "last_name": "Любушкин",
+      "name": "Андрей Любушкин"
+    },
+    {
+      "id": "492e3208-4a4b-5234-7f6f-5d76471f5b1c",
+      "user_name": "omironova",
+      "first_name": "Ольга",
+      "last_name": "Миронова",
+      "name": "Ольга Миронова"
+    },
+    {
+      "id": "4bedad44-436c-806f-9f9a-5de644d459dc",
+      "user_name": "vfilyaeva",
+      "first_name": "Valentina",
+      "last_name": "Filyaeva",
+      "name": "Valentina Filyaeva"
+    },
+    {
+      "id": "4bef31aa-30d6-5389-9e91-5e06130c99e6",
+      "user_name": "eschelkonogova",
+      "first_name": "Елена",
+      "last_name": "Щелконогова",
+      "name": "Елена Щелконогова"
+    },
+    {
+      "id": "4dfb0382-2fbb-a7b4-dc83-5df8d941634b",
+      "user_name": "kstepanov",
+      "first_name": "Кирилл",
+      "last_name": "Степанов",
+      "name": "Кирилл Степанов"
+    },
+    {
+      "id": "5039322c-006a-8a4a-cd9c-5df8d91a54ed",
+      "user_name": "atarasova",
+      "first_name": "Анна",
+      "last_name": "Тарасова",
+      "name": "Анна Тарасова"
+    },
+    {
+      "id": "511f031b-204a-3840-b9fb-5e0613c3e7d4",
+      "user_name": "akatrich",
+      "first_name": "Алексей",
+      "last_name": "Катрич",
+      "name": "Алексей Катрич"
+    },
+    {
+      "id": "541ed8e1-0552-1f43-d3c9-5e61ece7e7c9",
+      "user_name": "тестовый тест",
+      "first_name": "Manager",
+      "last_name": "Test",
+      "name": "Manager Test"
+    },
+    {
+      "id": "553d9090-fc9f-3d1a-7fb3-5e061323dbfb",
+      "user_name": "dmakarovskiy",
+      "first_name": "Дмитрий",
+      "last_name": "Макаровский",
+      "name": "Дмитрий Макаровский"
+    },
+    {
+      "id": "583c221e-0321-9210-caf2-5df8d915f70a",
+      "user_name": "ibannov",
+      "first_name": "Игорь",
+      "last_name": "Баннов",
+      "name": "Игорь Баннов"
+    },
+    {
+      "id": "5c505f38-11e4-86a8-36dc-5e96b3ed46a8",
+      "user_name": "rmaslennikov12",
+      "first_name": "Ruslan",
+      "last_name": "Maslennikov",
+      "name": "Ruslan Maslennikov"
+    },
+    {
+      "id": "5ca9c689-aeb5-33ca-a01a-5e031d553208",
+      "user_name": "oshchetkin",
+      "first_name": "Oleg",
+      "last_name": "Shchetkin",
+      "name": "Oleg Shchetkin"
+    },
+    {
+      "id": "5e797f4c-0bb8-5bcf-c8b5-5e0613efefa1",
+      "user_name": "rurmanov",
+      "first_name": "Ренат",
+      "last_name": "Урманов",
+      "name": "Ренат Урманов"
+    },
+    {
+      "id": "6052b372-9cc7-f1ea-6166-5e0613c8a413",
+      "user_name": "amaximkin",
+      "first_name": "Алексей",
+      "last_name": "Максимкин",
+      "name": "Алексей Максимкин"
+    },
+    {
+      "id": "62d0c1a6-2b2d-f690-5391-5df8d993b918",
+      "user_name": "vvoronov",
+      "first_name": "Владимир",
+      "last_name": "Воронов",
+      "name": "Владимир Воронов"
+    },
+    {
+      "id": "6373f764-83cc-aa7f-27d3-5e4a937f7898",
+      "user_name": "aakuznetsov",
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "name": "Алексей Кузнецов"
+    },
+    {
+      "id": "6cf5e79a-ca41-c1a8-3e02-5e0613107237",
+      "user_name": "ymatsigin",
+      "first_name": "Юрий",
+      "last_name": "Мацыгин",
+      "name": "Юрий Мацыгин"
+    },
+    {
+      "id": "6d2bd07a-a661-f65e-d632-5df8d9f62462",
+      "user_name": "edenisova",
+      "first_name": "Елена",
+      "last_name": "Денисова",
+      "name": "Елена Денисова"
+    },
+    {
+      "id": "73438a80-27e5-c551-64a6-5d8e1aadd0ed",
+      "user_name": "vsamoshkin",
+      "first_name": "Vladimir",
+      "last_name": "Samoshkin",
+      "name": "Vladimir Samoshkin"
+    },
+    {
+      "id": "73fdebd8-f8e1-be8d-8323-5e0613ab143b",
+      "user_name": "dklokov",
+      "first_name": "Данила",
+      "last_name": "Клоков",
+      "name": "Данила Клоков"
+    },
+    {
+      "id": "777842f9-dc7d-b63d-a01b-5df8d9643405",
+      "user_name": "dderbentsov",
+      "first_name": "Дмитрий",
+      "last_name": "Дербенцов",
+      "name": "Дмитрий Дербенцов"
+    },
+    {
+      "id": "7f35ed25-c814-1020-35a2-5e79f4949410",
+      "user_name": "isychev",
+      "first_name": "Ilya",
+      "last_name": "Sychev",
+      "name": "Ilya Sychev"
+    },
+    {
+      "id": "81db45ab-1584-5ea3-bb83-5df8d941343a",
+      "user_name": "kignatenkov",
+      "first_name": "Кирилл",
+      "last_name": "Игнатенков",
+      "name": "Кирилл Игнатенков"
+    },
+    {
+      "id": "84e78061-7189-f300-f53e-5e8f2f4d426c",
+      "user_name": "testp",
+      "first_name": "p",
+      "last_name": "Test",
+      "name": "p Test"
+    },
+    {
+      "id": "857786fb-60e6-010d-5861-5e0613406733",
+      "user_name": "pfrunza",
+      "first_name": "Павел",
+      "last_name": "Фрунза",
+      "name": "Павел Фрунза"
+    },
+    {
+      "id": "88d2de1e-3a0b-6278-16b7-5e0613db41e5",
+      "user_name": "ametelin",
+      "first_name": "Арсений",
+      "last_name": "Метелин",
+      "name": "Арсений Метелин"
+    },
+    {
+      "id": "8b35d6d6-768c-f703-9a38-5d89d442700b",
+      "user_name": "vfink",
+      "first_name": "Viktor",
+      "last_name": "Fink",
+      "name": "Viktor Fink"
+    },
+    {
+      "id": "8c1bcd30-a809-4a27-3162-5df8d983d7cd",
+      "user_name": "eillarionov",
+      "first_name": "Евгений",
+      "last_name": "Илларионов",
+      "name": "Евгений Илларионов"
+    },
+    {
+      "id": "8dacdf9e-8c26-8bab-f959-5e26b809bbdc",
+      "user_name": "ikolchanova",
+      "first_name": "Irina",
+      "last_name": "Kolchanova",
+      "name": "Irina Kolchanova"
+    },
+    {
+      "id": "91fc1a70-ae99-1299-b1c2-5e05db7e370f",
+      "user_name": "vpisareva",
+      "first_name": "Viktoriya",
+      "last_name": "Pisareva",
+      "name": "Viktoriya Pisareva"
+    },
+    {
+      "id": "939c72d7-9f85-7254-2e5f-5e061369a7c1",
+      "user_name": "imilyutin",
+      "first_name": "Илья",
+      "last_name": "Милютин",
+      "name": "Илья Милютин"
+    },
+    {
+      "id": "96677bed-af1a-5680-c5d5-5df8d9c697b2",
+      "user_name": "ekiristova",
+      "first_name": "Елена",
+      "last_name": "Киристова",
+      "name": "Елена Киристова"
+    },
+    {
+      "id": "993c26e3-9800-ccb4-7667-5e26b67d0575",
+      "user_name": "edorokhova",
+      "first_name": "Elena",
+      "last_name": "Dorokhova",
+      "name": "Elena Dorokhova"
+    },
+    {
+      "id": "99a867e9-73ba-6801-90a9-5e0613db7fe5",
+      "user_name": "aavramov",
+      "first_name": "Алексей",
+      "last_name": "Аврамов",
+      "name": "Алексей Аврамов"
+    },
+    {
+      "id": "a1be3098-17df-0fd4-8401-5e6b338b9470",
+      "user_name": "Ntcn",
+      "first_name": "Ntcn",
+      "last_name": "Ntcn",
+      "name": "Ntcn Ntcn"
+    },
+    {
+      "id": "a3b4f8e8-3e19-5361-0f8c-5e7a21a0b1f0",
+      "user_name": "asycheva",
+      "first_name": "Александра",
+      "last_name": "Сычева",
+      "name": "Александра Сычева"
+    },
+    {
+      "id": "a46b1c4b-3f9f-0222-209b-5e0613e7255c",
+      "user_name": "aantonov",
+      "first_name": "Александр",
+      "last_name": "Антонов",
+      "name": "Александр Антонов"
+    },
+    {
+      "id": "a51d0a21-6615-368f-ff97-5de64c16ab94",
+      "user_name": "rkhachaturian",
+      "first_name": "Regina",
+      "last_name": "Khachaturian",
+      "name": "Regina Khachaturian"
+    },
+    {
+      "id": "a697ae50-deee-70ba-5268-5e06136742ef",
+      "user_name": "kmorozova",
+      "first_name": "Ксения",
+      "last_name": "Морозова",
+      "name": "Ксения Морозова"
+    },
+    {
+      "id": "a6b24c22-48da-dd08-decf-5e7336ba7cb6",
+      "user_name": "testman",
+      "first_name": "Иван",
+      "last_name": "Тестировщик",
+      "name": "Иван Тестировщик"
+    },
+    {
+      "id": "a6b24c23-48db-dd09-decf-5e7336ba7cb7",
+      "user_name": "testman2",
+      "first_name": "Иван",
+      "last_name": "Тестеров",
+      "name": "Иван Тестеров"
+    },
+    {
+      "id": "a6be5ae7-37ac-11f6-a412-5df8d92f9595",
+      "user_name": "aklyanchin",
+      "first_name": "Антон",
+      "last_name": "Клянчин",
+      "name": "Антон Клянчин"
+    },
+    {
+      "id": "a7aab879-e954-1759-53e1-5e01eaf91816",
+      "user_name": "esoboleva",
+      "first_name": "Екатерина",
+      "last_name": "Соболева",
+      "name": "Екатерина Соболева"
+    },
+    {
+      "id": "a82304e1-5e93-a963-4afc-5df8d9b13479",
+      "user_name": "kmaseykin",
+      "first_name": "Константин",
+      "last_name": "Масейкин",
+      "name": "Константин Масейкин"
+    },
+    {
+      "id": "aff1d017-074b-6cbe-8cd4-5e06133ea44e",
+      "user_name": "avaleev",
+      "first_name": "Азат",
+      "last_name": "Валеев",
+      "name": "Азат Валеев"
+    },
+    {
+      "id": "b027392a-a78b-2f44-8fee-5e399bbc8a38",
+      "user_name": "akrasilnikov",
+      "first_name": "Александр",
+      "last_name": "Красильников",
+      "name": "Александр Красильников"
+    },
+    {
+      "id": "b1252ab3-08ec-7a9e-7072-5e0613ebfd9b",
+      "user_name": "ysnikolaev",
+      "first_name": "Юрий",
+      "last_name": "Николаев",
+      "name": "Юрий Николаев"
+    },
+    {
+      "id": "b15ecc3d-510f-611b-a594-5df8d9dba672",
+      "user_name": "mkozin",
+      "first_name": "Михаил",
+      "last_name": "Козин",
+      "name": "Михаил Козин"
+    },
+    {
+      "id": "b650935e-ba66-499f-6f83-5d931fb1b950",
+      "user_name": "odenisova",
+      "first_name": "Olga",
+      "last_name": "Denisova",
+      "name": "Olga Denisova"
+    },
+    {
+      "id": "bdb29437-5434-6d27-568a-5df8d9809655",
+      "user_name": "aakolesnikov",
+      "first_name": "Алексей",
+      "last_name": "Колесников",
+      "name": "Алексей Колесников"
+    },
+    {
+      "id": "bf08ef9e-8c2f-a703-ae84-5e16e6216bdd",
+      "user_name": "AHamaganova",
+      "first_name": "Agniya",
+      "last_name": "Hamaganova",
+      "name": "Agniya Hamaganova"
+    },
+    {
+      "id": "c19d52d1-90f2-7e2a-5540-5e0613594e6a",
+      "user_name": "ovlasenko",
+      "first_name": "Олег",
+      "last_name": "Власенко",
+      "name": "Олег Власенко"
+    },
+    {
+      "id": "c33866bd-69c4-20ae-f16c-5e0613039238",
+      "user_name": "rpavlenko",
+      "first_name": "Роман",
+      "last_name": "Павленко",
+      "name": "Роман Павленко"
+    },
+    {
+      "id": "c4178301-17a9-1a9c-f7ee-5da4276848c6",
+      "user_name": "vprazdnikov",
+      "first_name": "Vladimir",
+      "last_name": "Prazdnikov",
+      "name": "Vladimir Prazdnikov"
+    },
+    {
+      "id": "c565ca59-00af-66d2-7f33-5e01e97308f1",
+      "user_name": "atemlyantsev",
+      "first_name": "Aleksandr",
+      "last_name": "Temlyantsev",
+      "name": "Aleksandr Temlyantsev"
+    },
+    {
+      "id": "c864a4c3-493d-b9f5-c0bf-5df8d9a13601",
+      "user_name": "aakuptsova",
+      "first_name": "Анастасия",
+      "last_name": "Купцова",
+      "name": "Анастасия Купцова"
+    },
+    {
+      "id": "cb9bf00d-474a-9293-7349-5def4883baae",
+      "user_name": "emakhmutova",
+      "first_name": "Elvira",
+      "last_name": "Makhmutova",
+      "name": "Elvira Makhmutova"
+    },
+    {
+      "id": "cc8a88c2-bf37-1a86-9b80-5e06139676ac",
+      "user_name": "tdasmaeva",
+      "first_name": "Татьяна",
+      "last_name": "Дасмаева",
+      "name": "Татьяна Дасмаева"
+    },
+    {
+      "id": "d08d0ad9-fef1-263e-59a9-5e0613294440",
+      "user_name": "nsimagina",
+      "first_name": "Наталья",
+      "last_name": "Симагина",
+      "name": "Наталья Симагина"
+    },
+    {
+      "id": "d2feae2f-2601-9b24-141d-5e4278afb6bd",
+      "user_name": "vbatrakova",
+      "first_name": "Veronika",
+      "last_name": "Batrakova",
+      "name": "Veronika Batrakova"
+    },
+    {
+      "id": "d354ec84-b524-0283-62c0-5df8d953ed69",
+      "user_name": "TKurbanova",
+      "first_name": "Татьяна",
+      "last_name": "Курбанова",
+      "name": "Татьяна Курбанова"
+    },
+    {
+      "id": "d3e974ca-c7c5-3a74-db35-5e06139345d8",
+      "user_name": "ipravsky",
+      "first_name": "Илья",
+      "last_name": "Правский",
+      "name": "Илья Правский"
+    },
+    {
+      "id": "d7a7849c-4597-82cf-3754-5e061313072b",
+      "user_name": "dshohalevich",
+      "first_name": "Дмитрий",
+      "last_name": "Шохалевич",
+      "name": "Дмитрий Шохалевич"
+    },
+    {
+      "id": "da6ddbd1-fda0-0a2e-826f-5d8e2015e8bd",
+      "user_name": "bminakov",
+      "first_name": "Boris",
+      "last_name": "Minakov",
+      "name": "Boris Minakov"
+    },
+    {
+      "id": "ddee2e74-88a6-6902-a29d-5df8d90f173c",
+      "user_name": "rleonov",
+      "first_name": "Роман",
+      "last_name": "Леонов",
+      "name": "Роман Леонов"
+    },
+    {
+      "id": "e0093b57-7b23-25a1-2ac0-5e2ae52d99ff",
+      "user_name": "obelousova",
+      "first_name": "Olesya",
+      "last_name": "Belousova",
+      "name": "Olesya Belousova"
+    },
+    {
+      "id": "e018b649-99d5-00f2-7145-5e0613913358",
+      "user_name": "iproshina",
+      "first_name": "Ирина",
+      "last_name": "Прошина",
+      "name": "Ирина Прошина"
+    },
+    {
+      "id": "e2700ac8-4986-ac52-3b3c-5df8d9aa8cd6",
+      "user_name": "atubalitsev",
+      "first_name": "Алексей",
+      "last_name": "Тубальцев",
+      "name": "Алексей Тубальцев"
+    },
+    {
+      "id": "e2757f31-3fd2-d50e-0ad7-5e06139eb944",
+      "user_name": "denivanov",
+      "first_name": "Денис",
+      "last_name": "Иванов",
+      "name": "Денис Иванов"
+    },
+    {
+      "id": "e2c1ba11-677e-50f9-bbcd-5e3d021e11f8",
+      "user_name": "gtsereteli",
+      "first_name": "Григорий",
+      "last_name": "Церетели",
+      "name": "Григорий Церетели"
+    },
+    {
+      "id": "e55b3203-5b7a-29fe-5334-5d7647c6ddd3",
+      "user_name": "aryabov",
+      "first_name": "Андрей",
+      "last_name": "Рябов",
+      "name": "Андрей Рябов"
+    },
+    {
+      "id": "e6231097-ac96-b249-5ff0-5de64573b66c",
+      "user_name": "kselezneva",
+      "first_name": "Ksenia",
+      "last_name": "Selezneva",
+      "name": "Ksenia Selezneva"
+    },
+    {
+      "id": "e86547de-a688-ca82-eacc-5df8d990a130",
+      "user_name": "dmakarov",
+      "first_name": "Дмитрий",
+      "last_name": "Макаров",
+      "name": "Дмитрий Макаров"
+    },
+    {
+      "id": "e9b79c73-e54e-adf0-b960-5d762148665e",
+      "user_name": "hrcrm",
+      "first_name": "HR",
+      "last_name": "CRM",
+      "name": "HR CRM"
+    },
+    {
+      "id": "eb1d42b0-9198-f197-9997-5e06137291ec",
+      "user_name": "nsamokhvalov",
+      "first_name": "Никита",
+      "last_name": "Самохвалов",
+      "name": "Никита Самохвалов"
+    },
+    {
+      "id": "ec8dea46-f6a0-62d9-92b7-5def48cf91e1",
+      "user_name": "akarmakulova",
+      "first_name": "Alena",
+      "last_name": "Karmakulova",
+      "name": "Alena Karmakulova"
+    },
+    {
+      "id": "ed7192ce-b730-6b27-3ca8-5e0613584c62",
+      "user_name": "nlkazakova",
+      "first_name": "Наталья",
+      "last_name": "Казакова",
+      "name": "Наталья Казакова"
+    },
+    {
+      "id": "eec893ed-68a0-8306-6c60-5e3d028730fa",
+      "user_name": "tporoshin",
+      "first_name": "Тимур",
+      "last_name": "Порошин",
+      "name": "Тимур Порошин"
+    },
+    {
+      "id": "f33f181e-55ea-9e19-9fc7-5e9039467f42",
+      "user_name": "mbondarenko",
+      "first_name": "Maksim",
+      "last_name": "Bondarenko",
+      "name": "Maksim Bondarenko"
+    },
+    {
+      "id": "f41e53ff-02ec-6ac8-cc01-5df8d9ca017d",
+      "user_name": "imarvanov",
+      "first_name": "Ильвир",
+      "last_name": "Марванов",
+      "name": "Ильвир Марванов"
     }
-  ]
+  ],
+  "stage_templates": [
+    { "id": "16ef745e-8179-4c2d-2055-5eb2a3340d83", "name": "Разработчик" },
+    {
+      "id": "4153a461-9a2d-9710-4fa3-5f04146002e1",
+      "name": "Добавление трех этапов"
+    },
+    {
+      "id": "70cfbc39-6e00-f5ad-fb22-5de515f99b40",
+      "name": "Основной шаблон"
+    },
+    {
+      "id": "759e20d8-d46b-7891-5465-5e61f8fb2cdc",
+      "name": "Тест пропуска табл отчет"
+    },
+    {
+      "id": "8305ff50-5e9c-8fd1-a662-5e620db50377",
+      "name": "Шаблон тест таблицы"
+    },
+    {
+      "id": "bca1c856-d6bd-938e-084e-5e61f4bedbf6",
+      "name": "Тест табл отчета"
+    },
+    { "id": "f09eea4d-8d0f-df65-f76e-5eb2a4154092", "name": "Массовый набор" }
+  ],
+  "hrpac_departments": [
+    {
+      "id": "102206b0-34b8-e0b9-90f8-5e06151ff374",
+      "name": "Front/Отдел по работе с клиентами индустрии ТЭК"
+    },
+    {
+      "id": "12c33f25-d364-d8f5-af7d-5e061554bfc6",
+      "name": "ERP/Практика SAP Консалтинга, Отдел консалтинга по АБАП-разработкам"
+    },
+    {
+      "id": "194fbc55-f4bc-8426-e5a6-5e0615634bb1",
+      "name": "Front/Отдел по работе с ключевыми клиентами"
+    },
+    {
+      "id": "1e17df4d-7939-86fe-70cb-5e0615b30db6",
+      "name": "ERP/Практика SAP Консалтинга, Отдел консалтинга по аналитическим решениям"
+    },
+    {
+      "id": "21c99b61-77f0-77c7-6b99-5e06152f5dda",
+      "name": "BPM/Практика BPM/ECM/SOA, Отдел разработки ECM"
+    },
+    {
+      "id": "253a943d-1ff3-4be0-788d-5e0615cb8c50",
+      "name": "Back/ДУП, Отдел кадрового делопроизводства"
+    },
+    {
+      "id": "25721027-2f71-1d38-e68a-5e0615752fbb",
+      "name": "1C/Архитектурный департамент, Отдел инфраструктуры и информационной безопасности"
+    },
+    {
+      "id": "26e8e446-23fc-67bb-7e63-5e06156d5c15",
+      "name": "Back/ФО, Отдел управленческой отчетности"
+    },
+    {
+      "id": "29ace850-9979-723f-02d5-5e0615d18690",
+      "name": "ERP/Практика SAP Консалтинга, Отдел консалтинга по логистике"
+    },
+    {
+      "id": "341c5638-0351-4417-a29a-5e0615b835b9",
+      "name": "Front/Отдел по работе с финансовыми и коммерческими организациями"
+    },
+    {
+      "id": "3453bf9e-2751-65e1-3a21-5e0615011d87",
+      "name": "BPM/Практика BPM/ECM/SOA, Отдел разработки ВРМ и SOA"
+    },
+    {
+      "id": "35dda697-bf21-2fcd-fc5e-5e061578b039",
+      "name": "ERP/Практика SAP Консалтинга, Отдел консалтинга по управлению персоналом"
+    },
+    {
+      "id": "4194b0ce-d7ce-778b-fb2c-5e061592cf30",
+      "name": "Back/ДУП, Отдел подбора и адаптации персонала"
+    },
+    {
+      "id": "41f4f3e9-8d4d-e2c8-663f-5e06152ee6a2",
+      "name": "ERP/Практика SAP Консалтинга, Отдел консалтинга по финансам"
+    },
+    {
+      "id": "47300973-7d87-8596-fafb-5e06150f970b",
+      "name": "BPM/Практика BPM/ECM/SOA, Отдел Тестирования"
+    },
+    {
+      "id": "485516d9-9b65-d4ae-3865-5e0615638e15",
+      "name": "1C/Архитектурный департамент, Отдел разработки прикладных решений"
+    },
+    {
+      "id": "486eaff1-06fd-e60c-7e4a-5e0615fd5e5f",
+      "name": "Back/ФО, Проектный офис"
+    },
+    {
+      "id": "4f5940fd-531d-2270-8474-5e0615e61285",
+      "name": "ERP/Практика SAP Консалтинга, Отдел по интеграции"
+    },
+    {
+      "id": "501a033b-6607-2c0e-f03b-5e0615a027af",
+      "name": "1C/Архитектурный департамент, Отдел инженерныхенерных практик"
+    },
+    {
+      "id": "542fdc2a-2742-a0ee-1d4c-5e0615c82785",
+      "name": "Front/Отдел по работе с финансовыми организациями"
+    },
+    {
+      "id": "563df670-4d3f-8453-abb5-5e0615da72f4",
+      "name": "1C/Проектный Департамент"
+    },
+    {
+      "id": "585b0904-f77b-1725-d200-5e0615dda5d3",
+      "name": "Back/ФО, Отдел по автоматизации и оптимизации бизнес-процессов"
+    },
+    {
+      "id": "5abcc715-a28e-7145-4455-5e06154d8d43",
+      "name": "BPM/Практика BPM/ECM/SOA, Отдел технической поддержки проектов"
+    },
+    {
+      "id": "5ca3b883-32ef-01dd-90f4-5e0615d99440",
+      "name": "ERP/Практика SAP Консалтинга, Отдел управления проектами SAP"
+    },
+    {
+      "id": "5dfc1835-b6fa-6f4f-cf6e-5e0615ec9c73",
+      "name": "Back/Отдел закупок"
+    },
+    {
+      "id": "6a4cda8b-1117-88d3-9861-5e0615fed6ab",
+      "name": "Digital/Департамент разработки"
+    },
+    {
+      "id": "6b64f537-4932-c056-fce9-5e061563f396",
+      "name": "Back/ЮД, Отдел контрактного сопровождения клиентов"
+    },
+    {
+      "id": "6c02e936-46e6-29ae-d521-5e061559f4a8",
+      "name": "Front/Центр инноваций"
+    },
+    {
+      "id": "6f066653-bac0-99d9-1a1c-5e0615593ced",
+      "name": "BPM/Практика BPM/ECM/SOA, Отдел управления проектами"
+    },
+    {
+      "id": "78970fbf-d89e-e85c-0eb0-5e0615fcaf8b",
+      "name": "CRM/Практика Оракл, Центр компетенций Больших Данных"
+    },
+    {
+      "id": "78f0f750-3ca4-0110-04db-5e06156b2a0b",
+      "name": "Digital/Департамент разработки,Отдел поддержки инфраструктуры и разработки"
+    },
+    {
+      "id": "7b128413-d817-f549-9069-5e0615459206",
+      "name": "Back/Отдел информационной безопасности"
+    },
+    {
+      "id": "82225010-7c77-5df4-e10d-5e0615b9fe16",
+      "name": "1C/Производственный департамент, Аналитический отдел"
+    },
+    {
+      "id": "83a68209-a58f-c712-9a75-5e0615ee9732",
+      "name": "BPM/Практика заказных разработок, Отдел внедрения и сопровождения информационных систем"
+    },
+    {
+      "id": "8547ebdb-0c42-19b3-26b1-5e0615566ee9",
+      "name": "Back/ДИТ, Отдел внедрения корпоративных информационных систем"
+    },
+    {
+      "id": "881cc1f7-da00-ca52-ea31-5e0615936dea",
+      "name": "Digital/Департамент разработки, Отдел разработки прикладного программного обеспечения"
+    },
+    {
+      "id": "8a868b98-0eef-d2e3-a5ec-5e06155af330",
+      "name": "CRM/Обособленное структурное подразделение г. Воронеж"
+    },
+    {
+      "id": "91d00b7c-1c96-8d96-efd4-5e061583c4b3",
+      "name": "Back/ДУП, Отдел административно-хозяйственной поддержки"
+    },
+    {
+      "id": "93253915-540f-e9a0-0bd4-5e0615a846a1",
+      "name": "CRM/Обособленное структурное подразделение г. Рязань"
+    },
+    {
+      "id": "9653912d-90db-2440-b166-5e06155f2ce7",
+      "name": "Back/ЮД, Отдел подготовки тендерных документов"
+    },
+    {
+      "id": "96e0b61c-204a-f13a-2835-5e06154d66eb",
+      "name": "Digital/Департамент разработки, Отдел системной разработки"
+    },
+    {
+      "id": "97470c5f-bfa4-00a8-6c2b-5e06157ba9e8",
+      "name": "BPM/Практика заказных разработок, Отдел программирования"
+    },
+    {
+      "id": "98dd522e-37e8-54ba-708f-5e06156708c2",
+      "name": "Back/ФО, Бухгалтерия"
+    },
+    {
+      "id": "9c60f11a-a824-9392-c328-5e061511b71f",
+      "name": "CRM/Обособленное структурное подразделение г. Тверь"
+    },
+    {
+      "id": "9d0005e3-b807-a481-9652-5e0615a9cfae",
+      "name": "Back/ЮД, Юридический отдел"
+    },
+    {
+      "id": "9f3f48f7-8a78-b509-6dfa-5e0615a22c8b",
+      "name": "Back/ДИТ, Отдел поддержки пользователей"
+    },
+    {
+      "id": "a59e5a3a-34ab-3794-8d71-5e0615ef1f57",
+      "name": "CRM/Департамент сервиса, Отдел подготовки и ведения сервисных проектов"
+    },
+    {
+      "id": "a60e1e13-be04-6652-da11-5e06150d3660",
+      "name": "Digital/Департамент разработки, Отдел фронтальной разработки"
+    },
+    {
+      "id": "ac71b2dc-71eb-c274-2ce6-5e0615bd48e8",
+      "name": "Front/Департамент Маркетинга"
+    },
+    {
+      "id": "aedfd89f-62a3-1dcd-4113-5e0615825816",
+      "name": "CRM/Департамент сервиса, Отдел технической поддержки и сопровождения информационных систем"
+    },
+    {
+      "id": "b5bf964e-1dce-1925-1b67-5e0615e89349",
+      "name": "Digital/Департамент экспертиз и практик"
+    },
+    {
+      "id": "b84ab40a-1c14-a53a-65cc-5e06156a92ef",
+      "name": "Back/ФО, Казначейство"
+    },
+    {
+      "id": "b92021c3-86ea-0a47-d51e-5e06157e7f19",
+      "name": "CRM/Практика Оракл, Отдел аналитических решений"
+    },
+    {
+      "id": "bd0dda4f-b35d-614c-b2a5-5e06155a78b7",
+      "name": "Back/ДИТ, Отдел системного администрирования"
+    },
+    {
+      "id": "c6a1f777-0eed-cc83-a72f-5e0615db0cd2",
+      "name": "Front/Отдел координации продаж"
+    },
+    {
+      "id": "ca8726fc-12b3-231b-7d6e-5e0615f65d74",
+      "name": "CRM/Практика Оракл, Отдел бизнес-анализа"
+    },
+    {
+      "id": "d1c6aba3-9827-b089-00a9-5e06157b335a",
+      "name": "Digital/Департамент экспертиз и практик, Отдел аналитики"
+    },
+    {
+      "id": "d4afe37c-e9b8-eabd-6ef9-5e0615f6dcd9",
+      "name": "CRM/Практика Оракл, Отдел Разработки"
+    },
+    {
+      "id": "d7738bae-b985-1c32-9cb5-5e0615ebafc1",
+      "name": "Back/ДУП, Дежурная служба"
+    },
+    {
+      "id": "d88141b8-a592-8c62-d8ec-5e0615064755",
+      "name": "Back/ФО, Отдел бюджетирования, анализа и контроля"
+    },
+    {
+      "id": "dda61daa-b830-2e9a-432e-5e0615b0de2b",
+      "name": "Front/Отдел по работе с государственным сектором"
+    },
+    {
+      "id": "decca832-13f6-0c92-38ed-5e0615300081",
+      "name": "CRM/Практика Оракл, Отдел тестирования и качества"
+    },
+    {
+      "id": "e24ca3a0-b526-a706-2f32-5e061514d856",
+      "name": "Digital/Департамент экспертиз и практик, Отдел качества"
+    },
+    {
+      "id": "e9e88da9-9ad2-578c-0f5e-5e06158a82cc",
+      "name": "1C/Архитектурный департамент"
+    },
+    {
+      "id": "f0f92de9-de64-090b-c548-5e0615a9c9ce",
+      "name": "CRM/Практика Оракл, Отдел управления проектами Оракл"
+    },
+    {
+      "id": "f256c440-1ffc-b9de-595f-5e06156c8e19",
+      "name": "Digital/Департамент экспертиз и практик, Отдел управления проектной деятельностью"
+    },
+    {
+      "id": "f97d00b9-5e69-b554-dbcd-5e061557b0da",
+      "name": "BPM/Практика BPM/ECM/SOA, Отдел Анализа"
+    }
+  ],
+  "reason_for_opening": [
+    { "id": "6c1502cd-7cf2-fa1b-1ac7-5e788e953b8b", "name": "Замена" },
+    {
+      "id": "b4efd01b-c7d5-f23b-3a9f-5e788e013e46",
+      "name": "Новый сотрудник"
+    }
+  ],
+  "difficulty_level": [
+    {
+      "id": "4ac3e4e5-61f9-a9ba-b3bc-5f17fc9e0245",
+      "name": "Базовая",
+      "coefficient": "1.0"
+    },
+    {
+      "id": "9b8bc7dc-ae3c-c3f3-fade-5f17ff08de38",
+      "name": "Сложная",
+      "coefficient": "1.5"
+    },
+    {
+      "id": "36b61a3a-7407-61ee-b871-5f17ff5ef2cd",
+      "name": "Повышенная сложность",
+      "coefficient": "2.0"
+    }
+  ],
+  "grades": []
 }

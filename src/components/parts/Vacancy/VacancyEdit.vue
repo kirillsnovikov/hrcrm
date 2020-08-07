@@ -1,5 +1,21 @@
 <template>
   <div class="vacancy-edit" v-if="Object.keys(form).length">
+    <el-dialog
+      v-if="previewVisible"
+      width="40%"
+      title="Предпросмотр шаблона вакансии"
+      :visible.sync="previewVisible"
+      class="preview-dialog"
+      @close="previewVisible = false"
+    >
+      test test test
+      {{ selectedTemplate }}
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="previewVisible = false">
+          Закрыть
+        </el-button>
+      </div>
+    </el-dialog>
     <div
       class="inline-buttons vacancy-edit__inline-buttons"
       v-scroll="handleScroll"
@@ -38,6 +54,51 @@
             <input type="hidden" name="action" value="Save" />
             <input type="hidden" name="jsqon_return" value="1" />
           </div>
+          <el-form-item
+            class="row"
+            label="Наименование шаблона"
+            prop="template_name"
+          >
+            <el-select
+              v-model="form.template_name"
+              name="template_name"
+              placeholder=""
+              :rules="rules.template_name"
+              filterable
+              no-match-text="Нет результатов поиска"
+              @change="
+                changeOption(
+                  'template_name', // наим-е
+                  'hrpac_vacancy_template_names_id_c', // ид
+                  'vacancy_template_names' // опции
+                )
+              "
+            >
+              <el-option
+                v-for="opt in options.vacancy_template_names"
+                :key="opt.id"
+                :label="opt.name"
+                :value="opt.name"
+              >
+                <span>{{ opt.name }}</span>
+                <el-tooltip
+                  effect="dark"
+                  content="Предпросмотр"
+                  placement="bottom"
+                >
+                  <i
+                    class="el-icon-view"
+                    @click="showTemplatePreview($event, opt)"
+                  ></i>
+                </el-tooltip>
+              </el-option>
+            </el-select>
+            <input
+              type="hidden"
+              name="hrpac_vacancy_template_names_id_c"
+              :value="form.hrpac_vacancy_template_names_id_c"
+            />
+          </el-form-item>
           <el-form-item
             class="row"
             label="Наименование вакансии"
@@ -553,6 +614,13 @@ export default {
       resume_file: [],
       form: {},
       rules: {
+        template_name: [
+          {
+            required: true,
+            message: 'Необходимо выбрать наименование шаблона',
+            trigger: 'change'
+          }
+        ],
         name_id: [
           {
             required: true,
@@ -635,7 +703,9 @@ export default {
       spectators_ids: [],
       salary_min: '',
       salary_max: '',
-      loading: false
+      loading: false,
+      previewVisible: false,
+      selectedTemplate: ''
     };
   },
   mounted() {
@@ -770,6 +840,12 @@ export default {
         cities.splice(idx, 1);
         cities.unshift(movedCity);
       });
+    },
+    showTemplatePreview(e, opt) {
+      e.stopPropagation();
+      console.log('preview', opt);
+      this.selectedTemplate = opt.name;
+      this.previewVisible = true;
     }
   },
   watch: {
