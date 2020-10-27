@@ -54,6 +54,7 @@
             <input type="hidden" name="action" value="Save" />
             <input type="hidden" name="jsqon_return" value="1" />
           </div>
+          <div class="el-form-item">
           <el-form-item
             class="row"
             label="Наименование шаблона"
@@ -99,6 +100,7 @@
               :value="form.hrpac_vacancy_template_names_id_c"
             />
           </el-form-item>
+          </div>
           <el-form-item
             class="row"
             label="Наименование вакансии"
@@ -322,7 +324,7 @@
               placeholder=""
               filterable
               no-match-text="Нет результатов поиска"
-              @change="convertTagData(grade, 'grade')"
+              @change="callback.field.change($event, 'grade')"
             >
               <el-option
                 v-for="option in options.grades"
@@ -340,7 +342,7 @@
                   type="text"
                   name="salary_min"
                   class="el-input__inner"
-                  @change="validateField('salary_min')"
+                  @input="callback.field.change($event, 'salary_min')"
                   placeholder="От"
                   :masked="false"
                   :mask="[
@@ -362,7 +364,7 @@
                   type="text"
                   name="salary_max"
                   class="el-input__inner"
-                  @change="validateField('salary_max')"
+                  @input="callback.field.change($event, 'salary_max')"
                   placeholder="До"
                   :masked="false"
                   :mask="[
@@ -531,6 +533,9 @@
               multiple
               placeholder=""
               filterable
+              @change="callback.field.change('additional_assigned_ids')"
+              @input.native="callback.field.change($event, 'test2')"
+              @visible-change="callback.field.change($event, 'test2')"
               no-match-text="Нет результатов поиска"
             >
               <el-option
@@ -613,10 +618,34 @@ export default {
     return {
       resume_file: [],
       form: {},
+      callback: {
+        field: {
+          change: (e, name) => {
+            console.log(e, name)
+            switch (name) {
+              case 'grade':
+                this.convertTagData(this.grade, name);
+                break;
+
+              case 'salary_min':
+              case 'salary_max':
+                this.formatSalary(this[name], name);
+                break;
+
+              case 'additional_assigned_ids':
+                console.log(e, name)
+                break;
+
+              default:
+                break;
+            }
+          }
+        }
+      },
       rules: {
         template_name: [
           {
-            required: true,
+            // required: true,
             message: 'Необходимо выбрать наименование шаблона',
             trigger: 'change'
           }
@@ -740,6 +769,28 @@ export default {
     this.filterCities();
   },
   methods: {
+    testCallback(name, e) {
+      console.log(name, e)
+    },
+    fieldCallback(e, name) {
+      return {
+        change: () => {
+          switch (name) {
+            case 'grade':
+              this.convertTagData(this.grade, name);
+              break;
+
+            case 'salary_min':
+            case 'salary_max':
+              this.formatSalary(this[name], name);
+              break;
+
+            default:
+              break;
+          }
+        }
+      }
+    },
     handleScroll(evt, el) {
       if (window.scrollY > SCROLL_VALUE) {
         el.classList.add('scroll');
@@ -849,14 +900,14 @@ export default {
     }
   },
   watch: {
-    salary_min: function() {
-      const precision = this.fields.salary_min.precision;
-      this.formatSalary(this.salary_min, 'salary_min', precision);
-    },
-    salary_max: function() {
-      const precision = this.fields.salary_max.precision;
-      this.formatSalary(this.salary_max, 'salary_max', precision);
-    }
+    // salary_min: function() {
+    //   const precision = this.fields.salary_min.precision;
+    //   this.formatSalary(this.salary_min, 'salary_min', precision);
+    // },
+    // salary_max: function() {
+    //   const precision = this.fields.salary_max.precision;
+    //   this.formatSalary(this.salary_max, 'salary_max', precision);
+    // }
   },
   components: { TheMask }
 };
